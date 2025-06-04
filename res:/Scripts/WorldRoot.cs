@@ -8,7 +8,7 @@ public partial class GameWorld : Node2D
 
 	[Export] public PackedScene FarmScene;
 	[Export] public PackedScene HouseScene;
-
+	GD.Print("Hello World);
 	private Dictionary<string, Node2D> _locations = new();
 	private Node2D _currentLocation;
 
