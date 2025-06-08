@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://xpemlunulsjb"]
+
+[ext_resource type="Texture2D" uid="uid://bwv4c845pm0pd" path="res://Assets/2D Arts/UI stuff/Title screen/greenBackgroundTitleScreen.png" id="1_eqs3g"]
+[ext_resource type="Texture2D" uid="uid://c2gexm1f5da6k" path="res://Assets/2D Arts/UI stuff/Title screen/backgrounGreenDarker_titleScreen.png" id="2_4vgew"]
+[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://Assets/2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_crao7"]
+
+[node name="LoadUI" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_eqs3g")
+
+[node name="LoadButton" type="Button" parent="."]
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 934.0
+offset_bottom = 160.0
+icon = ExtResource("2_4vgew")
+flat = true
+
+[node name="Label" type="Label" parent="LoadButton"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 11.0
+offset_right = 109.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 40
+text = "File 1"
+
+[node name="Label2" type="Label" parent="LoadButton"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 69.0
+offset_right = 199.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 35
+text = "Year 1, Week 4, El Nino"
+
+[node name="Label3" type="Label" parent="LoadButton"]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 70.0
+offset_right = 879.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 35
+text = "P20,000"

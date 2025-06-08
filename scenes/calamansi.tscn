@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://bvhsl2lgo60oo"]
+
+[ext_resource type="Texture2D" uid="uid://c67f54obgtrrj" path="res://Assets/2D Arts/Plant Assets/CalamansiTree.png" id="1_2wcuf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_864tp"]
+atlas = ExtResource("1_2wcuf")
+region = Rect2(0, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl2fl"]
+atlas = ExtResource("1_2wcuf")
+region = Rect2(20, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo8at"]
+atlas = ExtResource("1_2wcuf")
+region = Rect2(40, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bo5v"]
+atlas = ExtResource("1_2wcuf")
+region = Rect2(60, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnpiw"]
+atlas = ExtResource("1_2wcuf")
+region = Rect2(80, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abs06"]
+atlas = ExtResource("1_2wcuf")
+region = Rect2(0, 40, 20, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8oodr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_864tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl2fl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qo8at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bo5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnpiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abs06")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wcuf"]
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_864tp"]
+size = Vector2(11, 11)
+
+[node name="calamansi tree" type="StaticBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_8oodr")
+autoplay = "default"
+frame_progress = 0.00617243
+
+[node name="collisionshape" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_2wcuf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_864tp")

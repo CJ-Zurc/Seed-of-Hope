@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://e08un1cay5cp"]
+
+[ext_resource type="Texture2D" uid="uid://dipi1x1iuhkst" path="res://Assets/2D Arts/Plant Assets/PechayPlant.png" id="1_u8gfm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p38d2"]
+atlas = ExtResource("1_u8gfm")
+region = Rect2(0, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im8v7"]
+atlas = ExtResource("1_u8gfm")
+region = Rect2(20, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k5wb"]
+atlas = ExtResource("1_u8gfm")
+region = Rect2(40, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66w3x"]
+atlas = ExtResource("1_u8gfm")
+region = Rect2(60, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6c7r"]
+atlas = ExtResource("1_u8gfm")
+region = Rect2(0, 26, 20, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tyl6f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p38d2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im8v7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k5wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66w3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6c7r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8gfm"]
+radius = 4.47214
+
+[node name="pechay" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tyl6f")
+autoplay = "default"
+frame_progress = 0.851972
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 6)
+shape = SubResource("CircleShape2D_u8gfm")
