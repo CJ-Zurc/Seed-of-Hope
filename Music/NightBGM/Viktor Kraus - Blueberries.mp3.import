@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bah6t15bc8i4y"
+path="res://.godot/imported/Viktor Kraus - Blueberries.mp3-aa8bcded4e647bc1aba468c8c9a41ffc.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/NightBGM/Viktor Kraus - Blueberries.mp3"
+dest_files=["res://.godot/imported/Viktor Kraus - Blueberries.mp3-aa8bcded4e647bc1aba468c8c9a41ffc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
