@@ -1,0 +1,22 @@
+# Godot-specific folders
+.import/
+.export/
+.godot/
+
+# Export templates and translation files
+*.translation
+*.import
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Temporary or backup files
+*.tmp
+*.temp
+*.swp
+*.log
+
+# Godot cache files
+*.converted.res
+*.converted.scn
