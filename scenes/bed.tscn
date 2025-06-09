@@ -1,13 +1,14 @@
-[gd_scene load_steps=20 format=4 uid="uid://duh4ouihpudo3"]
+[gd_scene load_steps=21 format=4 uid="uid://duh4ouihpudo3"]
 
-[ext_resource type="Texture2D" uid="uid://dpukuoq1cj5tt" path="res://Assets/2D Arts/Interiors/topDown/TopDownHouse_FloorsAndWalls.png" id="1_exsg2"]
+[ext_resource type="Texture2D" uid="uid://dpukuoq1cj5tt" path="res://2D Arts/Interiors/topDown/TopDownHouse_FloorsAndWalls.png" id="1_exsg2"]
 [ext_resource type="PackedScene" uid="uid://c7ovd1vg55yta" path="res://scenes/hud.tscn" id="1_ulp3u"]
-[ext_resource type="Texture2D" uid="uid://dg1j4s66vsoqx" path="res://Assets/2D Arts/Interiors/topDown/TopDownHouse_FurnitureState1.png" id="2_pqek7"]
-[ext_resource type="Texture2D" uid="uid://cy6hcj5aeuu58" path="res://Assets/2D Arts/Interiors/topDown/TopDownHouse_FurnitureState2.png" id="3_ulp3u"]
-[ext_resource type="Texture2D" uid="uid://bpadylfgjhat6" path="res://Assets/2D Arts/Interiors/Pixel Lands Interiors Demo/interiors_demo.png" id="4_honl5"]
-[ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://Assets/2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="5_3v2c1"]
-[ext_resource type="Texture2D" uid="uid://c3roao8sneu3m" path="res://Assets/2D Arts/Interiors/topDown/TopDownHouse_SmallItems.png" id="6_la8lx"]
-[ext_resource type="Texture2D" uid="uid://dsdsxehmyoy16" path="res://Assets/2D Arts/UI stuff/Buttons/Tiles/Used in game/tile_0169.png" id="7_pqek7"]
+[ext_resource type="Texture2D" uid="uid://dg1j4s66vsoqx" path="res://2D Arts/Interiors/topDown/TopDownHouse_FurnitureState1.png" id="2_pqek7"]
+[ext_resource type="Texture2D" uid="uid://cy6hcj5aeuu58" path="res://2D Arts/Interiors/topDown/TopDownHouse_FurnitureState2.png" id="3_ulp3u"]
+[ext_resource type="Texture2D" uid="uid://bpadylfgjhat6" path="res://2D Arts/Interiors/Pixel Lands Interiors Demo/interiors_demo.png" id="4_honl5"]
+[ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="5_3v2c1"]
+[ext_resource type="Texture2D" uid="uid://c3roao8sneu3m" path="res://2D Arts/Interiors/topDown/TopDownHouse_SmallItems.png" id="6_la8lx"]
+[ext_resource type="Texture2D" uid="uid://dsdsxehmyoy16" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0169.png" id="7_pqek7"]
+[ext_resource type="PackedScene" uid="uid://b24o0fnaoccno" path="res://scenes/saving_dialogue.tscn" id="9_honl5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_60r8n"]
 texture = ExtResource("1_exsg2")
@@ -1350,3 +1351,9 @@ tile_set = SubResource("TileSet_ulp3u")
 [node name="toLivingRoom" type="Sprite2D" parent="."]
 position = Vector2(-56, 40)
 texture = ExtResource("7_pqek7")
+
+[node name="Saving Dialogue" parent="." instance=ExtResource("9_honl5")]
+offset_left = 138.0
+offset_top = -350.0
+offset_right = 138.0
+offset_bottom = -350.0
