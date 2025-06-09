@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=4 uid="uid://dditttsq1xujj"]
+[gd_scene load_steps=18 format=4 uid="uid://dditttsq1xujj"]
 
-[ext_resource type="Texture2D" uid="uid://lbkmad5iq1co" path="res://Assets/2D Arts/BackgroundMainGame/BlackBackground.png" id="1_o6v7o"]
-[ext_resource type="Texture2D" uid="uid://cxc764otrlfr0" path="res://Assets/2D Arts/BackgroundMainGame/BlueBackground.png" id="2_wjob3"]
+[ext_resource type="Texture2D" uid="uid://lbkmad5iq1co" path="res://2D Arts/BackgroundMainGame/BlackBackground.png" id="1_o6v7o"]
+[ext_resource type="Texture2D" uid="uid://cxc764otrlfr0" path="res://2D Arts/BackgroundMainGame/BlueBackground.png" id="2_wjob3"]
 [ext_resource type="PackedScene" uid="uid://duh4ouihpudo3" path="res://scenes/bed.tscn" id="4_sp04v"]
 [ext_resource type="PackedScene" uid="uid://bc76pux0agbdd" path="res://scenes/outside.tscn" id="5_ihbck"]
 [ext_resource type="PackedScene" uid="uid://bda8oap7etm3v" path="res://scenes/weather report.tscn" id="7_ikqpi"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://xpemlunulsjb" path="res://scenes/LoadUI.tscn" id="11_5wboo"]
 [ext_resource type="PackedScene" uid="uid://7mfevosxae3" path="res://scenes/spending_earning_summary.tscn" id="12_6de02"]
 [ext_resource type="PackedScene" uid="uid://ctpqlnacq2w7n" path="res://scenes/settings.tscn" id="12_o6v7o"]
+[ext_resource type="PackedScene" uid="uid://bqrnebrk6e7u4" path="res://scenes/player.tscn" id="13_wjob3"]
+[ext_resource type="PackedScene" uid="uid://ggodvwqq6ecg" path="res://scenes/Teleporter.tscn" id="14_8xp80"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6v7o"]
 texture = ExtResource("1_o6v7o")
@@ -56,7 +58,10 @@ position = Vector2(911, -222)
 position = Vector2(-1303, 377)
 
 [node name="Plant info" parent="." instance=ExtResource("9_yu8cv")]
-position = Vector2(601, 541)
+offset_left = 601.0
+offset_top = 541.0
+offset_right = 601.0
+offset_bottom = 541.0
 
 [node name="Title Screen" parent="." instance=ExtResource("10_ibnub")]
 position = Vector2(1878, 347)
@@ -64,3 +69,33 @@ position = Vector2(1878, 347)
 [node name="LoadUI" parent="Title Screen" instance=ExtResource("11_5wboo")]
 top_level = true
 position = Vector2(1388, 82)
+
+[node name="player" parent="." instance=ExtResource("13_wjob3")]
+position = Vector2(-56, 155)
+
+[node name="TeleportBlock" parent="." instance=ExtResource("14_8xp80")]
+position = Vector2(8, 221)
+targetX = 13
+targetY = 562
+playerPath = NodePath("../player")
+
+[node name="TeleportBlock2" parent="." instance=ExtResource("14_8xp80")]
+position = Vector2(-66, 125)
+targetX = -37
+targetY = -441
+playerPath = NodePath("../player")
+
+[node name="TeleportBlock3" parent="." instance=ExtResource("14_8xp80")]
+position = Vector2(5, 524)
+targetX = 9
+targetY = 198
+playerPath = NodePath("../player")
+
+[node name="TeleportBlock4" parent="." instance=ExtResource("14_8xp80")]
+position = Vector2(-74, -440)
+targetX = -56
+targetY = 147
+playerPath = NodePath("../player")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-42, -443)

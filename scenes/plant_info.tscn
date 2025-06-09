@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2vpsxf150g0n"]
 
-[ext_resource type="Texture2D" uid="uid://cbrlwnxeloiac" path="res://Assets/2D Arts/GardenAssets/plant description.png" id="1_vpdo1"]
-[ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://Assets/2D Arts/UI stuff/fonts/slkscre.ttf" id="2_1xrl3"]
-[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://Assets/2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="2_uijc7"]
-[ext_resource type="Texture2D" uid="uid://bktgssr408u45" path="res://Assets/2D Arts/UI stuff/HUD UI/waterProgressBarOuter.png" id="3_hiurs"]
-[ext_resource type="Texture2D" uid="uid://cm3f758myakaj" path="res://Assets/2D Arts/UI stuff/HUD UI/waterProgressBar.png" id="4_wsk6x"]
-[ext_resource type="Texture2D" uid="uid://qc3w6cxtpw43" path="res://Assets/2D Arts/UI stuff/HUD UI/waterIcon.png" id="5_4u54i"]
+[ext_resource type="Texture2D" uid="uid://cbrlwnxeloiac" path="res://2D Arts/GardenAssets/plant description.png" id="1_vpdo1"]
+[ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="2_1xrl3"]
+[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="2_uijc7"]
+[ext_resource type="Texture2D" uid="uid://bktgssr408u45" path="res://2D Arts/UI stuff/HUD UI/waterProgressBarOuter.png" id="3_hiurs"]
+[ext_resource type="Texture2D" uid="uid://cm3f758myakaj" path="res://2D Arts/UI stuff/HUD UI/waterProgressBar.png" id="4_wsk6x"]
+[ext_resource type="Texture2D" uid="uid://qc3w6cxtpw43" path="res://2D Arts/UI stuff/HUD UI/waterIcon.png" id="5_4u54i"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,6 +22,7 @@ offset_bottom = 103.0
 texture = ExtResource("1_vpdo1")
 
 [node name="plantName" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 12.0
 offset_right = 128.0
@@ -34,6 +35,7 @@ fit_content = true
 scroll_active = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 48.0
 offset_right = 125.0
@@ -46,18 +48,11 @@ fit_content = true
 scroll_active = false
 
 [node name="WaterBar" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -986.0
-offset_top = -606.0
-offset_right = -970.0
-offset_bottom = -542.0
-grow_horizontal = 0
-grow_vertical = 0
+layout_mode = 0
+offset_left = 166.0
+offset_top = 43.0
+offset_right = 182.0
+offset_bottom = 107.0
 rotation = -0.00531567
 scale = Vector2(-0.893883, 0.853504)
 
@@ -69,17 +64,10 @@ texture_over = ExtResource("3_hiurs")
 texture_progress = ExtResource("4_wsk6x")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1010.0
-offset_top = -570.0
-offset_right = -994.0
-offset_bottom = -548.0
-grow_horizontal = 0
-grow_vertical = 0
+layout_mode = 0
+offset_left = 145.0
+offset_top = 78.0
+offset_right = 161.0
+offset_bottom = 100.0
 scale = Vector2(0.926278, 0.876488)
 texture = ExtResource("5_4u54i")
