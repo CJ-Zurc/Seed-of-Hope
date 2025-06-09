@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vqubqo6yu0hl"
-path="res://.godot/imported/TVRight.png-0f81a9d6803b37016e3bb3955beb12b7.ctex"
+path="res://.godot/imported/TVRight.png-965acb30773c22c3c0c4ff63123ad1df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/tv and computer/TVRight.png"
-dest_files=["res://.godot/imported/TVRight.png-0f81a9d6803b37016e3bb3955beb12b7.ctex"]
+source_file="res://2D Arts/tv and computer/TVRight.png"
+dest_files=["res://.godot/imported/TVRight.png-965acb30773c22c3c0c4ff63123ad1df.ctex"]
 
 [params]
 

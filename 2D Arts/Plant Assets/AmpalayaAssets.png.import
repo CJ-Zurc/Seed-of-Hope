@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v36natl8ql1f"
-path="res://.godot/imported/AmpalayaAssets.png-523f87756be984e06fbcf52512bd8c83.ctex"
+path="res://.godot/imported/AmpalayaAssets.png-875e76a929c2a8b7c9ccb24eca79e160.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/Plant Assets/AmpalayaAssets.png"
-dest_files=["res://.godot/imported/AmpalayaAssets.png-523f87756be984e06fbcf52512bd8c83.ctex"]
+source_file="res://2D Arts/Plant Assets/AmpalayaAssets.png"
+dest_files=["res://.godot/imported/AmpalayaAssets.png-875e76a929c2a8b7c9ccb24eca79e160.ctex"]
 
 [params]
 

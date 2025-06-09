@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3docj08n1iq5"
-path="res://.godot/imported/stairs.png-c94c2f16f9ba2dcc8a2f1a324a24ffdd.ctex"
+path="res://.godot/imported/stairs.png-20e3a17ccf435ff862ab546d083db961.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/Interiors/topDown/stairs.png"
-dest_files=["res://.godot/imported/stairs.png-c94c2f16f9ba2dcc8a2f1a324a24ffdd.ctex"]
+source_file="res://2D Arts/Interiors/topDown/stairs.png"
+dest_files=["res://.godot/imported/stairs.png-20e3a17ccf435ff862ab546d083db961.ctex"]
 
 [params]
 

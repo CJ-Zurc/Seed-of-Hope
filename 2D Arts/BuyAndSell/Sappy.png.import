@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2e6smdq0di6i"
-path="res://.godot/imported/Sappy.png-ab207b93fff13f2713da4a89d2de2d3e.ctex"
+path="res://.godot/imported/Sappy.png-cc2b93284c231b177dad4ec04f9d98a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/BuyAndSell/Sappy.png"
-dest_files=["res://.godot/imported/Sappy.png-ab207b93fff13f2713da4a89d2de2d3e.ctex"]
+source_file="res://2D Arts/BuyAndSell/Sappy.png"
+dest_files=["res://.godot/imported/Sappy.png-cc2b93284c231b177dad4ec04f9d98a0.ctex"]
 
 [params]
 

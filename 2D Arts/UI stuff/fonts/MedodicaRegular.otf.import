@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bmdklqoudcv6"
-path="res://.godot/imported/MedodicaRegular.otf-443faddd0c5c7069c94755d98b593b44.fontdata"
+path="res://.godot/imported/MedodicaRegular.otf-84098360b51ef0ec7226c66856c4b250.fontdata"
 
 [deps]
 
-source_file="res://Assets/2D Arts/UI stuff/fonts/MedodicaRegular.otf"
-dest_files=["res://.godot/imported/MedodicaRegular.otf-443faddd0c5c7069c94755d98b593b44.fontdata"]
+source_file="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf"
+dest_files=["res://.godot/imported/MedodicaRegular.otf-84098360b51ef0ec7226c66856c4b250.fontdata"]
 
 [params]
 

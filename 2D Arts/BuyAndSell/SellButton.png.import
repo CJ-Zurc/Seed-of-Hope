@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyjnciylhmg4t"
-path="res://.godot/imported/SellButton.png-65d7f71e94413b12f735c5e14c8423f8.ctex"
+path="res://.godot/imported/SellButton.png-64cde66a5de16bfe05ad080f8623ba4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/BuyAndSell/SellButton.png"
-dest_files=["res://.godot/imported/SellButton.png-65d7f71e94413b12f735c5e14c8423f8.ctex"]
+source_file="res://2D Arts/BuyAndSell/SellButton.png"
+dest_files=["res://.godot/imported/SellButton.png-64cde66a5de16bfe05ad080f8623ba4c.ctex"]
 
 [params]
 

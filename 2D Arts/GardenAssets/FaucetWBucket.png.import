@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dql2m0o33b2vw"
-path="res://.godot/imported/FaucetWBucket.png-139dfd8c2c3e79c7eb09d45d9306a718.ctex"
+path="res://.godot/imported/FaucetWBucket.png-d514e0c09eaad08094d403a770656355.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/GardenAssets/FaucetWBucket.png"
-dest_files=["res://.godot/imported/FaucetWBucket.png-139dfd8c2c3e79c7eb09d45d9306a718.ctex"]
+source_file="res://2D Arts/GardenAssets/FaucetWBucket.png"
+dest_files=["res://.godot/imported/FaucetWBucket.png-d514e0c09eaad08094d403a770656355.ctex"]
 
 [params]
 

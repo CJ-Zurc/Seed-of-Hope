@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vfesmpkjvlup"
-path="res://.godot/imported/seeds.png-b0cdffcf27bfb3fab6c7c7872f288a23.ctex"
+path="res://.godot/imported/seeds.png-afd2a6925346db68decb3d67e14e98a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/BuyAndSell/seeds.png"
-dest_files=["res://.godot/imported/seeds.png-b0cdffcf27bfb3fab6c7c7872f288a23.ctex"]
+source_file="res://2D Arts/BuyAndSell/seeds.png"
+dest_files=["res://.godot/imported/seeds.png-afd2a6925346db68decb3d67e14e98a3.ctex"]
 
 [params]
 
