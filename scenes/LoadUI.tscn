@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://xpemlunulsjb"]
 
-[ext_resource type="Texture2D" uid="uid://bwv4c845pm0pd" path="res://Assets/2D Arts/UI stuff/Title screen/greenBackgroundTitleScreen.png" id="1_eqs3g"]
-[ext_resource type="Texture2D" uid="uid://c2gexm1f5da6k" path="res://Assets/2D Arts/UI stuff/Title screen/backgrounGreenDarker_titleScreen.png" id="2_4vgew"]
-[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://Assets/2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_crao7"]
+[ext_resource type="Texture2D" uid="uid://bwv4c845pm0pd" path="res://2D Arts/UI stuff/Title screen/greenBackgroundTitleScreen.png" id="1_eqs3g"]
+[ext_resource type="Texture2D" uid="uid://c2gexm1f5da6k" path="res://2D Arts/UI stuff/Title screen/backgrounGreenDarker_titleScreen.png" id="2_4vgew"]
+[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_crao7"]
 
 [node name="LoadUI" type="Node2D"]
 

@@ -1,5 +1,5 @@
 using Godot;
-
+//Override Methods 
 public class SpriteAnimationHandler : AnimationHandler
 {
     public SpriteAnimationHandler(AnimatedSprite2D sprite) : base(sprite) { }
