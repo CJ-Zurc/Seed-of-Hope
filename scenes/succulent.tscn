@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://bcdhdcf5gj3wt"]
+
+[ext_resource type="PackedScene" uid="uid://dk5pe73t8j0tj" path="res://scenes/pot.tscn" id="1_ayfyj"]
+[ext_resource type="Texture2D" uid="uid://cm4sql6mrgbwe" path="res://Assets/2D Arts/Plant Assets/succulentPlant.png" id="2_hlb2k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msiyk"]
+atlas = ExtResource("2_hlb2k")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njfxk"]
+atlas = ExtResource("2_hlb2k")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcvyw"]
+atlas = ExtResource("2_hlb2k")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58qwe"]
+atlas = ExtResource("2_hlb2k")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtypk"]
+atlas = ExtResource("2_hlb2k")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3tvt8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msiyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njfxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcvyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58qwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtypk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="succulent" type="Node2D"]
+
+[node name="Pot" parent="." instance=ExtResource("1_ayfyj")]
+
+[node name="succulent" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -7)
+scale = Vector2(0.84375, 0.78125)
+sprite_frames = SubResource("SpriteFrames_3tvt8")
+autoplay = "default"
+frame_progress = 0.76015
+
+[node name="important pls read" type="RichTextLabel" parent="."]
+offset_left = -158.0
+offset_top = -124.0
+offset_right = 189.0
+offset_bottom = -32.0
+text = "ung brown sa succulent is nalanta dont mistake dat. If di needed ung pot u can just delete it then tell me na lang para i can adjust :D"
+fit_content = true
+scroll_active = false

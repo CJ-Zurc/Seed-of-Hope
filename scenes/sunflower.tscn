@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5ctp2l0f82h0"]
+
+[ext_resource type="Texture2D" uid="uid://bma3bwfot75hk" path="res://Assets/2D Arts/Plant Assets/SunflowerPlant.png" id="1_yxs2d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxxt0"]
+atlas = ExtResource("1_yxs2d")
+region = Rect2(0, 0, 22, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boem4"]
+atlas = ExtResource("1_yxs2d")
+region = Rect2(22, 0, 22, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofkug"]
+atlas = ExtResource("1_yxs2d")
+region = Rect2(44, 0, 22, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8whej"]
+atlas = ExtResource("1_yxs2d")
+region = Rect2(66, 0, 22, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrkhh"]
+atlas = ExtResource("1_yxs2d")
+region = Rect2(88, 0, 22, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn0uu"]
+atlas = ExtResource("1_yxs2d")
+region = Rect2(110, 0, 22, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ugp2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxxt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boem4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofkug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8whej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrkhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn0uu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxs2d"]
+size = Vector2(12, 26.5)
+
+[node name="sunflower" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ugp2e")
+autoplay = "default"
+frame_progress = 0.542212
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10.25)
+shape = SubResource("RectangleShape2D_yxs2d")
