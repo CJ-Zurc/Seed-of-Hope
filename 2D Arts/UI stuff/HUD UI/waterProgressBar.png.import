@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm3f758myakaj"
-path="res://.godot/imported/waterProgressBar.png-daac07b01567c0c414c911f6ce8c5074.ctex"
+path="res://.godot/imported/waterProgressBar.png-142412a086ee9fa50b4905836fd05875.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/UI stuff/HUD UI/waterProgressBar.png"
-dest_files=["res://.godot/imported/waterProgressBar.png-daac07b01567c0c414c911f6ce8c5074.ctex"]
+source_file="res://2D Arts/UI stuff/HUD UI/waterProgressBar.png"
+dest_files=["res://.godot/imported/waterProgressBar.png-142412a086ee9fa50b4905836fd05875.ctex"]
 
 [params]
 

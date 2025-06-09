@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3f8mhmvf8l0t"
-path="res://.godot/imported/PotAsset.png-c5cad0d477aafefd576403e22d268aac.ctex"
+path="res://.godot/imported/PotAsset.png-88723291e2e9ad90d97adc650a9dbdd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/Plant Assets/PotAsset.png"
-dest_files=["res://.godot/imported/PotAsset.png-c5cad0d477aafefd576403e22d268aac.ctex"]
+source_file="res://2D Arts/Plant Assets/PotAsset.png"
+dest_files=["res://.godot/imported/PotAsset.png-88723291e2e9ad90d97adc650a9dbdd7.ctex"]
 
 [params]
 

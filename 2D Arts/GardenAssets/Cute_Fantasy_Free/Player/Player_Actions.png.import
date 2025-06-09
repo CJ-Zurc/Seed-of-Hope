@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbt4gtphc63xm"
-path="res://.godot/imported/Player_Actions.png-f0d2eec0f1af77a68b3924aef8a0aef1.ctex"
+path="res://.godot/imported/Player_Actions.png-954588b1eb9996606b0ef988e1b11afd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/GardenAssets/Cute_Fantasy_Free/Player/Player_Actions.png"
-dest_files=["res://.godot/imported/Player_Actions.png-f0d2eec0f1af77a68b3924aef8a0aef1.ctex"]
+source_file="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Player/Player_Actions.png"
+dest_files=["res://.godot/imported/Player_Actions.png-954588b1eb9996606b0ef988e1b11afd.ctex"]
 
 [params]
 

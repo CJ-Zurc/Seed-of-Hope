@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn5dorpdblck3"
-path="res://.godot/imported/Path_Middle.png-c89d1fa71bb1ac68c5bb847657a19693.ctex"
+path="res://.godot/imported/Path_Middle.png-439041bf56d0cd27c2da231da8575f2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png"
-dest_files=["res://.godot/imported/Path_Middle.png-c89d1fa71bb1ac68c5bb847657a19693.ctex"]
+source_file="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png"
+dest_files=["res://.godot/imported/Path_Middle.png-439041bf56d0cd27c2da231da8575f2c.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bah6t15bc8i4y"
-path="res://.godot/imported/Viktor Kraus - Blueberries.mp3-aa8bcded4e647bc1aba468c8c9a41ffc.mp3str"
+path="res://.godot/imported/Viktor Kraus - Blueberries.mp3-0109a81bb1618e097f132e1793e62b20.mp3str"
 
 [deps]
 
-source_file="res://Assets/Music/NightBGM/Viktor Kraus - Blueberries.mp3"
-dest_files=["res://.godot/imported/Viktor Kraus - Blueberries.mp3-aa8bcded4e647bc1aba468c8c9a41ffc.mp3str"]
+source_file="res://Music/NightBGM/Viktor Kraus - Blueberries.mp3"
+dest_files=["res://.godot/imported/Viktor Kraus - Blueberries.mp3-0109a81bb1618e097f132e1793e62b20.mp3str"]
 
 [params]
 

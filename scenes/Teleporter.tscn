@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ggodvwqq6ecg"]
+
+[ext_resource type="Script" uid="uid://c2aay3arpfsge" path="res://Script/Teleporter/Teleporter.cs" id="1_edhff"]
+[ext_resource type="Texture2D" uid="uid://cxc764otrlfr0" path="res://2D Arts/BackgroundMainGame/BlueBackground.png" id="1_givoe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwjo6"]
+size = Vector2(13, 13)
+
+[node name="TeleportBlock" type="Area2D"]
+position = Vector2(243, 155)
+script = ExtResource("1_edhff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_iwjo6")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+texture = ExtResource("1_givoe")

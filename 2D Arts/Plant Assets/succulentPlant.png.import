@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm4sql6mrgbwe"
-path="res://.godot/imported/succulentPlant.png-2bf766232ab409b1c92ca13e1bb6ffde.ctex"
+path="res://.godot/imported/succulentPlant.png-7980ac8e4516520ac145b7a3ac578308.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Arts/Plant Assets/succulentPlant.png"
-dest_files=["res://.godot/imported/succulentPlant.png-2bf766232ab409b1c92ca13e1bb6ffde.ctex"]
+source_file="res://2D Arts/Plant Assets/succulentPlant.png"
+dest_files=["res://.godot/imported/succulentPlant.png-7980ac8e4516520ac145b7a3ac578308.ctex"]
 
 [params]
 
