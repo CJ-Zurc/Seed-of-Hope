@@ -17,7 +17,7 @@ public partial class Player : CharacterBody2D
 
     public override void _PhysicsProcess(double delta)
     {
-        int speed = 125;
+        int speed = 60;
         velocity = Vector2.Zero;
 
         // Movement input and direction tracking

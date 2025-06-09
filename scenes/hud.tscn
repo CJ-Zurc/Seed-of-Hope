@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://c7ovd1vg55yta"]
 
-[ext_resource type="Texture2D" uid="uid://bec5wdw4t5ro0" path="res://Assets/2D Arts/UI stuff/HUD UI/moneybackground.png" id="1_uo2fv"]
-[ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://Assets/2D Arts/UI stuff/fonts/slkscre.ttf" id="2_047uy"]
-[ext_resource type="Texture2D" uid="uid://bkmxjfl4t3p33" path="res://Assets/2D Arts/UI stuff/HUD UI/backgroundTime.png" id="3_5pdws"]
-[ext_resource type="Texture2D" uid="uid://cptacr07mw423" path="res://Assets/2D Arts/UI stuff/HUD UI/stamina bar outline.png" id="4_hd3ao"]
-[ext_resource type="Texture2D" uid="uid://b5tpdnuadh71n" path="res://Assets/2D Arts/UI stuff/HUD UI/stamina bar.png" id="5_0i1j5"]
-[ext_resource type="Texture2D" uid="uid://cknci5ct8k7nh" path="res://Assets/2D Arts/UI stuff/HUD UI/inventoryUI.png" id="6_047uy"]
+[ext_resource type="Texture2D" uid="uid://bec5wdw4t5ro0" path="res://2D Arts/UI stuff/HUD UI/moneybackground.png" id="1_uo2fv"]
+[ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="2_047uy"]
+[ext_resource type="Texture2D" uid="uid://bkmxjfl4t3p33" path="res://2D Arts/UI stuff/HUD UI/backgroundTime.png" id="3_5pdws"]
+[ext_resource type="Texture2D" uid="uid://cptacr07mw423" path="res://2D Arts/UI stuff/HUD UI/stamina bar outline.png" id="4_hd3ao"]
+[ext_resource type="Texture2D" uid="uid://b5tpdnuadh71n" path="res://2D Arts/UI stuff/HUD UI/stamina bar.png" id="5_0i1j5"]
+[ext_resource type="Texture2D" uid="uid://cknci5ct8k7nh" path="res://2D Arts/UI stuff/HUD UI/inventoryUI.png" id="6_047uy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5pdws"]
 texture = ExtResource("6_047uy")
@@ -58,14 +58,14 @@ texture = ExtResource("3_5pdws")
 
 [node name="yearWeek" type="Label" parent="Control/containerDateTime/backgroundColor"]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 7.0
-offset_right = 96.0
-offset_bottom = 18.0
+offset_left = 3.93442
+offset_top = 6.33189
+offset_right = 96.9344
+offset_bottom = 17.3319
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_047uy")
-theme_override_font_sizes/font_size = 9
-text = "Year 1, Week 4"
+theme_override_font_sizes/font_size = 8
+text = "Year 1, day 1"
 
 [node name="season" type="Label" parent="Control/containerDateTime/backgroundColor"]
 layout_mode = 0
@@ -87,9 +87,10 @@ offset_bottom = 68.0
 
 [node name="time" type="Label" parent="Control/containerDateTime/backgroundColor/timeContainer"]
 layout_mode = 0
-offset_left = 4.0
-offset_right = 78.0
-offset_bottom = 17.0
+offset_left = 5.95081
+offset_top = -0.0784788
+offset_right = 79.9508
+offset_bottom = 16.9215
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_047uy")
 text = "3:25PM"
