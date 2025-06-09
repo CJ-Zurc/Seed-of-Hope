@@ -74,28 +74,29 @@ position = Vector2(1388, 82)
 position = Vector2(-56, 155)
 
 [node name="TeleportBlock" parent="." instance=ExtResource("14_8xp80")]
+visible = false
 position = Vector2(8, 221)
 targetX = 13
 targetY = 562
 playerPath = NodePath("../player")
 
 [node name="TeleportBlock2" parent="." instance=ExtResource("14_8xp80")]
+visible = false
 position = Vector2(-66, 125)
 targetX = -37
 targetY = -441
 playerPath = NodePath("../player")
 
 [node name="TeleportBlock3" parent="." instance=ExtResource("14_8xp80")]
+visible = false
 position = Vector2(5, 524)
 targetX = 9
 targetY = 198
 playerPath = NodePath("../player")
 
 [node name="TeleportBlock4" parent="." instance=ExtResource("14_8xp80")]
+visible = false
 position = Vector2(-74, -440)
 targetX = -56
 targetY = 147
 playerPath = NodePath("../player")
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(-42, -443)
