@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Game Project", "New Game Project.csproj", "{E505CDCC-7102-49F0-92FD-7BA3C2F678DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Game Project", "New Game Project.csproj", "{B355B985-A226-4CCB-B274-0663FCBE3B6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E505CDCC-7102-49F0-92FD-7BA3C2F678DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E505CDCC-7102-49F0-92FD-7BA3C2F678DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E505CDCC-7102-49F0-92FD-7BA3C2F678DE}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{E505CDCC-7102-49F0-92FD-7BA3C2F678DE}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{E505CDCC-7102-49F0-92FD-7BA3C2F678DE}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{E505CDCC-7102-49F0-92FD-7BA3C2F678DE}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{B355B985-A226-4CCB-B274-0663FCBE3B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B355B985-A226-4CCB-B274-0663FCBE3B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B355B985-A226-4CCB-B274-0663FCBE3B6E}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{B355B985-A226-4CCB-B274-0663FCBE3B6E}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{B355B985-A226-4CCB-B274-0663FCBE3B6E}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{B355B985-A226-4CCB-B274-0663FCBE3B6E}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

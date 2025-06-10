@@ -210,8 +210,9 @@ texture = ExtResource("2_sc017")
 1:7/0 = 0
 1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -5.93534, -8, -5.93534, 8, -5.39576, 6.29506, 8, 6.29506, 8, 8, -8, 8)
 2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.29506, 8, 5.93534, 8, 8, -8, 8)
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 5.2159, 8, 5.39576, 8, 8, -8, 8)
 3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 5.2159, 8, 5.39576, 8, 8, -8, 8)
 4:7/0 = 0
 4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.07915, 6.47491, 5.93534, 6.29506, 5.57562, -8, 8, -8, 8, 8, -8, 8, -8, 6.29506)
 5:7/0 = 0
@@ -879,7 +880,7 @@ tile_map_data = PackedByteArray("AAABAPz/AAAQAAQAAADz//7/AwAAAAAAAAD4//3/AAAGAAg
 tile_set = SubResource("TileSet_2baer")
 
 [node name="furnitures" type="TileMapLayer" parent="FloorandWall"]
-tile_map_data = PackedByteArray("AAABAAAAAQAGAAwAAAD9////AQACAAwAAAACAAcAAQALAAcAABABAAcAAQAHAAIAAAAAAP7/AQAEAA8AAAACAP7/AQAEAA8AAADy/wAAAQAAAAoAAADz/wAAAgAAAAcAAADy/wcAAgACAAAAAADz/wcAAgAJAAAAABD1/wcAAQAKAAIAAADy/wMAAQAIAAMAAFAAAAcAAQAFAAIAAAA=")
+tile_map_data = PackedByteArray("AAABAAAAAQAGAAwAAAD9////AQACAAwAAAACAAcAAQALAAcAABABAAcAAQAHAAIAAAAAAP7/AQAEAA8AAAACAP7/AQAEAA8AAADy/wAAAQAAAAoAAADz/wAAAgAAAAcAAADy/wcAAgACAAAAAADz/wcAAgAJAAAAABD1/wcAAQAKAAIAAAAAAAcAAQAFAAIAAAA=")
 tile_set = SubResource("TileSet_5agdc")
 
 [node name="lamp" type="TileMapLayer" parent="FloorandWall/furnitures"]
