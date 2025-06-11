@@ -932,7 +932,6 @@ texture = ExtResource("11_5cgma")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(380, 341)
-energy = 1.91
 texture = SubResource("GradientTexture2D_exyd1")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
@@ -940,5 +939,5 @@ position = Vector2(571, 340)
 texture = SubResource("GradientTexture2D_exyd1")
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(428, 209)
+position = Vector2(428, 212)
 texture = SubResource("GradientTexture2D_exyd1")
