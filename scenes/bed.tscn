@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://duh4ouihpudo3"]
+[gd_scene load_steps=21 format=4 uid="uid://duh4ouihpudo3"]
 
 [ext_resource type="Texture2D" uid="uid://dpukuoq1cj5tt" path="res://2D Arts/Interiors/topDown/TopDownHouse_FloorsAndWalls.png" id="1_exsg2"]
 [ext_resource type="Texture2D" uid="uid://dg1j4s66vsoqx" path="res://2D Arts/Interiors/topDown/TopDownHouse_FurnitureState1.png" id="2_pqek7"]
@@ -1325,6 +1325,15 @@ texture = ExtResource("2_pqek7")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_pqek7")
 
+[sub_resource type="Gradient" id="Gradient_fbsx8"]
+offsets = PackedFloat32Array(0, 0.75974)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqek7"]
+gradient = SubResource("Gradient_fbsx8")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="bed" type="Node2D"]
 
 [node name="floorAndWall" type="TileMapLayer" parent="."]
@@ -1347,3 +1356,8 @@ tile_set = SubResource("TileSet_ulp3u")
 [node name="toLivingRoom" type="Sprite2D" parent="."]
 position = Vector2(-56, 40)
 texture = ExtResource("7_pqek7")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(50, 23)
+energy = 1.91
+texture = SubResource("GradientTexture2D_pqek7")

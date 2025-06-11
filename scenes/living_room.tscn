@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://ddp8rmvqjhold"]
+[gd_scene load_steps=26 format=4 uid="uid://ddp8rmvqjhold"]
 
 [ext_resource type="Texture2D" uid="uid://dpukuoq1cj5tt" path="res://2D Arts/Interiors/topDown/TopDownHouse_FloorsAndWalls.png" id="2_sc017"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="3_30exw"]
@@ -867,6 +867,15 @@ physics_layer_0/collision_layer = 1
 sources/6 = SubResource("TileSetAtlasSource_31tqe")
 sources/4 = SubResource("TileSetAtlasSource_l6qvg")
 
+[sub_resource type="Gradient" id="Gradient_fbsx8"]
+offsets = PackedFloat32Array(0, 0.75974)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_exyd1"]
+gradient = SubResource("Gradient_fbsx8")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="livingRoom" type="Node2D"]
 
 [node name="FloorandWall" type="TileMapLayer" parent="."]
@@ -885,7 +894,7 @@ tile_set = SubResource("TileSet_5agdc")
 
 [node name="lamp" type="TileMapLayer" parent="FloorandWall/furnitures"]
 z_index = 2
-tile_map_data = PackedByteArray("AAD3/wcAAAAGAAgAAAD3/wYAAAAGAAcAAAD3/wgAAAAGAAkAAAADAAgAAAAGAAkAAAADAAcAAAAGAAgAAAADAAYAAAAGAAcAAAA=")
+tile_map_data = PackedByteArray("AAD3/wcAAAAGAAgAAAD3/wYAAAAGAAcAAAD3/wgAAAAGAAkAAAADAAgAAAAGAAkAAAADAAcAAAAGAAgAAAADAAYAAAAGAAcAAAD6/wAAAAAGAAkAAAD6////AAAGAAgAAAD6//7/AAAGAAcAAAA=")
 tile_set = SubResource("TileSet_j7j0o")
 
 [node name="tv and computer" type="TileMapLayer" parent="FloorandWall"]
@@ -920,3 +929,16 @@ texture = ExtResource("10_uuwu5")
 [node name="bedIndicator" type="Sprite2D" parent="."]
 position = Vector2(362, 228)
 texture = ExtResource("11_5cgma")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(380, 341)
+energy = 1.91
+texture = SubResource("GradientTexture2D_exyd1")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(571, 340)
+texture = SubResource("GradientTexture2D_exyd1")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(428, 209)
+texture = SubResource("GradientTexture2D_exyd1")
