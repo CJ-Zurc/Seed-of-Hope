@@ -228,8 +228,12 @@ layer = 2
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -248.0
+offset_top = -120.0
+offset_right = -208.0
+offset_bottom = -80.0
+scale = Vector2(1.39294, 1.36859)
+size_flags_horizontal = 4
 
 [node name="wallpaper" type="TileMapLayer" parent="CanvasLayer/Control"]
 position = Vector2(556, 240)
