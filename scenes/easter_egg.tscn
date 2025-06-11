@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://3i3mbynkom3f"]
+[gd_scene load_steps=12 format=3 uid="uid://3i3mbynkom3f"]
 
 [ext_resource type="Texture2D" uid="uid://ds8ouxru2qlev" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="1_ldbig"]
 [ext_resource type="Texture2D" uid="uid://cvvqusjjrbbgd" path="res://2D Arts/EasterEgg/FirstNotes.png" id="2_3wiaw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmmlf274qc62h" path="res://2D Arts/EasterEgg/FourthNotes.png" id="5_f3v11"]
 [ext_resource type="Texture2D" uid="uid://cjt88215qnk5e" path="res://2D Arts/EasterEgg/FifthNotes.png" id="6_m7pwf"]
 [ext_resource type="Texture2D" uid="uid://drao2fovke2n4" path="res://2D Arts/EasterEgg/RestNotes.png" id="7_yw6rh"]
+[ext_resource type="AudioStream" uid="uid://c8c0piwci2lfq" path="res://Music/SoundEffects/Sway To My Beat In Cosmos chiptune.mp3" id="8_3wiaw"]
 
 [sub_resource type="Animation" id="Animation_pwf08"]
 resource_name = "new_animation"
@@ -227,3 +228,9 @@ texture = ExtResource("7_yw6rh")
 offset_right = 1151.0
 offset_bottom = 647.0
 color = Color(0.933333, 0.764706, 0.603922, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_3wiaw")
+autoplay = true
+playback_type = 1
+parameters/looping = true
