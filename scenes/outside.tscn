@@ -680,13 +680,13 @@ energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D5" type="PointLight2D" parent="."]
-position = Vector2(38, 93)
+position = Vector2(32, 93)
 color = Color(1, 1, 0.156863, 1)
 energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D6" type="PointLight2D" parent="."]
-position = Vector2(-19, 95)
+position = Vector2(-15, 92)
 color = Color(1, 1, 0.156863, 1)
 energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
