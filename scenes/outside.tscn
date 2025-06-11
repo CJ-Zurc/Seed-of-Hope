@@ -658,47 +658,39 @@ shape = SubResource("RectangleShape2D_tjkqt")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-13, -3)
 color = Color(1, 1, 0.156863, 1)
-energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
 position = Vector2(36, -3)
 color = Color(1, 1, 0.156863, 1)
-energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
 position = Vector2(-124, 47)
 color = Color(1, 1, 0.156863, 1)
-energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D4" type="PointLight2D" parent="."]
 position = Vector2(160, 46)
 color = Color(1, 1, 0.156863, 1)
-energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D5" type="PointLight2D" parent="."]
 position = Vector2(32, 93)
 color = Color(1, 1, 0.156863, 1)
-energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D6" type="PointLight2D" parent="."]
 position = Vector2(-15, 92)
 color = Color(1, 1, 0.156863, 1)
-energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D7" type="PointLight2D" parent="."]
 position = Vector2(-125, 124)
 color = Color(1, 1, 0.156863, 1)
-energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D8" type="PointLight2D" parent="."]
 position = Vector2(160, 125)
 color = Color(1, 1, 0.156863, 1)
-energy = 1.91
 texture = SubResource("GradientTexture2D_hbx8j")
