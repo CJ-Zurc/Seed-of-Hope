@@ -1340,7 +1340,7 @@ tile_map_data = PackedByteArray("AAD8/wAAAAAHAAIAAAD8/wEAAAAHAAIAAAD+/wMAAAAHAAI
 tile_set = SubResource("TileSet_eooau")
 
 [node name="lamp" type="TileMapLayer" parent="floorAndWall/furnitures"]
-z_index = 1
+z_index = 2
 tile_map_data = PackedByteArray("AAADAAMAAAAGAAkAAAADAAIAAAAGAAgAAAADAAEAAAAGAAcAAAA=")
 tile_set = SubResource("TileSet_ulp3u")
 
