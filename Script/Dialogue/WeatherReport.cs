@@ -19,8 +19,8 @@ public partial class WeatherReport : Control
 
     public override void _Ready()
     {
-        dialogueLabel = GetNode<RichTextLabel>("CanvasLayer/Control/weatherReport"); // Adjust path
-        nextButton = GetNode<Button>("CanvasLayer/Control/next Button"); // Adjust path
+        dialogueLabel = GetNode<RichTextLabel>("CanvasLayer/Control/weatherReport"); 
+        nextButton = GetNode<Button>("CanvasLayer/Control/next Button");
 
         nextButton.Pressed += OnNextPressed;
         UpdateDialogue();
@@ -35,8 +35,8 @@ public partial class WeatherReport : Control
         }
         else
         {
-            // All lines read; close or hide the scene
-            QueueFree(); // or emit signal, etc.
+          
+            QueueFree();
         }
     }
 
