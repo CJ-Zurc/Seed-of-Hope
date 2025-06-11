@@ -7,8 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://bah6t15bc8i4y" path="res://Music/NightBGM/Viktor Kraus - Blueberries.mp3" id="3_ikqpi"]
 [ext_resource type="PackedScene" uid="uid://duh4ouihpudo3" path="res://scenes/bed.tscn" id="4_sp04v"]
 [ext_resource type="PackedScene" uid="uid://bc76pux0agbdd" path="res://scenes/outside.tscn" id="5_ihbck"]
-[ext_resource type="PackedScene" uid="uid://bda8oap7etm3v" path="res://scenes/weather report.tscn" id="7_ikqpi"]
-[ext_resource type="PackedScene" uid="uid://cty8xedpqukuv" path="res://scenes/buy_and_sell.tscn" id="8_5luka"]
 [ext_resource type="PackedScene" uid="uid://c2vpsxf150g0n" path="res://scenes/plant_info.tscn" id="9_yu8cv"]
 [ext_resource type="PackedScene" uid="uid://r7865twymit3" path="res://scenes/title_screen.tscn" id="10_ibnub"]
 [ext_resource type="PackedScene" uid="uid://ddp8rmvqjhold" path="res://scenes/living_room.tscn" id="11_5cypo"]
@@ -17,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://bqrnebrk6e7u4" path="res://scenes/player.tscn" id="13_wjob3"]
 [ext_resource type="PackedScene" uid="uid://ggodvwqq6ecg" path="res://scenes/Teleporter.tscn" id="14_8xp80"]
 [ext_resource type="PackedScene" uid="uid://c7ovd1vg55yta" path="res://scenes/hud.tscn" id="15_sp04v"]
+[ext_resource type="Script" uid="uid://cd773r7gid7y2" path="res://Script/Dialogue/TvTrigger.cs" id="18_ikqpi"]
 [ext_resource type="Script" uid="uid://cbghd6slb04g1" path="res://Script/Dialogue/BedTrigger.cs" id="19_5luka"]
+[ext_resource type="Script" uid="uid://dk46oe0y31m1a" path="res://Script/Dialogue/ComputerTrigger.cs" id="19_yu8cv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6v7o"]
 texture = ExtResource("1_o6v7o")
@@ -32,6 +32,7 @@ sources/0 = SubResource("TileSetAtlasSource_o6v7o")
 sources/1 = SubResource("TileSetAtlasSource_wjob3")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikqpi"]
+size = Vector2(23, 23)
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_ihbck")
@@ -61,12 +62,6 @@ position = Vector2(-2, 500)
 [node name="bed" parent="." instance=ExtResource("4_sp04v")]
 position = Vector2(-1, -481)
 
-[node name="weather report" parent="." instance=ExtResource("7_ikqpi")]
-position = Vector2(911, -222)
-
-[node name="buyAndSell" parent="." instance=ExtResource("8_5luka")]
-position = Vector2(-1297, 383)
-
 [node name="Plant info" parent="." instance=ExtResource("9_yu8cv")]
 offset_left = 562.0
 offset_top = -237.0
@@ -83,44 +78,66 @@ position = Vector2(1388, 82)
 [node name="player" parent="." instance=ExtResource("13_wjob3")]
 position = Vector2(-55, 155)
 
-[node name="TeleportBlock" parent="." instance=ExtResource("14_8xp80")]
-visible = false
-position = Vector2(8, 221)
-targetX = 13
-targetY = 562
-playerPath = NodePath("../player")
-
-[node name="TeleportBlock2" parent="." instance=ExtResource("14_8xp80")]
-visible = false
-position = Vector2(-66, 125)
-targetX = -37
-targetY = -441
-playerPath = NodePath("../player")
-
-[node name="TeleportBlock3" parent="." instance=ExtResource("14_8xp80")]
-visible = false
-position = Vector2(5, 524)
-targetX = 9
-targetY = 198
-playerPath = NodePath("../player")
-
-[node name="TeleportBlock4" parent="." instance=ExtResource("14_8xp80")]
-visible = false
-position = Vector2(-74, -440)
-targetX = -56
-targetY = 147
-playerPath = NodePath("../player")
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.664684, 0.706669, 0.922063, 1)
 
 [node name="HUD" parent="." instance=ExtResource("15_sp04v")]
 layer = 1
 
-[node name="BedTrigger" type="Area2D" parent="."]
+[node name="Teleporting Blocks" type="Node2D" parent="."]
+
+[node name="TeleportBlock" parent="Teleporting Blocks" instance=ExtResource("14_8xp80")]
+visible = false
+position = Vector2(8, 221)
+targetX = 5
+targetY = 550
+playerPath = NodePath("../../player")
+
+[node name="TeleportBlock2" parent="Teleporting Blocks" instance=ExtResource("14_8xp80")]
+visible = false
+position = Vector2(-66, 125)
+targetX = -37
+targetY = -441
+playerPath = NodePath("../../player")
+
+[node name="TeleportBlock3" parent="Teleporting Blocks" instance=ExtResource("14_8xp80")]
+visible = false
+position = Vector2(5, 524)
+targetX = 9
+targetY = 198
+playerPath = NodePath("../../player")
+
+[node name="TeleportBlock4" parent="Teleporting Blocks" instance=ExtResource("14_8xp80")]
+visible = false
+position = Vector2(-74, -440)
+targetX = -56
+targetY = 147
+playerPath = NodePath("../../player")
+
+[node name="Dialogue Triggers" type="Node2D" parent="."]
+
+[node name="BedTrigger" type="Area2D" parent="Dialogue Triggers"]
 position = Vector2(39, -474)
 script = ExtResource("19_5luka")
-playerPath = NodePath("../player")
+playerPath = NodePath("../../player")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BedTrigger"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue Triggers/BedTrigger"]
+shape = SubResource("RectangleShape2D_ikqpi")
+
+[node name="ComputerTrigger" type="Area2D" parent="Dialogue Triggers"]
+position = Vector2(-103, 237)
+script = ExtResource("19_yu8cv")
+playerPath = NodePath("../../player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue Triggers/ComputerTrigger"]
+position = Vector2(8, -5)
+shape = SubResource("RectangleShape2D_ikqpi")
+
+[node name="TV Trigger" type="Area2D" parent="Dialogue Triggers"]
+position = Vector2(64, 242)
+script = ExtResource("18_ikqpi")
+playerPath = NodePath("../../player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue Triggers/TV Trigger"]
+position = Vector2(8, -5)
 shape = SubResource("RectangleShape2D_ikqpi")
