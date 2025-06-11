@@ -1,0 +1,229 @@
+[gd_scene load_steps=11 format=3 uid="uid://3i3mbynkom3f"]
+
+[ext_resource type="Texture2D" uid="uid://ds8ouxru2qlev" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="1_ldbig"]
+[ext_resource type="Texture2D" uid="uid://cvvqusjjrbbgd" path="res://2D Arts/EasterEgg/FirstNotes.png" id="2_3wiaw"]
+[ext_resource type="Texture2D" uid="uid://lhnd4r3wdoa6" path="res://2D Arts/EasterEgg/SecondNotes.png" id="3_bb88s"]
+[ext_resource type="Texture2D" uid="uid://bq4nhooeao4u" path="res://2D Arts/EasterEgg/ThirdNotes.png" id="4_2w2rx"]
+[ext_resource type="Texture2D" uid="uid://cmmlf274qc62h" path="res://2D Arts/EasterEgg/FourthNotes.png" id="5_f3v11"]
+[ext_resource type="Texture2D" uid="uid://cjt88215qnk5e" path="res://2D Arts/EasterEgg/FifthNotes.png" id="6_m7pwf"]
+[ext_resource type="Texture2D" uid="uid://drao2fovke2n4" path="res://2D Arts/EasterEgg/RestNotes.png" id="7_yw6rh"]
+
+[sub_resource type="Animation" id="Animation_pwf08"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/FirstNotes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.193732, 0.387463, 0.193732, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/SecondNotes:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.193732, -0.387463, -0.193732, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/ThirdNotes:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.193732, 0.387463, 0.193732, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/FourthNotes:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.191986, -0.387463, -0.193732, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/FifthNotes:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.193732, 0.387463, 0.193732, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/RestNotes:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.49968, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(365, 8), Vector2(365, 40), Vector2(365, 80), Vector2(365, 40.0255), Vector2(365, 40), Vector2(365, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0upao"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/FirstNotes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/SecondNotes:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/ThirdNotes:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/FourthNotes:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/FifthNotes:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/RestNotes:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(365, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pr453"]
+_data = {
+&"RESET": SubResource("Animation_0upao"),
+&"new_animation": SubResource("Animation_pwf08")
+}
+
+[node name="EasterEgg" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pr453")
+}
+autoplay = "new_animation"
+
+[node name="CharmonyDove" type="TextureRect" parent="AnimationPlayer"]
+offset_left = 425.0
+offset_top = 215.0
+offset_right = 739.0
+offset_bottom = 420.0
+texture = ExtResource("1_ldbig")
+
+[node name="FirstNotes" type="TextureRect" parent="AnimationPlayer"]
+offset_left = 37.0
+offset_top = 34.0
+offset_right = 167.0
+offset_bottom = 141.0
+texture = ExtResource("2_3wiaw")
+
+[node name="SecondNotes" type="TextureRect" parent="AnimationPlayer"]
+offset_left = 206.0
+offset_top = 58.0
+offset_right = 336.0
+offset_bottom = 165.0
+texture = ExtResource("3_bb88s")
+
+[node name="ThirdNotes" type="TextureRect" parent="AnimationPlayer"]
+offset_left = 528.0
+offset_top = 64.0
+offset_right = 658.0
+offset_bottom = 171.0
+texture = ExtResource("4_2w2rx")
+
+[node name="FourthNotes" type="TextureRect" parent="AnimationPlayer"]
+offset_left = 698.0
+offset_top = 30.0
+offset_right = 873.0
+offset_bottom = 157.0
+texture = ExtResource("5_f3v11")
+
+[node name="FifthNotes" type="TextureRect" parent="AnimationPlayer"]
+offset_left = 923.0
+offset_top = 58.0
+offset_right = 1098.0
+offset_bottom = 185.0
+texture = ExtResource("6_m7pwf")
+
+[node name="RestNotes" type="TextureRect" parent="AnimationPlayer"]
+offset_left = 365.0
+offset_top = 8.0
+offset_right = 495.0
+offset_bottom = 115.0
+texture = ExtResource("7_yw6rh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(0.933333, 0.764706, 0.603922, 1)
