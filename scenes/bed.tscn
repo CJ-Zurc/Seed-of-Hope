@@ -1359,5 +1359,4 @@ texture = ExtResource("7_pqek7")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(50, 23)
-energy = 1.91
 texture = SubResource("GradientTexture2D_pqek7")
