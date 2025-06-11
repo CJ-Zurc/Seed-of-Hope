@@ -11,6 +11,7 @@
 texture = ExtResource("6_047uy")
 
 [node name="HUD" type="CanvasLayer"]
+layer = 3
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

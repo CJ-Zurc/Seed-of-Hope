@@ -109,4 +109,23 @@ public partial class MainGame : Node2D
         else
             canvasModulate.Color = new Color("587792");
     }
+
+    public void SkipToNextDay()
+    {
+        time = 6f;
+        dayCount++;
+        if (dayCount > 30)
+        {
+            dayCount = 1;
+            year++;
+        }
+
+        hasPlayedMorningSound = false;
+        hasPlayedEveningSound = false;
+
+        UpdateYearLabel();
+        UpdateTimeLabel();
+        UpdateLighting();
+    }
+
 }

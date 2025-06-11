@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=4 uid="uid://dditttsq1xujj"]
+[gd_scene load_steps=23 format=4 uid="uid://dditttsq1xujj"]
 
 [ext_resource type="Script" uid="uid://c0oyghgu8w35f" path="res://Script/World/MainGame.cs" id="1_ihbck"]
 [ext_resource type="Texture2D" uid="uid://lbkmad5iq1co" path="res://2D Arts/BackgroundMainGame/BlackBackground.png" id="1_o6v7o"]
+[ext_resource type="AudioStream" uid="uid://c8c0piwci2lfq" path="res://Music/SoundEffects/Sway To My Beat In Cosmos chiptune.mp3" id="2_ikqpi"]
 [ext_resource type="Texture2D" uid="uid://cxc764otrlfr0" path="res://2D Arts/BackgroundMainGame/BlueBackground.png" id="2_wjob3"]
 [ext_resource type="AudioStream" uid="uid://bah6t15bc8i4y" path="res://Music/NightBGM/Viktor Kraus - Blueberries.mp3" id="3_ikqpi"]
 [ext_resource type="PackedScene" uid="uid://duh4ouihpudo3" path="res://scenes/bed.tscn" id="4_sp04v"]
@@ -12,12 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://r7865twymit3" path="res://scenes/title_screen.tscn" id="10_ibnub"]
 [ext_resource type="PackedScene" uid="uid://ddp8rmvqjhold" path="res://scenes/living_room.tscn" id="11_5cypo"]
 [ext_resource type="PackedScene" uid="uid://xpemlunulsjb" path="res://scenes/LoadUI.tscn" id="11_5wboo"]
-[ext_resource type="PackedScene" uid="uid://7mfevosxae3" path="res://scenes/spending_earning_summary.tscn" id="12_6de02"]
 [ext_resource type="PackedScene" uid="uid://ctpqlnacq2w7n" path="res://scenes/settings.tscn" id="12_o6v7o"]
 [ext_resource type="PackedScene" uid="uid://bqrnebrk6e7u4" path="res://scenes/player.tscn" id="13_wjob3"]
 [ext_resource type="PackedScene" uid="uid://ggodvwqq6ecg" path="res://scenes/Teleporter.tscn" id="14_8xp80"]
 [ext_resource type="PackedScene" uid="uid://c7ovd1vg55yta" path="res://scenes/hud.tscn" id="15_sp04v"]
-[ext_resource type="AudioStream" uid="uid://bhi6fxom72nhc" path="res://Music/DayBGM/a-day-in-my-life-dark-cat-main-version-32322-02-31.mp3" id="17_vnsdt"]
+[ext_resource type="Script" uid="uid://cbghd6slb04g1" path="res://Script/Dialogue/BedTrigger.cs" id="19_5luka"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6v7o"]
 texture = ExtResource("1_o6v7o")
@@ -31,10 +31,12 @@ texture = ExtResource("2_wjob3")
 sources/0 = SubResource("TileSetAtlasSource_o6v7o")
 sources/1 = SubResource("TileSetAtlasSource_wjob3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikqpi"]
+
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_ihbck")
 modulatePath = NodePath("CanvasModulate")
-wakeUpSound = ExtResource("17_vnsdt")
+wakeUpSound = ExtResource("2_ikqpi")
 eveningSound = ExtResource("3_ikqpi")
 
 [node name="settings" parent="." instance=ExtResource("12_o6v7o")]
@@ -59,9 +61,6 @@ position = Vector2(-2, 500)
 [node name="bed" parent="." instance=ExtResource("4_sp04v")]
 position = Vector2(-1, -481)
 
-[node name="spending_earningSummary" parent="bed" instance=ExtResource("12_6de02")]
-position = Vector2(-615, -1102)
-
 [node name="weather report" parent="." instance=ExtResource("7_ikqpi")]
 position = Vector2(911, -222)
 
@@ -69,10 +68,10 @@ position = Vector2(911, -222)
 position = Vector2(-1297, 383)
 
 [node name="Plant info" parent="." instance=ExtResource("9_yu8cv")]
-offset_left = 568.0
-offset_top = 406.0
-offset_right = 568.0
-offset_bottom = 406.0
+offset_left = 562.0
+offset_top = -237.0
+offset_right = 562.0
+offset_bottom = -237.0
 
 [node name="Title Screen" parent="." instance=ExtResource("10_ibnub")]
 position = Vector2(1878, 347)
@@ -116,3 +115,12 @@ playerPath = NodePath("../player")
 color = Color(0.664684, 0.706669, 0.922063, 1)
 
 [node name="HUD" parent="." instance=ExtResource("15_sp04v")]
+layer = 1
+
+[node name="BedTrigger" type="Area2D" parent="."]
+position = Vector2(39, -474)
+script = ExtResource("19_5luka")
+playerPath = NodePath("../player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedTrigger"]
+shape = SubResource("RectangleShape2D_ikqpi")
