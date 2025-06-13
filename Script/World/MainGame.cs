@@ -128,4 +128,18 @@ public partial class MainGame : Node2D
         UpdateLighting();
     }
 
+    public float GetSeasonWaterRetentionMultiplier()
+    {
+        // TODO: Implement actual season logic
+        return 1.0f;
+    }
+
+    public float GetSeasonGrowthMultiplier()
+    {
+        // TODO: Implement actual season logic
+        return 1.0f;
+    }
+
+    public int DayCount => dayCount;
+    public int Year => year;
 }
