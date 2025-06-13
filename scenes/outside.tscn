@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://bc76pux0agbdd"]
+[gd_scene load_steps=40 format=4 uid="uid://bc76pux0agbdd"]
 
 [ext_resource type="Texture2D" uid="uid://5mg1w4q54waj" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Beach_Tile.png" id="1_lt5my"]
 [ext_resource type="Texture2D" uid="uid://dlxc01j3p03s0" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Cliff_Tile.png" id="2_5tstl"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://du7gejaxb2xqx" path="res://2D Arts/Interiors/topDown/newTopdownFloor.png" id="10_v7x2m"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="11_cdqji"]
 [ext_resource type="Texture2D" uid="uid://dql2m0o33b2vw" path="res://2D Arts/GardenAssets/FaucetWBucket.png" id="12_x3una"]
+[ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpxjy"]
@@ -504,6 +505,71 @@ texture = ExtResource("12_x3una")
 sources/0 = SubResource("TileSetAtlasSource_ht1us")
 sources/1 = SubResource("TileSetAtlasSource_nxbbw")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xi43"]
+texture = ExtResource("13_nxbbw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xxkng"]
+sources/0 = SubResource("TileSetAtlasSource_2xi43")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxbbw"]
 atlas = ExtResource("12_x3una")
 region = Rect2(0, 0, 22, 19)
@@ -538,6 +604,15 @@ radius = 6.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjkqt"]
 size = Vector2(12, 16)
 
+[sub_resource type="Gradient" id="Gradient_wxvcn"]
+offsets = PackedFloat32Array(0, 0.675325)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hbx8j"]
+gradient = SubResource("Gradient_wxvcn")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="outside" type="Node2D"]
 
 [node name="floor garden" type="TileMapLayer" parent="."]
@@ -556,6 +631,10 @@ tile_set = SubResource("TileSet_nxbbw")
 [node name="door and window" type="TileMapLayer" parent="wallHouse"]
 tile_map_data = PackedByteArray("AAD6/wEAAAAGAAgAAAAGAAEAAAAGAAgAAAAAAP//AAAIAAAAAAA=")
 tile_set = SubResource("TileSet_lpxjy")
+
+[node name="Lamp" type="TileMapLayer" parent="wallHouse"]
+tile_map_data = PackedByteArray("AAD+/wEAAAAEAAYAAAACAAEAAAAEAAYAAAD3/wMAAAAEAAYAAAAKAAMAAAAEAAYAAAD3/wkAAAAEAAYAAAAKAAkAAAAEAAYAAAD+/wAAAAAEAAUAAAACAAAAAAAEAAUAAAAKAAIAAAAEAAUAAAD3/wIAAAAEAAUAAAD3/wgAAAAEAAUAAAAKAAgAAAAEAAUAAAD+////AAAEAAQAAAACAP//AAAEAAQAAAAKAAEAAAAEAAQAAAD3/wEAAAAEAAQAAAD3/wcAAAAEAAQAAAAKAAcAAAAEAAQAAAABAAgAAAAEAAYAAAD//wgAAAAEAAYAAAABAAcAAAAEAAUAAAD//wcAAAAEAAUAAAABAAYAAAAEAAQAAAD//wYAAAAEAAQAAAA=")
+tile_set = SubResource("TileSet_xxkng")
 
 [node name="arrowIndicator" type="Sprite2D" parent="."]
 position = Vector2(7, 26)
@@ -578,3 +657,43 @@ shape = SubResource("CircleShape2D_q0kmf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="faucet"]
 position = Vector2(-27, 55)
 shape = SubResource("RectangleShape2D_tjkqt")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-23, -1)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(-134, 32)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(42, -1)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="PointLight2D5" type="PointLight2D" parent="."]
+position = Vector2(-132, 128)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="PointLight2D6" type="PointLight2D" parent="."]
+position = Vector2(169, 127)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="PointLight2D7" type="PointLight2D" parent="."]
+position = Vector2(25, 111)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="PointLight2D8" type="PointLight2D" parent="."]
+position = Vector2(-7, 112)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(168, 32)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
