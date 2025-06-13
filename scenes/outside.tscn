@@ -547,6 +547,7 @@ texture = ExtResource("13_nxbbw")
 1:6/0 = 0
 2:6/0 = 0
 4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 6.29506, 6.29506, 3.55339, 12.3861, -2.33509, 12.6907, -6.1152, 5.57562)
 0:7/0 = 0
 1:7/0 = 0
 2:7/0 = 0
@@ -568,6 +569,8 @@ texture = ExtResource("13_nxbbw")
 3:11/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_xxkng"]
+physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2xi43")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxbbw"]
@@ -632,7 +635,8 @@ tile_set = SubResource("TileSet_nxbbw")
 tile_map_data = PackedByteArray("AAD6/wEAAAAGAAgAAAAGAAEAAAAGAAgAAAAAAP//AAAIAAAAAAA=")
 tile_set = SubResource("TileSet_lpxjy")
 
-[node name="Lamp" type="TileMapLayer" parent="wallHouse"]
+[node name="LampPhysics" type="TileMapLayer" parent="wallHouse"]
+z_index = 2
 tile_map_data = PackedByteArray("AAD+/wEAAAAEAAYAAAACAAEAAAAEAAYAAAD3/wMAAAAEAAYAAAAKAAMAAAAEAAYAAAD3/wkAAAAEAAYAAAAKAAkAAAAEAAYAAAD+/wAAAAAEAAUAAAACAAAAAAAEAAUAAAAKAAIAAAAEAAUAAAD3/wIAAAAEAAUAAAD3/wgAAAAEAAUAAAAKAAgAAAAEAAUAAAD+////AAAEAAQAAAACAP//AAAEAAQAAAAKAAEAAAAEAAQAAAD3/wEAAAAEAAQAAAD3/wcAAAAEAAQAAAAKAAcAAAAEAAQAAAABAAgAAAAEAAYAAAD//wgAAAAEAAYAAAABAAcAAAAEAAUAAAD//wcAAAAEAAUAAAABAAYAAAAEAAQAAAD//wYAAAAEAAQAAAA=")
 tile_set = SubResource("TileSet_xxkng")
 
