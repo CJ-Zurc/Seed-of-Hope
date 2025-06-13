@@ -45,7 +45,7 @@ offset_bottom = 188.0
 icon = ExtResource("4_dc4i4")
 flat = true
 
-[node name="Button" type="Button" parent="."]
+[node name="ExitGame" type="Button" parent="."]
 offset_left = 239.0
 offset_top = 116.0
 offset_right = 439.0
