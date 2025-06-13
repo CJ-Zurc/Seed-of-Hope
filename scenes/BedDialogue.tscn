@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://q2ayxq15yslw"]
+
+[ext_resource type="Texture2D" uid="uid://wj30q3pj7l3r" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="1_ggrl0"]
+[ext_resource type="Script" uid="uid://du75jf75ujk4g" path="res://Script/Dialogue/Bed.cs" id="1_umbcb"]
+[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="2_umbcb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -194.0
+offset_top = -122.0
+offset_right = -154.0
+offset_bottom = -82.0
+scale = Vector2(1.13477, 1.0556)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_umbcb")
+
+[node name="background" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 353.0
+offset_right = 892.0
+offset_bottom = 602.0
+texture = ExtResource("1_ggrl0")
+
+[node name="noButton" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 517.0
+offset_right = 863.0
+offset_bottom = 553.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_umbcb")
+theme_override_font_sizes/font_size = 28
+text = "No"
+alignment = 0
+
+[node name="yesButton" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 466.0
+offset_right = 861.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(0.995615, 0.995601, 0.995338, 1)
+theme_override_fonts/font = ExtResource("2_umbcb")
+theme_override_font_sizes/font_size = 28
+text = "Yes"
+alignment = 0
+
+[node name="questionSave" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 443.559
+offset_top = 392.075
+offset_right = 860.559
+offset_bottom = 420.075
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_umbcb")
+theme_override_font_sizes/font_size = 28
+text = "Do you want to sleep? (Saves the game)"

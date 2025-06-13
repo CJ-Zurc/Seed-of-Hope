@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5wxv45xtil2v"]
+
+[ext_resource type="Texture2D" uid="uid://b4m74gn8afvnn" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="2_tv08x"]
+[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_xdpwj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="background" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 380.0
+offset_right = 715.0
+offset_bottom = 508.0
+texture = ExtResource("2_tv08x")
+
+[node name="noButton" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 461.0
+offset_right = 700.0
+offset_bottom = 485.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_xdpwj")
+text = "No"
+alignment = 0
+
+[node name="yesButton" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 435.0
+offset_right = 700.0
+offset_bottom = 459.0
+theme_override_colors/font_color = Color(0.995615, 0.995601, 0.995338, 1)
+theme_override_fonts/font = ExtResource("3_xdpwj")
+text = "Yes"
+alignment = 0
+
+[node name="questionSave" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 398.0
+offset_right = 689.0
+offset_bottom = 414.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xdpwj")
+text = "Do you want to sleep? (Saves the game)"

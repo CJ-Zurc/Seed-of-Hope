@@ -1,5 +1,5 @@
 using Godot;
-
+// Abstract Class for Character Movement
 public abstract class AnimationHandler
 {
     protected AnimatedSprite2D anime {get; set;}
