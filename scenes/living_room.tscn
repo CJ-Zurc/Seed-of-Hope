@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://ddp8rmvqjhold"]
+[gd_scene load_steps=25 format=4 uid="uid://ddp8rmvqjhold"]
 
 [ext_resource type="Texture2D" uid="uid://dpukuoq1cj5tt" path="res://2D Arts/Interiors/topDown/TopDownHouse_FloorsAndWalls.png" id="2_sc017"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="3_30exw"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cy6hcj5aeuu58" path="res://2D Arts/Interiors/topDown/TopDownHouse_FurnitureState2.png" id="6_karft"]
 [ext_resource type="Texture2D" uid="uid://vqubqo6yu0hl" path="res://2D Arts/tv and computer/TVRight.png" id="7_7smae"]
 [ext_resource type="Texture2D" uid="uid://dw8pnydj8joy6" path="res://2D Arts/tv and computer/Computer.png" id="8_d4nal"]
-[ext_resource type="Texture2D" uid="uid://51ho4wc255oj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0111.png" id="9_3a64r"]
 [ext_resource type="Texture2D" uid="uid://dk8656vcdlasa" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0168.png" id="10_uuwu5"]
 [ext_resource type="Texture2D" uid="uid://dsdsxehmyoy16" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0169.png" id="11_5cgma"]
 
@@ -867,6 +866,15 @@ physics_layer_0/collision_layer = 1
 sources/6 = SubResource("TileSetAtlasSource_31tqe")
 sources/4 = SubResource("TileSetAtlasSource_l6qvg")
 
+[sub_resource type="Gradient" id="Gradient_cidui"]
+offsets = PackedFloat32Array(0, 0.772727)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fbsx8"]
+gradient = SubResource("Gradient_cidui")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="livingRoom" type="Node2D"]
 
 [node name="FloorandWall" type="TileMapLayer" parent="."]
@@ -885,33 +893,13 @@ tile_set = SubResource("TileSet_5agdc")
 
 [node name="lamp" type="TileMapLayer" parent="FloorandWall/furnitures"]
 z_index = 2
-tile_map_data = PackedByteArray("AAD3/wcAAAAGAAgAAAD3/wYAAAAGAAcAAAD3/wgAAAAGAAkAAAADAAgAAAAGAAkAAAADAAcAAAAGAAgAAAADAAYAAAAGAAcAAAA=")
+tile_map_data = PackedByteArray("AAD3/wcAAAAGAAgAAAD3/wYAAAAGAAcAAAD3/wgAAAAGAAkAAAADAAgAAAAGAAkAAAADAAcAAAAGAAgAAAADAAYAAAAGAAcAAAD6/wAAAAAGAAkAAAD6////AAAGAAgAAAD6//7/AAAGAAcAAAA=")
 tile_set = SubResource("TileSet_j7j0o")
 
 [node name="tv and computer" type="TileMapLayer" parent="FloorandWall"]
 z_index = 1
 tile_map_data = PackedByteArray("AADy/wcABgAAAAEAAADy/wYABgAAAAAAAAD9/wcABAAAAAAAAAA=")
 tile_set = SubResource("TileSet_458ru")
-
-[node name="tvButton" type="Button" parent="."]
-z_index = 1
-offset_left = 481.0
-offset_top = 343.0
-offset_right = 505.0
-offset_bottom = 367.0
-icon = ExtResource("9_3a64r")
-flat = true
-metadata/_edit_use_anchors_ = true
-
-[node name="computerButton" type="Button" parent="."]
-z_index = 1
-offset_left = 299.0
-offset_top = 330.0
-offset_right = 323.0
-offset_bottom = 354.0
-icon = ExtResource("9_3a64r")
-flat = true
-metadata/_edit_use_anchors_ = true
 
 [node name="outsideIndicator" type="Sprite2D" parent="."]
 position = Vector2(428, 324)
@@ -920,3 +908,15 @@ texture = ExtResource("10_uuwu5")
 [node name="bedIndicator" type="Sprite2D" parent="."]
 position = Vector2(362, 228)
 texture = ExtResource("11_5cgma")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(380, 341)
+texture = SubResource("GradientTexture2D_fbsx8")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(568, 339)
+texture = SubResource("GradientTexture2D_fbsx8")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(429, 212)
+texture = SubResource("GradientTexture2D_fbsx8")

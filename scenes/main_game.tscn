@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c0oyghgu8w35f" path="res://Script/World/MainGame.cs" id="1_ihbck"]
 [ext_resource type="Texture2D" uid="uid://lbkmad5iq1co" path="res://2D Arts/BackgroundMainGame/BlackBackground.png" id="1_o6v7o"]
-[ext_resource type="AudioStream" uid="uid://bhi6fxom72nhc" path="res://Music/DayBGM/a-day-in-my-life-dark-cat-main-version-32322-02-31.mp3" id="2_ikqpi"]
+[ext_resource type="AudioStream" uid="uid://b6jyn4jixg1fv" path="res://Music/DayBGM/a-day-in-my-life-dark-cat-main-version-Edited.mp3" id="2_ikqpi"]
 [ext_resource type="Texture2D" uid="uid://cxc764otrlfr0" path="res://2D Arts/BackgroundMainGame/BlueBackground.png" id="2_wjob3"]
-[ext_resource type="AudioStream" uid="uid://bah6t15bc8i4y" path="res://Music/NightBGM/Viktor Kraus - Blueberries.mp3" id="3_ikqpi"]
+[ext_resource type="AudioStream" uid="uid://b11udfgrwoksp" path="res://Music/NightBGM/Viktor Kraus - Blueberries-Edited.mp3" id="3_5luka"]
 [ext_resource type="PackedScene" uid="uid://duh4ouihpudo3" path="res://scenes/bed.tscn" id="4_sp04v"]
 [ext_resource type="PackedScene" uid="uid://bc76pux0agbdd" path="res://scenes/outside.tscn" id="5_ihbck"]
 [ext_resource type="PackedScene" uid="uid://c2vpsxf150g0n" path="res://scenes/plant_info.tscn" id="9_yu8cv"]
@@ -38,7 +38,7 @@ size = Vector2(23, 23)
 script = ExtResource("1_ihbck")
 modulatePath = NodePath("CanvasModulate")
 wakeUpSound = ExtResource("2_ikqpi")
-eveningSound = ExtResource("3_ikqpi")
+eveningSound = ExtResource("3_5luka")
 
 [node name="settings" parent="." instance=ExtResource("12_o6v7o")]
 anchors_preset = 9
