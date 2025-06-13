@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bc76pux0agbdd"]
+[gd_scene load_steps=41 format=4 uid="uid://bc76pux0agbdd"]
 
 [ext_resource type="Texture2D" uid="uid://5mg1w4q54waj" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Beach_Tile.png" id="1_lt5my"]
 [ext_resource type="Texture2D" uid="uid://dlxc01j3p03s0" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Cliff_Tile.png" id="2_5tstl"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dql2m0o33b2vw" path="res://2D Arts/GardenAssets/FaucetWBucket.png" id="12_x3una"]
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
+[ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpxjy"]
 texture = ExtResource("1_lt5my")
@@ -701,3 +702,12 @@ texture = SubResource("GradientTexture2D_hbx8j")
 position = Vector2(168, 32)
 color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="CharmonyDoveButton" type="Button" parent="."]
+offset_left = 172.0
+offset_top = 75.0
+offset_right = 494.0
+offset_bottom = 288.0
+scale = Vector2(0.0346734, 0.0349177)
+icon = ExtResource("15_ht1us")
+flat = true
