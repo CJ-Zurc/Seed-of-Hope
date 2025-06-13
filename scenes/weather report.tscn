@@ -273,8 +273,12 @@ layer = 2
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -491.0
+offset_top = -201.0
+offset_right = -451.0
+offset_bottom = -161.0
+scale = Vector2(1.9209, 1.65904)
+metadata/_edit_use_anchors_ = true
 
 [node name="wallpaper" type="TileMapLayer" parent="CanvasLayer/Control"]
 position = Vector2(556, 240)
@@ -295,6 +299,7 @@ tile_map_data = PackedByteArray("AAD3/wIAAAAAAAQAAAD4/wIAAAABAAQAAAD5/wIAAAACAAQ
 tile_set = SubResource("TileSet_scskp")
 
 [node name="weatherReport" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 289.0
 offset_top = 356.0
 offset_right = 551.0
@@ -305,8 +310,10 @@ theme_override_fonts/normal_font = ExtResource("5_p0ilv")
 text = "Welcome to your local news. I'm your host Bike Menriquez! I'm here to deliver a weather report."
 fit_content = true
 scroll_active = false
+metadata/_edit_use_anchors_ = true
 
 [node name="next Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 783.0
 offset_top = 420.0
 offset_right = 807.0
@@ -314,3 +321,4 @@ offset_bottom = 444.0
 scale = Vector2(2.06822, 2.40559)
 icon = ExtResource("5_scskp")
 flat = true
+metadata/_edit_use_anchors_ = true
