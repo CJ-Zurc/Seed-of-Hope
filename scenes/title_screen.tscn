@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://r7865twymit3"]
+[gd_scene load_steps=8 format=3 uid="uid://r7865twymit3"]
 
 [ext_resource type="Texture2D" uid="uid://b3awcj6ipx8y7" path="res://2D Arts/UI stuff/Title screen/title screen.png" id="1_sa3yf"]
 [ext_resource type="Texture2D" uid="uid://buid2snmwpocc" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_New.png" id="2_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://bx7jwh8boivfg" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_Load.png" id="3_mgrm8"]
 [ext_resource type="Texture2D" uid="uid://c65v1j57ujmmt" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_Options.png" id="4_dc4i4"]
+[ext_resource type="Texture2D" uid="uid://dewrw6bf1p840" path="res://2D Arts/UI stuff/Title screen/ExitButton.png" id="5_dc4i4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgkus"]
 texture = ExtResource("1_sa3yf")
@@ -21,25 +22,33 @@ tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 3, 0, 1, 0, 0, 0, 0, 0
 tile_set = SubResource("TileSet_dc4i4")
 
 [node name="New" type="Button" parent="."]
-offset_left = -350.0
-offset_top = 117.0
-offset_right = -150.0
-offset_bottom = 189.0
+offset_left = -477.0
+offset_top = 115.0
+offset_right = -277.0
+offset_bottom = 187.0
 icon = ExtResource("2_s4lrb")
 flat = true
 
 [node name="Load" type="Button" parent="."]
-offset_left = -108.0
-offset_top = 118.0
-offset_right = 92.0
-offset_bottom = 190.0
+offset_left = -235.0
+offset_top = 116.0
+offset_right = -35.0
+offset_bottom = 188.0
 icon = ExtResource("3_mgrm8")
 flat = true
 
 [node name="Options" type="Button" parent="."]
-offset_left = 134.0
-offset_top = 118.0
-offset_right = 334.0
-offset_bottom = 190.0
+offset_left = 7.0
+offset_top = 116.0
+offset_right = 207.0
+offset_bottom = 188.0
 icon = ExtResource("4_dc4i4")
+flat = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 239.0
+offset_top = 116.0
+offset_right = 439.0
+offset_bottom = 188.0
+icon = ExtResource("5_dc4i4")
 flat = true
