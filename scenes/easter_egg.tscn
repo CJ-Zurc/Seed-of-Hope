@@ -1,13 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://3i3mbynkom3f"]
+[gd_scene load_steps=12 format=3 uid="uid://dcr7cumc4g2bf"]
 
-[ext_resource type="Texture2D" uid="uid://ds8ouxru2qlev" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="1_ldbig"]
-[ext_resource type="Texture2D" uid="uid://cvvqusjjrbbgd" path="res://2D Arts/EasterEgg/FirstNotes.png" id="2_3wiaw"]
-[ext_resource type="Texture2D" uid="uid://lhnd4r3wdoa6" path="res://2D Arts/EasterEgg/SecondNotes.png" id="3_bb88s"]
-[ext_resource type="Texture2D" uid="uid://bq4nhooeao4u" path="res://2D Arts/EasterEgg/ThirdNotes.png" id="4_2w2rx"]
-[ext_resource type="Texture2D" uid="uid://cmmlf274qc62h" path="res://2D Arts/EasterEgg/FourthNotes.png" id="5_f3v11"]
-[ext_resource type="Texture2D" uid="uid://cjt88215qnk5e" path="res://2D Arts/EasterEgg/FifthNotes.png" id="6_m7pwf"]
-[ext_resource type="Texture2D" uid="uid://drao2fovke2n4" path="res://2D Arts/EasterEgg/RestNotes.png" id="7_yw6rh"]
-[ext_resource type="AudioStream" uid="uid://c8c0piwci2lfq" path="res://Music/SoundEffects/Sway To My Beat In Cosmos chiptune.mp3" id="8_3wiaw"]
+[ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="1_ldbig"]
+[ext_resource type="Texture2D" uid="uid://j8d35jn5g7wt" path="res://2D Arts/EasterEgg/FirstNotes.png" id="2_3wiaw"]
+[ext_resource type="Texture2D" uid="uid://bfc7xl4k7gey2" path="res://2D Arts/EasterEgg/SecondNotes.png" id="3_bb88s"]
+[ext_resource type="Texture2D" uid="uid://bjid7468fnhwg" path="res://2D Arts/EasterEgg/ThirdNotes.png" id="4_2w2rx"]
+[ext_resource type="Texture2D" uid="uid://byoqwlco1v0rk" path="res://2D Arts/EasterEgg/FourthNotes.png" id="5_f3v11"]
+[ext_resource type="Texture2D" uid="uid://bu1ui1pdo3jc3" path="res://2D Arts/EasterEgg/FifthNotes.png" id="6_m7pwf"]
+[ext_resource type="Texture2D" uid="uid://hhfycctujhbk" path="res://2D Arts/EasterEgg/RestNotes.png" id="7_yw6rh"]
+[ext_resource type="AudioStream" uid="uid://dxcka0c7vias8" path="res://Music/SoundEffects/Sway To My Beat In Cosmos chiptune.mp3" id="8_3wiaw"]
 
 [sub_resource type="Animation" id="Animation_0upao"]
 length = 0.001

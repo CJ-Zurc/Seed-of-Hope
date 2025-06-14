@@ -9,11 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://3gyr6iau2eel" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Water_Middle.png" id="7_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://cwwyksrw0uml7" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Water_Tile.png" id="8_ht1us"]
 [ext_resource type="Texture2D" uid="uid://c3st6bujm6amt" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Fences.png" id="9_5tstl"]
-[ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="10_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://du7gejaxb2xqx" path="res://2D Arts/Interiors/topDown/newTopdownFloor.png" id="10_v7x2m"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="11_cdqji"]
 [ext_resource type="Texture2D" uid="uid://dql2m0o33b2vw" path="res://2D Arts/GardenAssets/FaucetWBucket.png" id="12_x3una"]
+[ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
+[ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpxjy"]
 texture = ExtResource("1_lt5my")
@@ -147,138 +148,6 @@ texture = ExtResource("9_5tstl")
 [sub_resource type="TileSet" id="TileSet_v7x2m"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lt7nq")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xi43"]
-texture = ExtResource("10_nxbbw")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-6:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-4:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-4:6/0 = 0
-4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.15831, -8, 3.0576, -8, 5.93534, 2.33816, 4.85619, 11.511, -3.77703, 11.8707, -5.75548, 3.41731)
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_xxkng"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_2xi43")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxbbw"]
-texture = ExtResource("10_nxbbw")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-6:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-4:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-4:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_ht1us"]
-sources/0 = SubResource("TileSetAtlasSource_nxbbw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x3una"]
 texture = ExtResource("10_v7x2m")
@@ -628,8 +497,82 @@ texture = ExtResource("11_cdqji")
 7:1/0 = 0
 7:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxbbw"]
+texture = ExtResource("12_x3una")
+0:0/0 = 0
+1:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_lpxjy"]
 sources/0 = SubResource("TileSetAtlasSource_ht1us")
+sources/1 = SubResource("TileSetAtlasSource_nxbbw")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xi43"]
+texture = ExtResource("13_nxbbw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 6.29506, 6.29506, 3.55339, 12.3861, -2.33509, 12.6907, -6.1152, 5.57562)
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xxkng"]
+physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_2xi43")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxbbw"]
 atlas = ExtResource("12_x3una")
@@ -666,7 +609,7 @@ radius = 6.0
 size = Vector2(12, 16)
 
 [sub_resource type="Gradient" id="Gradient_wxvcn"]
-offsets = PackedFloat32Array(0, 0.727273)
+offsets = PackedFloat32Array(0, 0.675325)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_hbx8j"]
@@ -685,16 +628,6 @@ tile_set = SubResource("TileSet_2xi43")
 tile_map_data = PackedByteArray("AAAKAAgAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAP//AAADAAAAAAAKAAIAAAAAAAAAAAAKAAAAAAAAAAAAAAAKAAkAAAADAAAAAAAJAAkAAAACAAAAAAAIAAkAAAACAAAAAAAHAAkAAAACAAAAAAAGAAkAAAACAAAAAAAFAAkAAAACAAAAAAAEAAkAAAACAAAAAAADAAkAAAACAAAAAAACAAkAAAACAAAAAAABAAkAAAACAAAAAAAAAAkAAAACAAAAAAD//wkAAAACAAAAAAD+/wkAAAACAAAAAAD9/wkAAAACAAAAAAD8/wkAAAACAAAAAAD7/wkAAAACAAAAAAD6/wkAAAACAAAAAAD5/wkAAAACAAAAAAD4/wkAAAACAAAAAAD4////AAACAAAAAAAJAP//AAACAAAAAAD2/wcAAAAAAAAAAAD2/wUAAAAAAAAAAAD2/wMAAAAAAAAAAAD2/wEAAAAAAAAAAAD2/wAAAAAAAAAAAAD2////AAABAAAAAAD3////AAACAAAAAAD2/wgAAAAAAAAAAAD2/wkAAAABAAAAAAD3/wkAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_v7x2m")
 
-[node name="lamp post (physics)" type="TileMapLayer" parent="floor garden"]
-z_index = 1
-tile_map_data = PackedByteArray("AAABAP//AAAEAAYAAAD+////AAAEAAYAAAAJAAIAAAAEAAYAAAD3/wIAAAAEAAYAAAAJAAcAAAAEAAYAAAD3/wcAAAAEAAYAAAABAAUAAAAEAAYAAAD+/wUAAAAEAAYAAAA=")
-tile_set = SubResource("TileSet_xxkng")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="floor garden/lamp post (physics)"]
-z_index = 2
-tile_map_data = PackedByteArray("AAD+////AAAEAAYAAAABAP//AAAEAAYAAAABAAUAAAAEAAYAAAD+/wUAAAAEAAYAAAD3/wIAAAAEAAYAAAD3/wcAAAAEAAYAAAAJAAIAAAAEAAYAAAAJAAcAAAAEAAYAAAD+//7/AAAEAAUAAAABAP7/AAAEAAUAAAABAAQAAAAEAAUAAAD+/wQAAAAEAAUAAAD3/wEAAAAEAAUAAAD3/wYAAAAEAAUAAAAJAAYAAAAEAAUAAAAJAAEAAAAEAAUAAAAJAAAAAAAEAAQAAAAJAAUAAAAEAAQAAAABAAMAAAAEAAQAAAD+/wMAAAAEAAQAAAABAP3/AAAEAAQAAAD+//3/AAAEAAQAAAD3/wAAAAAEAAQAAAD3/wUAAAAEAAQAAAA=")
-tile_set = SubResource("TileSet_ht1us")
-
 [node name="wallHouse" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD9//3/AAAKAAEAAAD9//7/AAAMAAIAAAD9////AAAMAAIAAAD9/wAAAAAMAAEAAAD+//3/AAAKAAEAAAD+//7/AAAKAAIAAAD+////AAAKAAMAAAD+/wAAAAAKAAQAAAD///3/AAAKAAEAAAD///7/AAAKAAIAAAD/////AAAKAAMAAAD//wAAAAAKAAQAAAAAAP3/AAAKAAEAAAAAAP7/AAAKAAIAAAAAAP//AAAKAAMAAAAAAAAAAAAKAAQAAAABAP3/AAAKAAEAAAABAP7/AAAKAAIAAAABAP//AAAKAAMAAAABAAAAAAAKAAQAAAACAP3/AAAKAAEAAAACAP7/AAAKAAIAAAACAP//AAAKAAMAAAACAAAAAAAKAAQAAAADAP3/AAAKAAEAAAADAP7/AAAJAAIAAAADAP//AAAJAAIAAAD6//3/AAALAAEAAAD6//7/AAALAAIAAAD6////AAALAAMAAAD6/wAAAAALAAEAAAD7//3/AAAKAAEAAAD7//7/AAAKAAIAAAD7////AAAKAAIAAAD7/wAAAAALAAEAAAD8//3/AAALAAEAAAD8//7/AAAKAAIAAAD8////AAAKAAMAAAD8/wAAAAALAAEAAAAEAP3/AAAKAAEAAAAEAP7/AAAKAAIAAAAEAP//AAAKAAMAAAAFAP3/AAAKAAEAAAAFAP7/AAAKAAIAAAAFAP//AAAKAAMAAAAGAP3/AAAKAAEAAAAGAP7/AAAKAAIAAAAGAP//AAAKAAMAAAD4//3/AAAJAAEAAAD4//7/AAAJAAMAAAD4////AAAJAAMAAAD4/wAAAAAJAAEAAAD5//3/AAAKAAEAAAD5//7/AAAKAAIAAAD5////AAAKAAMAAAD5/wAAAAALAAEAAAAHAP3/AAAKAAEAAAAHAP7/AAAKAAIAAAAHAP//AAAKAAMAAAAHAAAAAAAKAAEAAAAIAP3/AAALAAEAAAAIAP7/AAALAAIAAAAIAP//AAALAAMAAAAIAAAAAAAKAAEAAAAJAP3/AAAMAAEAAAAJAP7/AAAMAAMAAAAJAP//AAAMAAMAAAD6/wEAAAALAAIAAAD6/wIAAAALAAIAAAD6/wMAAAAKAAQAAAD7/wEAAAALAAIAAAD7/wIAAAALAAIAAAD7/wMAAAAKAAQAAAD8/wEAAAALAAIAAAD8/wIAAAALAAIAAAD8/wMAAAALAAQAAAD9/wEAAAAMAAIAAAD9/wIAAAAMAAMAAAD9/wMAAAAMAAQAAAD4/wEAAAAJAAMAAAD4/wIAAAAJAAMAAAD5/wEAAAALAAIAAAD5/wIAAAALAAIAAAD5/wMAAAAKAAQAAAADAAEAAAAJAAIAAAADAAIAAAAJAAMAAAADAAMAAAAJAAQAAAAEAAEAAAAKAAIAAAAEAAIAAAAKAAMAAAAEAAMAAAAKAAQAAAAFAAEAAAALAAIAAAAFAAIAAAALAAIAAAAFAAMAAAALAAQAAAAGAAEAAAALAAIAAAAGAAIAAAALAAIAAAAGAAMAAAALAAQAAAAHAAEAAAALAAIAAAAHAAIAAAALAAIAAAAHAAMAAAALAAQAAAAIAAEAAAAKAAIAAAAIAAIAAAAKAAMAAAAIAAMAAAAKAAQAAAAJAAMAAAAMAAQAAAADAAAAAAAJAAEAAAAEAAAAAAAKAAEAAAAFAAAAAAAKAAEAAAAGAAAAAAAKAAEAAAAJAAIAAAAMAAMAAAAJAAEAAAAMAAMAAAAJAAAAAAAMAAEAAAD4/wMAAAAJAAQAAAA=")
 tile_set = SubResource("TileSet_nxbbw")
@@ -702,6 +635,11 @@ tile_set = SubResource("TileSet_nxbbw")
 [node name="door and window" type="TileMapLayer" parent="wallHouse"]
 tile_map_data = PackedByteArray("AAD6/wEAAAAGAAgAAAAGAAEAAAAGAAgAAAAAAP//AAAIAAAAAAA=")
 tile_set = SubResource("TileSet_lpxjy")
+
+[node name="LampPhysics" type="TileMapLayer" parent="wallHouse"]
+z_index = 2
+tile_map_data = PackedByteArray("AAD+/wEAAAAEAAYAAAACAAEAAAAEAAYAAAD3/wMAAAAEAAYAAAAKAAMAAAAEAAYAAAD3/wkAAAAEAAYAAAAKAAkAAAAEAAYAAAD+/wAAAAAEAAUAAAACAAAAAAAEAAUAAAAKAAIAAAAEAAUAAAD3/wIAAAAEAAUAAAD3/wgAAAAEAAUAAAAKAAgAAAAEAAUAAAD+////AAAEAAQAAAACAP//AAAEAAQAAAAKAAEAAAAEAAQAAAD3/wEAAAAEAAQAAAD3/wcAAAAEAAQAAAAKAAcAAAAEAAQAAAABAAgAAAAEAAYAAAD//wgAAAAEAAYAAAABAAcAAAAEAAUAAAD//wcAAAAEAAUAAAABAAYAAAAEAAQAAAD//wYAAAAEAAQAAAA=")
+tile_set = SubResource("TileSet_xxkng")
 
 [node name="arrowIndicator" type="Sprite2D" parent="."]
 position = Vector2(7, 26)
@@ -726,41 +664,50 @@ position = Vector2(-27, 55)
 shape = SubResource("RectangleShape2D_tjkqt")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-13, -3)
-color = Color(1, 1, 0.156863, 1)
-texture = SubResource("GradientTexture2D_hbx8j")
-
-[node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(36, -3)
-color = Color(1, 1, 0.156863, 1)
+position = Vector2(-23, -1)
+color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(-124, 47)
-color = Color(1, 1, 0.156863, 1)
+position = Vector2(-134, 32)
+color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
 
-[node name="PointLight2D4" type="PointLight2D" parent="."]
-position = Vector2(160, 46)
-color = Color(1, 1, 0.156863, 1)
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(42, -1)
+color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D5" type="PointLight2D" parent="."]
-position = Vector2(32, 93)
-color = Color(1, 1, 0.156863, 1)
+position = Vector2(-132, 128)
+color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D6" type="PointLight2D" parent="."]
-position = Vector2(-15, 92)
-color = Color(1, 1, 0.156863, 1)
+position = Vector2(169, 127)
+color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D7" type="PointLight2D" parent="."]
-position = Vector2(-125, 124)
-color = Color(1, 1, 0.156863, 1)
+position = Vector2(25, 111)
+color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="PointLight2D8" type="PointLight2D" parent="."]
-position = Vector2(160, 125)
-color = Color(1, 1, 0.156863, 1)
+position = Vector2(-7, 112)
+color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(168, 32)
+color = Color(1, 0.913725, 0.145098, 1)
+texture = SubResource("GradientTexture2D_hbx8j")
+
+[node name="CharmonyDoveButton" type="Button" parent="."]
+offset_left = 172.0
+offset_top = 75.0
+offset_right = 494.0
+offset_bottom = 288.0
+scale = Vector2(0.0346734, 0.0349177)
+icon = ExtResource("15_ht1us")
+flat = true
