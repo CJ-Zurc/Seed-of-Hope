@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class MainGame : Node2D
 {
@@ -22,6 +23,7 @@ public partial class MainGame : Node2D
 
     private bool hasPlayedMorningSound = false;
     private bool hasPlayedEveningSound = false;
+    private List<FarmLandTile> farmTiles = new List<FarmLandTile>();
 
     public override void _Ready()
     {
@@ -31,6 +33,22 @@ public partial class MainGame : Node2D
 
         audioPlayer = new AudioStreamPlayer();
         AddChild(audioPlayer); // Add dynamically
+
+        // Find all farm tiles in the scene
+        FindFarmTiles();
+    }
+
+    private void FindFarmTiles()
+    {
+        // Find all FarmLandTile nodes in the scene
+        var farmTileNodes = GetTree().GetNodesInGroup("FarmTiles");
+        foreach (var node in farmTileNodes)
+        {
+            if (node is FarmLandTile farmTile)
+            {
+                farmTiles.Add(farmTile);
+            }
+        }
     }
 
     public override void _Process(double delta)
@@ -50,12 +68,28 @@ public partial class MainGame : Node2D
             // Reset audio triggers for the new day
             hasPlayedMorningSound = false;
             hasPlayedEveningSound = false;
+
+            // Advance all plants to next day
+            foreach (var farmTile in farmTiles)
+            {
+                farmTile.AdvanceDay();
+            }
+        }
+
+        // Update plant water levels
+        foreach (var farmTile in farmTiles)
+        {
+            farmTile.UpdatePlant(time);
         }
 
         PlayScheduledAudio();
-
         UpdateTimeLabel();
         UpdateLighting();
+    }
+
+    public float GetCurrentTime()
+    {
+        return time;
     }
 
     private void PlayScheduledAudio()
