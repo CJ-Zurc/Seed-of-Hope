@@ -7,23 +7,23 @@ public partial class DialogueBox : Control
     [Export] public NodePath optionsContainerPath;
     [Export] public PackedScene optionButtonScene;
 
-    private Label questionLabel;
-    private VBoxContainer optionsContainer;
-    private Action<int> onOptionSelected;
+    private Label _questionLabel;
+    private VBoxContainer _optionsContainer;
+    private Action<int> _onOptionSelected;
 
     public override void _Ready()
     {
-        questionLabel = GetNode<Label>(questionLabelPath);
-        optionsContainer = GetNode<VBoxContainer>(optionsContainerPath);
+        _questionLabel = GetNode<Label>(questionLabelPath);
+        _optionsContainer = GetNode<VBoxContainer>(optionsContainerPath);
     }
 
     public void ShowDialogue(string question, string[] options, Action<int> callback)
     {
-        onOptionSelected = callback;
-        questionLabel.Text = question;
+        _onOptionSelected = callback;
+        _questionLabel.Text = question;
         
         // Clear existing options
-        foreach (Node child in optionsContainer.GetChildren())
+        foreach (Node child in _optionsContainer.GetChildren())
         {
             child.QueueFree();
         }
@@ -35,7 +35,7 @@ public partial class DialogueBox : Control
             Button optionButton = optionButtonScene.Instantiate<Button>();
             optionButton.Text = options[i];
             optionButton.Pressed += () => OnOptionButtonPressed(optionIndex);
-            optionsContainer.AddChild(optionButton);
+            _optionsContainer.AddChild(optionButton);
         }
 
         Show();
@@ -43,7 +43,7 @@ public partial class DialogueBox : Control
 
     private void OnOptionButtonPressed(int optionIndex)
     {
-        onOptionSelected?.Invoke(optionIndex);
+        _onOptionSelected?.Invoke(optionIndex);
         QueueFree();
     }
 } 
