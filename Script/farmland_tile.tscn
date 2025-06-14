@@ -1,0 +1,29 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8q6y4n2j8x3v"]
+
+[ext_resource type="Script" path="res://Script/World/FarmLandTile.cs" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://k8r2w4ciyv6t" path="res://scenes/ampalaya.tscn" id="2_ampalaya"]
+[ext_resource type="PackedScene" uid="uid://bvhsl2lgo60oo" path="res://scenes/calamansi.tscn" id="3_calamansi"]
+[ext_resource type="PackedScene" uid="uid://e08un1cay5cp" path="res://scenes/pechay.tscn" id="4_pechay"]
+[ext_resource type="PackedScene" uid="uid://bcdhdcf5gj3wt" path="res://scenes/succulent.tscn" id="5_succulent"]
+[ext_resource type="PackedScene" uid="uid://b5ctp2l0f82h0" path="res://scenes/sunflower.tscn" id="6_sunflower"]
+[ext_resource type="PackedScene" uid="uid://c2vpsxf150g0n" path="res://scenes/plant_info.tscn" id="7_plant_info"]
+[ext_resource type="PackedScene" uid="uid://c2vpsxf150g0n" path="res://scenes/dialogue_box.tscn" id="8_dialogue"]
+
+[node name="FarmLandTile" type="Area2D"]
+script = ExtResource("1_script")
+dialogueBoxPath = NodePath("DialogueBox")
+ampalayaScene = ExtResource("2_ampalaya")
+calamansiScene = ExtResource("3_calamansi")
+pechayScene = ExtResource("4_pechay")
+succulentScene = ExtResource("5_succulent")
+sunflowerScene = ExtResource("6_sunflower")
+plantInfoScene = ExtResource("7_plant_info")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="DialogueBox" parent="." instance=ExtResource("8_dialogue")]
+visible = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(32, 32) 
