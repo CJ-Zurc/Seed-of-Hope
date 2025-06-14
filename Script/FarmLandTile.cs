@@ -17,6 +17,7 @@ public partial class FarmLandTile : Area2D
     private string currentPlant = "";
     private PlantBase currentPlantInstance;
     private Control plantInfoInstance;
+    private bool isAwaitingInteraction = false;
 
     // Plant options
     private readonly string[] availablePlants = new string[] {
@@ -37,20 +38,22 @@ public partial class FarmLandTile : Area2D
         // Connect signals
         BodyEntered += OnBodyEntered;
         BodyExited += OnBodyExited;
+        InputEvent += OnInputEvent;
     }
 
     public override void _Input(InputEvent @event)
     {
-        if (@event.IsActionPressed("interact") && isPlayerInRange)
+        if (isPlayerInRange && @event.IsActionPressed("interact"))
         {
-            if (!isPlanted)
-            {
-                ShowPlantingOptions();
-            }
-            else
-            {
-                ShowPlantInteractionOptions();
-            }
+            ShowInteractionDialogue();
+        }
+    }
+
+    private void OnInputEvent(Node viewport, InputEvent @event, int shapeIdx)
+    {
+        if (isPlayerInRange && @event is InputEventMouseButton mouseEvent && mouseEvent.Pressed && mouseEvent.ButtonIndex == MouseButton.Left)
+        {
+            ShowInteractionDialogue();
         }
     }
 
@@ -203,5 +206,17 @@ public partial class FarmLandTile : Area2D
     public bool NeedsWater()
     {
         return currentPlantInstance?.NeedsWater() ?? false;
+    }
+
+    private void ShowInteractionDialogue()
+    {
+        if (!isPlanted)
+        {
+            ShowPlantingOptions();
+        }
+        else
+        {
+            ShowPlantInteractionOptions();
+        }
     }
 } 
