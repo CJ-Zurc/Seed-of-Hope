@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dcr7cumc4g2bf"]
+[gd_scene load_steps=32 format=3 uid="uid://dcr7cumc4g2bf"]
 
 [ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="1_ldbig"]
 [ext_resource type="Texture2D" uid="uid://j8d35jn5g7wt" path="res://2D Arts/EasterEgg/FirstNotes.png" id="2_3wiaw"]
+[ext_resource type="Texture2D" uid="uid://bihwrlcaf0s7w" path="res://2D Arts/EasterEgg/easterEggAssets.png" id="2_bb88s"]
+[ext_resource type="Texture2D" uid="uid://deex0ppy0npj4" path="res://2D Arts/EasterEgg/balloons and confetti.png" id="3_2w2rx"]
 [ext_resource type="Texture2D" uid="uid://bfc7xl4k7gey2" path="res://2D Arts/EasterEgg/SecondNotes.png" id="3_bb88s"]
 [ext_resource type="Texture2D" uid="uid://bjid7468fnhwg" path="res://2D Arts/EasterEgg/ThirdNotes.png" id="4_2w2rx"]
 [ext_resource type="Texture2D" uid="uid://byoqwlco1v0rk" path="res://2D Arts/EasterEgg/FourthNotes.png" id="5_f3v11"]
@@ -10,7 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://dxcka0c7vias8" path="res://Music/SoundEffects/Sway To My Beat In Cosmos chiptune.mp3" id="8_3wiaw"]
 
 [sub_resource type="Animation" id="Animation_0upao"]
-length = 0.001
+length = 2.0
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -18,10 +21,10 @@ tracks/0/path = NodePath("AnimationPlayer/FirstNotes:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, 0.193732, 0.387463, 0.193732, 0.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -30,10 +33,10 @@ tracks/1/path = NodePath("AnimationPlayer/SecondNotes:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, -0.193732, -0.387463, -0.193732, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -42,10 +45,10 @@ tracks/2/path = NodePath("AnimationPlayer/ThirdNotes:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, 0.193732, 0.387463, 0.193732, 0.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -54,10 +57,10 @@ tracks/3/path = NodePath("AnimationPlayer/FourthNotes:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, -0.193732, -0.387463, -0.193732, 0.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -66,10 +69,10 @@ tracks/4/path = NodePath("AnimationPlayer/FifthNotes:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, 0.193732, 0.387463, 0.193732, 0.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -78,10 +81,10 @@ tracks/5/path = NodePath("AnimationPlayer/RestNotes:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(365, 8)]
+"values": [Vector2(356, 112), Vector2(356, 32)]
 }
 
 [sub_resource type="Animation" id="Animation_pwf08"]
@@ -167,6 +170,141 @@ _data = {
 &"new_animation": SubResource("Animation_pwf08")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w2rx"]
+atlas = ExtResource("2_bb88s")
+region = Rect2(0, 0, 166, 318)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3wiaw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w2rx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3v11"]
+atlas = ExtResource("2_bb88s")
+region = Rect2(166, 0, 166, 318)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m7pwf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3v11")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yw6rh"]
+atlas = ExtResource("2_bb88s")
+region = Rect2(332, 0, 166, 318)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwf08"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yw6rh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0upao"]
+atlas = ExtResource("2_bb88s")
+region = Rect2(498, 0, 166, 318)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pr453"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0upao")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tpsn"]
+atlas = ExtResource("2_bb88s")
+region = Rect2(664, 0, 166, 318)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcntx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tpsn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsceo"]
+atlas = ExtResource("2_bb88s")
+region = Rect2(830, 0, 166, 318)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_de6o6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsceo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7pwf"]
+atlas = ExtResource("3_2w2rx")
+region = Rect2(0, 0, 400, 455)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yw6rh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7pwf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwf08"]
+atlas = ExtResource("3_2w2rx")
+region = Rect2(400, 0, 400, 455)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0upao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwf08")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr453"]
+atlas = ExtResource("3_2w2rx")
+region = Rect2(800, 0, 400, 455)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tpsn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr453")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="EasterEgg" type="Node2D"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -176,52 +314,156 @@ libraries = {
 autoplay = "new_animation"
 
 [node name="CharmonyDove" type="TextureRect" parent="AnimationPlayer"]
-offset_left = 425.0
-offset_top = 215.0
-offset_right = 739.0
-offset_bottom = 420.0
+offset_left = 445.0
+offset_top = 148.0
+offset_right = 759.0
+offset_bottom = 353.0
+scale = Vector2(0.378157, 0.420961)
 texture = ExtResource("1_ldbig")
 
+[node name="pinkCoffin" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(103, 342)
+sprite_frames = SubResource("SpriteFrames_3wiaw")
+
+[node name="lavenderCoffin" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(281, 458)
+sprite_frames = SubResource("SpriteFrames_m7pwf")
+
+[node name="exquisiteBrownCoffin" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(466, 358)
+sprite_frames = SubResource("SpriteFrames_pwf08")
+
+[node name="blueCoffin" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(659, 460)
+sprite_frames = SubResource("SpriteFrames_pr453")
+
+[node name="yellowCoffin" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(865, 363)
+sprite_frames = SubResource("SpriteFrames_tcntx")
+
+[node name="redCoffin" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(1033, 469)
+rotation = -0.0175656
+sprite_frames = SubResource("SpriteFrames_de6o6")
+
+[node name="blueBalloon" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(64, 165)
+scale = Vector2(0.430769, 0.371951)
+sprite_frames = SubResource("SpriteFrames_yw6rh")
+frame_progress = 0.0278486
+
+[node name="blueBalloon2" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(1139, 148)
+scale = Vector2(0.430769, 0.371951)
+sprite_frames = SubResource("SpriteFrames_yw6rh")
+frame_progress = 0.634695
+
+[node name="manyBalloons" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(518, 450)
+scale = Vector2(0.354453, 0.357394)
+sprite_frames = SubResource("SpriteFrames_0upao")
+
+[node name="manyBalloons2" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(130, 430)
+scale = Vector2(0.354453, 0.357394)
+sprite_frames = SubResource("SpriteFrames_0upao")
+
+[node name="manyBalloons5" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(900, 469)
+scale = Vector2(0.354453, 0.357394)
+sprite_frames = SubResource("SpriteFrames_0upao")
+
+[node name="confetti" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(109, 287)
+scale = Vector2(0.28755, 0.256429)
+sprite_frames = SubResource("SpriteFrames_5tpsn")
+
+[node name="confetti2" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(299, 401)
+scale = Vector2(0.28755, 0.256429)
+sprite_frames = SubResource("SpriteFrames_5tpsn")
+
+[node name="manyBalloons3" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(321, 563)
+scale = Vector2(0.354453, 0.357394)
+sprite_frames = SubResource("SpriteFrames_0upao")
+
+[node name="confetti3" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(489, 309)
+scale = Vector2(0.28755, 0.256429)
+sprite_frames = SubResource("SpriteFrames_5tpsn")
+
+[node name="confetti4" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(678, 397)
+scale = Vector2(0.28755, 0.256429)
+sprite_frames = SubResource("SpriteFrames_5tpsn")
+
+[node name="manyBalloons4" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(710, 562)
+scale = Vector2(0.354453, 0.357394)
+sprite_frames = SubResource("SpriteFrames_0upao")
+
+[node name="confetti5" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(876, 302)
+scale = Vector2(0.28755, 0.256429)
+sprite_frames = SubResource("SpriteFrames_5tpsn")
+
+[node name="confetti6" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(1033, 404)
+scale = Vector2(0.28755, 0.256429)
+sprite_frames = SubResource("SpriteFrames_5tpsn")
+
+[node name="manyBalloons6" type="AnimatedSprite2D" parent="AnimationPlayer"]
+position = Vector2(1066, 575)
+scale = Vector2(0.354453, 0.357394)
+sprite_frames = SubResource("SpriteFrames_0upao")
+
 [node name="FirstNotes" type="TextureRect" parent="AnimationPlayer"]
-offset_left = 37.0
-offset_top = 34.0
-offset_right = 167.0
-offset_bottom = 141.0
+offset_left = 71.0
+offset_top = 107.0
+offset_right = 201.0
+offset_bottom = 214.0
+scale = Vector2(0.889345, 0.861229)
 texture = ExtResource("2_3wiaw")
 
 [node name="SecondNotes" type="TextureRect" parent="AnimationPlayer"]
-offset_left = 206.0
-offset_top = 58.0
-offset_right = 336.0
-offset_bottom = 165.0
+offset_left = 234.0
+offset_top = 211.0
+offset_right = 364.0
+offset_bottom = 318.0
+scale = Vector2(0.962593, 1.01065)
 texture = ExtResource("3_bb88s")
 
 [node name="ThirdNotes" type="TextureRect" parent="AnimationPlayer"]
-offset_left = 528.0
-offset_top = 64.0
-offset_right = 658.0
-offset_bottom = 171.0
+offset_left = 644.0
+offset_top = 192.0
+offset_right = 774.0
+offset_bottom = 299.0
+scale = Vector2(0.927459, 0.883951)
 texture = ExtResource("4_2w2rx")
 
 [node name="FourthNotes" type="TextureRect" parent="AnimationPlayer"]
-offset_left = 698.0
-offset_top = 30.0
-offset_right = 873.0
-offset_bottom = 157.0
+offset_left = 811.0
+offset_top = 133.0
+offset_right = 986.0
+offset_bottom = 260.0
+scale = Vector2(0.831502, 0.849124)
 texture = ExtResource("5_f3v11")
 
 [node name="FifthNotes" type="TextureRect" parent="AnimationPlayer"]
-offset_left = 923.0
-offset_top = 58.0
-offset_right = 1098.0
-offset_bottom = 185.0
+offset_left = 978.0
+offset_top = 186.0
+offset_right = 1153.0
+offset_bottom = 313.0
+scale = Vector2(0.930157, 0.965472)
 texture = ExtResource("6_m7pwf")
 
 [node name="RestNotes" type="TextureRect" parent="AnimationPlayer"]
-offset_left = 365.0
-offset_top = 8.0
-offset_right = 495.0
-offset_bottom = 115.0
+offset_left = 356.0
+offset_top = 112.0
+offset_right = 486.0
+offset_bottom = 219.0
+scale = Vector2(0.840642, 0.702306)
 texture = ExtResource("7_yw6rh")
 
 [node name="ColorRect" type="ColorRect" parent="."]
