@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Had I Not Seen The Sun chiptune.mp3-b121dbd10
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
