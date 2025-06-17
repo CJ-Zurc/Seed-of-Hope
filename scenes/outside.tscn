@@ -1,13 +1,6 @@
-[gd_scene load_steps=41 format=4 uid="uid://bc76pux0agbdd"]
+[gd_scene load_steps=25 format=4 uid="uid://bc76pux0agbdd"]
 
-[ext_resource type="Texture2D" uid="uid://5mg1w4q54waj" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Beach_Tile.png" id="1_lt5my"]
-[ext_resource type="Texture2D" uid="uid://dlxc01j3p03s0" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Cliff_Tile.png" id="2_5tstl"]
-[ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_lt7nq"]
-[ext_resource type="Texture2D" uid="uid://dftldqx3387pb" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="4_v7x2m"]
-[ext_resource type="Texture2D" uid="uid://dn5dorpdblck3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="5_cdqji"]
-[ext_resource type="Texture2D" uid="uid://d1m4elcvysruv" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="6_x3una"]
-[ext_resource type="Texture2D" uid="uid://3gyr6iau2eel" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Water_Middle.png" id="7_nxbbw"]
-[ext_resource type="Texture2D" uid="uid://cwwyksrw0uml7" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Water_Tile.png" id="8_ht1us"]
+[ext_resource type="PackedScene" uid="uid://cgagg36ej5q78" path="res://scenes/farm_land.tscn" id="1_lt5my"]
 [ext_resource type="Texture2D" uid="uid://c3st6bujm6amt" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Fences.png" id="9_5tstl"]
 [ext_resource type="Texture2D" uid="uid://du7gejaxb2xqx" path="res://2D Arts/Interiors/topDown/newTopdownFloor.png" id="10_v7x2m"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="11_cdqji"]
@@ -15,113 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
 [ext_resource type="Texture2D" uid="uid://ch20jjjq6cchb" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpxjy"]
-texture = ExtResource("1_lt5my")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0kmf"]
-texture = ExtResource("2_5tstl")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tjkqt"]
-texture = ExtResource("3_lt7nq")
-0:0/0 = 0
-0:1/0 = 0
-0:2/0 = 0
-1:0/0 = 0
-1:1/0 = 0
-1:2/0 = 0
-2:0/0 = 0
-2:1/0 = 0
-2:2/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xq4d2"]
-texture = ExtResource("4_v7x2m")
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ni2yb"]
-texture = ExtResource("5_cdqji")
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pu366"]
-texture = ExtResource("6_x3una")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xi7x6"]
-texture = ExtResource("7_nxbbw")
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s22lx"]
-texture = ExtResource("8_ht1us")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_2xi43"]
-sources/0 = SubResource("TileSetAtlasSource_lpxjy")
-sources/1 = SubResource("TileSetAtlasSource_q0kmf")
-sources/2 = SubResource("TileSetAtlasSource_tjkqt")
-sources/3 = SubResource("TileSetAtlasSource_xq4d2")
-sources/4 = SubResource("TileSetAtlasSource_ni2yb")
-sources/5 = SubResource("TileSetAtlasSource_pu366")
-sources/6 = SubResource("TileSetAtlasSource_xi7x6")
-sources/7 = SubResource("TileSetAtlasSource_s22lx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lt7nq"]
 texture = ExtResource("9_5tstl")
@@ -619,13 +505,14 @@ fill_from = Vector2(0.5, 0.5)
 
 [node name="outside" type="Node2D"]
 
-[node name="floor garden" type="TileMapLayer" parent="."]
-position = Vector2(8, 29)
-tile_map_data = PackedByteArray("AAD//wEABAAAAAAAAAABAAEAAQAAAAUAAAACAAEAAQABAAUAAAD+/wEAAwAAAAAAAAD+/wIAAwAAAAAAAAD//wIABQACAAUAAAABAAIAAwAAAAAAAAACAAIAAQACAAUAAAACAAMAAwAAAAAAAAABAAMAAQAAAAUAAAD//wMABAAAAAAAAAD+/wMAAQABAAUAAAD+/wQAAwAAAAAAAAD//wQABQACAAUAAAABAAQAAwAAAAAAAAACAAQAAgAAAAAAAAD9/wQAAwAAAAAAAAD8/wQAAQABAAUAAAD7/wQAAgACAAAAAAD6/wQAAgABAAAAAAD5/wQAAgAAAAAAAAD4/wQAAwAAAAAAAAADAAQAAgACAAAAAAAEAAQAAQACAAUAAAAFAAQAAgAAAAAAAAAGAAQAAgABAAAAAAAHAAQAAgACAAAAAAAIAAQAAQACAAUAAAAJAAQAAwAAAAAAAAD3/wMAAQAAAAUAAAD3/wQAAwAAAAAAAAAKAAMABAAAAAAAAAAKAAQABQACAAUAAAD+//7/AwAAAAAAAAD+////AQABAAUAAAD+/wAAAQABAAUAAAD///7/AwAAAAAAAAD/////BQABAAUAAAD//wAABQABAAUAAAABAP7/AwAAAAAAAAABAP//AQABAAUAAAABAAAAAwAAAAAAAAACAP7/AwAAAAAAAAACAP//AwAAAAAAAAACAAAAAwAAAAAAAAD+//3/AwAAAAAAAAD///3/AwAAAAAAAAABAP3/AwAAAAAAAAACAP3/AwAAAAAAAAADAP3/AwAAAAAAAAADAP7/AwAAAAAAAAADAP//AwAAAAAAAAD9//3/AwAAAAAAAAD9//7/AwAAAAAAAAD9////AwAAAAAAAAD9/wAAAwAAAAAAAAADAAAAAwAAAAAAAAD8/wAAAwAAAAAAAAD7/wAAAwAAAAAAAAD6/wAAAwAAAAAAAAD5/wAAAwAAAAAAAAD4/wAAAwAAAAAAAAD4/wEAAwAAAAAAAAD4/wIAAQABAAUAAAD4/wMAAwAAAAAAAAD5/wIAAwAAAAAAAAD5/wMAAwAAAAAAAAD5/wEAAwAAAAAAAAD6/wIAAQABAAUAAAD6/wEAAwAAAAAAAAD6/wMAAwAAAAAAAAD7/wIAAwAAAAAAAAD7/wEAAQABAAUAAAD7/wMAAwAAAAAAAAD8/wMAAQABAAUAAAD8/wIAAwAAAAAAAAD8/wEAAwAAAAAAAAD9/wIAAwAAAAAAAAD9/wMAAwAAAAAAAAD9/wEAAQAAAAUAAAADAAEAAwAAAAAAAAADAAIAAwAAAAAAAAADAAMAAwAAAAAAAAAEAAMAAQABAAUAAAAFAAMAAQACAAUAAAAGAAMAAwAAAAAAAAAHAAMAAwAAAAAAAAAIAAMAAwAAAAAAAAAJAAMAAwAAAAAAAAAJAAIAAwAAAAAAAAAJAAEAAwAAAAAAAAAJAAAAAwAAAAAAAAAIAAAAAwAAAAAAAAAHAAAAAwAAAAAAAAAGAAAAAwAAAAAAAAAFAAAAAwAAAAAAAAAEAAAAAwAAAAAAAAAEAAEAAwAAAAAAAAAEAAIAAQABAAUAAAAFAAIAAwAAAAAAAAAGAAIAAwAAAAAAAAAHAAIAAwAAAAAAAAAHAAEAAwAAAAAAAAAGAAEAAwAAAAAAAAAFAAEAAwAAAAAAAAAIAAEAAwAAAAAAAAAIAAIAAQACAAUAAAD3/wIAAwAAAAAAAAD3/wEAAQACAAUAAAD3/wAAAQABAAUAAAD3////BQABAAUAAAAKAAIABQABAAUAAAAKAAEABQAAAAUAAAAKAAAABAAAAAAAAAAKAP//BQACAAUAAAD4/wUAAQACAAUAAAD4/wYAAwAAAAAAAAD4/wcAAwAAAAAAAAD4/wgAAgABAAEAAAD5/wUAAgAAAAEAAAD5/wYAAgAAAAIAAAD5/wcAAQABAAUAAAD5/wgAAgABAAEAAAD6/wUAAgABAAEAAAD6/wYAAgABAAIAAAD6/wcAAQACAAUAAAD6/wgAAgABAAEAAAD7/wUAAgACAAEAAAD7/wYAAgACAAIAAAD7/wcAAwAAAAAAAAD7/wgAAgABAAEAAAD8/wUAAwAAAAAAAAD8/wYAAwAAAAAAAAD8/wcAAQAAAAUAAAD8/wgAAgABAAEAAAD9/wUAAwAAAAAAAAD9/wYAAwAAAAAAAAD9/wcAAwAAAAAAAAD9/wgAAgABAAEAAAD+/wUAAQABAAUAAAD+/wYAAQAAAAUAAAD+/wcAAwAAAAAAAAD+/wgAAgABAAEAAAD//wUABAAAAAAAAAD//wYABQABAAUAAAD//wcABAAAAAAAAAD//wgABAAAAAAAAAABAAUAAwAAAAAAAAABAAYAAwAAAAAAAAABAAcAAwAAAAAAAAABAAgAAgABAAEAAAACAAUAAgAAAAEAAAACAAYAAgAAAAIAAAACAAcAAQACAAUAAAACAAgAAgABAAEAAAADAAUAAgACAAEAAAADAAYAAgACAAIAAAADAAcAAwAAAAAAAAADAAgAAgABAAEAAAAEAAUAAQABAAUAAAAEAAYAAwAAAAAAAAAEAAcAAQAAAAUAAAAEAAgAAgABAAEAAAAFAAUAAgAAAAEAAAAFAAYAAgAAAAIAAAAFAAcAAwAAAAAAAAAFAAgAAgABAAEAAAAGAAUAAgABAAEAAAAGAAYAAgABAAIAAAAGAAcAAQACAAUAAAAGAAgAAgABAAEAAAAHAAUAAgACAAEAAAAHAAYAAgACAAIAAAAHAAcAAwAAAAAAAAAHAAgAAgABAAEAAAAIAAUAAQACAAUAAAAIAAYAAwAAAAAAAAAIAAcAAQAAAAUAAAAIAAgAAgABAAEAAAAJAAUAAwAAAAAAAAAJAAYAAwAAAAAAAAAJAAcAAQAAAAUAAAAJAAgAAgABAAEAAAD3/wUAAQABAAUAAAD3/wYAAwAAAAAAAAD3/wcAAQABAAUAAAD3/wgAAgABAAEAAAD3/wkABAAAAAAAAAD4/wkABQACAAUAAAD5/wkABAAAAAAAAAD6/wkABAAAAAAAAAD7/wkABQACAAUAAAD8/wkABAAAAAAAAAD9/wkABAAAAAAAAAD+/wkABQAAAAUAAAD//wkABAAAAAAAAAAAAAkABQABAAUAAAABAAkABAAAAAAAAAACAAkABAAAAAAAAAADAAkABQACAAUAAAAEAAkABQAAAAUAAAAFAAkABAAAAAAAAAAGAAkABQACAAUAAAAHAAkABAAAAAAAAAAIAAkABQABAAUAAAAJAAkABAAAAAAAAAAKAAkABQACAAUAAAAKAAUABAAAAAAAAAAKAAYABAAAAAAAAAAKAAcABQABAAUAAAAKAAgABAAAAAAAAAD4////BAAAAAAAAAAJAP//BAAAAAAAAAAAAP//BAAAAAAAAAAAAAAABAAAAAAAAAAAAAEABQACAAUAAAAAAAIABAAAAAAAAAAAAAMABQACAAUAAAAAAAQABQABAAUAAAAAAAUABAAAAAAAAAAAAAYABAAAAAAAAAAAAAcABQACAAUAAAAAAAgABQABAAUAAAD2////BAAAAAAAAAD2/wAABAAAAAAAAAD2/wEABAAAAAAAAAD2/wIABAAAAAAAAAD2/wMABAAAAAAAAAD2/wQABAAAAAAAAAD2/wUABAAAAAAAAAD2/wYABAAAAAAAAAD2/wcABAAAAAAAAAD2/wgABAAAAAAAAAD2/wkABAAAAAAAAAA=")
-tile_set = SubResource("TileSet_2xi43")
+[node name="Farm Land" parent="." instance=ExtResource("1_lt5my")]
+position = Vector2(172, 98)
+scale = Vector2(1.05463, 0.896875)
 
-[node name="fence" type="TileMapLayer" parent="floor garden"]
-tile_map_data = PackedByteArray("AAAKAAgAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAP//AAADAAAAAAAKAAIAAAAAAAAAAAAKAAAAAAAAAAAAAAAKAAkAAAADAAAAAAAJAAkAAAACAAAAAAAIAAkAAAACAAAAAAAHAAkAAAACAAAAAAAGAAkAAAACAAAAAAAFAAkAAAACAAAAAAAEAAkAAAACAAAAAAADAAkAAAACAAAAAAACAAkAAAACAAAAAAABAAkAAAACAAAAAAAAAAkAAAACAAAAAAD//wkAAAACAAAAAAD+/wkAAAACAAAAAAD9/wkAAAACAAAAAAD8/wkAAAACAAAAAAD7/wkAAAACAAAAAAD6/wkAAAACAAAAAAD5/wkAAAACAAAAAAD4/wkAAAACAAAAAAD4////AAACAAAAAAAJAP//AAACAAAAAAD2/wcAAAAAAAAAAAD2/wUAAAAAAAAAAAD2/wMAAAAAAAAAAAD2/wEAAAAAAAAAAAD2/wAAAAAAAAAAAAD2////AAABAAAAAAD3////AAACAAAAAAD2/wgAAAAAAAAAAAD2/wkAAAABAAAAAAD3/wkAAAACAAAAAAA=")
+[node name="fence" type="TileMapLayer" parent="Farm Land"]
+position = Vector2(-157.401, -92.5436)
+scale = Vector2(1.17033, 1.5296)
+tile_map_data = PackedByteArray("AAAJAAkAAAADAAAAAAD4////AAACAAAAAAD2/wcAAAAAAAAAAAD2/wUAAAAAAAAAAAD2/wMAAAAAAAAAAAD2/wEAAAAAAAAAAAD2/wAAAAAAAAAAAAD2////AAABAAAAAAD3////AAACAAAAAAD2/wgAAAAAAAAAAAD5////AAACAAAAAAAJAAgAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAAAAAAAAAAAAAAJAP//AAADAAAAAAAIAP//AAACAAAAAAAHAP//AAABAAAAAAD2/wkAAAABAAAAAAD3/wkAAAACAAAAAAD4/wkAAAACAAAAAAD5/wkAAAACAAAAAAD6/wkAAAACAAAAAAD7/wkAAAACAAAAAAD8/wkAAAACAAAAAAD9/wkAAAACAAAAAAD+/wkAAAACAAAAAAD//wkAAAACAAAAAAAAAAkAAAACAAAAAAABAAkAAAACAAAAAAACAAkAAAACAAAAAAADAAkAAAACAAAAAAAEAAkAAAACAAAAAAAFAAkAAAACAAAAAAAGAAkAAAACAAAAAAAHAAkAAAACAAAAAAAIAAkAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_v7x2m")
 
 [node name="wallHouse" type="TileMapLayer" parent="."]
@@ -704,10 +591,10 @@ color = Color(1, 0.913725, 0.145098, 1)
 texture = SubResource("GradientTexture2D_hbx8j")
 
 [node name="CharmonyDoveButton" type="Button" parent="."]
-offset_left = 172.0
-offset_top = 75.0
-offset_right = 494.0
-offset_bottom = 288.0
+offset_left = 190.0
+offset_top = 80.0
+offset_right = 565.0
+offset_bottom = 366.0
 scale = Vector2(0.0346734, 0.0349177)
 icon = ExtResource("15_ht1us")
 flat = true
