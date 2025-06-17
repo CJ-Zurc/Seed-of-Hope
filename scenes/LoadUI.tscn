@@ -1,28 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://xpemlunulsjb"]
+[gd_scene load_steps=6 format=3 uid="uid://xpemlunulsjb"]
 
+[ext_resource type="Script" uid="uid://c8qxp5x6jjvyp" path="res://Script/MainMenu/LoadUi.cs" id="1_crao7"]
 [ext_resource type="Texture2D" uid="uid://bwv4c845pm0pd" path="res://2D Arts/UI stuff/Title screen/greenBackgroundTitleScreen.png" id="1_eqs3g"]
 [ext_resource type="Texture2D" uid="uid://c2gexm1f5da6k" path="res://2D Arts/UI stuff/Title screen/backgrounGreenDarker_titleScreen.png" id="2_4vgew"]
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_crao7"]
 [ext_resource type="Texture2D" uid="uid://dc744ea7vg6wd" path="res://2D Arts/UI stuff/Title screen/BackButton.png" id="4_4vgew"]
 
-[node name="LoadUI" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_crao7")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_right = 960.0
-offset_bottom = 520.0
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 48.0
+offset_right = 1063.0
+offset_bottom = 568.0
 texture = ExtResource("1_eqs3g")
 
-[node name="LoadButton" type="Button" parent="CanvasLayer"]
-offset_left = 26.0
-offset_top = 24.0
-offset_right = 934.0
-offset_bottom = 160.0
+[node name="LoadButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 72.0
+offset_right = 1037.0
+offset_bottom = 208.0
 icon = ExtResource("2_4vgew")
 flat = true
 
-[node name="Label" type="Label" parent="CanvasLayer/LoadButton"]
+[node name="Label" type="Label" parent="LoadButton"]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 11.0
@@ -33,18 +43,18 @@ theme_override_fonts/font = ExtResource("3_crao7")
 theme_override_font_sizes/font_size = 40
 text = "File 1"
 
-[node name="Label2" type="Label" parent="CanvasLayer/LoadButton"]
+[node name="Label2" type="Label" parent="LoadButton"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 69.0
-offset_right = 199.0
-offset_bottom = 92.0
+offset_right = 323.0
+offset_bottom = 105.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_crao7")
 theme_override_font_sizes/font_size = 35
 text = "Year 1, Week 4, El Nino"
 
-[node name="Label3" type="Label" parent="CanvasLayer/LoadButton"]
+[node name="Label3" type="Label" parent="LoadButton"]
 layout_mode = 0
 offset_left = 778.0
 offset_top = 70.0
@@ -55,10 +65,11 @@ theme_override_fonts/font = ExtResource("3_crao7")
 theme_override_font_sizes/font_size = 35
 text = "P20,000"
 
-[node name="BackButton" type="Button" parent="CanvasLayer"]
-offset_left = 1.0
-offset_top = 451.0
-offset_right = 201.0
-offset_bottom = 523.0
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 499.0
+offset_right = 304.0
+offset_bottom = 571.0
 icon = ExtResource("4_4vgew")
 flat = true

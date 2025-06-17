@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://q2ayxq15yslw"]
 
-[ext_resource type="Texture2D" uid="uid://drw2pwn4p4dm6" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="1_ggrl0"]
+[ext_resource type="Texture2D" uid="uid://b4m74gn8afvnn" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="1_ggrl0"]
 [ext_resource type="Script" uid="uid://du75jf75ujk4g" path="res://Script/Dialogue/Bed.cs" id="1_umbcb"]
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="2_umbcb"]
 
@@ -11,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_umbcb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -28,7 +29,6 @@ offset_bottom = -817.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.96055, 2.0339)
-script = ExtResource("1_umbcb")
 
 [node name="background" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -38,16 +38,15 @@ offset_right = 715.0
 offset_bottom = 508.0
 texture = ExtResource("1_ggrl0")
 
-[node name="noButton" type="Button" parent="CanvasLayer/Control"]
+[node name="questionSave" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 449.0
-offset_top = 461.0
-offset_right = 700.0
-offset_bottom = 485.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+offset_left = 451.0
+offset_top = 398.0
+offset_right = 689.0
+offset_bottom = 414.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_umbcb")
-text = "No"
-alignment = 0
+text = "Do you want to sleep? "
 
 [node name="yesButton" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -60,12 +59,13 @@ theme_override_fonts/font = ExtResource("2_umbcb")
 text = "Yes"
 alignment = 0
 
-[node name="questionSave" type="Label" parent="CanvasLayer/Control"]
+[node name="noButton" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 451.0
-offset_top = 398.0
-offset_right = 689.0
-offset_bottom = 414.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 449.0
+offset_top = 461.0
+offset_right = 700.0
+offset_bottom = 485.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_umbcb")
-text = "Do you want to sleep? (Saves the game)"
+text = "No"
+alignment = 0

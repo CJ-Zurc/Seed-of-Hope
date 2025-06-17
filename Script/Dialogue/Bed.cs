@@ -12,14 +12,7 @@ public partial class Bed : DialogueBase
         // Advance to next day
         var mainGame = GetTree().Root.GetNode<MainGame>("MainGame");
         mainGame.SkipToNextDay();
-
-        // Simulate saving data
-        var saveData = new Godot.Collections.Dictionary
-        {
-            { "day", 1 },
-            { "player_position", new Vector2(100, 100) }
-        };
-
+        
         var innerControl = fadeRoot
             .GetNode<CanvasLayer>("CanvasLayer")
             .GetNode<Control>("Control");

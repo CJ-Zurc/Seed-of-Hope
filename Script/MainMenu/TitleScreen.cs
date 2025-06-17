@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class TitleScreen : Node2D
+public partial class TitleScreen : Control
 {
 	private Button newGame;
 	private Button loadGame;
@@ -18,16 +18,19 @@ public partial class TitleScreen : Node2D
 		loadGame.Pressed += OnLoadGamePressed;
 		settingsGame.Pressed += OnSettingsGamePressed;
 		exitGame.Pressed += OnExitGamePressed;
+		newGame.Pressed += OnNewGamePressed;
 	}
 
 	private void OnLoadGamePressed()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/LoadUI.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/main_game.tscn");
 	}
 
 	private void OnSettingsGamePressed()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/settings.tscn");
+		var settingsScene = GD.Load<PackedScene>("res://scenes/settings.tscn");
+		var settingsInstance = settingsScene.Instantiate();
+		AddChild(settingsInstance);
 	}
 	
 	private void OnExitGamePressed()
@@ -35,7 +38,11 @@ public partial class TitleScreen : Node2D
 		GetTree().Quit();
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
+
+	private void OnNewGamePressed()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/intro_cutscene.tscn");
+	}	// Called every frame. 'delta' is the elapsed time since the previous frame.
 
 
 	public override void _Process(double delta)

@@ -15,44 +15,57 @@ texture = ExtResource("1_sa3yf")
 [sub_resource type="TileSet" id="TileSet_dc4i4"]
 sources/3 = SubResource("TileSetAtlasSource_fgkus")
 
-[node name="Title Screen" type="Node2D"]
-position = Vector2(578, 339)
-scale = Vector2(1.01596, 1.0363)
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_e54dn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(11, -6)
+position = Vector2(583, 333)
+scale = Vector2(1.02153, 1.01321)
 tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 3, 0, 1, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_dc4i4")
 
 [node name="New" type="Button" parent="."]
-offset_left = -477.0
-offset_top = 115.0
-offset_right = -277.0
-offset_bottom = 187.0
+layout_mode = 0
+offset_left = 95.0
+offset_top = 454.0
+offset_right = 295.0
+offset_bottom = 526.0
+scale = Vector2(1.02153, 1.01321)
 icon = ExtResource("2_s4lrb")
 flat = true
 
 [node name="Load" type="Button" parent="."]
-offset_left = -235.0
-offset_top = 116.0
-offset_right = -35.0
-offset_bottom = 188.0
+layout_mode = 0
+offset_left = 337.0
+offset_top = 455.0
+offset_right = 537.0
+offset_bottom = 527.0
+scale = Vector2(1.02153, 1.01321)
 icon = ExtResource("3_mgrm8")
 flat = true
 
 [node name="Options" type="Button" parent="."]
-offset_left = 7.0
-offset_top = 116.0
-offset_right = 207.0
-offset_bottom = 188.0
+layout_mode = 0
+offset_left = 579.0
+offset_top = 455.0
+offset_right = 779.0
+offset_bottom = 527.0
+scale = Vector2(1.02153, 1.01321)
 icon = ExtResource("4_dc4i4")
 flat = true
 
 [node name="ExitGame" type="Button" parent="."]
-offset_left = 239.0
-offset_top = 116.0
-offset_right = 439.0
-offset_bottom = 188.0
+layout_mode = 0
+offset_left = 811.0
+offset_top = 455.0
+offset_right = 1011.0
+offset_bottom = 527.0
+scale = Vector2(1.02153, 1.01321)
 icon = ExtResource("5_dc4i4")
 flat = true

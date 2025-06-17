@@ -23,6 +23,9 @@ public partial class MainGame : Node2D
     private bool hasPlayedMorningSound = false;
     private bool hasPlayedEveningSound = false;
 
+    private float autosaveTimer = 0f;
+    private const float AUTOSAVE_INTERVAL = 10f; // seconds //Time interval for autosave
+
     public override void _Ready()
     {
         canvasModulate = GetNode<CanvasModulate>(modulatePath);
@@ -30,7 +33,78 @@ public partial class MainGame : Node2D
         yearWeekLabel = GetNode<Label>("HUD/Control/containerDateTime/backgroundColor/yearWeek");
 
         audioPlayer = new AudioStreamPlayer();
-        AddChild(audioPlayer); // Add dynamically
+        audioPlayer.Bus = "Master";
+        AddChild(audioPlayer);
+
+        // --- Save/load logic ---
+        if (HasNode("player"))
+        {
+            var player = GetNode<Node2D>("player");
+            if (!FileAccess.FileExists("user://savegame.json"))
+            {
+                // File does not exist: create with default values
+                player.Position = new Vector2(-16, -459); // Set your default starting position here
+                dayCount = 1;
+                year = 1;
+                time = 6f;
+
+                SaveGame(); // Save the initial state
+            }
+            else
+            {
+                // File exists: load values
+                using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Read);
+                var json = file.GetAsText();
+                var result = Json.ParseString(json);
+                var saveData = result.As<Godot.Collections.Dictionary>();
+                if (saveData != null)
+                {
+                    if (HasNode("player"))
+                    {
+                        var playerNode = GetNode<Node2D>("player");
+
+                        if (saveData.ContainsKey("player_position"))
+                        {
+                            var posVariant = saveData["player_position"];
+                            var posArray = posVariant.As<Godot.Collections.Array>();
+
+                            if (posArray != null && posArray.Count == 2)
+                            {
+                                float x = (float)(double)posArray[0];
+                                float y = (float)(double)posArray[1];
+                                playerNode.GlobalPosition = new Vector2(x, y);
+                            }
+                        }
+                    }
+                    if (saveData.ContainsKey("day"))
+                        dayCount = (int)saveData["day"]; 
+                    if (saveData.ContainsKey("year"))
+                        year = (int)saveData["year"];
+                    if (saveData.ContainsKey("time"))
+                        time = (float)saveData["time"];
+
+                }
+            }
+        }
+        UpdateYearLabel();
+        UpdateTimeLabel();
+        UpdateLighting();
+
+        // Play background music based on loaded time
+        if (time >= 6f && time < 19f)
+        {
+            audioPlayer.Stream = wakeUpSound;
+            audioPlayer.Play();
+            hasPlayedMorningSound = true;
+            hasPlayedEveningSound = false;
+        }
+        else if (time >= 19f || time < 6f)
+        {
+            audioPlayer.Stream = eveningSound;
+            audioPlayer.Play();
+            hasPlayedMorningSound = false;
+            hasPlayedEveningSound = true;
+        }
     }
 
     public override void _Process(double delta)
@@ -56,6 +130,14 @@ public partial class MainGame : Node2D
 
         UpdateTimeLabel();
         UpdateLighting();
+
+        // Autosave logic
+        autosaveTimer += (float)delta;
+        if (autosaveTimer >= AUTOSAVE_INTERVAL)
+        {
+            autosaveTimer = 0f;
+            SaveGame(); 
+        }
     }
 
     private void PlayScheduledAudio()
@@ -128,4 +210,23 @@ public partial class MainGame : Node2D
         UpdateLighting();
     }
 
+    private void SaveGame()
+    {
+        // Example: Save player position, day, time, etc.
+        var saveData = new Godot.Collections.Dictionary();
+
+        if (HasNode("player"))
+        {
+            var player = GetNode<Node2D>("player");
+            var pos = player.GlobalPosition;
+            saveData["player_position"] = new Godot.Collections.Array { pos.X, pos.Y };
+        }
+        saveData["day"] = dayCount;
+        saveData["year"] = year;
+        saveData["time"] = time;
+
+        string json = Json.Stringify(saveData);
+        using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
+        file.StoreString(json);
+    }
 }

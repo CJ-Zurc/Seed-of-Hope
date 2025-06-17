@@ -9,9 +9,9 @@ public abstract partial class DialogueBase : Control
 
     public override void _Ready()
     {
-        questionLabel = GetNode<Label>("questionSave");
-        yesButton = GetNode<Button>("yesButton");
-        noButton = GetNode<Button>("noButton");
+        questionLabel = GetNode<Label>("CanvasLayer/Control/questionSave");
+        yesButton = GetNode<Button>("CanvasLayer/Control/yesButton");
+        noButton = GetNode<Button>("CanvasLayer/Control/noButton");
 
         yesButton.Pressed += OnYesPressed;
         noButton.Pressed += OnNoPressed;
