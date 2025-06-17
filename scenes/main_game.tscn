@@ -122,6 +122,3 @@ playerPath = NodePath("../../player")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue Triggers/TV Trigger"]
 position = Vector2(8, -5)
 shape = SubResource("RectangleShape2D_ikqpi")
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(-16, -459)

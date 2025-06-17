@@ -67,9 +67,9 @@ text = "P20,000"
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 104.0
-offset_top = 499.0
-offset_right = 304.0
-offset_bottom = 571.0
+offset_left = 116.0
+offset_top = 498.0
+offset_right = 316.0
+offset_bottom = 570.0
 icon = ExtResource("4_4vgew")
 flat = true

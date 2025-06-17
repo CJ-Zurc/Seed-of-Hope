@@ -224,6 +224,9 @@ public partial class MainGame : Node2D
         saveData["day"] = dayCount;
         saveData["year"] = year;
         saveData["time"] = time;
+        
+
+
 
         string json = Json.Stringify(saveData);
         using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
