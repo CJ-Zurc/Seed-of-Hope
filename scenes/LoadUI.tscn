@@ -3,16 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://bwv4c845pm0pd" path="res://2D Arts/UI stuff/Title screen/greenBackgroundTitleScreen.png" id="1_eqs3g"]
 [ext_resource type="Texture2D" uid="uid://c2gexm1f5da6k" path="res://2D Arts/UI stuff/Title screen/backgrounGreenDarker_titleScreen.png" id="2_4vgew"]
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_crao7"]
-[ext_resource type="Texture2D" uid="uid://bta372k0u73gs" path="res://2D Arts/UI stuff/Title screen/BackButton.png" id="4_4vgew"]
+[ext_resource type="Texture2D" uid="uid://dc744ea7vg6wd" path="res://2D Arts/UI stuff/Title screen/BackButton.png" id="4_4vgew"]
 
 [node name="LoadUI" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 960.0
+offset_bottom = 520.0
 texture = ExtResource("1_eqs3g")
 
-[node name="LoadButton" type="Button" parent="."]
+[node name="LoadButton" type="Button" parent="CanvasLayer"]
 offset_left = 26.0
 offset_top = 24.0
 offset_right = 934.0
@@ -20,7 +22,7 @@ offset_bottom = 160.0
 icon = ExtResource("2_4vgew")
 flat = true
 
-[node name="Label" type="Label" parent="LoadButton"]
+[node name="Label" type="Label" parent="CanvasLayer/LoadButton"]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 11.0
@@ -31,7 +33,7 @@ theme_override_fonts/font = ExtResource("3_crao7")
 theme_override_font_sizes/font_size = 40
 text = "File 1"
 
-[node name="Label2" type="Label" parent="LoadButton"]
+[node name="Label2" type="Label" parent="CanvasLayer/LoadButton"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 69.0
@@ -42,7 +44,7 @@ theme_override_fonts/font = ExtResource("3_crao7")
 theme_override_font_sizes/font_size = 35
 text = "Year 1, Week 4, El Nino"
 
-[node name="Label3" type="Label" parent="LoadButton"]
+[node name="Label3" type="Label" parent="CanvasLayer/LoadButton"]
 layout_mode = 0
 offset_left = 778.0
 offset_top = 70.0
@@ -53,7 +55,7 @@ theme_override_fonts/font = ExtResource("3_crao7")
 theme_override_font_sizes/font_size = 35
 text = "P20,000"
 
-[node name="BackButton" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="CanvasLayer"]
 offset_left = 1.0
 offset_top = 451.0
 offset_right = 201.0

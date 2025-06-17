@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcdhdcf5gj3wt"]
 
 [ext_resource type="PackedScene" uid="uid://dk5pe73t8j0tj" path="res://scenes/pot.tscn" id="1_ayfyj"]
-[ext_resource type="Texture2D" uid="uid://cm4sql6mrgbwe" path="res://Assets/2D Arts/Plant Assets/succulentPlant.png" id="2_hlb2k"]
+[ext_resource type="Texture2D" uid="uid://cm4sql6mrgbwe" path="res://2D Arts/Plant Assets/succulentPlant.png" id="2_hlb2k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_msiyk"]
 atlas = ExtResource("2_hlb2k")
