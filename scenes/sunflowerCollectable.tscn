@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cojki1ddpnobp"]
+
+[ext_resource type="Texture2D" uid="uid://bd86mpo0w5ouq" path="res://2D Arts/SunflowerPlant.png" id="1_7xa6q"]
+[ext_resource type="PackedScene" uid="uid://cmwjw7bl3c5ei" path="res://scenes/collectable_items.tscn" id="2_ytvgi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7e83"]
+atlas = ExtResource("1_7xa6q")
+region = Rect2(49, 35, 19, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ftjhq"]
+radius = 7.07107
+
+[node name="sunflower" type="Sprite2D"]
+texture = SubResource("AtlasTexture_f7e83")
+
+[node name="collectableItems" parent="." instance=ExtResource("2_ytvgi")]
+CollectableItemName = "Sunflower"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collectableItems"]
+shape = SubResource("CircleShape2D_ftjhq")

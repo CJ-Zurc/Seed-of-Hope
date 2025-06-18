@@ -1,10 +1,15 @@
-[gd_scene load_steps=25 format=4 uid="uid://bc76pux0agbdd"]
+[gd_scene load_steps=30 format=4 uid="uid://bc76pux0agbdd"]
 
 [ext_resource type="PackedScene" uid="uid://cgagg36ej5q78" path="res://scenes/farm_land.tscn" id="1_lt5my"]
 [ext_resource type="Texture2D" uid="uid://c3st6bujm6amt" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Fences.png" id="9_5tstl"]
+[ext_resource type="PackedScene" uid="uid://cojki1ddpnobp" path="res://scenes/sunflowerCollectable.tscn" id="9_lt7nq"]
+[ext_resource type="PackedScene" uid="uid://5spetf5xvp65" path="res://scenes/pechayCollectable.tscn" id="10_cdqji"]
 [ext_resource type="Texture2D" uid="uid://du7gejaxb2xqx" path="res://2D Arts/Interiors/topDown/newTopdownFloor.png" id="10_v7x2m"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="11_cdqji"]
+[ext_resource type="PackedScene" uid="uid://beo8eiemlleag" path="res://scenes/ampalayaCollectable.tscn" id="11_x3una"]
+[ext_resource type="PackedScene" uid="uid://b8kf03nlo746s" path="res://scenes/calamansiCollectable.tscn" id="12_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://dql2m0o33b2vw" path="res://2D Arts/GardenAssets/FaucetWBucket.png" id="12_x3una"]
+[ext_resource type="PackedScene" uid="uid://brt5q3g25ufad" path="res://scenes/succulentCollectable.tscn" id="13_ht1us"]
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
 [ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
@@ -598,3 +603,48 @@ offset_bottom = 366.0
 scale = Vector2(0.0346734, 0.0349177)
 icon = ExtResource("15_ht1us")
 flat = true
+
+[node name="sunflower" parent="." instance=ExtResource("9_lt7nq")]
+position = Vector2(-56, 95)
+
+[node name="sunflower2" parent="." instance=ExtResource("9_lt7nq")]
+position = Vector2(-72, 110)
+
+[node name="sunflower3" parent="." instance=ExtResource("9_lt7nq")]
+position = Vector2(-49, 109)
+
+[node name="pechay" parent="." instance=ExtResource("10_cdqji")]
+position = Vector2(-70, 79)
+
+[node name="pechay2" parent="." instance=ExtResource("10_cdqji")]
+position = Vector2(-57, 79)
+
+[node name="pechay3" parent="." instance=ExtResource("10_cdqji")]
+position = Vector2(-45, 80)
+
+[node name="pechay4" parent="." instance=ExtResource("10_cdqji")]
+position = Vector2(-137, 79)
+
+[node name="ampalaya" parent="." instance=ExtResource("11_x3una")]
+position = Vector2(46, 76)
+
+[node name="ampalaya2" parent="." instance=ExtResource("11_x3una")]
+position = Vector2(38, 94)
+
+[node name="calamansi" parent="." instance=ExtResource("12_nxbbw")]
+position = Vector2(-124, 79)
+
+[node name="calamansi2" parent="." instance=ExtResource("12_nxbbw")]
+position = Vector2(-110, 79)
+
+[node name="calamansi3" parent="." instance=ExtResource("12_nxbbw")]
+position = Vector2(-135, 92)
+
+[node name="succulent" parent="." instance=ExtResource("13_ht1us")]
+position = Vector2(44, 36)
+
+[node name="succulent2" parent="." instance=ExtResource("13_ht1us")]
+position = Vector2(41, 45)
+
+[node name="succulent3" parent="." instance=ExtResource("13_ht1us")]
+position = Vector2(40, 54)

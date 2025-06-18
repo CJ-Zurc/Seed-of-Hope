@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://pigd5j4eic7v"]
+
+[ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="1_btqip"]
+
+[resource]
+base_font = ExtResource("1_btqip")
+spacing_glyph = -4

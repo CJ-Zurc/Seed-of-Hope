@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8kf03nlo746s"]
+
+[ext_resource type="Texture2D" uid="uid://cq21sug0vo7j1" path="res://2D Arts/CalamansiTree.png" id="1_7aikl"]
+[ext_resource type="PackedScene" uid="uid://cmwjw7bl3c5ei" path="res://scenes/collectable_items.tscn" id="2_koph4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tex4"]
+atlas = ExtResource("1_7aikl")
+region = Rect2(24, 30, 23, 17)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0dwpr"]
+radius = 6.08276
+
+[node name="calamansi" type="Sprite2D"]
+texture = SubResource("AtlasTexture_1tex4")
+
+[node name="collectableItems" parent="." instance=ExtResource("2_koph4")]
+CollectableItemName = "Calamansi"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collectableItems"]
+shape = SubResource("CircleShape2D_0dwpr")
