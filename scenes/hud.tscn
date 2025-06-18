@@ -98,12 +98,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 810.0
-offset_top = -57.0
-offset_right = 906.0
-offset_bottom = 23.0
+offset_left = 841.0
+offset_top = -56.0
+offset_right = 937.0
+offset_bottom = 24.0
 grow_horizontal = 0
-scale = Vector2(2.54167, 2.36896)
+scale = Vector2(2.12372, 1.95292)
 
 [node name="backgroundColor" type="TextureRect" parent="Control/containerDateTime"]
 layout_mode = 2

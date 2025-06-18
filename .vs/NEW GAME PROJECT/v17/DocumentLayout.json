@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\inventory\\inventoryseedspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|solutionrelative:script\\inventory\\inventoryseedspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\buyandsell\\buyandsellpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\buyandsell\\buyandsellpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\global\\seedinventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|solutionrelative:script\\global\\seedinventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\global\\selectedseedmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\global\\selectedseedmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\buyandsell\\buyseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|solutionrelative:script\\buyandsell\\buyseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\dialogue\\computertrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\dialogue\\computertrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\inventory\\inventoryharvestedpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|solutionrelative:script\\inventory\\inventoryharvestedpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\buyandsell\\sellitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\buyandsell\\sellitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\inventory\\inventorypanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|solutionrelative:script\\inventory\\inventorypanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\inventory\\inventoryseedspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\inventory\\inventoryseedspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\global\\harvestmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|solutionrelative:script\\global\\harvestmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\inventory\\inventorypanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\inventory\\inventorypanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\dialogue\\computertrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|solutionrelative:script\\dialogue\\computertrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\global\\harvestmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\global\\harvestmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\plant\\collectableitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7452FFFF-A7C8-4444-8DA7-5738C4BE5298}|New Game Project.csproj|solutionrelative:script\\plant\\collectableitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\plant\\collectableitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\plant\\collectableitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\inventory\\inventoryharvestedpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD33BCC-704E-4E32-BADC-D3BE30792F47}|New Game Project.csproj|solutionrelative:script\\inventory\\inventoryharvestedpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,24 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InventoryPanel.cs",
-              "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Inventory\\InventoryPanel.cs",
-              "RelativeDocumentMoniker": "Script\\Inventory\\InventoryPanel.cs",
-              "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Inventory\\InventoryPanel.cs",
-              "RelativeToolTip": "Script\\Inventory\\InventoryPanel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T08:28:10.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "ComputerTrigger.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Dialogue\\ComputerTrigger.cs",
               "RelativeDocumentMoniker": "Script\\Dialogue\\ComputerTrigger.cs",
@@ -68,50 +59,77 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T08:00:35.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BuySeeds.cs",
-              "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\BuySeeds.cs",
-              "RelativeDocumentMoniker": "Script\\BuyAndSell\\BuySeeds.cs",
-              "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\BuySeeds.cs",
-              "RelativeToolTip": "Script\\BuyAndSell\\BuySeeds.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T06:59:18.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SeedInventoryManager.cs",
-              "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Global\\SeedInventoryManager.cs",
-              "RelativeDocumentMoniker": "Script\\Global\\SeedInventoryManager.cs",
-              "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Global\\SeedInventoryManager.cs",
-              "RelativeToolTip": "Script\\Global\\SeedInventoryManager.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T19:31:20.608Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BuyAndSellPanel.cs",
+              "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\BuyAndSellPanel.cs",
+              "RelativeDocumentMoniker": "Script\\BuyAndSell\\BuyAndSellPanel.cs",
+              "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\BuyAndSellPanel.cs",
+              "RelativeToolTip": "Script\\BuyAndSell\\BuyAndSellPanel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:52:52.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SelectedSeedManager.cs",
+              "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Global\\SelectedSeedManager.cs",
+              "RelativeDocumentMoniker": "Script\\Global\\SelectedSeedManager.cs",
+              "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Global\\SelectedSeedManager.cs",
+              "RelativeToolTip": "Script\\Global\\SelectedSeedManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T09:23:08.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SellItems.cs",
+              "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\SellItems.cs",
+              "RelativeDocumentMoniker": "Script\\BuyAndSell\\SellItems.cs",
+              "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\SellItems.cs",
+              "RelativeToolTip": "Script\\BuyAndSell\\SellItems.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T09:04:11.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InventoryPanel.cs",
+              "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Inventory\\InventoryPanel.cs",
+              "RelativeDocumentMoniker": "Script\\Inventory\\InventoryPanel.cs",
+              "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Inventory\\InventoryPanel.cs",
+              "RelativeToolTip": "Script\\Inventory\\InventoryPanel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T08:28:10.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "InventorySeedsPanel.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Inventory\\InventorySeedsPanel.cs",
               "RelativeDocumentMoniker": "Script\\Inventory\\InventorySeedsPanel.cs",
               "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Inventory\\InventorySeedsPanel.cs",
               "RelativeToolTip": "Script\\Inventory\\InventorySeedsPanel.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAUwGoAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAUwEgAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-17T16:45:44.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "HarvestManager.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Global\\HarvestManager.cs",
               "RelativeDocumentMoniker": "Script\\Global\\HarvestManager.cs",
@@ -119,8 +137,7 @@
               "RelativeToolTip": "Script\\Global\\HarvestManager.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwB0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T09:52:39.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T09:52:39.133Z"
             },
             {
               "$type": "Document",
@@ -136,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "InventoryHarvestedPanel.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Inventory\\InventoryHarvestedPanel.cs",
               "RelativeDocumentMoniker": "Script\\Inventory\\InventoryHarvestedPanel.cs",
@@ -144,8 +161,7 @@
               "RelativeToolTip": "Script\\Inventory\\InventoryHarvestedPanel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwDQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T10:36:29.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T10:36:29.446Z"
             }
           ]
         }
