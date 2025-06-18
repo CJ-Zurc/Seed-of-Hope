@@ -15,6 +15,12 @@ public partial class TitleScreen : Control
 		settingsGame = GetNode<Button>("Options");
 		exitGame = GetNode<Button>("ExitGame");
 
+		// Hide New Game button if save file exists
+		if (FileAccess.FileExists("user://savegame.json"))
+			newGame.Hide();
+		else
+			newGame.Show();
+
 		loadGame.Pressed += OnLoadGamePressed;
 		settingsGame.Pressed += OnSettingsGamePressed;
 		exitGame.Pressed += OnExitGamePressed;

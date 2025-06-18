@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://cljmirepaj1cb"]
 
 [ext_resource type="Script" uid="uid://cujswep35j2p4" path="res://Script/MainMenu/IntroCutscene.cs" id="1_dcu1r"]
-[ext_resource type="Texture2D" uid="uid://dacr5i1q3idol" path="res://2D Arts/Intro/IntroCutscene_1.png" id="1_vuduy"]
-[ext_resource type="Texture2D" uid="uid://rcc3gicaagfs" path="res://2D Arts/Intro/IntroCutscene_2.png" id="2_3438a"]
-[ext_resource type="Texture2D" uid="uid://brdmmkxx6s1g0" path="res://2D Arts/Intro/IntroCutscene_3.png" id="3_wifpd"]
-[ext_resource type="Texture2D" uid="uid://ba1od5f8sw5nw" path="res://2D Arts/Intro/IntroCutscene_4.png" id="4_wifpd"]
-[ext_resource type="Texture2D" uid="uid://ctetpcsgalwmu" path="res://2D Arts/Intro/IntroCutscene_5.png" id="5_dw6o5"]
-[ext_resource type="Texture2D" uid="uid://1ssv8l2xig14" path="res://2D Arts/Intro/IntroCutscene_6.png" id="6_xeku4"]
+[ext_resource type="Texture2D" uid="uid://d1o2nwu6jwfse" path="res://2D Arts/Intro/IntroCutscene_1.png" id="1_vuduy"]
+[ext_resource type="Texture2D" uid="uid://d4ashepvmhw78" path="res://2D Arts/Intro/IntroCutscene_2.png" id="2_3438a"]
+[ext_resource type="Texture2D" uid="uid://uo82gcy1qgcc" path="res://2D Arts/Intro/IntroCutscene_3.png" id="3_wifpd"]
+[ext_resource type="Texture2D" uid="uid://doel1u00woioh" path="res://2D Arts/Intro/IntroCutscene_4.png" id="4_wifpd"]
+[ext_resource type="Texture2D" uid="uid://u7aen4ph2ogn" path="res://2D Arts/Intro/IntroCutscene_5.png" id="5_dw6o5"]
+[ext_resource type="Texture2D" uid="uid://dw41i5cpenjqt" path="res://2D Arts/Intro/IntroCutscene_6.png" id="6_xeku4"]
 [ext_resource type="AudioStream" uid="uid://di4yxay4nkm8j" path="res://Music/IntroBGM/Had I Not Seen The Sun chiptune.mp3" id="7_jusdg"]
 
 [sub_resource type="Animation" id="Animation_vuduy"]
