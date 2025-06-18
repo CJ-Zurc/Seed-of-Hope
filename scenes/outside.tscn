@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://brt5q3g25ufad" path="res://scenes/succulentCollectable.tscn" id="13_ht1us"]
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
-[ext_resource type="Texture2D" uid="uid://ch20jjjq6cchb" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
+[ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lt7nq"]
 texture = ExtResource("9_5tstl")

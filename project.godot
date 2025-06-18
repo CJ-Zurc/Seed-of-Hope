@@ -15,6 +15,12 @@ run/main_scene="uid://r7865twymit3"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SelectedSeedManager="*res://Script/Global/SelectedSeedManager.cs"
+SeedInventoryManager="*res://Script/Global/SeedInventoryManager.cs"
+HarvestManager="*res://Script/Global/HarvestManager.cs"
+
 [display]
 
 mouse_cursor/custom_image="uid://n3388q43qr6m"

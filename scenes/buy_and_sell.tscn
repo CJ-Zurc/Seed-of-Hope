@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cty8xedpqukuv"]
+[gd_scene load_steps=21 format=3 uid="uid://8shpnyu2wb1w"]
 
 [ext_resource type="Script" uid="uid://bwx7wxiwgsp3o" path="res://Script/BuyAndSell/BuyAndSellPanel.cs" id="1_j3yc2"]
 [ext_resource type="Texture2D" uid="uid://di02kv8yi0cxs" path="res://2D Arts/BuyAndSell/BuyBackground.png" id="2_a0msc"]
@@ -195,115 +195,94 @@ sprite_frames = SubResource("SpriteFrames_m2qx1")
 position = Vector2(1002, 267)
 sprite_frames = SubResource("SpriteFrames_82kkc")
 
-[node name="buySucculent" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 67.0
-offset_top = 416.0
-offset_right = 139.0
-offset_bottom = 456.0
+[node name="buySucculent" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00238427
+anchor_top = 0.00644034
+anchor_right = -0.00238427
+anchor_bottom = 0.00644034
+offset_left = 123.0
+offset_top = 375.0
+offset_right = 195.0
+offset_bottom = 415.0
+scale = Vector2(1.05996, 1.47148)
 icon = ExtResource("3_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="buyAmpalaya" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 290.0
-offset_top = 416.0
-offset_right = 362.0
-offset_bottom = 456.0
+[node name="buyAmpalaya" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00119207
+anchor_top = 0.00644043
+anchor_right = -0.00119207
+anchor_bottom = 0.00644043
+offset_left = 334.0
+offset_top = 375.0
+offset_right = 406.0
+offset_bottom = 415.0
+scale = Vector2(1.05996, 1.47148)
 icon = ExtResource("3_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="buyKalamansi" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 530.0
-offset_top = 416.0
-offset_right = 602.0
-offset_bottom = 456.0
+[node name="buyCalamansi" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00357633
+anchor_top = 0.00644034
+anchor_right = 0.00357633
+anchor_bottom = 0.00644034
+offset_left = 538.0
+offset_top = 375.0
+offset_right = 610.0
+offset_bottom = 415.0
+scale = Vector2(1.05996, 1.47148)
 icon = ExtResource("3_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="buyPechay" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 766.0
-offset_top = 416.0
-offset_right = 838.0
-offset_bottom = 456.0
+[node name="buyPechay" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.00429356
+anchor_bottom = 0.00429356
+offset_left = 748.0
+offset_top = 375.0
+offset_right = 820.0
+offset_bottom = 415.0
+scale = Vector2(1.05996, 1.47148)
 icon = ExtResource("3_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="buySunflower" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 989.0
-offset_top = 416.0
-offset_right = 1061.0
-offset_bottom = 456.0
+[node name="buySunflower" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.00644034
+anchor_bottom = 0.00644034
+offset_left = 964.0
+offset_top = 375.0
+offset_right = 1036.0
+offset_bottom = 415.0
+scale = Vector2(1.05996, 1.47148)
 icon = ExtResource("3_ei2hd")
 flat = true
+metadata/_edit_use_anchors_ = true
 
-[node name="succulentText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 40.0
-offset_top = 215.0
-offset_right = 183.0
-offset_bottom = 277.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Succulent Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="ampalayaText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 240.0
-offset_top = 223.0
-offset_right = 425.0
-offset_bottom = 285.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Ampalaya Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="kalamansiText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 467.0
-offset_top = 223.0
-offset_right = 671.0
-offset_bottom = 285.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Kalamansi Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="pechayText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 721.0
-offset_top = 223.0
-offset_right = 889.0
-offset_bottom = 254.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Pechay Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="sunflowerText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 937.0
-offset_top = 218.0
-offset_right = 1122.0
-offset_bottom = 280.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Sunflower Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="sellButton" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 1030.0
-offset_top = 135.0
-offset_right = 1102.0
-offset_bottom = 175.0
+[node name="sellButton" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0333799
+anchor_top = 0.0322018
+anchor_right = -0.0333799
+anchor_bottom = 0.0322018
+offset_left = 965.0
+offset_top = 36.0
+offset_right = 1037.0
+offset_bottom = 76.0
+scale = Vector2(1.97983, 1.88993)
 icon = ExtResource("5_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
