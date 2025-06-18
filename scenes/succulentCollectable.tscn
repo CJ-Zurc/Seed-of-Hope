@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://brt5q3g25ufad"]
+
+[ext_resource type="Texture2D" uid="uid://bnjwbrwa7qns8" path="res://2D Arts/succulentPlant.png" id="1_lyx0d"]
+[ext_resource type="PackedScene" uid="uid://cmwjw7bl3c5ei" path="res://scenes/collectable_items.tscn" id="2_i2ie8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcfeu"]
+atlas = ExtResource("1_lyx0d")
+region = Rect2(4, 6, 7, 9)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tc5dj"]
+radius = 4.12311
+
+[node name="succulent" type="Sprite2D"]
+texture = SubResource("AtlasTexture_pcfeu")
+
+[node name="collectableItems" parent="." instance=ExtResource("2_i2ie8")]
+CollectableItemName = "Succulent"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collectableItems"]
+shape = SubResource("CircleShape2D_tc5dj")

@@ -15,14 +15,9 @@ run/main_scene="uid://r7865twymit3"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[audio]
-
-buses/default_bus_layout=""
-
 [display]
 
-window/size/mode=3
-window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://n3388q43qr6m"
 
 [dotnet]
 

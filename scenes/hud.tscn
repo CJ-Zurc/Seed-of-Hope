@@ -1,14 +1,66 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7ovd1vg55yta"]
+[gd_scene load_steps=28 format=3 uid="uid://c7ovd1vg55yta"]
 
 [ext_resource type="Texture2D" uid="uid://bec5wdw4t5ro0" path="res://2D Arts/UI stuff/HUD UI/moneybackground.png" id="1_uo2fv"]
 [ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="2_047uy"]
 [ext_resource type="Texture2D" uid="uid://bkmxjfl4t3p33" path="res://2D Arts/UI stuff/HUD UI/backgroundTime.png" id="3_5pdws"]
 [ext_resource type="Texture2D" uid="uid://cptacr07mw423" path="res://2D Arts/UI stuff/HUD UI/stamina bar outline.png" id="4_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://b5tpdnuadh71n" path="res://2D Arts/UI stuff/HUD UI/stamina bar.png" id="5_0i1j5"]
-[ext_resource type="Texture2D" uid="uid://cknci5ct8k7nh" path="res://2D Arts/UI stuff/HUD UI/inventoryUI.png" id="6_047uy"]
+[ext_resource type="Theme" uid="uid://bbscswd1q326h" path="res://scenes/inventoryPanel.tres" id="6_047uy"]
+[ext_resource type="Texture2D" uid="uid://dtpypgu8tks5v" path="res://2D Arts/GardenAssets/Basic_tools_and_meterials.png" id="7_5pdws"]
+[ext_resource type="Script" uid="uid://dkxltdm1bsug7" path="res://Script/Inventory/InventoryPanel.cs" id="7_hd3ao"]
+[ext_resource type="Texture2D" uid="uid://dtgsql8llkbor" path="res://2D Arts/AmpalayaAssets.png" id="9_5n1hp"]
+[ext_resource type="Script" uid="uid://d3dgwb1hbcpxd" path="res://Script/Inventory/InventoryHarvestedPanel.cs" id="9_eld54"]
+[ext_resource type="Texture2D" uid="uid://cq21sug0vo7j1" path="res://2D Arts/CalamansiTree.png" id="10_eld54"]
+[ext_resource type="Texture2D" uid="uid://ctxt8407wprjw" path="res://2D Arts/PechayPlant.png" id="11_3swnk"]
+[ext_resource type="Texture2D" uid="uid://bnjwbrwa7qns8" path="res://2D Arts/succulentPlant.png" id="12_qkknv"]
+[ext_resource type="Texture2D" uid="uid://bd86mpo0w5ouq" path="res://2D Arts/SunflowerPlant.png" id="13_uxdf7"]
+[ext_resource type="Texture2D" uid="uid://h8ikpekh3im" path="res://2D Arts/Plant Assets/Seedsmol.png" id="15_3swnk"]
+[ext_resource type="Script" uid="uid://84nwmsu41vue" path="res://Script/Inventory/InventorySeedsPanel.cs" id="15_qkknv"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5pdws"]
-texture = ExtResource("6_047uy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd3ao"]
+atlas = ExtResource("7_5pdws")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkknv"]
+atlas = ExtResource("15_3swnk")
+region = Rect2(91, 9, 40, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxdf7"]
+atlas = ExtResource("15_3swnk")
+region = Rect2(11, 63, 40, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3swnk"]
+atlas = ExtResource("15_3swnk")
+region = Rect2(94, 66, 40, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_084dp"]
+atlas = ExtResource("15_3swnk")
+region = Rect2(53, 116, 40, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2nlu"]
+atlas = ExtResource("15_3swnk")
+region = Rect2(17, 7, 40, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5357l"]
+atlas = ExtResource("9_5n1hp")
+region = Rect2(81, 58, 26, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iypfu"]
+atlas = ExtResource("10_eld54")
+region = Rect2(24, 30, 23, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpprf"]
+atlas = ExtResource("11_3swnk")
+region = Rect2(60, 8, 15, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xg78"]
+atlas = ExtResource("12_qkknv")
+region = Rect2(4, 6, 7, 9)
+margin = Rect2(0, 5, 0, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48y67"]
+atlas = ExtResource("13_uxdf7")
+region = Rect2(49, 35, 19, 18)
 
 [node name="HUD" type="CanvasLayer"]
 layer = 3
@@ -46,12 +98,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 810.0
-offset_top = -57.0
-offset_right = 906.0
-offset_bottom = 23.0
+offset_left = 841.0
+offset_top = -56.0
+offset_right = 937.0
+offset_bottom = 24.0
 grow_horizontal = 0
-scale = Vector2(2.54167, 2.36896)
+scale = Vector2(2.12372, 1.95292)
 
 [node name="backgroundColor" type="TextureRect" parent="Control/containerDateTime"]
 layout_mode = 2
@@ -117,17 +169,275 @@ fill_mode = 3
 texture_over = ExtResource("4_hd3ao")
 texture_progress = ExtResource("5_0i1j5")
 
-[node name="inventoryPanel" type="Panel" parent="Control"]
+[node name="inventoryPanel" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = 474.0
+offset_right = 19.0
+offset_bottom = 520.0
+scale = Vector2(1.94398, 1.8432)
+theme = ExtResource("6_047uy")
+theme_type_variation = &"woodPanel"
+script = ExtResource("7_hd3ao")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/inventoryPanel"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/inventoryPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="waterCan" type="Button" parent="Control/inventoryPanel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"waterCan"
+icon = SubResource("AtlasTexture_hd3ao")
+icon_alignment = 1
+
+[node name="inventorySeedsPanel" type="PanelContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 351.0
-offset_top = 498.0
-offset_right = 664.0
-offset_bottom = 538.0
+offset_left = 307.0
+offset_top = 425.0
+offset_right = 583.0
+offset_bottom = 496.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxTexture_5pdws")
+scale = Vector2(1.41701, 1.45817)
+theme = ExtResource("6_047uy")
+theme_type_variation = &"newWoodPanel"
+script = ExtResource("15_qkknv")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/inventorySeedsPanel"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/inventorySeedsPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="ampalayaSeed" type="PanelContainer" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"inventorySeeds"
+
+[node name="ampalayaButton" type="Button" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+icon = SubResource("AtlasTexture_qkknv")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="ampalayaLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"inventorySeedsLabel"
+text = "0"
+horizontal_alignment = 1
+
+[node name="calamansiSeed" type="PanelContainer" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"inventorySeeds"
+
+[node name="calamansiButton" type="Button" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/calamansiSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+icon = SubResource("AtlasTexture_uxdf7")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="calamansiLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/calamansiSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"inventorySeedsLabel"
+text = "0"
+horizontal_alignment = 1
+
+[node name="pechaySeed" type="PanelContainer" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"inventorySeeds"
+
+[node name="pechayButton" type="Button" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/pechaySeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+icon = SubResource("AtlasTexture_3swnk")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="pechayLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/pechaySeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"inventorySeedsLabel"
+text = "0"
+horizontal_alignment = 1
+
+[node name="succulentSeed" type="PanelContainer" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"inventorySeeds"
+
+[node name="succulentButton" type="Button" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/succulentSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+icon = SubResource("AtlasTexture_084dp")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="succulentLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/succulentSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"inventorySeedsLabel"
+text = "0"
+horizontal_alignment = 1
+
+[node name="sunflowerSeed" type="PanelContainer" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"inventorySeeds"
+
+[node name="sunflowerButton" type="Button" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/sunflowerSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+icon = SubResource("AtlasTexture_y2nlu")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="sunflowerLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/sunflowerSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"inventorySeedsLabel"
+text = "0"
+horizontal_alignment = 1
+
+[node name="inventoryHarvestedPanel" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = 65.0
+offset_right = 12.0
+offset_bottom = 249.0
+grow_vertical = 2
+scale = Vector2(1.56311, 1.62815)
+theme = ExtResource("6_047uy")
+theme_type_variation = &"woodPanel"
+script = ExtResource("9_eld54")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/inventoryHarvestedPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/inventoryHarvestedPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="ampalaya" type="PanelContainer" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"inventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/ampalaya"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_5357l")
+
+[node name="ampalayaLabel" type="Label" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/ampalaya"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+text = "0"
+
+[node name="calamansi" type="PanelContainer" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"inventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/calamansi"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_iypfu")
+
+[node name="calamansiLabel" type="Label" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/calamansi"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+text = "0"
+
+[node name="pechay" type="PanelContainer" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"inventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/pechay"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_qpprf")
+
+[node name="pechayLabel" type="Label" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/pechay"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+text = "0"
+
+[node name="succulent" type="PanelContainer" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"inventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/succulent"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_3xg78")
+
+[node name="succulentLabel" type="Label" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/succulent"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+text = "0"
+
+[node name="sunflower" type="PanelContainer" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"inventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/sunflower"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_48y67")
+
+[node name="sunflowerLabel" type="Label" parent="Control/inventoryHarvestedPanel/MarginContainer/VBoxContainer/sunflower"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+text = "0"
+
+[connection signal="pressed" from="Control/inventoryPanel/MarginContainer/HBoxContainer/waterCan" to="Control/inventoryPanel" method="_on_water_can_pressed"]
+[connection signal="pressed" from="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed/ampalayaButton" to="Control/inventoryPanel" method="_on_ampalaya_button_pressed"]
+[connection signal="pressed" from="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/calamansiSeed/calamansiButton" to="Control/inventoryPanel" method="_on_calamansi_button_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmwjw7bl3c5ei"]
+
+[ext_resource type="Script" uid="uid://bqexkcuhcacwd" path="res://Script/Plant/CollectableItems.cs" id="1_8c8sg"]
+
+[node name="collectableItems" type="Area2D"]
+script = ExtResource("1_8c8sg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
