@@ -8,8 +8,15 @@ public partial class InventorySeedsPanel : PanelContainer
     private Button pechayButton;
     private Button succulentButton;
     private Button sunflowerButton;
-	public override void _Ready()
+
+
+    //inventory seed manager to manage the seeds in the inventory
+    private SeedInventoryManager seedInventoryManager;
+    public override void _Ready()
 	{
+        //gets the reference of the SeedInventoryManager
+        seedInventoryManager = GetNode<SeedInventoryManager>("/root/SeedInventoryManager");
+
         //gets the ampalayaButton from the node
         ampalayaButton = GetNode<Button>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed/ampalayaButton");
         ampalayaButton.Pressed += OnAmpalayaButtonPressed;
@@ -29,6 +36,7 @@ public partial class InventorySeedsPanel : PanelContainer
         //gets the sunflowerButton from the node
         sunflowerButton = GetNode<Button>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/sunflowerSeed/sunflowerButton");
         sunflowerButton.Pressed += OnSunflowerButtonPressed;
+
     }
 
     //function for when the ampalayaButton is pressed

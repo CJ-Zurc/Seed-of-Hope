@@ -6,27 +6,34 @@ public partial class SeedInventoryManager : Node
     [Signal]
     public delegate void InventoryChangedEventHandler();
 
-    public Dictionary<string,int> Inventory = new Dictionary<string, int>();
+    private Dictionary<string, int> seedInventory = new Dictionary<string, int>();
 
-    public void AddSeed(String seedName) 
+    public IReadOnlyDictionary<string,int> Inventory => seedInventory;
+
+    public void BuySeed(String seedName) 
     {
-        if (Inventory.ContainsKey(seedName))
+        if (seedInventory.ContainsKey(seedName))
         {
-            Inventory[seedName] += 1;
+            seedInventory[seedName] += 1;
         }
         else
         {
-            Inventory[seedName] = 1;
+            seedInventory[seedName] = 1;
         }
         EmitSignal(nameof(InventoryChanged));
     }
 
-    public void RemoveSeed(String seedName) 
+    public void SellOneOfEachSeed() 
     {
-        if(Inventory.ContainsKey(seedName) && Inventory[seedName] >0)
+        foreach (var seed in seedInventory.Keys) 
         {
-            Inventory[seedName] -= 1;
-            EmitSignal(nameof(InventoryChanged));
+            if (seedInventory[seed] > 0)
+            {
+                seedInventory[seed] -= 1;
+
+            }
+            
         }
+        EmitSignal(nameof(InventoryChanged));
     }
 }

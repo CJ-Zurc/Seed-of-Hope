@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://eu7441b35sxj"]
 
-[ext_resource type="Texture2D" uid="uid://bvy8ytk20woa3" path="res://2D Arts/BuyAndSell/SellBackground.png" id="1_11bll"]
+[ext_resource type="Texture2D" uid="uid://kbfpi465l05t" path="res://2D Arts/BuyAndSell/SellBackground.png" id="1_11bll"]
 [ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="2_m4b1v"]
 [ext_resource type="Texture2D" uid="uid://bims48vbhs25b" path="res://2D Arts/BuyAndSell/buyButton.png" id="3_8wsmk"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m4b1v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wsmk"]
 atlas = ExtResource("1_11bll")
 
 [node name="sellUI" type="Control"]
@@ -17,11 +17,10 @@ grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="sappyBGSell" type="TextureRect" parent="CanvasLayer"]
+[node name="sellUIBG" type="TextureRect" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(1.01762, 1.17039)
-texture = SubResource("AtlasTexture_m4b1v")
+texture = SubResource("AtlasTexture_8wsmk")
 
 [node name="sellItems" type="Button" parent="CanvasLayer"]
 offset_left = 233.036
@@ -34,9 +33,10 @@ text = "Click here to sell plants
 "
 
 [node name="buyButton" type="Button" parent="CanvasLayer"]
-offset_left = 1013.0
-offset_top = 80.0
-offset_right = 1085.0
-offset_bottom = 120.0
+offset_left = 939.0
+offset_top = 38.0
+offset_right = 1011.0
+offset_bottom = 78.0
+scale = Vector2(2.33548, 2.27451)
 icon = ExtResource("3_8wsmk")
 flat = true

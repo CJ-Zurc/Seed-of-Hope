@@ -9,7 +9,8 @@ public partial class HarvestManager : Node
 	public delegate void InventoryChangedEventHandler();
 
     //dictionary to hold the item name and the count
-    public Dictionary<string, int> Inventory = new Dictionary<string, int>();
+    private Dictionary<string, int> inventory = new Dictionary<string, int>();
+    public IReadOnlyDictionary<string, int> Inventory => inventory;
 
     public void AddCollectable(string CollectableName)
 	{
@@ -17,12 +18,12 @@ public partial class HarvestManager : Node
         if (Inventory.ContainsKey(CollectableName))
 		{
             // If it exists, increment the count
-            Inventory[CollectableName] += 1;
+            inventory[CollectableName] += 1;
 		}
 		else
 		{
             // If it doesn't exist, add it with a count of 1
-            Inventory[CollectableName] = 1;
+            inventory[CollectableName] = 1;
 		}
         // Emit the signal to notify that the inventory has changed
         EmitSignal(nameof(InventoryChanged));
