@@ -9,6 +9,12 @@ public partial class InventorySeedsPanel : PanelContainer
     private Button succulentButton;
     private Button sunflowerButton;
 
+    private Label sunflowerLabel;
+    private Label ampalayaLabel;
+    private Label calamansiLabel;
+    private Label pechayLabel;
+    private Label succulentLabel;
+
 
     //inventory seed manager to manage the seeds in the inventory
     private SeedInventoryManager seedInventoryManager;
@@ -16,6 +22,14 @@ public partial class InventorySeedsPanel : PanelContainer
 	{
         //gets the reference of the SeedInventoryManager
         seedInventoryManager = GetNode<SeedInventoryManager>("/root/SeedInventoryManager");
+        seedInventoryManager.InventoryChanged += OnInventoryChanged;
+
+        //gets the labels for each seed in the inventory
+        sunflowerLabel = GetNode<Label>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/sunflowerSeed/sunflowerLabelN");
+        ampalayaLabel = GetNode<Label>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed/ampalayaLabelN");
+        calamansiLabel = GetNode<Label>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/calamansiSeed/calamansiLabelN");
+        pechayLabel = GetNode<Label>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/pechaySeed/pechayLabelN");
+        succulentLabel = GetNode<Label>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/succulentSeed/succulentLabelN");
 
         //gets the ampalayaButton from the node
         ampalayaButton = GetNode<Button>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed/ampalayaButton");
@@ -36,6 +50,8 @@ public partial class InventorySeedsPanel : PanelContainer
         //gets the sunflowerButton from the node
         sunflowerButton = GetNode<Button>("/root/MainGame/HUD/Control/inventorySeedsPanel/MarginContainer/HBoxContainer/sunflowerSeed/sunflowerButton");
         sunflowerButton.Pressed += OnSunflowerButtonPressed;
+
+        OnInventoryChanged(); // Initialize the labels with current inventory counts
 
     }
 
@@ -72,6 +88,33 @@ public partial class InventorySeedsPanel : PanelContainer
     {
         Texture2D sunflowerSmolSeed = GD.Load<Texture2D>("res://2D Arts/Plant Assets/sunflowerSmolSeed.png");
         Input.SetCustomMouseCursor(sunflowerSmolSeed, Input.CursorShape.Arrow, Vector2.Zero);
+
+    }
+
+    private void OnInventoryChanged()
+    {
+        // Get the inventory from the HarvestManager
+        var inventory = seedInventoryManager.Inventory;
+
+        // Update the sunflower label with the current count of sunflowers in the inventory
+        int sunflowerCount = inventory.ContainsKey("Sunflower") ? inventory["Sunflower"] : 0;
+        sunflowerLabel.Text = sunflowerCount.ToString();
+
+        // Update the ampalaya label with the current count of ampalayas in the inventory
+        int ampalayaCount = inventory.ContainsKey("Ampalaya") ? inventory["Ampalaya"] : 0;
+        ampalayaLabel.Text = ampalayaCount.ToString();
+
+        // Update the calamansi label with the current count of calamansis in the inventory
+        int calamansiCount = inventory.ContainsKey("Calamansi") ? inventory["Calamansi"] : 0;
+        calamansiLabel.Text = calamansiCount.ToString();
+
+        // Update the pechay label with the current count of pechays in the inventory
+        int pechayCount = inventory.ContainsKey("Pechay") ? inventory["Pechay"] : 0;
+        pechayLabel.Text = pechayCount.ToString();
+
+        // Update the succulent label with the current count of succulents in the inventory
+        int succulentCount = inventory.ContainsKey("Succulent") ? inventory["Succulent"] : 0;
+        succulentLabel.Text = succulentCount.ToString();
 
     }
 }

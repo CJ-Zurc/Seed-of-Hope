@@ -98,10 +98,10 @@ script = ExtResource("1_a0msc")
 layer = 2
 
 [node name="SappyBG" type="TextureRect" parent="CanvasLayer"]
-offset_left = 10.0
-offset_top = 22.0
-offset_right = 1149.0
-offset_bottom = 607.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 1155.0
+offset_bottom = 650.0
 texture = SubResource("AtlasTexture_dbud6")
 stretch_mode = 5
 
@@ -143,7 +143,7 @@ offset_bottom = 415.0
 icon = ExtResource("3_ei2hd")
 flat = true
 
-[node name="buyKalamansi" type="Button" parent="CanvasLayer/SappyBG"]
+[node name="buyCalamansi" type="Button" parent="CanvasLayer/SappyBG"]
 layout_mode = 0
 offset_left = 538.0
 offset_top = 375.0

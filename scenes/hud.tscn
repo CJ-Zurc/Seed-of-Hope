@@ -201,13 +201,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 343.0
-offset_top = 445.0
-offset_right = 619.0
-offset_bottom = 516.0
+offset_left = 307.0
+offset_top = 425.0
+offset_right = 583.0
+offset_bottom = 496.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(1, 0.981263)
+scale = Vector2(1.41701, 1.45817)
 theme = ExtResource("6_047uy")
 theme_type_variation = &"newWoodPanel"
 script = ExtResource("15_qkknv")
@@ -231,7 +231,7 @@ flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="ampalayaLabel" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed"]
+[node name="ampalayaLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -252,7 +252,7 @@ flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="calamansiLabel" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/calamansiSeed"]
+[node name="calamansiLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/calamansiSeed"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -273,7 +273,7 @@ flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="pechayLabel" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/pechaySeed"]
+[node name="pechayLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/pechaySeed"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -294,7 +294,7 @@ flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="succulentLabel" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/succulentSeed"]
+[node name="succulentLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/succulentSeed"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -315,7 +315,7 @@ flat = true
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="sunflowerLabel" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/sunflowerSeed"]
+[node name="sunflowerLabelN" type="Label" parent="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/sunflowerSeed"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
