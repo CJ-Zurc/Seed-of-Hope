@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 SelectedSeedManager="*res://Script/Global/SelectedSeedManager.cs"
 SeedInventoryManager="*res://Script/Global/SeedInventoryManager.cs"
 HarvestManager="*res://Script/Global/HarvestManager.cs"
+MoneyManager="*res://Script/Global/MoneyManager.cs"
 
 [display]
 

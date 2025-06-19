@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class HarvestManager : Node
 {
@@ -28,4 +29,17 @@ public partial class HarvestManager : Node
         // Emit the signal to notify that the inventory has changed
         EmitSignal(nameof(InventoryChanged));
 	}
+
+    //Method to sell all of the harvested items
+    public void SellHarvestedItems()
+    {
+        foreach(var key in inventory.Keys.ToList())
+        {
+            inventory[key] = 0; // Set the count to 0 for each item
+            GD.Print($"Selling {key}... Count: {inventory[key]}");
+        }
+        EmitSignal(nameof(InventoryChanged)); // Emit the signal to notify that the inventory has changed
+        GD.Print("All harvested items sold.");
+    }
+
 }

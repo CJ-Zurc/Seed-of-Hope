@@ -1,41 +1,37 @@
 using Godot;
 using System;
 
-public partial class SellItems : Button
+public partial class SellItems : TextureRect
 {
-	private Button sellItemsButton;
-
+	private Button sellAmpalaya;
+    private Button sellSucculent;
+	private Button sellCalamansi;
+	private Button sellPechay;
+    private Button sellSunflower;
     public override void _Ready()
 	{
-		sellItemsButton = GetNode<Button>("/root/Control/sellUI/CanvasLayer/sellUIBG/SellItems");
-		sellItemsButton.Pressed += OnSellItemsButtonPressed;
+        GetNode<Button>("sellAmpalaya").Pressed += () => SellSeed("Ampalaya");
+        GetNode<Button>("sellSucculent").Pressed += () => SellSeed("Succulent");
+        GetNode<Button>("sellPechay").Pressed += () => SellSeed("Pechay");
+        GetNode<Button>("sellCalamansi").Pressed += () => SellSeed("Calamansi");
+        GetNode<Button>("sellSunflower").Pressed += () => SellSeed("Sunflower");
+        GetNode<Button>("sellHarvested").Pressed += SellHarvestedItemsPressed;
+
+
     }
 
-	private void OnSellItemsButtonPressed()
-	{
-		var sm = GetNode<SelectedSeedManager>("/root/SelectedSeedManager");
-		var selectedSeed = sm.SelectedSeed; // Get the currently selected seed
-
-        if (!String.IsNullOrEmpty(selectedSeed))
-		{
-			var SeedInventoryManager = GetNode<SeedInventoryManager>("/root/SeedInventoryManager");
-            SeedInventoryManager.SellOneOfEachSeed();
-            GD.Print($"Selling {selectedSeed}...");
-			
-			sm.SelectedSeed = null; // Reset the selected seed after selling
-		}
-		else
-		{
-			GD.Print("No seed selected to sell.");
-        }
-        // Logic to sell items goes here
-        GD.Print("Sell Items button pressed.");
+    private void SellSeed(string seedName)
+    {
+        var seedInventoryManager = GetNode<SeedInventoryManager>("/root/SeedInventoryManager");
+        seedInventoryManager.SellSeed(seedName);
+        GD.Print($"Selling {seedName}...");
     }
 
+private void SellHarvestedItemsPressed()
+    {
+        var harvestManager = GetNode<HarvestManager>("/root/HarvestManager");
+        harvestManager.SellHarvestedItems();
+        GD.Print("All harvested items sold.");
+    }
 
-
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
-	{
-	}
 }

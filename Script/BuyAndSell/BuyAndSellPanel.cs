@@ -7,6 +7,8 @@ public partial class BuyAndSellPanel : Control
     private CanvasLayer sellCanvasLayer;
     private Button buyButton;
     private Button sellButton;
+
+    private SelectedSeedManager selectedSeedManager;
     private SeedInventoryManager seedInventoryManager;
 
     public override void _Ready()
@@ -40,6 +42,10 @@ public partial class BuyAndSellPanel : Control
     {
         seedInventoryManager.BuySeed(SeedName);
         GD.Print($"Bought seed: {SeedName}");
+
+        //sets the selected seed after buying
+        var selectedSeedManager = GetNode<SelectedSeedManager>("/root/SelectedSeedManager");
+        selectedSeedManager.SelectedSeed = SeedName;
     }
 
     private void OnBuyButtonPressed()
