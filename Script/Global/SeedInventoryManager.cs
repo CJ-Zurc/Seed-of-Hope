@@ -30,9 +30,11 @@ public partial class SeedInventoryManager : Node
             seedInventory[seedName] -= 1;
             EmitSignal(nameof(InventoryChanged));
         }
-        else
-        {
-            GD.Print($"Cannot sell {seedName}: none in inventory.");
-        }
+    }
+
+    public int GetSeedCount(string seedName)
+    {
+        var seedInventoryManager = GetNode<SeedInventoryManager>("/root/SeedInventoryManager");
+        return seedInventoryManager.Inventory.ContainsKey(seedName) ? seedInventoryManager.Inventory[seedName] : 0;
     }
 }

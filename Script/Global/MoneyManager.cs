@@ -3,41 +3,46 @@ using System;
 
 public partial class MoneyManager : Node
 {
-    // Signal to notify when the money changes
-	[Signal]
-	public delegate void MoneyChangedEventHandler(int newAmount);
-
     // Variable to hold the current amount of money
-	private int currentMoney = 0;
-	public int CurrentMoney
-	{
-		get => currentMoney;
-		set
-		{
-			if (currentMoney != value)
-			{
-				currentMoney = value;
-				EmitSignal(nameof(MoneyChanged), currentMoney);
-			}
-		}
-	}
+    private int currentMoney = 0;
 
-    // Called when the node enters the scene tree for the first time.
+    // Signal to notify when the money changes
+    [Signal]
+    public delegate void MoneyChangedEventHandler(int newAmount);
+
+    public int CurrentMoney
+    {
+        get => currentMoney;
+        set
+        {
+            if (currentMoney != value)
+            {
+                currentMoney = value;
+                EmitSignal(nameof(MoneyChanged), currentMoney);
+            }
+        }
+    }
+
     public override void _Ready()
-	{
-		currentMoney = 200; // Initialize with a default amount of money
+    {
+        CurrentMoney = 200; // Use the property so the signal fires
     }
 
-	public void AddMoney(int amount)
-	{
-		if (amount > 0)
-		{
-			CurrentMoney += amount;
-		}
+    public void AddMoney(int amount)
+    {
+        if (amount > 0)
+        {
+            CurrentMoney += amount; // Use the property!
+        }
     }
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
-	{
-	}
+    public bool RemoveMoney(int amount)
+    {
+        if (currentMoney >= amount)
+        {
+            CurrentMoney -= amount;
+            return true;
+        }
+        return false; // Not enough money
+    }
 }

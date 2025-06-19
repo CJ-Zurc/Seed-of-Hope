@@ -36,10 +36,8 @@ public partial class HarvestManager : Node
         foreach(var key in inventory.Keys.ToList())
         {
             inventory[key] = 0; // Set the count to 0 for each item
-            GD.Print($"Selling {key}... Count: {inventory[key]}");
         }
         EmitSignal(nameof(InventoryChanged)); // Emit the signal to notify that the inventory has changed
-        GD.Print("All harvested items sold.");
     }
 
 }

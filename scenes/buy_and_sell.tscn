@@ -109,7 +109,7 @@ offset_bottom = 547.0
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="sellUI"]
-layer = 0
+layer = 2
 
 [node name="sellUIBG" type="TextureRect" parent="sellUI/CanvasLayer"]
 offset_left = 164.0
@@ -210,6 +210,7 @@ grow_vertical = 2
 scale = Vector2(1.00839, 1.00872)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="BuyUI"]
+layer = 3
 
 [node name="SappyBG" type="TextureRect" parent="BuyUI/CanvasLayer"]
 offset_left = 160.0
