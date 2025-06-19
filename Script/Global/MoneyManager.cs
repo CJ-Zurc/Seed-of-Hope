@@ -21,15 +21,23 @@ public partial class MoneyManager : Node
 			}
 		}
 	}
-    // Method to add money
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
-	}
+		currentMoney = 200; // Initialize with a default amount of money
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	public void AddMoney(int amount)
+	{
+		if (amount > 0)
+		{
+			CurrentMoney += amount;
+		}
+    }
+
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 	}
 }
