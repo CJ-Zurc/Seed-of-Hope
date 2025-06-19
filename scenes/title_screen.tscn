@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://buid2snmwpocc" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_New.png" id="2_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://bx7jwh8boivfg" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_Load.png" id="3_mgrm8"]
 [ext_resource type="Texture2D" uid="uid://c65v1j57ujmmt" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_Options.png" id="4_dc4i4"]
-[ext_resource type="Texture2D" uid="uid://j55ot4pba8ip" path="res://2D Arts/UI stuff/Title screen/ExitButton.png" id="5_dc4i4"]
+[ext_resource type="Texture2D" uid="uid://o0rxkdn7ciqh" path="res://2D Arts/UI stuff/Title screen/ExitButton.png" id="5_dc4i4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgkus"]
 texture = ExtResource("1_sa3yf")
