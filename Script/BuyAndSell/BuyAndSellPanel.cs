@@ -19,7 +19,7 @@ public partial class BuyAndSellPanel : Control
         { "Ampalaya", 15 },
         { "Calamansi", 20 },
         { "Pechay", 25 },
-        { "Sunflower", 30 }
+        { "Sunflower", 25 }
     };
 
     // Signals for buy and sell actions
