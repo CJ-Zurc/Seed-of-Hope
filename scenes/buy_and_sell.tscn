@@ -1,19 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://8shpnyu2wb1w"]
+[gd_scene load_steps=19 format=3 uid="uid://8shpnyu2wb1w"]
 
 [ext_resource type="Script" uid="uid://bwx7wxiwgsp3o" path="res://Script/BuyAndSell/BuyAndSellPanel.cs" id="1_j3yc2"]
-[ext_resource type="Texture2D" uid="uid://di02kv8yi0cxs" path="res://2D Arts/BuyAndSell/BuyBackground.png" id="2_a0msc"]
+[ext_resource type="Texture2D" uid="uid://cdjasg07nd0gl" path="res://2D Arts/BuyAndSell/BuyBackground.png" id="2_a0msc"]
 [ext_resource type="Texture2D" uid="uid://vfesmpkjvlup" path="res://2D Arts/BuyAndSell/seeds.png" id="2_y4nr4"]
 [ext_resource type="Texture2D" uid="uid://bims48vbhs25b" path="res://2D Arts/BuyAndSell/buyButton.png" id="3_ei2hd"]
 [ext_resource type="Texture2D" uid="uid://dyjnciylhmg4t" path="res://2D Arts/BuyAndSell/SellButton.png" id="5_ei2hd"]
 [ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="6_4ox3i"]
-[ext_resource type="Texture2D" uid="uid://kbfpi465l05t" path="res://2D Arts/BuyAndSell/SellBackground.png" id="7_dbud6"]
+[ext_resource type="Texture2D" uid="uid://cfdepgs183lpc" path="res://2D Arts/BuyAndSell/SellBackground.png" id="7_dbud6"]
 [ext_resource type="Script" uid="uid://cpraq5wf3rhsh" path="res://Script/BuyAndSell/SellItems.cs" id="8_j3yc2"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rbqbk"]
-atlas = ExtResource("7_dbud6")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dbud6"]
-atlas = ExtResource("2_a0msc")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ox3i"]
 atlas = ExtResource("2_y4nr4")
@@ -117,16 +111,16 @@ offset_top = 100.0
 offset_right = 1316.0
 offset_bottom = 748.0
 scale = Vector2(0.725482, 0.714004)
-texture = SubResource("AtlasTexture_rbqbk")
+texture = ExtResource("7_dbud6")
 script = ExtResource("8_j3yc2")
 metadata/_edit_use_anchors_ = true
 
 [node name="sellAmpalaya" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 55.1358
-offset_top = 165.265
+offset_top = 159.663
 offset_right = 427.136
-offset_bottom = 239.265
+offset_bottom = 233.663
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Ampalaya Seed"
@@ -135,9 +129,9 @@ autowrap_mode = 1
 [node name="sellSucculent" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 57.0
-offset_top = 253.605
+offset_top = 246.602
 offset_right = 426.0
-offset_bottom = 327.605
+offset_bottom = 320.602
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Succulent Seed"
@@ -146,9 +140,9 @@ autowrap_mode = 1
 [node name="sellCalamansi" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 57.0
-offset_top = 350.014
+offset_top = 331.807
 offset_right = 426.0
-offset_bottom = 424.014
+offset_bottom = 405.807
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Calamansi Seed"
@@ -157,9 +151,9 @@ autowrap_mode = 1
 [node name="sellSunflower" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 56.5142
-offset_top = 445.375
+offset_top = 420.165
 offset_right = 423.514
-offset_bottom = 519.375
+offset_bottom = 494.165
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell sunflower  Seed"
@@ -167,10 +161,10 @@ autowrap_mode = 1
 
 [node name="sellPechay" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 82.7036
-offset_top = 539.213
-offset_right = 389.704
-offset_bottom = 613.213
+offset_left = 76.1895
+offset_top = 509.812
+offset_right = 400.19
+offset_bottom = 583.812
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Pechay Seed"
@@ -218,7 +212,7 @@ offset_top = 97.0
 offset_right = 1312.0
 offset_bottom = 745.0
 scale = Vector2(0.728154, 0.718845)
-texture = SubResource("AtlasTexture_dbud6")
+texture = ExtResource("2_a0msc")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
