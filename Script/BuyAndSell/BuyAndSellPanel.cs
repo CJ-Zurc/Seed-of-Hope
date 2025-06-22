@@ -9,6 +9,7 @@ public partial class BuyAndSellPanel : Control
     private Button buyButton;
     private Button sellButton;
 
+    private SelectedSeedManager selectedSeedManager;
     private SeedInventoryManager seedInventoryManager;
 
     // Prices for seeds
@@ -52,6 +53,7 @@ public partial class BuyAndSellPanel : Control
     }
     private void onBuySeedButtonPressed(string SeedName)
     {
+        var selectedSeedManager = GetNode<SelectedSeedManager>("/root/SelectedSeedManager");
         var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
         int seedCost = seedPrices.ContainsKey(SeedName) ? seedPrices[SeedName] : 0;
 
@@ -60,6 +62,8 @@ public partial class BuyAndSellPanel : Control
             seedInventoryManager.BuySeed(SeedName);
             textManager.Instance.showPopup($"Bought {SeedName} for {seedCost} coins.");
 
+            // Sets the selected seed after buying
+            selectedSeedManager.SelectedSeed = SeedName;
         }
         else
         {
