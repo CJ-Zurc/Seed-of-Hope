@@ -6,6 +6,8 @@ public partial class PlantArea2D : PlantableArea
 	[Export]
 	public NodePath plantAnimationPath;
 	private AnimatedSprite2D plantAnimation;
+	private Timer plantInfoTimer;
+	private Control plantInfoInstance;
 	private string currentSeedType = null;
 	private float lastGrowthDay = 0;
 	private ProgressBar waterBar;
@@ -15,6 +17,7 @@ public partial class PlantArea2D : PlantableArea
 	private InventorySeedsPanel inventorySeedsPanel;
 	private InventoryPanel inventoryPanel;
 	private bool wateringCanActive = false;
+	private int growthDaysLeft = 5;
 
 	public override void _Ready()
 	{
@@ -35,6 +38,7 @@ public partial class PlantArea2D : PlantableArea
 
 		currentSeedType = seedType;
 		isPlanted = true;
+		growthDaysLeft = 5; // Set growth stage to 5 days
 
 		switch (seedType)
 		{
@@ -90,13 +94,64 @@ public partial class PlantArea2D : PlantableArea
 
 	private void ShowPlantInfo()
 	{
-		// Reset: Only set up the basic structure for showing plant info
+		if (plantInfoInstance != null && IsInstanceValid(plantInfoInstance))
+		{
+			plantInfoInstance.QueueFree();
+		}
+
+		var plantInfoScene = GD.Load<PackedScene>("res://scenes/plant_info.tscn");
+		plantInfoInstance = (Control)plantInfoScene.Instantiate();
+
+		// Set plant name
+		var plantNameLabel = plantInfoInstance.GetNode<RichTextLabel>("CanvasLayer/Control/plantName");
+		plantNameLabel.Text = currentSeedType;
+
+		// Set growth info
+		var growthLabel = plantInfoInstance.GetNode<RichTextLabel>("CanvasLayer/Control/RichTextLabel");
+		if (growthDaysLeft > 0)
+		{
+			growthLabel.Text = $"Growth: {growthDaysLeft} Days";
+		}
+		else
+		{
+			growthLabel.Text = "Ready to Harvest!";
+		}
+
+		// Add to HUD (assumes HUD is at /root/MainGame/HUD)
+		var hud = GetNode<CanvasLayer>("/root/MainGame/HUD");
+		hud.AddChild(plantInfoInstance);
+
+		// Position: bottom middle, just above the seed inventory
+		plantInfoInstance.AnchorLeft = 0.5f;
+		plantInfoInstance.AnchorRight = 0.5f;
+		plantInfoInstance.AnchorBottom = 1.0f;
+		plantInfoInstance.AnchorTop = 1.0f;
+		plantInfoInstance.OffsetLeft = -plantInfoInstance.Size.X / 2f;
+		plantInfoInstance.OffsetTop = -180; // Adjust as needed to be above inventory
+
+		// Auto-hide after 1.5 seconds
+		if (plantInfoTimer == null)
+		{
+			plantInfoTimer = new Timer();
+			plantInfoTimer.OneShot = true;
+			plantInfoTimer.WaitTime = 1.5f;
+			plantInfoTimer.Timeout += () => {
+				if (plantInfoInstance != null && IsInstanceValid(plantInfoInstance))
+					plantInfoInstance.QueueFree();
+			};
+			hud.AddChild(plantInfoTimer);
+		}
+		plantInfoTimer.Start();
 	}
 
 	public override void _Process(double delta)
 	{
 		if (isPlanted && mainGame.GetDayCount() > lastGrowthDay)
 		{
+			if (growthDaysLeft > 0)
+			{
+				growthDaysLeft--;
+			}
 			plantAnimation.Frame++;
 			lastGrowthDay = mainGame.GetDayCount();
 		}
