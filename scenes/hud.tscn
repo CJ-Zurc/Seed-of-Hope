@@ -79,10 +79,10 @@ offset_bottom = 106.0
 
 [node name="moneyContainer" type="TextureRect" parent="Control"]
 layout_mode = 1
-offset_left = 5.0
-offset_top = -5.0
-offset_right = 117.0
-offset_bottom = 35.0
+offset_left = 32.0
+offset_top = -60.0
+offset_right = 144.0
+offset_bottom = -20.0
 scale = Vector2(1.88975, 2.35645)
 texture = ExtResource("1_uo2fv")
 
