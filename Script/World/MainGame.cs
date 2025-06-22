@@ -126,28 +126,7 @@ public partial class MainGame : Node2D
 		}
 	}
 
-	public void OpenSettingsMenu()
-	{
-		if (SettingsScene == null)
-		{
-			GD.PrintErr("SettingsScene is not assigned!");
-			return;
-		}
-		var settingsInstance = (Settings)SettingsScene.Instantiate();
-		
-		// Connect the settings menu's volume changed signal to this script's handler
-		settingsInstance.Connect("VolumeChangedEventHandler", new Callable(this, nameof(OnSettingsVolumeChanged)));
-	   
-		AddChild(settingsInstance);
-	}
 
-	private void OnSettingsVolumeChanged(float newVolume)
-	{
-		
-		// Called when the settings menu emits a volume change
-		SetVolume(newVolume);
-		
-	}
 
 	public override void _Process(double delta)
 	{
