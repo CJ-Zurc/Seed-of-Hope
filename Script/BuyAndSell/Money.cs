@@ -16,7 +16,9 @@ public partial class Money : CanvasLayer
 		optionButton.Pressed += OnOptionButtonPressed;
 
 		// Connect the MoneyChanged signal to update the label when money changes
+		// Connect the MoneyChanged signal to update the label when money changes
 		moneyManager.MoneyChanged += OnMoneyChanged;
+	}
 	}
 
 	private void OnMoneyChanged(int newAmount)
