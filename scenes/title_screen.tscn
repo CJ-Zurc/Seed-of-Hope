@@ -1,19 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://r7865twymit3"]
+[gd_scene load_steps=8 format=3 uid="uid://r7865twymit3"]
 
 [ext_resource type="Script" uid="uid://baoafwkt1k16y" path="res://Script/MainMenu/TitleScreen.cs" id="1_e54dn"]
-[ext_resource type="Texture2D" uid="uid://b3awcj6ipx8y7" path="res://2D Arts/UI stuff/Title screen/title screen.png" id="1_sa3yf"]
+[ext_resource type="Texture2D" uid="uid://bud3l28nb25pm" path="res://2D Arts/UI stuff/Title screen/title_screen.png" id="2_e54dn"]
 [ext_resource type="Texture2D" uid="uid://buid2snmwpocc" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_New.png" id="2_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://bx7jwh8boivfg" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_Load.png" id="3_mgrm8"]
 [ext_resource type="Texture2D" uid="uid://c65v1j57ujmmt" path="res://2D Arts/UI stuff/Title screen/titleScreen_Button_Options.png" id="4_dc4i4"]
-[ext_resource type="Texture2D" uid="uid://j55ot4pba8ip" path="res://2D Arts/UI stuff/Title screen/ExitButton.png" id="5_dc4i4"]
+[ext_resource type="Texture2D" uid="uid://dewrw6bf1p840" path="res://2D Arts/UI stuff/Title screen/ExitButton.png" id="5_dc4i4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgkus"]
-texture = ExtResource("1_sa3yf")
-1:0/size_in_atlas = Vector2i(71, 40)
-1:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_dc4i4"]
-sources/3 = SubResource("TileSetAtlasSource_fgkus")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yumr"]
+atlas = ExtResource("2_e54dn")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,11 +19,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e54dn")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(583, 333)
-scale = Vector2(1.02153, 1.01321)
-tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 3, 0, 1, 0, 0, 0, 0, 0)
-tile_set = SubResource("TileSet_dc4i4")
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 3.05176e-05
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("AtlasTexture_3yumr")
 
 [node name="New" type="Button" parent="."]
 layout_mode = 0

@@ -75,8 +75,7 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T05:51:08.547Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "Script\\Global\\SeedInventoryManager.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T06:39:05.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T06:39:05.75Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "Script\\Inventory\\InventorySeedsPanel.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T05:51:38.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T05:51:38.284Z"
             },
             {
               "$type": "Document",
@@ -150,8 +147,7 @@
               "RelativeToolTip": "Script\\BuyAndSell\\BuyAndSellPanel.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAjwAsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T16:58:02.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T16:58:02.077Z"
             },
             {
               "$type": "Document",
@@ -173,7 +169,7 @@
               "RelativeDocumentMoniker": "Script\\BuyAndSell\\Money.cs",
               "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\Money.cs",
               "RelativeToolTip": "Script\\BuyAndSell\\Money.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBIAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T14:29:26.486Z",
               "EditorCaption": ""
