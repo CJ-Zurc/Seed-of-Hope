@@ -1,10 +1,10 @@
-[gd_scene load_steps=20 format=4 uid="uid://dditttsq1xujj"]
+[gd_scene load_steps=23 format=4 uid="uid://dditttsq1xujj"]
 
 [ext_resource type="Script" uid="uid://c0oyghgu8w35f" path="res://Script/World/MainGame.cs" id="1_ihbck"]
 [ext_resource type="Texture2D" uid="uid://lbkmad5iq1co" path="res://2D Arts/BackgroundMainGame/BlackBackground.png" id="1_o6v7o"]
-[ext_resource type="AudioStream" uid="uid://don66no7j47cj" path="res://Music/DayBGM/a-day-in-my-life-dark-cat-main-version-Edited.mp3" id="2_ikqpi"]
+[ext_resource type="AudioStream" uid="uid://b6jyn4jixg1fv" path="res://Music/DayBGM/a-day-in-my-life-dark-cat-main-version-Edited.mp3" id="2_ikqpi"]
 [ext_resource type="Texture2D" uid="uid://cxc764otrlfr0" path="res://2D Arts/BackgroundMainGame/BlueBackground.png" id="2_wjob3"]
-[ext_resource type="AudioStream" uid="uid://v76tkxvnxc74" path="res://Music/NightBGM/Viktor Kraus - Blueberries-Edited.mp3" id="3_5luka"]
+[ext_resource type="AudioStream" uid="uid://b11udfgrwoksp" path="res://Music/NightBGM/Viktor Kraus - Blueberries-Edited.mp3" id="3_5luka"]
 [ext_resource type="PackedScene" uid="uid://duh4ouihpudo3" path="res://scenes/bed.tscn" id="4_sp04v"]
 [ext_resource type="PackedScene" uid="uid://bc76pux0agbdd" path="res://scenes/outside.tscn" id="5_ihbck"]
 [ext_resource type="PackedScene" uid="uid://c2vpsxf150g0n" path="res://scenes/plant_info.tscn" id="9_yu8cv"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bqrnebrk6e7u4" path="res://scenes/player.tscn" id="13_wjob3"]
 [ext_resource type="PackedScene" uid="uid://ggodvwqq6ecg" path="res://scenes/Teleporter.tscn" id="14_8xp80"]
 [ext_resource type="PackedScene" uid="uid://c7ovd1vg55yta" path="res://scenes/hud.tscn" id="15_sp04v"]
+[ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="16_ihbck"]
+[ext_resource type="Texture2D" uid="uid://dmth8e8rc2yfr" path="res://2D Arts/UI stuff/dialogues/dialogue box.png" id="16_vnsdt"]
 [ext_resource type="Script" uid="uid://cd773r7gid7y2" path="res://Script/Dialogue/TvTrigger.cs" id="18_ikqpi"]
 [ext_resource type="Script" uid="uid://cbghd6slb04g1" path="res://Script/Dialogue/BedTrigger.cs" id="19_5luka"]
 [ext_resource type="Script" uid="uid://dk46oe0y31m1a" path="res://Script/Dialogue/ComputerTrigger.cs" id="19_yu8cv"]
@@ -30,6 +32,10 @@ sources/1 = SubResource("TileSetAtlasSource_wjob3")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikqpi"]
 size = Vector2(23, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikqpi"]
+atlas = ExtResource("16_vnsdt")
+region = Rect2(2, 75, 124, 46)
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_ihbck")
@@ -122,3 +128,36 @@ playerPath = NodePath("../../player")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue Triggers/TV Trigger"]
 position = Vector2(8, -5)
 shape = SubResource("RectangleShape2D_ikqpi")
+
+[node name="text" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="textbackground" type="TextureRect" parent="text"]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -172.0
+offset_right = 172.0
+offset_bottom = 83.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_ikqpi")
+
+[node name="textPopUp" type="Label" parent="text"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.0
+offset_top = 20.0
+offset_right = 109.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_ihbck")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="textDuration" type="Timer" parent="text"]
+process_mode = 3
+wait_time = 1.5
+one_shot = true

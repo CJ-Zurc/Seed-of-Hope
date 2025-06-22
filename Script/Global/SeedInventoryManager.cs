@@ -8,9 +8,9 @@ public partial class SeedInventoryManager : Node
 
     private Dictionary<string, int> seedInventory = new Dictionary<string, int>();
 
-    public IReadOnlyDictionary<string,int> Inventory => seedInventory;
+    public IReadOnlyDictionary<string, int> Inventory => seedInventory;
 
-    public void BuySeed(String seedName) 
+    public void BuySeed(String seedName)
     {
         if (seedInventory.ContainsKey(seedName))
         {
@@ -23,17 +23,18 @@ public partial class SeedInventoryManager : Node
         EmitSignal(nameof(InventoryChanged));
     }
 
-    public void SellOneOfEachSeed() 
+    public void SellSeed(string seedName)
     {
-        foreach (var seed in seedInventory.Keys) 
+        if (seedInventory.ContainsKey(seedName) && seedInventory[seedName] > 0)
         {
-            if (seedInventory[seed] > 0)
-            {
-                seedInventory[seed] -= 1;
-
-            }
-            
+            seedInventory[seedName] -= 1;
+            EmitSignal(nameof(InventoryChanged));
         }
-        EmitSignal(nameof(InventoryChanged));
+    }
+
+    public int GetSeedCount(string seedName)
+    {
+        var seedInventoryManager = GetNode<SeedInventoryManager>("/root/SeedInventoryManager");
+        return seedInventoryManager.Inventory.ContainsKey(seedName) ? seedInventoryManager.Inventory[seedName] : 0;
     }
 }
