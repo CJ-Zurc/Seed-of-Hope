@@ -27,10 +27,6 @@ HarvestManager="*res://Script/Global/HarvestManager.cs"
 MoneyManager="*res://Script/Global/MoneyManager.cs"
 TextManager="*res://Script/Global/textManager.cs"
 
-[display]
-
-mouse_cursor/custom_image="uid://n3388q43qr6m"
-
 [dotnet]
 
 project/assembly_name="New Game Project"
