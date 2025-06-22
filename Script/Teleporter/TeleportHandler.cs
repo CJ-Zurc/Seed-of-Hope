@@ -20,3 +20,4 @@ public class CharacterTeleport : TeleportHandler
         Player.Position = new Vector2(x, y);    
     }
 }
+
