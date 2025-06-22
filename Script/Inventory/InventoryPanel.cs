@@ -5,6 +5,7 @@ public partial class InventoryPanel : PanelContainer
 {
 	private Button waterButton;
 	private Texture2D defaultCursor;
+	private bool wateringCanActive = false;
 
     public override void _Ready()
 	{
@@ -23,6 +24,16 @@ public partial class InventoryPanel : PanelContainer
         {
             // Reset the mouse cursor to the default custom icon when right mouse button is pressed
             Input.SetCustomMouseCursor(defaultCursor, Input.CursorShape.Arrow, Vector2.Zero);
+            // Directly clear the selectedSeed value in InventorySeedsPanel
+            var seedsPanel = GetNodeOrNull<InventorySeedsPanel>("/root/MainGame/HUD/Control/inventorySeedsPanel");
+            if (seedsPanel != null)
+            {
+                var selectedSeedField = typeof(InventorySeedsPanel).GetField("selectedSeed", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                if (selectedSeedField != null)
+                {
+                    selectedSeedField.SetValue(seedsPanel, null);
+                }
+            }
         }
     }
 
@@ -34,4 +45,8 @@ public partial class InventoryPanel : PanelContainer
         Input.SetCustomMouseCursor(wateringCan, Input.CursorShape.Arrow, Vector2.Zero);
     }
  
+    public void SetWateringCanActive(bool active)
+    {
+        wateringCanActive = active;
+    }
 }

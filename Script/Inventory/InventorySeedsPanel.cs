@@ -15,6 +15,8 @@ public partial class InventorySeedsPanel : PanelContainer
     private Label pechayLabel;
     private Label succulentLabel;
 
+    //stores the selected seed
+    private String selectedSeed = null; 
 
     //inventory seed manager to manage the seeds in the inventory
     private SeedInventoryManager seedInventoryManager;
@@ -60,6 +62,7 @@ public partial class InventorySeedsPanel : PanelContainer
     {
         Texture2D ampalayaSmolSeed = GD.Load<Texture2D>("res://2D Arts/Plant Assets/ampalayaSmolSeed.png");
         Input.SetCustomMouseCursor(ampalayaSmolSeed, Input.CursorShape.Arrow, Vector2.Zero);
+        selectedSeed = "Ampalaya"; // Set the selected seed to ampalaya when its button is pressed
     }
 
     //function for when the calamansiButton is pressed
@@ -67,6 +70,7 @@ public partial class InventorySeedsPanel : PanelContainer
     {
         Texture2D calamansiSmolSeed = GD.Load<Texture2D>("res://2D Arts/Plant Assets/calamansiSmolSeed.png");
         Input.SetCustomMouseCursor(calamansiSmolSeed, Input.CursorShape.Arrow, Vector2.Zero);
+        selectedSeed = "Calamansi"; // Set the selected seed to calamansi when its button is pressed
     }
 
     //function for when the pechayButton is pressed
@@ -74,6 +78,7 @@ public partial class InventorySeedsPanel : PanelContainer
     {
         Texture2D pechaySmolSeed = GD.Load<Texture2D>("res://2D Arts/Plant Assets/pechaySmolSeed.png");
         Input.SetCustomMouseCursor(pechaySmolSeed, Input.CursorShape.Arrow, Vector2.Zero);
+        selectedSeed = "Pechay"; // Set the selected seed to pechay when its button is pressed
     }
 
     //function for when the succulentButton is pressed
@@ -81,6 +86,7 @@ public partial class InventorySeedsPanel : PanelContainer
     {
         Texture2D succulentSmolSeed = GD.Load<Texture2D>("res://2D Arts/Plant Assets/succulentSmolSeed.png");
         Input.SetCustomMouseCursor(succulentSmolSeed, Input.CursorShape.Arrow, Vector2.Zero);
+        selectedSeed = "Succulent"; // Set the selected seed to succulent when its button is pressed
     }
 
     //function for when the sunflowerButton is pressed
@@ -88,6 +94,7 @@ public partial class InventorySeedsPanel : PanelContainer
     {
         Texture2D sunflowerSmolSeed = GD.Load<Texture2D>("res://2D Arts/Plant Assets/sunflowerSmolSeed.png");
         Input.SetCustomMouseCursor(sunflowerSmolSeed, Input.CursorShape.Arrow, Vector2.Zero);
+        selectedSeed = "Sunflower"; // Set the selected seed to sunflower when its button is pressed
     }
 
     private void OnInventoryChanged()
@@ -115,5 +122,18 @@ public partial class InventorySeedsPanel : PanelContainer
         int succulentCount = inventory.ContainsKey("Succulent") ? inventory["Succulent"] : 0;
         succulentLabel.Text = succulentCount.ToString();
 
+    }
+
+    public string SelectedSeed => selectedSeed;
+
+    public void SetSeedSelectedFalse(string seedType)
+    {
+        if (selectedSeed == seedType)
+            selectedSeed = null;
+    }
+
+    public void ClearSelectedSeed()
+    {
+        selectedSeed = null;
     }
 }
