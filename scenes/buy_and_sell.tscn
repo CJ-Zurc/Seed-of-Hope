@@ -123,10 +123,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sellAmpalaya" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 55.1358
-offset_top = 142.856
-offset_right = 427.136
-offset_bottom = 216.856
+offset_left = 85.4604
+offset_top = 145.657
+offset_right = 457.461
+offset_bottom = 219.657
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Ampalaya Seed"
@@ -134,10 +134,10 @@ autowrap_mode = 1
 
 [node name="sellSucculent" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 232.597
-offset_right = 426.0
-offset_bottom = 306.597
+offset_left = 87.3246
+offset_top = 235.398
+offset_right = 456.325
+offset_bottom = 309.398
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Succulent Seed"
@@ -145,10 +145,10 @@ autowrap_mode = 1
 
 [node name="sellCalamansi" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 320.602
-offset_right = 426.0
-offset_bottom = 394.602
+offset_left = 87.3246
+offset_top = 323.404
+offset_right = 456.325
+offset_bottom = 397.404
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Calamansi Seed"
@@ -156,10 +156,10 @@ autowrap_mode = 1
 
 [node name="sellSunflower" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 56.5142
-offset_top = 411.762
-offset_right = 423.514
-offset_bottom = 485.762
+offset_left = 86.8388
+offset_top = 414.563
+offset_right = 453.839
+offset_bottom = 488.563
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell sunflower  Seed"
@@ -167,10 +167,10 @@ autowrap_mode = 1
 
 [node name="sellPechay" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 82.7036
-offset_top = 499.998
-offset_right = 389.704
-offset_bottom = 573.998
+offset_left = 113.028
+offset_top = 502.799
+offset_right = 420.029
+offset_bottom = 576.799
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Pechay Seed"
@@ -178,10 +178,10 @@ autowrap_mode = 1
 
 [node name="sellHarvested" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 572.0
-offset_top = 204.005
-offset_right = 926.0
-offset_bottom = 501.005
+offset_left = 616.142
+offset_top = 200.279
+offset_right = 970.142
+offset_bottom = 497.279
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Click Here to sell plants"
