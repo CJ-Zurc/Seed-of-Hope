@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dftldqx3387pb" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="2_sch2e"]
 [ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_7ropj"]
 [ext_resource type="Texture2D" uid="uid://dn5dorpdblck3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="4_aj8r3"]
-[ext_resource type="Script" uid="uid://dyjj0w45nchwj" path="res://Script/Plant/PlantArea2D.cs" id="5_4f3g4"]
-[ext_resource type="Texture2D" uid="uid://dtgsql8llkbor" path="res://2D Arts/AmpalayaAssets.png" id="6_ve7ty"]
-[ext_resource type="Texture2D" uid="uid://cq21sug0vo7j1" path="res://2D Arts/CalamansiTree.png" id="7_kc8te"]
-[ext_resource type="Texture2D" uid="uid://bd86mpo0w5ouq" path="res://2D Arts/SunflowerPlant.png" id="8_tvjxd"]
-[ext_resource type="Texture2D" uid="uid://ctxt8407wprjw" path="res://2D Arts/PechayPlant.png" id="9_7opn1"]
-[ext_resource type="Texture2D" uid="uid://bnjwbrwa7qns8" path="res://2D Arts/succulentPlant.png" id="10_73cbh"]
+[ext_resource type="Script" uid="uid://ebv5gkjpffhw" path="res://Script/Plant/PlantArea2D.cs" id="5_4f3g4"]
+[ext_resource type="Texture2D" uid="uid://b255lu07j3lou" path="res://2D Arts/AmpalayaAssets.png" id="6_ve7ty"]
+[ext_resource type="Texture2D" uid="uid://bd0w41cca0fyt" path="res://2D Arts/CalamansiTree.png" id="7_kc8te"]
+[ext_resource type="Texture2D" uid="uid://dmwks4f7825u2" path="res://2D Arts/SunflowerPlant.png" id="8_tvjxd"]
+[ext_resource type="Texture2D" uid="uid://0l2eabfbttpk" path="res://2D Arts/PechayPlant.png" id="9_7opn1"]
+[ext_resource type="Texture2D" uid="uid://b22nq70d2wycg" path="res://2D Arts/succulentPlant.png" id="10_73cbh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_so3p6"]
 texture = ExtResource("1_b1nsg")

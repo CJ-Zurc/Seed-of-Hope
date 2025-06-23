@@ -1,27 +1,23 @@
-[gd_scene load_steps=72 format=4 uid="uid://bpjfws1r67246"]
+[gd_scene load_steps=68 format=4 uid="uid://bpjfws1r67246"]
 
 [ext_resource type="Texture2D" uid="uid://d1m4elcvysruv" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="3_ht1us"]
 [ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_xi7x6"]
 [ext_resource type="Texture2D" uid="uid://dftldqx3387pb" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="4_lpxjy"]
 [ext_resource type="Texture2D" uid="uid://dn5dorpdblck3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="4_s22lx"]
-[ext_resource type="Script" uid="uid://dyjj0w45nchwj" path="res://Script/Plant/PlantArea2D.cs" id="5_2xi43"]
-[ext_resource type="Texture2D" uid="uid://dtgsql8llkbor" path="res://2D Arts/AmpalayaAssets.png" id="6_xxkng"]
-[ext_resource type="Texture2D" uid="uid://cq21sug0vo7j1" path="res://2D Arts/CalamansiTree.png" id="7_wxvcn"]
-[ext_resource type="Texture2D" uid="uid://bd86mpo0w5ouq" path="res://2D Arts/SunflowerPlant.png" id="8_hbx8j"]
+[ext_resource type="Script" uid="uid://ebv5gkjpffhw" path="res://Script/Plant/PlantArea2D.cs" id="5_2xi43"]
+[ext_resource type="Texture2D" uid="uid://b255lu07j3lou" path="res://2D Arts/AmpalayaAssets.png" id="6_xxkng"]
+[ext_resource type="Texture2D" uid="uid://bd0w41cca0fyt" path="res://2D Arts/CalamansiTree.png" id="7_wxvcn"]
+[ext_resource type="Texture2D" uid="uid://dmwks4f7825u2" path="res://2D Arts/SunflowerPlant.png" id="8_hbx8j"]
 [ext_resource type="Texture2D" uid="uid://c3st6bujm6amt" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Fences.png" id="9_5tstl"]
-[ext_resource type="PackedScene" uid="uid://cojki1ddpnobp" path="res://scenes/sunflowerCollectable.tscn" id="9_lt7nq"]
-[ext_resource type="Texture2D" uid="uid://ctxt8407wprjw" path="res://2D Arts/PechayPlant.png" id="9_xe0xi"]
-[ext_resource type="PackedScene" uid="uid://5spetf5xvp65" path="res://scenes/pechayCollectable.tscn" id="10_cdqji"]
-[ext_resource type="Texture2D" uid="uid://bnjwbrwa7qns8" path="res://2D Arts/succulentPlant.png" id="10_fh1te"]
+[ext_resource type="Texture2D" uid="uid://0l2eabfbttpk" path="res://2D Arts/PechayPlant.png" id="9_xe0xi"]
+[ext_resource type="Texture2D" uid="uid://b22nq70d2wycg" path="res://2D Arts/succulentPlant.png" id="10_fh1te"]
 [ext_resource type="Texture2D" uid="uid://du7gejaxb2xqx" path="res://2D Arts/Interiors/topDown/newTopdownFloor.png" id="10_v7x2m"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="11_cdqji"]
-[ext_resource type="PackedScene" uid="uid://beo8eiemlleag" path="res://scenes/ampalayaCollectable.tscn" id="11_x3una"]
-[ext_resource type="PackedScene" uid="uid://b8kf03nlo746s" path="res://scenes/calamansiCollectable.tscn" id="12_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://dql2m0o33b2vw" path="res://2D Arts/GardenAssets/FaucetWBucket.png" id="12_x3una"]
-[ext_resource type="PackedScene" uid="uid://brt5q3g25ufad" path="res://scenes/succulentCollectable.tscn" id="13_ht1us"]
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
-[ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
+[ext_resource type="Texture2D" uid="uid://ch20jjjq6cchb" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
+[ext_resource type="Script" uid="uid://bafws4a1e2cxv" path="res://Script/Plant/Faucet.cs" id="17_tjkqt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bcrnr"]
 texture = ExtResource("3_ht1us")
@@ -779,8 +775,7 @@ animations = [{
 "speed": 1.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q0kmf"]
-radius = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0kmf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjkqt"]
 size = Vector2(12, 16)
@@ -802,10 +797,28 @@ offset_right = 207.0
 offset_bottom = 138.0
 metadata/_edit_use_anchors_ = true
 
+[node name="PlantingArea4" type="Area2D" parent="Control"]
+position = Vector2(72, 0)
+script = ExtResource("5_2xi43")
+plantAnimationPath = NodePath("../PlantingArea3/PlantAnimations")
+x = -65.0
+y = 678.0
+
+[node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea4"]
+position = Vector2(-301, 69)
+sprite_frames = SubResource("SpriteFrames_seo6j")
+animation = &"none"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/PlantingArea4"]
+position = Vector2(-301, 79)
+shape = SubResource("RectangleShape2D_r7ppj")
+
 [node name="PlantingArea" type="Area2D" parent="Control"]
 position = Vector2(2, 0)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -134.0
+y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea"]
 position = Vector2(-301, 69)
@@ -820,6 +833,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(25, 0)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -111.0
+y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea2"]
 position = Vector2(-301, 69)
@@ -834,6 +849,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(48, 0)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -88.0
+y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea3"]
 position = Vector2(-301, 69)
@@ -844,31 +861,19 @@ animation = &"none"
 position = Vector2(-301, 79)
 shape = SubResource("RectangleShape2D_r7ppj")
 
-[node name="PlantingArea3" type="Area2D" parent="."]
-position = Vector2(239, 98)
+[node name="PlantingArea5" type="Area2D" parent="Control"]
+position = Vector2(96, 0)
 script = ExtResource("5_2xi43")
-plantAnimationPath = NodePath("PlantAnimations")
+plantAnimationPath = NodePath("../PlantingArea4/PlantAnimations")
+x = -40.0
+y = 677.0
 
-[node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea3"]
+[node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea5"]
 position = Vector2(-301, 69)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlantingArea3"]
-position = Vector2(-301, 79)
-shape = SubResource("RectangleShape2D_r7ppj")
-
-[node name="PlantingArea4" type="Area2D" parent="."]
-position = Vector2(263, 98)
-script = ExtResource("5_2xi43")
-plantAnimationPath = NodePath("PlantAnimations")
-
-[node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea4"]
-position = Vector2(-301, 69)
-sprite_frames = SubResource("SpriteFrames_seo6j")
-animation = &"none"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlantingArea4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/PlantingArea5"]
 position = Vector2(-301, 79)
 shape = SubResource("RectangleShape2D_r7ppj")
 
@@ -876,6 +881,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(263, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -40.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea5"]
 position = Vector2(-301, 69)
@@ -890,11 +897,13 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(239, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -64.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea6"]
 position = Vector2(-301, 69)
 sprite_frames = SubResource("SpriteFrames_seo6j")
-animation = &"none"
+animation = &"succulentaimation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlantingArea6"]
 position = Vector2(-301, 79)
@@ -904,6 +913,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(215, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -88.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea7"]
 position = Vector2(-301, 69)
@@ -918,6 +929,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(191, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -112.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea8"]
 position = Vector2(-301, 69)
@@ -932,6 +945,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(169, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -134.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea9"]
 position = Vector2(-301, 69)
@@ -946,6 +961,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(357, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 54.0
+y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea"]
 position = Vector2(-301, 69)
@@ -960,6 +977,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(380, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 77.0
+y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea2"]
 position = Vector2(-301, 69)
@@ -974,6 +993,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(404, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 101.0
+y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea10"]
 position = Vector2(-301, 69)
@@ -988,6 +1009,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(428, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 125.0
+y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea11"]
 position = Vector2(-301, 69)
@@ -1002,6 +1025,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(453, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 150.0
+y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea12"]
 position = Vector2(-301, 69)
@@ -1013,9 +1038,11 @@ position = Vector2(-301, 79)
 shape = SubResource("RectangleShape2D_r7ppj")
 
 [node name="PlantingArea13" type="Area2D" parent="."]
-position = Vector2(354, 116)
+position = Vector2(357, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 54.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea13"]
 position = Vector2(-301, 69)
@@ -1027,9 +1054,11 @@ position = Vector2(-301, 79)
 shape = SubResource("RectangleShape2D_r7ppj")
 
 [node name="PlantingArea14" type="Area2D" parent="."]
-position = Vector2(381, 117)
+position = Vector2(380, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 77.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea14"]
 position = Vector2(-301, 69)
@@ -1041,9 +1070,11 @@ position = Vector2(-301, 79)
 shape = SubResource("RectangleShape2D_r7ppj")
 
 [node name="PlantingArea15" type="Area2D" parent="."]
-position = Vector2(406, 117)
+position = Vector2(404, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 101.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea15"]
 position = Vector2(-301, 69)
@@ -1055,9 +1086,11 @@ position = Vector2(-301, 79)
 shape = SubResource("RectangleShape2D_r7ppj")
 
 [node name="PlantingArea16" type="Area2D" parent="."]
-position = Vector2(433, 116)
+position = Vector2(428, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 125.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea16"]
 position = Vector2(-301, 69)
@@ -1069,9 +1102,11 @@ position = Vector2(-301, 79)
 shape = SubResource("RectangleShape2D_r7ppj")
 
 [node name="PlantingArea17" type="Area2D" parent="."]
-position = Vector2(462, 117)
+position = Vector2(453, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 150.0
+y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea17"]
 position = Vector2(-301, 69)
@@ -1086,6 +1121,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(364, 4)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 61.0
+y = 583.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea18"]
 position = Vector2(-301, 69)
@@ -1100,6 +1137,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(386, 4)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 83.0
+y = 583.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea19"]
 position = Vector2(-301, 69)
@@ -1114,6 +1153,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(363, 30)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 60.0
+y = 609.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea20"]
 position = Vector2(-301, 69)
@@ -1128,6 +1169,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(385, 30)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 82.0
+y = 609.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea21"]
 position = Vector2(-301, 69)
@@ -1142,6 +1185,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(439, 7)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = 136.0
+y = 586.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea22"]
 position = Vector2(-301, 69)
@@ -1156,6 +1201,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(233, 2)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -71.0
+y = 581.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea23"]
 position = Vector2(-301, 69)
@@ -1170,6 +1217,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(254, 2)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -49.0
+y = 581.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea24"]
 position = Vector2(-301, 69)
@@ -1184,6 +1233,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(233, 27)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -70.0
+y = 606.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea25"]
 position = Vector2(-301, 69)
@@ -1198,6 +1249,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(254, 27)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -49.0
+y = 606.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea26"]
 position = Vector2(-301, 69)
@@ -1209,9 +1262,11 @@ position = Vector2(-301, 79)
 shape = SubResource("RectangleShape2D_r7ppj")
 
 [node name="PlantingArea27" type="Area2D" parent="."]
-position = Vector2(180, 7)
+position = Vector2(179, 8)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -124.0
+y = 587.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea27"]
 position = Vector2(-301, 69)
@@ -1226,6 +1281,8 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(179, 29)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+x = -124.0
+y = 608.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea28"]
 position = Vector2(-301, 69)
@@ -1304,6 +1361,7 @@ texture = ExtResource("13_x3una")
 position = Vector2(3, -30)
 
 [node name="Area2D" type="Area2D" parent="faucet"]
+script = ExtResource("17_tjkqt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="faucet/Area2D"]
 position = Vector2(-26, 55)
@@ -1312,11 +1370,11 @@ autoplay = "default"
 frame_progress = 0.569984
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="faucet/Area2D"]
-position = Vector2(-28, 54)
-shape = SubResource("CircleShape2D_q0kmf")
+position = Vector2(-23, 55)
+shape = SubResource("RectangleShape2D_q0kmf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="faucet"]
-position = Vector2(-27, 55)
+position = Vector2(-25, 55)
 shape = SubResource("RectangleShape2D_tjkqt")
 
 [node name="CharmonyDoveButton" type="Button" parent="."]
@@ -1327,48 +1385,3 @@ offset_bottom = 366.0
 scale = Vector2(0.0346734, 0.0349177)
 icon = ExtResource("15_ht1us")
 flat = true
-
-[node name="sunflower" parent="." instance=ExtResource("9_lt7nq")]
-position = Vector2(-56, 95)
-
-[node name="sunflower2" parent="." instance=ExtResource("9_lt7nq")]
-position = Vector2(-72, 110)
-
-[node name="sunflower3" parent="." instance=ExtResource("9_lt7nq")]
-position = Vector2(-49, 109)
-
-[node name="pechay" parent="." instance=ExtResource("10_cdqji")]
-position = Vector2(-70, 79)
-
-[node name="pechay2" parent="." instance=ExtResource("10_cdqji")]
-position = Vector2(-57, 79)
-
-[node name="pechay3" parent="." instance=ExtResource("10_cdqji")]
-position = Vector2(-45, 80)
-
-[node name="pechay4" parent="." instance=ExtResource("10_cdqji")]
-position = Vector2(-137, 79)
-
-[node name="ampalaya" parent="." instance=ExtResource("11_x3una")]
-position = Vector2(46, 76)
-
-[node name="ampalaya2" parent="." instance=ExtResource("11_x3una")]
-position = Vector2(38, 94)
-
-[node name="calamansi" parent="." instance=ExtResource("12_nxbbw")]
-position = Vector2(-124, 79)
-
-[node name="calamansi2" parent="." instance=ExtResource("12_nxbbw")]
-position = Vector2(-110, 79)
-
-[node name="calamansi3" parent="." instance=ExtResource("12_nxbbw")]
-position = Vector2(-135, 92)
-
-[node name="succulent" parent="." instance=ExtResource("13_ht1us")]
-position = Vector2(44, 36)
-
-[node name="succulent2" parent="." instance=ExtResource("13_ht1us")]
-position = Vector2(41, 45)
-
-[node name="succulent3" parent="." instance=ExtResource("13_ht1us")]
-position = Vector2(40, 54)
