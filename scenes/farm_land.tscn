@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_so3p6"]
 [ext_resource type="Texture2D" uid="uid://dn5dorpdblck3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="4_e278s"]
 [ext_resource type="Texture2D" uid="uid://b255lu07j3lou" path="res://2D Arts/AmpalayaAssets.png" id="5_ktamn"]
-[ext_resource type="Script" uid="uid://11rmim02u3mr" path="res://Script/Plant/PlantArea2D.cs" id="5_yaamt"]
+[ext_resource type="Script" uid="uid://ebv5gkjpffhw" path="res://Script/Plant/PlantArea2D.cs" id="5_yaamt"]
 [ext_resource type="Texture2D" uid="uid://bd0w41cca0fyt" path="res://2D Arts/CalamansiTree.png" id="6_yaamt"]
 [ext_resource type="Texture2D" uid="uid://0l2eabfbttpk" path="res://2D Arts/PechayPlant.png" id="7_l65st"]
 [ext_resource type="Texture2D" uid="uid://b22nq70d2wycg" path="res://2D Arts/succulentPlant.png" id="8_68710"]

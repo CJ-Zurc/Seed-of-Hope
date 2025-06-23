@@ -20,10 +20,11 @@ grow_vertical = 2
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 462.0
-offset_top = 402.0
-offset_right = 502.0
-offset_bottom = 442.0
+offset_left = 465.0
+offset_top = 374.0
+offset_right = 505.0
+offset_bottom = 414.0
+scale = Vector2(1.44013, 1.36656)
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 0
@@ -50,10 +51,11 @@ offset_left = 6.0
 offset_top = 48.0
 offset_right = 125.0
 offset_bottom = 88.0
+scale = Vector2(0.942801, 0.803058)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_1xrl3")
 theme_override_font_sizes/normal_font_size = 19
-text = "Growth: 10 Days"
+text = "Ready to harvest"
 fit_content = true
 scroll_active = false
 

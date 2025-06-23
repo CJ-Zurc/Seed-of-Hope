@@ -51,4 +51,9 @@ public partial class InventoryPanel : PanelContainer
 		WaterButtonPressed?.Invoke();
     }
 
+	public bool IsWateringCanActive
+	{
+		get => wateringCanActive;
+		set => wateringCanActive = value;
+	}
 }

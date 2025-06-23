@@ -21,6 +21,8 @@ public partial class PlantArea2D : PlantableArea
 	private bool waitingForWaterClick = false;
 	private float waterLevel = 0f;
 	private float lastWaterDecreaseHour = 0f;
+	private string collectableScenePath = "";
+	private bool spawnedCollectable = false;
 
 	public override void _Ready()
 	{
@@ -55,10 +57,13 @@ public partial class PlantArea2D : PlantableArea
 			case "Ampalaya":
 				plantAnimation.Animation = "ampalayaanimation";
 				plantAnimation.Frame = 0;
+				collectableScenePath = "res://scenes/ampalayaCollectable.tscn";
 				break;
 			case "Calamansi":
 				plantAnimation.Animation = "calamansianimation";
 				plantAnimation.Frame = 0;
+				collectableScenePath = "res://scenes/calamansiCollectable.tscn";
+				
 				break;
 			case "Pechay":
 				plantAnimation.Animation = "pechayanimation";
@@ -107,10 +112,6 @@ public partial class PlantArea2D : PlantableArea
 				waterLevel = 1.0f;
 				ShowPlantInfo();
 				waitingForWaterClick = false;
-				if (inventoryPanel != null)
-					inventoryPanel.SetWateringCanActive(false);
-				Input.SetDefaultCursorShape(Input.CursorShape.Arrow);
-				mainGame.DecreaseStamina(0.1f); // Decrease stamina by 10% on watering
 			}
 			else if (isPlanted)
 			{
@@ -206,6 +207,33 @@ public partial class PlantArea2D : PlantableArea
 					waterBarNode.Value = waterLevel * 100f;
 				}
 			}
+		}
+
+		// When ready to harvest, spawn collectable if not already done
+		if (isPlanted && growthDaysLeft <= 0 && !spawnedCollectable && !string.IsNullOrEmpty(collectableScenePath))
+		{
+			var collectableScene = GD.Load<PackedScene>(collectableScenePath);
+			if (collectableScene != null)
+			{
+				var collectable = collectableScene.Instantiate();
+
+				if (collectable is Sprite2D collectableNode)
+				{
+					GetParent().AddChild(collectableNode);
+					collectableNode.Position = this.Position;
+					collectableNode.ZIndex = 10; // Ensure it's on top		
+					GD.Print($"Spawning collectable at {collectableNode.GlobalPosition}");
+				}
+			}
+			spawnedCollectable = true;
+
+			// Change plant animation to "empty" or "harvested"
+			plantAnimation.Animation = "none"; // Make sure you have an "empty" or "harvested" animation
+			plantAnimation.Frame = 0;  
+			plantAnimation.Visible = false; // Hide the plant animation
+
+			// Mark area as not planted so it can be replanted
+			isPlanted = false;
 		}
 	}
 
