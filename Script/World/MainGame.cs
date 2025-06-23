@@ -24,13 +24,8 @@ public partial class MainGame : Node2D
 	private bool hasPlayedMorningSound = false;
 	private bool hasPlayedEveningSound = false;
 
-	private float autosaveTimer = 0f;
-	private const float AUTOSAVE_INTERVAL = 10f; // seconds //Time interval for autosave
-
-	// Volume settings: stores the current master volume in dB, and the name of the audio bus
-	private float masterVolume = 0f; // Default volume in dB
-	private const string MusicBusName = "Master";
-	
+    private float autosaveTimer = 0f;
+    private const float AUTOSAVE_INTERVAL = 10f; // seconds //Time interval for autosave
 
 	public override void _Ready()
 	{
@@ -38,9 +33,9 @@ public partial class MainGame : Node2D
 		timeLabel = GetNode<Label>("HUD/Control/containerDateTime/backgroundColor/timeContainer/time");
 		yearWeekLabel = GetNode<Label>("HUD/Control/containerDateTime/backgroundColor/yearWeek");
 
-		audioPlayer = new AudioStreamPlayer();
-		audioPlayer.Bus = "Master";
-		AddChild(audioPlayer);
+        audioPlayer = new AudioStreamPlayer();
+        audioPlayer.Bus = "Master";
+        AddChild(audioPlayer);
 
 		// --- Save/load logic ---
 		if (HasNode("player"))
@@ -109,45 +104,22 @@ public partial class MainGame : Node2D
 		UpdateTimeLabel();
 		UpdateLighting();
 
-		// Play background music based on loaded time
-		if (time >= 6f && time < 19f)
-		{
-			audioPlayer.Stream = wakeUpSound;
-			audioPlayer.Play();
-			hasPlayedMorningSound = true;
-			hasPlayedEveningSound = false;
-		}
-		else if (time >= 19f || time < 6f)
-		{
-			audioPlayer.Stream = eveningSound;
-			audioPlayer.Play();
-			hasPlayedMorningSound = false;
-			hasPlayedEveningSound = true;
-		}
-	}
-
-	public void OpenSettingsMenu()
-	{
-		if (SettingsScene == null)
-		{
-			GD.PrintErr("SettingsScene is not assigned!");
-			return;
-		}
-		var settingsInstance = (Settings)SettingsScene.Instantiate();
-		
-		// Connect the settings menu's volume changed signal to this script's handler
-		settingsInstance.Connect("VolumeChangedEventHandler", new Callable(this, nameof(OnSettingsVolumeChanged)));
-	   
-		AddChild(settingsInstance);
-	}
-
-	private void OnSettingsVolumeChanged(float newVolume)
-	{
-		
-		// Called when the settings menu emits a volume change
-		SetVolume(newVolume);
-		
-	}
+        // Play background music based on loaded time
+        if (time >= 6f && time < 19f)
+        {
+            audioPlayer.Stream = wakeUpSound;
+            audioPlayer.Play();
+            hasPlayedMorningSound = true;
+            hasPlayedEveningSound = false;
+        }
+        else if (time >= 19f || time < 6f)
+        {
+            audioPlayer.Stream = eveningSound;
+            audioPlayer.Play();
+            hasPlayedMorningSound = false;
+            hasPlayedEveningSound = true;
+        }
+    }
 
 	public override void _Process(double delta)
 	{
@@ -244,39 +216,13 @@ public partial class MainGame : Node2D
 			year++;
 		}
 
-		hasPlayedMorningSound = false;
-		hasPlayedEveningSound = false;
+        hasPlayedMorningSound = false;
+        hasPlayedEveningSound = false;
 
-		UpdateYearLabel();
-		UpdateTimeLabel();
-		UpdateLighting();
-	}
-
-	
-	// Method to update volume (called from Settings)
-	public void SetVolume(float volume)
-	{
-		GD.Print("Setting volume to: " + volume);
-		masterVolume = volume;
-		int busIdx = AudioServer.GetBusIndex(MusicBusName);
-		if (busIdx >= 0)
-		{
-			AudioServer.SetBusVolumeDb(busIdx, volume);
-			GD.Print("Volume set in audio bus: " + volume);
-		}
-		else
-		{
-			GD.PrintErr("Audio bus 'Master' not found!");
-		}
-		SaveGame(); // Save immediately when volume changes
-	}
-	
-
-	// Method to get current volume (called from Settings)
-	public float GetVolume()
-	{
-		return masterVolume;
-	}
+        UpdateYearLabel();
+        UpdateTimeLabel();
+        UpdateLighting();
+    }
 
 	private void SaveGame()
 	{
@@ -292,9 +238,12 @@ public partial class MainGame : Node2D
         saveData["day"] = dayCount;
         saveData["year"] = year;
         saveData["time"] = time;
+        
 
-        string json = Json.Stringify(saveData);
-        using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
-        file.StoreString(json);
-    }
+
+
+		string json = Json.Stringify(saveData);
+		using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
+		file.StoreString(json);
+	}
 }

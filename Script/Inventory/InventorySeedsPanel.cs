@@ -123,4 +123,17 @@ public partial class InventorySeedsPanel : PanelContainer
         succulentLabel.Text = succulentCount.ToString();
 
     }
+
+    public string SelectedSeed => selectedSeed;
+
+    public void SetSeedSelectedFalse(string seedType)
+    {
+        if (selectedSeed == seedType)
+            selectedSeed = null;
+    }
+
+    public void ClearSelectedSeed()
+    {
+        selectedSeed = null;
+    }
 }

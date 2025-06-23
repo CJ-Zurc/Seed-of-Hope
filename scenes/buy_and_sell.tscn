@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cty8xedpqukuv"]
+[gd_scene load_steps=21 format=3 uid="uid://8shpnyu2wb1w"]
 
 [ext_resource type="Script" uid="uid://bwx7wxiwgsp3o" path="res://Script/BuyAndSell/BuyAndSellPanel.cs" id="1_j3yc2"]
 [ext_resource type="Texture2D" uid="uid://di02kv8yi0cxs" path="res://2D Arts/BuyAndSell/BuyBackground.png" id="2_a0msc"]
@@ -109,7 +109,7 @@ offset_bottom = 547.0
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="sellUI"]
-layer = 0
+layer = 2
 
 [node name="sellUIBG" type="TextureRect" parent="sellUI/CanvasLayer"]
 offset_left = 164.0
@@ -118,28 +118,74 @@ offset_right = 1316.0
 offset_bottom = 748.0
 scale = Vector2(0.725482, 0.714004)
 texture = SubResource("AtlasTexture_rbqbk")
+script = ExtResource("8_j3yc2")
 metadata/_edit_use_anchors_ = true
 
-[node name="SellItems" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
+[node name="sellAmpalaya" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 310.139
-offset_top = 268.906
-offset_right = 882.139
-offset_bottom = 331.906
+offset_left = 55.1358
+offset_top = 165.265
+offset_right = 427.136
+offset_bottom = 239.265
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
-text = "Click here to sell seeds"
-script = ExtResource("8_j3yc2")
+text = "Sell Ampalaya Seed"
+autowrap_mode = 1
+
+[node name="sellSucculent" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 253.605
+offset_right = 426.0
+offset_bottom = 327.605
+theme_override_fonts/font = ExtResource("6_4ox3i")
+theme_override_font_sizes/font_size = 32
+text = "Sell Succulent Seed"
+autowrap_mode = 1
+
+[node name="sellCalamansi" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 350.014
+offset_right = 426.0
+offset_bottom = 424.014
+theme_override_fonts/font = ExtResource("6_4ox3i")
+theme_override_font_sizes/font_size = 32
+text = "Sell Calamansi Seed"
+autowrap_mode = 1
+
+[node name="sellSunflower" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
+layout_mode = 0
+offset_left = 56.5142
+offset_top = 445.375
+offset_right = 423.514
+offset_bottom = 519.375
+theme_override_fonts/font = ExtResource("6_4ox3i")
+theme_override_font_sizes/font_size = 32
+text = "Sell sunflower  Seed"
+autowrap_mode = 1
+
+[node name="sellPechay" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
+layout_mode = 0
+offset_left = 82.7036
+offset_top = 539.213
+offset_right = 389.704
+offset_bottom = 613.213
+theme_override_fonts/font = ExtResource("6_4ox3i")
+theme_override_font_sizes/font_size = 32
+text = "Sell Pechay Seed"
+autowrap_mode = 1
 
 [node name="sellHarvested" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
-offset_left = 297.733
-offset_top = 399.158
-offset_right = 899.733
-offset_bottom = 455.158
+offset_left = 572.0
+offset_top = 204.005
+offset_right = 926.0
+offset_bottom = 501.005
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Click Here to sell plants"
+autowrap_mode = 1
 
 [node name="buyButton" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
@@ -156,14 +202,15 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 159.0
-offset_top = -226.0
-offset_right = 994.0
-offset_bottom = 233.0
+offset_left = 161.0
+offset_top = -223.0
+offset_right = 996.0
+offset_bottom = 236.0
 grow_vertical = 2
 scale = Vector2(1.00839, 1.00872)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="BuyUI"]
+layer = 3
 
 [node name="SappyBG" type="TextureRect" parent="BuyUI/CanvasLayer"]
 offset_left = 160.0
@@ -195,115 +242,98 @@ sprite_frames = SubResource("SpriteFrames_m2qx1")
 position = Vector2(1002, 267)
 sprite_frames = SubResource("SpriteFrames_82kkc")
 
-[node name="buySucculent" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 67.0
-offset_top = 416.0
-offset_right = 139.0
-offset_bottom = 456.0
+[node name="buySucculent" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0154977
+anchor_top = 0.0300551
+anchor_right = -0.0154977
+anchor_bottom = 0.0300551
+offset_left = 123.0
+offset_top = 375.0
+offset_right = 195.0
+offset_bottom = 415.0
+scale = Vector2(1.55249, 1.96637)
 icon = ExtResource("3_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="buyAmpalaya" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 290.0
-offset_top = 416.0
-offset_right = 362.0
-offset_bottom = 456.0
+[node name="buyAmpalaya" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0193167
+anchor_top = 0.0288381
+anchor_right = -0.0193167
+anchor_bottom = 0.0288381
+offset_left = 334.0
+offset_top = 375.0
+offset_right = 406.0
+offset_bottom = 415.0
+scale = Vector2(1.57935, 1.99986)
 icon = ExtResource("3_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="buyKalamansi" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 530.0
-offset_top = 416.0
-offset_right = 602.0
-offset_bottom = 456.0
+[node name="buyCalamansi" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0128116
+anchor_top = 0.028838
+anchor_right = -0.0128116
+anchor_bottom = 0.028838
+offset_left = 538.0
+offset_top = 375.0
+offset_right = 610.0
+offset_bottom = 415.0
+scale = Vector2(1.58765, 1.98329)
 icon = ExtResource("3_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="buyPechay" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 766.0
-offset_top = 416.0
-offset_right = 838.0
-offset_bottom = 456.0
+[node name="buyPechay" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0174757
+anchor_top = 0.0288381
+anchor_right = -0.0174757
+anchor_bottom = 0.0288381
+offset_left = 748.0
+offset_top = 375.0
+offset_right = 820.0
+offset_bottom = 415.0
+scale = Vector2(1.59496, 1.96685)
 icon = ExtResource("3_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="buySunflower" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 989.0
-offset_top = 416.0
-offset_right = 1061.0
-offset_bottom = 456.0
+[node name="buySunflower" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0237709
+anchor_top = 0.0288382
+anchor_right = -0.0237709
+anchor_bottom = 0.0288382
+offset_left = 964.0
+offset_top = 375.0
+offset_right = 1036.0
+offset_bottom = 415.0
+scale = Vector2(1.59297, 1.97854)
 icon = ExtResource("3_ei2hd")
 flat = true
+metadata/_edit_use_anchors_ = true
 
-[node name="succulentText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 40.0
-offset_top = 215.0
-offset_right = 183.0
-offset_bottom = 277.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Succulent Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="ampalayaText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 240.0
-offset_top = 223.0
-offset_right = 425.0
-offset_bottom = 285.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Ampalaya Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="kalamansiText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 467.0
-offset_top = 223.0
-offset_right = 671.0
-offset_bottom = 285.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Kalamansi Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="pechayText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 721.0
-offset_top = 223.0
-offset_right = 889.0
-offset_bottom = 254.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Pechay Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="sunflowerText" type="RichTextLabel" parent="CanvasLayer/SappyBG"]
-offset_left = 937.0
-offset_top = 218.0
-offset_right = 1122.0
-offset_bottom = 280.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_y4nr4")
-theme_override_font_sizes/normal_font_size = 30
-text = "Sunflower Php 20"
-fit_content = true
-scroll_active = false
-
-[node name="sellButton" type="Button" parent="CanvasLayer/SappyBG"]
-offset_left = 1030.0
-offset_top = 135.0
-offset_right = 1102.0
-offset_bottom = 175.0
+[node name="sellButton" type="Button" parent="BuyUI/CanvasLayer/SappyBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0333799
+anchor_top = 0.0322018
+anchor_right = -0.0333799
+anchor_bottom = 0.0322018
+offset_left = 965.0
+offset_top = 36.0
+offset_right = 1037.0
+offset_bottom = 76.0
+scale = Vector2(1.97983, 1.88993)
 icon = ExtResource("5_ei2hd")
 flat = true
 metadata/_edit_use_anchors_ = true
@@ -328,17 +358,17 @@ metadata/_edit_use_anchors_ = true
 [node name="succulentPrice" type="Label" parent="BuyUI/CanvasLayer/SappyBG"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.00596064
+anchor_left = -0.0119213
 anchor_top = -0.00429365
-anchor_right = -0.00596064
-anchor_bottom = -0.00429365
+anchor_right = 0.00457174
+anchor_bottom = 0.00187919
 offset_left = 106.0
 offset_top = 346.0
 offset_right = 217.0
 offset_bottom = 371.0
 scale = Vector2(1.05996, 1.47148)
 theme_override_fonts/font = ExtResource("6_4ox3i")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 28
 text = "PHP 10"
 metadata/_edit_use_anchors_ = true
 
@@ -360,15 +390,17 @@ metadata/_edit_use_anchors_ = true
 [node name="ampalayaPrice" type="Label" parent="BuyUI/CanvasLayer/SappyBG"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = -0.00644034
-anchor_bottom = -0.00644034
+anchor_left = -0.0119213
+anchor_top = -0.00429361
+anchor_right = 0.00457173
+anchor_bottom = 0.00187923
 offset_left = 311.0
 offset_top = 347.0
 offset_right = 422.0
 offset_bottom = 372.0
 scale = Vector2(1.05996, 1.47148)
 theme_override_fonts/font = ExtResource("6_4ox3i")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 28
 text = "PHP 15"
 metadata/_edit_use_anchors_ = true
 
@@ -388,14 +420,18 @@ text = "Calamansi"
 metadata/_edit_use_anchors_ = true
 
 [node name="calamansiPrice" type="Label" parent="BuyUI/CanvasLayer/SappyBG"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00953701
+anchor_right = 0.00695605
+anchor_bottom = 0.00617284
 offset_left = 519.0
 offset_top = 345.0
 offset_right = 633.0
 offset_bottom = 370.0
 scale = Vector2(1.05996, 1.47148)
 theme_override_fonts/font = ExtResource("6_4ox3i")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 28
 text = "PHP 20"
 metadata/_edit_use_anchors_ = true
 
@@ -415,14 +451,18 @@ text = "Pechay"
 metadata/_edit_use_anchors_ = true
 
 [node name="pechayPrice" type="Label" parent="BuyUI/CanvasLayer/SappyBG"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00834491
+anchor_right = 0.00554397
+anchor_bottom = 0.00617284
 offset_left = 726.0
 offset_top = 345.0
 offset_right = 840.0
 offset_bottom = 370.0
 scale = Vector2(1.05996, 1.47148)
 theme_override_fonts/font = ExtResource("6_4ox3i")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 28
 text = "PHP 10"
 metadata/_edit_use_anchors_ = true
 
@@ -444,13 +484,17 @@ text = "Sunflower"
 metadata/_edit_use_anchors_ = true
 
 [node name="sunflowerPrice" type="Label" parent="BuyUI/CanvasLayer/SappyBG"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00953685
+anchor_right = 0.00435204
+anchor_bottom = 0.00617284
 offset_left = 953.0
 offset_top = 345.0
 offset_right = 1047.0
 offset_bottom = 370.0
 scale = Vector2(1.05996, 1.47148)
 theme_override_fonts/font = ExtResource("6_4ox3i")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 28
 text = "PHP 5"
 metadata/_edit_use_anchors_ = true
