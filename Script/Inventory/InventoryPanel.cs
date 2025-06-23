@@ -7,6 +7,8 @@ public partial class InventoryPanel : PanelContainer
 	private Texture2D defaultCursor;
 	private bool wateringCanActive = false;
 
+    public event Action WaterButtonPressed;
+
     public override void _Ready()
 	{
 
@@ -34,6 +36,8 @@ public partial class InventoryPanel : PanelContainer
                     selectedSeedField.SetValue(seedsPanel, null);
                 }
             }
+            // Disable watering mode on right-click
+            wateringCanActive = false;
         }
     }
 
@@ -43,6 +47,8 @@ public partial class InventoryPanel : PanelContainer
         Texture2D wateringCan = GD.Load<Texture2D>("res://2D Arts/GardenAssets/wateringCan.png");
  
         Input.SetCustomMouseCursor(wateringCan, Input.CursorShape.Arrow, Vector2.Zero);
+		wateringCanActive = true;
+		WaterButtonPressed?.Invoke();
     }
  
     public void SetWateringCanActive(bool active)

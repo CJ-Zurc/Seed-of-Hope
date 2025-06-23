@@ -31,6 +31,8 @@ public partial class MainGame : Node2D
 	private float masterVolume = 0f; // Default volume in dB
 	private const string MusicBusName = "Master";
 	
+	private float stamina = 1.0f; // 1.0 = 100%, 0.0 = 0%
+	private TextureProgressBar staminaBar;
 
 	public override void _Ready()
 	{
@@ -41,6 +43,8 @@ public partial class MainGame : Node2D
 		audioPlayer = new AudioStreamPlayer();
 		audioPlayer.Bus = "Master";
 		AddChild(audioPlayer);
+
+		staminaBar = GetNode<TextureProgressBar>("HUD/Control/staminaBar/TextureProgressBar");
 
 		// --- Save/load logic ---
 		if (HasNode("player"))
@@ -226,6 +230,9 @@ public partial class MainGame : Node2D
 		hasPlayedMorningSound = false;
 		hasPlayedEveningSound = false;
 
+		stamina = 1.0f;
+		UpdateStaminaBar();
+
 		UpdateYearLabel();
 		UpdateTimeLabel();
 		UpdateLighting();
@@ -262,23 +269,48 @@ public partial class MainGame : Node2D
 		return dayCount;
 	}
 
+	public void DecreaseStamina(float amount)
+	{
+		stamina -= amount;
+		if (stamina < 0f) stamina = 0f;
+		UpdateStaminaBar();
+	}
+
+	private void UpdateStaminaBar()
+	{
+		if (staminaBar != null)
+			staminaBar.Value = stamina * 100f;
+	}
+
+	public float GetStamina() => stamina;
+	public void SetStamina(float value)
+	{
+		stamina = Mathf.Clamp(value, 0f, 1f);
+		UpdateStaminaBar();
+	}
+
+	public float GetHourCount()
+	{
+		return time;
+	}
+
 	private void SaveGame()
 	{
 		// Example: Save player position, day, time, etc.
 		var saveData = new Godot.Collections.Dictionary();
 
-        if (HasNode("player"))
-        {
-            var player = GetNode<Node2D>("player");
-            var pos = player.GlobalPosition;
-            saveData["player_position"] = new Godot.Collections.Array { pos.X, pos.Y };
-        }
-        saveData["day"] = dayCount;
-        saveData["year"] = year;
-        saveData["time"] = time;
+		if (HasNode("player"))
+		{
+			var player = GetNode<Node2D>("player");
+			var pos = player.GlobalPosition;
+			saveData["player_position"] = new Godot.Collections.Array { pos.X, pos.Y };
+		}
+		saveData["day"] = dayCount;
+		saveData["year"] = year;
+		saveData["time"] = time;
 
-        string json = Json.Stringify(saveData);
-        using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
-        file.StoreString(json);
-    }
+		string json = Json.Stringify(saveData);
+		using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
+		file.StoreString(json);
+	}
 }

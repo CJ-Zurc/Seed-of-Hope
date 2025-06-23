@@ -18,6 +18,9 @@ public partial class PlantArea2D : PlantableArea
 	private InventoryPanel inventoryPanel;
 	private bool wateringCanActive = false;
 	private int growthDaysLeft = 5;
+	private bool waitingForWaterClick = false;
+	private float waterLevel = 0f;
+	private float lastWaterDecreaseHour = 0f;
 
 	public override void _Ready()
 	{
@@ -28,6 +31,11 @@ public partial class PlantArea2D : PlantableArea
 		inventoryPanel = GetNode<InventoryPanel>("/root/MainGame/HUD/Control/inventoryPanel");
 		waterBar = null;
 		Connect("input_event", new Callable(this, nameof(OnInputEvent)));
+
+		if (inventoryPanel != null)
+		{
+			inventoryPanel.WaterButtonPressed += OnWaterButtonActivated;
+		}
 	}
 
 	public override void Plant(string seedType)
@@ -39,6 +47,8 @@ public partial class PlantArea2D : PlantableArea
 		currentSeedType = seedType;
 		isPlanted = true;
 		growthDaysLeft = 5; // Set growth stage to 5 days
+		waterLevel = 0f; // Reset water level on planting
+		lastWaterDecreaseHour = mainGame.GetHourCount(); // Track water decrease timing
 
 		switch (seedType)
 		{
@@ -69,12 +79,18 @@ public partial class PlantArea2D : PlantableArea
 		lastGrowthDay = mainGame.GetDayCount();
 		seedInventoryManager.SellSeed(seedType);
 		inventorySeedsPanel.SetSeedSelectedFalse(seedType);
+		mainGame.DecreaseStamina(0.1f); // Decrease stamina by 10% per plant
 		ShowPlantInfo();
 	}
 
 	public override void Water()
 	{
-		// Reset: Only set up the basic structure for watering
+		// Not used directly; watering is handled via OnInputEvent
+	}
+
+	private void OnWaterButtonActivated()
+	{
+		waitingForWaterClick = true;
 	}
 
 	private void OnInputEvent(Viewport viewport, InputEvent @event, int shapeIdx)
@@ -84,6 +100,17 @@ public partial class PlantArea2D : PlantableArea
 			if (!isPlanted && !string.IsNullOrEmpty(inventorySeedsPanel.SelectedSeed))
 			{
 				Plant(inventorySeedsPanel.SelectedSeed);
+			}
+			// Only allow watering if wateringCanActive is true in InventoryPanel
+			else if (isPlanted && waitingForWaterClick && inventoryPanel != null && inventoryPanel.Get("wateringCanActive").AsBool())
+			{
+				waterLevel = 1.0f;
+				ShowPlantInfo();
+				waitingForWaterClick = false;
+				if (inventoryPanel != null)
+					inventoryPanel.SetWateringCanActive(false);
+				Input.SetDefaultCursorShape(Input.CursorShape.Arrow);
+				mainGame.DecreaseStamina(0.1f); // Decrease stamina by 10% on watering
 			}
 			else if (isPlanted)
 			{
@@ -116,6 +143,10 @@ public partial class PlantArea2D : PlantableArea
 		{
 			growthLabel.Text = "Ready to Harvest!";
 		}
+
+		// Set water bar value
+		var waterBarNode = plantInfoInstance.GetNode<TextureProgressBar>("CanvasLayer/Control/WaterBar/TextureProgressBar");
+		waterBarNode.Value = waterLevel * 100f;
 
 		// Add to HUD (assumes HUD is at /root/MainGame/HUD)
 		var hud = GetNode<CanvasLayer>("/root/MainGame/HUD");
@@ -155,9 +186,26 @@ public partial class PlantArea2D : PlantableArea
 			plantAnimation.Frame++;
 			lastGrowthDay = mainGame.GetDayCount();
 		}
-		if (waterBar != null && waterBar.Value > 0)
+
+		// Water decrease logic: decrease by 20% every 5 in-game hours
+		if (isPlanted)
 		{
-			// Simulate growth if watered
+			float currentHour = mainGame.GetHourCount();
+			if (currentHour - lastWaterDecreaseHour >= 5f)
+			{
+				if (waterLevel > 0f)
+				{
+					waterLevel -= 0.2f;
+					if (waterLevel < 0f) waterLevel = 0f;
+				}
+				lastWaterDecreaseHour += 5f;
+				// Optionally update info panel if visible
+				if (plantInfoInstance != null && IsInstanceValid(plantInfoInstance))
+				{
+					var waterBarNode = plantInfoInstance.GetNode<TextureProgressBar>("CanvasLayer/Control/WaterBar/TextureProgressBar");
+					waterBarNode.Value = waterLevel * 100f;
+				}
+			}
 		}
 	}
 
