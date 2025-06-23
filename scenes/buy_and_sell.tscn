@@ -213,7 +213,6 @@ scale = Vector2(1.00839, 1.00872)
 layer = 3
 
 [node name="SappyBG" type="TextureRect" parent="BuyUI/CanvasLayer"]
-visible = false
 offset_left = 160.0
 offset_top = 97.0
 offset_right = 1312.0
