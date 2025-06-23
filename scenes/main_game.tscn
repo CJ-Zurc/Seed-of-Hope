@@ -1,22 +1,27 @@
-[gd_scene load_steps=23 format=4 uid="uid://dditttsq1xujj"]
+[gd_scene load_steps=56 format=4 uid="uid://dditttsq1xujj"]
 
 [ext_resource type="Script" uid="uid://c0oyghgu8w35f" path="res://Script/World/MainGame.cs" id="1_ihbck"]
 [ext_resource type="Texture2D" uid="uid://lbkmad5iq1co" path="res://2D Arts/BackgroundMainGame/BlackBackground.png" id="1_o6v7o"]
-[ext_resource type="AudioStream" uid="uid://b6jyn4jixg1fv" path="res://Music/DayBGM/a-day-in-my-life-dark-cat-main-version-Edited.mp3" id="2_ikqpi"]
+[ext_resource type="AudioStream" uid="uid://don66no7j47cj" path="res://Music/DayBGM/a-day-in-my-life-dark-cat-main-version-Edited.mp3" id="2_ikqpi"]
 [ext_resource type="Texture2D" uid="uid://cxc764otrlfr0" path="res://2D Arts/BackgroundMainGame/BlueBackground.png" id="2_wjob3"]
-[ext_resource type="AudioStream" uid="uid://b11udfgrwoksp" path="res://Music/NightBGM/Viktor Kraus - Blueberries-Edited.mp3" id="3_vnsdt"]
+[ext_resource type="AudioStream" uid="uid://v76tkxvnxc74" path="res://Music/NightBGM/Viktor Kraus - Blueberries-Edited.mp3" id="3_vnsdt"]
 [ext_resource type="PackedScene" uid="uid://duh4ouihpudo3" path="res://scenes/bed.tscn" id="4_sp04v"]
 [ext_resource type="PackedScene" uid="uid://bpjfws1r67246" path="res://scenes/outside.tscn" id="5_ihbck"]
-[ext_resource type="PackedScene" uid="uid://c2vpsxf150g0n" path="res://scenes/plant_info.tscn" id="9_yu8cv"]
 [ext_resource type="PackedScene" uid="uid://ddp8rmvqjhold" path="res://scenes/living_room.tscn" id="11_5cypo"]
 [ext_resource type="PackedScene" uid="uid://bqrnebrk6e7u4" path="res://scenes/player.tscn" id="13_wjob3"]
 [ext_resource type="PackedScene" uid="uid://ggodvwqq6ecg" path="res://scenes/Teleporter.tscn" id="14_8xp80"]
 [ext_resource type="PackedScene" uid="uid://c7ovd1vg55yta" path="res://scenes/hud.tscn" id="15_sp04v"]
 [ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="16_ihbck"]
 [ext_resource type="Texture2D" uid="uid://dmth8e8rc2yfr" path="res://2D Arts/UI stuff/dialogues/dialogue box.png" id="16_vnsdt"]
+[ext_resource type="Script" uid="uid://11rmim02u3mr" path="res://Script/Plant/PlantArea2D.cs" id="17_5wboo"]
+[ext_resource type="Texture2D" uid="uid://b255lu07j3lou" path="res://2D Arts/AmpalayaAssets.png" id="18_6de02"]
 [ext_resource type="Script" uid="uid://cd773r7gid7y2" path="res://Script/Dialogue/TvTrigger.cs" id="18_ikqpi"]
 [ext_resource type="Script" uid="uid://cbghd6slb04g1" path="res://Script/Dialogue/BedTrigger.cs" id="19_5luka"]
+[ext_resource type="Texture2D" uid="uid://bd0w41cca0fyt" path="res://2D Arts/CalamansiTree.png" id="19_cybgu"]
 [ext_resource type="Script" uid="uid://dk46oe0y31m1a" path="res://Script/Dialogue/ComputerTrigger.cs" id="19_yu8cv"]
+[ext_resource type="Texture2D" uid="uid://dmwks4f7825u2" path="res://2D Arts/SunflowerPlant.png" id="20_wdxbp"]
+[ext_resource type="Texture2D" uid="uid://0l2eabfbttpk" path="res://2D Arts/PechayPlant.png" id="21_on6n6"]
+[ext_resource type="Texture2D" uid="uid://b22nq70d2wycg" path="res://2D Arts/succulentPlant.png" id="22_x3ega"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6v7o"]
 texture = ExtResource("1_o6v7o")
@@ -37,6 +42,229 @@ size = Vector2(23, 23)
 atlas = ExtResource("16_vnsdt")
 region = Rect2(2, 75, 124, 46)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3vmp"]
+atlas = ExtResource("18_6de02")
+region = Rect2(0, 0, 41, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgyq2"]
+atlas = ExtResource("18_6de02")
+region = Rect2(41, 0, 41, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7qf6"]
+atlas = ExtResource("18_6de02")
+region = Rect2(82, 0, 41, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnedi"]
+atlas = ExtResource("18_6de02")
+region = Rect2(123, 0, 41, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7ivk"]
+atlas = ExtResource("18_6de02")
+region = Rect2(0, 55, 41, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrgwk"]
+atlas = ExtResource("18_6de02")
+region = Rect2(41, 55, 41, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8crev"]
+atlas = ExtResource("19_cybgu")
+region = Rect2(0, 0, 16, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5r5b"]
+atlas = ExtResource("19_cybgu")
+region = Rect2(16, 0, 16, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6k3b4"]
+atlas = ExtResource("19_cybgu")
+region = Rect2(36, 0, 18, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4spj"]
+atlas = ExtResource("19_cybgu")
+region = Rect2(80, 2, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r41qy"]
+atlas = ExtResource("19_cybgu")
+region = Rect2(57, 0, 18, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u23ol"]
+atlas = ExtResource("20_wdxbp")
+region = Rect2(2, 0, 18, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8c4r"]
+atlas = ExtResource("21_on6n6")
+region = Rect2(0, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed357"]
+atlas = ExtResource("21_on6n6")
+region = Rect2(20, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx11i"]
+atlas = ExtResource("21_on6n6")
+region = Rect2(40, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpb6u"]
+atlas = ExtResource("21_on6n6")
+region = Rect2(60, 0, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivyy7"]
+atlas = ExtResource("21_on6n6")
+region = Rect2(0, 26, 20, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rx0y"]
+atlas = ExtResource("22_x3ega")
+region = Rect2(0, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhkdv"]
+atlas = ExtResource("22_x3ega")
+region = Rect2(15, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76v20"]
+atlas = ExtResource("22_x3ega")
+region = Rect2(2, 19, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n01r"]
+atlas = ExtResource("22_x3ega")
+region = Rect2(22, 19, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi8s6"]
+atlas = ExtResource("22_x3ega")
+region = Rect2(34, 0, 17, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kafvd"]
+atlas = ExtResource("20_wdxbp")
+region = Rect2(21, 0, 18, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opakg"]
+atlas = ExtResource("20_wdxbp")
+region = Rect2(40, 0, 18, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hko6u"]
+atlas = ExtResource("20_wdxbp")
+region = Rect2(0, 40, 24, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6u8u7"]
+atlas = ExtResource("20_wdxbp")
+region = Rect2(22, 34, 22, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcudo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3vmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgyq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7qf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnedi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7ivk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrgwk")
+}],
+"loop": true,
+"name": &"ampalayaanimation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8crev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5r5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6k3b4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4spj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r41qy")
+}],
+"loop": true,
+"name": &"calamansianimation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u23ol")
+}],
+"loop": true,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8c4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed357")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx11i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpb6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivyy7")
+}],
+"loop": true,
+"name": &"pechayanimation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u23ol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rx0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhkdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76v20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n01r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi8s6")
+}],
+"loop": true,
+"name": &"succulentaimation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u23ol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kafvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opakg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hko6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6u8u7")
+}],
+"loop": true,
+"name": &"sunfloweranimation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_307no"]
+
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_ihbck")
 modulatePath = NodePath("CanvasModulate")
@@ -55,12 +283,6 @@ position = Vector2(-2, 500)
 
 [node name="bed" parent="." instance=ExtResource("4_sp04v")]
 position = Vector2(-1, -481)
-
-[node name="Plant info" parent="." instance=ExtResource("9_yu8cv")]
-offset_left = 562.0
-offset_top = -237.0
-offset_right = 562.0
-offset_bottom = -237.0
 
 [node name="player" parent="." instance=ExtResource("13_wjob3")]
 position = Vector2(-55, 155)
@@ -161,3 +383,17 @@ autowrap_mode = 3
 process_mode = 3
 wait_time = 1.5
 one_shot = true
+
+[node name="PlantingArea3" type="Area2D" parent="."]
+position = Vector2(183, 546)
+script = ExtResource("17_5wboo")
+plantAnimationPath = NodePath("PlantAnimations")
+
+[node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea3"]
+position = Vector2(-301, 69)
+sprite_frames = SubResource("SpriteFrames_dcudo")
+animation = &"none"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlantingArea3"]
+position = Vector2(-301, 79)
+shape = SubResource("RectangleShape2D_307no")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=37 format=4 uid="uid://bpjfws1r67246"]
 
-[ext_resource type="PackedScene" path="res://scenes/farm_land.tscn" id="1_lt5my"]
+[ext_resource type="PackedScene" uid="uid://cgagg36ej5q78" path="res://scenes/farm_land.tscn" id="1_lt5my"]
 [ext_resource type="Texture2D" uid="uid://d1m4elcvysruv" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="3_ht1us"]
 [ext_resource type="Texture2D" uid="uid://dftldqx3387pb" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="4_lpxjy"]
 [ext_resource type="Texture2D" uid="uid://dlxc01j3p03s0" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Cliff_Tile.png" id="4_q0kmf"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://brt5q3g25ufad" path="res://scenes/succulentCollectable.tscn" id="13_ht1us"]
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
-[ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
+[ext_resource type="Texture2D" uid="uid://ch20jjjq6cchb" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0kmf"]
 texture = ExtResource("3_ht1us")

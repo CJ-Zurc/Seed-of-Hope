@@ -19,7 +19,7 @@ public partial class Money : CanvasLayer
 		// Connect the MoneyChanged signal to update the label when money changes
 		moneyManager.MoneyChanged += OnMoneyChanged;
 	}
-	}
+	
 
 	private void OnMoneyChanged(int newAmount)
 	{

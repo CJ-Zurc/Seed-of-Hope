@@ -15,6 +15,9 @@ public partial class PlantArea2D : PlantableArea
 	private InventorySeedsPanel inventorySeedsPanel;
 	private InventoryPanel inventoryPanel;
 	private bool wateringCanActive = false;
+	private float waterLevel = 0f;
+	private float waterDecreaseTimer = 10f; // 10 seconds interval
+	private const float WATER_DECREASE_INTERVAL = 10f;
 
 	public override void _Ready()
 	{
@@ -70,7 +73,8 @@ public partial class PlantArea2D : PlantableArea
 
 	public override void Water()
 	{
-		// Reset: Only set up the basic structure for watering
+		waterLevel += 10f;
+		GD.Print($"Plant watered! Water level: {waterLevel} (added 10)");
 	}
 
 	private void OnInputEvent(Viewport viewport, InputEvent @event, int shapeIdx)
@@ -81,6 +85,10 @@ public partial class PlantArea2D : PlantableArea
 			{
 				Plant(inventorySeedsPanel.SelectedSeed);
 			}
+			else if (isPlanted && inventoryPanel != null && inventoryPanel.IsWateringCanActive)
+			{
+				Water();
+			}
 			else if (isPlanted)
 			{
 				ShowPlantInfo();
@@ -90,7 +98,7 @@ public partial class PlantArea2D : PlantableArea
 
 	private void ShowPlantInfo()
 	{
-		// Reset: Only set up the basic structure for showing plant info
+
 	}
 
 	public override void _Process(double delta)
@@ -103,6 +111,18 @@ public partial class PlantArea2D : PlantableArea
 		if (waterBar != null && waterBar.Value > 0)
 		{
 			// Simulate growth if watered
+		}
+
+		// Water decrease logic
+		if (isPlanted && waterLevel > 0)
+		{
+			waterDecreaseTimer -= (float)delta;
+			if (waterDecreaseTimer <= 0f)
+			{
+				waterLevel -= 1f;
+				waterDecreaseTimer = WATER_DECREASE_INTERVAL;
+				GD.Print($"Water level decreased: {waterLevel}");
+			}
 		}
 	}
 
