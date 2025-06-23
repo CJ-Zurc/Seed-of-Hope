@@ -3,11 +3,11 @@ using System;
 
 public partial class InventoryPanel : PanelContainer
 {
-    private Button waterButton;
-    private Texture2D defaultCursor;
+	private Button waterButton;
+	private Texture2D defaultCursor;
+	private bool wateringCanActive = false;
 
-    public bool IsWateringCanActive { get; private set; } = false;
-    private InventoryPanel inventoryPanel;
+    public event Action WaterButtonPressed;
 
     public override void _Ready()
     {
@@ -26,7 +26,18 @@ public partial class InventoryPanel : PanelContainer
         {
             // Reset the mouse cursor to the default custom icon when right mouse button is pressed
             Input.SetCustomMouseCursor(defaultCursor, Input.CursorShape.Arrow, Vector2.Zero);
-            IsWateringCanActive = false; // Deactivate watering can
+            // Directly clear the selectedSeed value in InventorySeedsPanel
+            var seedsPanel = GetNodeOrNull<InventorySeedsPanel>("/root/MainGame/HUD/Control/inventorySeedsPanel");
+            if (seedsPanel != null)
+            {
+                var selectedSeedField = typeof(InventorySeedsPanel).GetField("selectedSeed", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                if (selectedSeedField != null)
+                {
+                    selectedSeedField.SetValue(seedsPanel, null);
+                }
+            }
+            // Disable watering mode on right-click
+            wateringCanActive = false;
         }
     }
 
@@ -36,7 +47,8 @@ public partial class InventoryPanel : PanelContainer
         Texture2D wateringCan = GD.Load<Texture2D>("res://2D Arts/GardenAssets/wateringCan.png");
 
         Input.SetCustomMouseCursor(wateringCan, Input.CursorShape.Arrow, Vector2.Zero);
-        IsWateringCanActive = true; // Set the flag to indicate that the watering can is active
+		wateringCanActive = true;
+		WaterButtonPressed?.Invoke();
     }
 
 }

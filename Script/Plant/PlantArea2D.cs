@@ -6,6 +6,8 @@ public partial class PlantArea2D : PlantableArea
 	[Export]
 	public NodePath plantAnimationPath;
 	private AnimatedSprite2D plantAnimation;
+	private Timer plantInfoTimer;
+	private Control plantInfoInstance;
 	private string currentSeedType = null;
 	private float lastGrowthDay = 0;
 	private ProgressBar waterBar;
@@ -15,9 +17,10 @@ public partial class PlantArea2D : PlantableArea
 	private InventorySeedsPanel inventorySeedsPanel;
 	private InventoryPanel inventoryPanel;
 	private bool wateringCanActive = false;
+	private int growthDaysLeft = 5;
+	private bool waitingForWaterClick = false;
 	private float waterLevel = 0f;
-	private float waterDecreaseTimer = 10f; // 10 seconds interval
-	private const float WATER_DECREASE_INTERVAL = 10f;
+	private float lastWaterDecreaseHour = 0f;
 
 	public override void _Ready()
 	{
@@ -28,6 +31,11 @@ public partial class PlantArea2D : PlantableArea
 		inventoryPanel = GetNode<InventoryPanel>("/root/MainGame/HUD/Control/inventoryPanel");
 		waterBar = null;
 		Connect("input_event", new Callable(this, nameof(OnInputEvent)));
+
+		if (inventoryPanel != null)
+		{
+			inventoryPanel.WaterButtonPressed += OnWaterButtonActivated;
+		}
 	}
 
 	public override void Plant(string seedType)
@@ -38,6 +46,9 @@ public partial class PlantArea2D : PlantableArea
 
 		currentSeedType = seedType;
 		isPlanted = true;
+		growthDaysLeft = 5; // Set growth stage to 5 days
+		waterLevel = 0f; // Reset water level on planting
+		lastWaterDecreaseHour = mainGame.GetHourCount(); // Track water decrease timing
 
 		switch (seedType)
 		{
@@ -68,13 +79,18 @@ public partial class PlantArea2D : PlantableArea
 		lastGrowthDay = mainGame.GetDayCount();
 		seedInventoryManager.SellSeed(seedType);
 		inventorySeedsPanel.SetSeedSelectedFalse(seedType);
+		mainGame.DecreaseStamina(0.1f); // Decrease stamina by 10% per plant
 		ShowPlantInfo();
 	}
 
 	public override void Water()
 	{
-		waterLevel += 10f;
-		GD.Print($"Plant watered! Water level: {waterLevel} (added 10)");
+		// Not used directly; watering is handled via OnInputEvent
+	}
+
+	private void OnWaterButtonActivated()
+	{
+		waitingForWaterClick = true;
 	}
 
 	private void OnInputEvent(Viewport viewport, InputEvent @event, int shapeIdx)
@@ -85,9 +101,16 @@ public partial class PlantArea2D : PlantableArea
 			{
 				Plant(inventorySeedsPanel.SelectedSeed);
 			}
-			else if (isPlanted && inventoryPanel != null && inventoryPanel.IsWateringCanActive)
+			// Only allow watering if wateringCanActive is true in InventoryPanel
+			else if (isPlanted && waitingForWaterClick && inventoryPanel != null && inventoryPanel.Get("wateringCanActive").AsBool())
 			{
-				Water();
+				waterLevel = 1.0f;
+				ShowPlantInfo();
+				waitingForWaterClick = false;
+				if (inventoryPanel != null)
+					inventoryPanel.SetWateringCanActive(false);
+				Input.SetDefaultCursorShape(Input.CursorShape.Arrow);
+				mainGame.DecreaseStamina(0.1f); // Decrease stamina by 10% on watering
 			}
 			else if (isPlanted)
 			{
@@ -98,30 +121,90 @@ public partial class PlantArea2D : PlantableArea
 
 	private void ShowPlantInfo()
 	{
+		if (plantInfoInstance != null && IsInstanceValid(plantInfoInstance))
+		{
+			plantInfoInstance.QueueFree();
+		}
 
+		var plantInfoScene = GD.Load<PackedScene>("res://scenes/plant_info.tscn");
+		plantInfoInstance = (Control)plantInfoScene.Instantiate();
+
+		// Set plant name
+		var plantNameLabel = plantInfoInstance.GetNode<RichTextLabel>("CanvasLayer/Control/plantName");
+		plantNameLabel.Text = currentSeedType;
+
+		// Set growth info
+		var growthLabel = plantInfoInstance.GetNode<RichTextLabel>("CanvasLayer/Control/RichTextLabel");
+		if (growthDaysLeft > 0)
+		{
+			growthLabel.Text = $"Growth: {growthDaysLeft} Days";
+		}
+		else
+		{
+			growthLabel.Text = "Ready to Harvest!";
+		}
+
+		// Set water bar value
+		var waterBarNode = plantInfoInstance.GetNode<TextureProgressBar>("CanvasLayer/Control/WaterBar/TextureProgressBar");
+		waterBarNode.Value = waterLevel * 100f;
+
+		// Add to HUD (assumes HUD is at /root/MainGame/HUD)
+		var hud = GetNode<CanvasLayer>("/root/MainGame/HUD");
+		hud.AddChild(plantInfoInstance);
+
+		// Position: bottom middle, just above the seed inventory
+		plantInfoInstance.AnchorLeft = 0.5f;
+		plantInfoInstance.AnchorRight = 0.5f;
+		plantInfoInstance.AnchorBottom = 1.0f;
+		plantInfoInstance.AnchorTop = 1.0f;
+		plantInfoInstance.OffsetLeft = -plantInfoInstance.Size.X / 2f;
+		plantInfoInstance.OffsetTop = -180; // Adjust as needed to be above inventory
+
+		// Auto-hide after 1.5 seconds
+		if (plantInfoTimer == null)
+		{
+			plantInfoTimer = new Timer();
+			plantInfoTimer.OneShot = true;
+			plantInfoTimer.WaitTime = 1.5f;
+			plantInfoTimer.Timeout += () => {
+				if (plantInfoInstance != null && IsInstanceValid(plantInfoInstance))
+					plantInfoInstance.QueueFree();
+			};
+			hud.AddChild(plantInfoTimer);
+		}
+		plantInfoTimer.Start();
 	}
 
 	public override void _Process(double delta)
 	{
 		if (isPlanted && mainGame.GetDayCount() > lastGrowthDay)
 		{
+			if (growthDaysLeft > 0)
+			{
+				growthDaysLeft--;
+			}
 			plantAnimation.Frame++;
 			lastGrowthDay = mainGame.GetDayCount();
 		}
-		if (waterBar != null && waterBar.Value > 0)
-		{
-			// Simulate growth if watered
-		}
 
-		// Water decrease logic
-		if (isPlanted && waterLevel > 0)
+		// Water decrease logic: decrease by 20% every 5 in-game hours
+		if (isPlanted)
 		{
-			waterDecreaseTimer -= (float)delta;
-			if (waterDecreaseTimer <= 0f)
+			float currentHour = mainGame.GetHourCount();
+			if (currentHour - lastWaterDecreaseHour >= 5f)
 			{
-				waterLevel -= 1f;
-				waterDecreaseTimer = WATER_DECREASE_INTERVAL;
-				GD.Print($"Water level decreased: {waterLevel}");
+				if (waterLevel > 0f)
+				{
+					waterLevel -= 0.2f;
+					if (waterLevel < 0f) waterLevel = 0f;
+				}
+				lastWaterDecreaseHour += 5f;
+				// Optionally update info panel if visible
+				if (plantInfoInstance != null && IsInstanceValid(plantInfoInstance))
+				{
+					var waterBarNode = plantInfoInstance.GetNode<TextureProgressBar>("CanvasLayer/Control/WaterBar/TextureProgressBar");
+					waterBarNode.Value = waterLevel * 100f;
+				}
 			}
 		}
 	}
