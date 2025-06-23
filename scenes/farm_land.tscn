@@ -1,18 +1,18 @@
 [gd_scene load_steps=44 format=4 uid="uid://cgagg36ej5q78"]
 
-[ext_resource type="Texture2D" uid="uid://d1m4elcvysruv" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="1_8t6kq"]
-[ext_resource type="Texture2D" uid="uid://dftldqx3387pb" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="2_p4lod"]
-[ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_so3p6"]
-[ext_resource type="Texture2D" uid="uid://dn5dorpdblck3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="4_e278s"]
-[ext_resource type="Texture2D" uid="uid://b255lu07j3lou" path="res://2D Arts/AmpalayaAssets.png" id="5_ktamn"]
-[ext_resource type="Script" uid="uid://ebv5gkjpffhw" path="res://Script/Plant/PlantArea2D.cs" id="5_yaamt"]
-[ext_resource type="Texture2D" uid="uid://bd0w41cca0fyt" path="res://2D Arts/CalamansiTree.png" id="6_yaamt"]
-[ext_resource type="Texture2D" uid="uid://0l2eabfbttpk" path="res://2D Arts/PechayPlant.png" id="7_l65st"]
-[ext_resource type="Texture2D" uid="uid://b22nq70d2wycg" path="res://2D Arts/succulentPlant.png" id="8_68710"]
-[ext_resource type="Texture2D" uid="uid://dmwks4f7825u2" path="res://2D Arts/SunflowerPlant.png" id="9_50vdo"]
+[ext_resource type="Texture2D" uid="uid://d1m4elcvysruv" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="1_b1nsg"]
+[ext_resource type="Texture2D" uid="uid://dftldqx3387pb" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="2_sch2e"]
+[ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_7ropj"]
+[ext_resource type="Texture2D" uid="uid://dn5dorpdblck3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="4_aj8r3"]
+[ext_resource type="Script" uid="uid://dyjj0w45nchwj" path="res://Script/Plant/PlantArea2D.cs" id="5_4f3g4"]
+[ext_resource type="Texture2D" uid="uid://dtgsql8llkbor" path="res://2D Arts/AmpalayaAssets.png" id="6_ve7ty"]
+[ext_resource type="Texture2D" uid="uid://cq21sug0vo7j1" path="res://2D Arts/CalamansiTree.png" id="7_kc8te"]
+[ext_resource type="Texture2D" uid="uid://bd86mpo0w5ouq" path="res://2D Arts/SunflowerPlant.png" id="8_tvjxd"]
+[ext_resource type="Texture2D" uid="uid://ctxt8407wprjw" path="res://2D Arts/PechayPlant.png" id="9_7opn1"]
+[ext_resource type="Texture2D" uid="uid://bnjwbrwa7qns8" path="res://2D Arts/succulentPlant.png" id="10_73cbh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_so3p6"]
-texture = ExtResource("1_8t6kq")
+texture = ExtResource("1_b1nsg")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -31,11 +31,11 @@ texture = ExtResource("1_8t6kq")
 2:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e278s"]
-texture = ExtResource("2_p4lod")
+texture = ExtResource("2_sch2e")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n2rv6"]
-texture = ExtResource("3_so3p6")
+texture = ExtResource("3_7ropj")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -47,7 +47,7 @@ texture = ExtResource("3_so3p6")
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ljht"]
-texture = ExtResource("4_e278s")
+texture = ExtResource("4_aj8r3")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_so3p6"]
@@ -57,107 +57,107 @@ sources/5 = SubResource("TileSetAtlasSource_n2rv6")
 sources/6 = SubResource("TileSetAtlasSource_3ljht")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d3vmp"]
-atlas = ExtResource("5_ktamn")
+atlas = ExtResource("6_ve7ty")
 region = Rect2(0, 0, 41, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tgyq2"]
-atlas = ExtResource("5_ktamn")
+atlas = ExtResource("6_ve7ty")
 region = Rect2(41, 0, 41, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l7qf6"]
-atlas = ExtResource("5_ktamn")
+atlas = ExtResource("6_ve7ty")
 region = Rect2(82, 0, 41, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnedi"]
-atlas = ExtResource("5_ktamn")
+atlas = ExtResource("6_ve7ty")
 region = Rect2(123, 0, 41, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7ivk"]
-atlas = ExtResource("5_ktamn")
+atlas = ExtResource("6_ve7ty")
 region = Rect2(0, 55, 41, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nrgwk"]
-atlas = ExtResource("5_ktamn")
+atlas = ExtResource("6_ve7ty")
 region = Rect2(41, 55, 41, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8crev"]
-atlas = ExtResource("6_yaamt")
+atlas = ExtResource("7_kc8te")
 region = Rect2(0, 0, 16, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5r5b"]
-atlas = ExtResource("6_yaamt")
+atlas = ExtResource("7_kc8te")
 region = Rect2(16, 0, 16, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6k3b4"]
-atlas = ExtResource("6_yaamt")
+atlas = ExtResource("7_kc8te")
 region = Rect2(36, 0, 18, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4spj"]
-atlas = ExtResource("6_yaamt")
+atlas = ExtResource("7_kc8te")
 region = Rect2(80, 2, 20, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r41qy"]
-atlas = ExtResource("6_yaamt")
+atlas = ExtResource("7_kc8te")
 region = Rect2(57, 0, 18, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u23ol"]
-atlas = ExtResource("9_50vdo")
+atlas = ExtResource("8_tvjxd")
 region = Rect2(2, 0, 18, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q8c4r"]
-atlas = ExtResource("7_l65st")
+atlas = ExtResource("9_7opn1")
 region = Rect2(0, 0, 20, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ed357"]
-atlas = ExtResource("7_l65st")
+atlas = ExtResource("9_7opn1")
 region = Rect2(20, 0, 20, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jx11i"]
-atlas = ExtResource("7_l65st")
+atlas = ExtResource("9_7opn1")
 region = Rect2(40, 0, 20, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dpb6u"]
-atlas = ExtResource("7_l65st")
+atlas = ExtResource("9_7opn1")
 region = Rect2(60, 0, 20, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivyy7"]
-atlas = ExtResource("7_l65st")
+atlas = ExtResource("9_7opn1")
 region = Rect2(0, 26, 20, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6rx0y"]
-atlas = ExtResource("8_68710")
+atlas = ExtResource("10_73cbh")
 region = Rect2(0, 0, 15, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yhkdv"]
-atlas = ExtResource("8_68710")
+atlas = ExtResource("10_73cbh")
 region = Rect2(15, 0, 15, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_76v20"]
-atlas = ExtResource("8_68710")
+atlas = ExtResource("10_73cbh")
 region = Rect2(2, 19, 20, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7n01r"]
-atlas = ExtResource("8_68710")
+atlas = ExtResource("10_73cbh")
 region = Rect2(22, 19, 20, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi8s6"]
-atlas = ExtResource("8_68710")
+atlas = ExtResource("10_73cbh")
 region = Rect2(34, 0, 17, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kafvd"]
-atlas = ExtResource("9_50vdo")
+atlas = ExtResource("8_tvjxd")
 region = Rect2(21, 0, 18, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_opakg"]
-atlas = ExtResource("9_50vdo")
+atlas = ExtResource("8_tvjxd")
 region = Rect2(40, 0, 18, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hko6u"]
-atlas = ExtResource("9_50vdo")
+atlas = ExtResource("8_tvjxd")
 region = Rect2(0, 40, 24, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6u8u7"]
-atlas = ExtResource("9_50vdo")
+atlas = ExtResource("8_tvjxd")
 region = Rect2(22, 34, 22, 34)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i0rrb"]
@@ -294,7 +294,7 @@ offset_bottom = 40.0
 
 [node name="PlantingArea" type="Area2D" parent="Control"]
 position = Vector2(2, 0)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea"]
@@ -308,7 +308,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea2" type="Area2D" parent="Control"]
 position = Vector2(25, 0)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea2"]
@@ -322,7 +322,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea3" type="Area2D" parent="Control"]
 position = Vector2(48, 0)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea3"]
@@ -336,7 +336,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea3" type="Area2D" parent="."]
 position = Vector2(72, 0)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea3"]
@@ -350,7 +350,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea4" type="Area2D" parent="."]
 position = Vector2(96, 0)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea4"]
@@ -364,7 +364,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea5" type="Area2D" parent="."]
 position = Vector2(96, 22)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea5"]
@@ -378,7 +378,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea6" type="Area2D" parent="."]
 position = Vector2(72, 22)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea6"]
@@ -392,7 +392,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea7" type="Area2D" parent="."]
 position = Vector2(48, 22)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea7"]
@@ -406,7 +406,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea8" type="Area2D" parent="."]
 position = Vector2(24, 22)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea8"]
@@ -420,7 +420,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea9" type="Area2D" parent="."]
 position = Vector2(2, 22)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea9"]
@@ -434,7 +434,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea" type="Area2D" parent="."]
 position = Vector2(190, 1)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea"]
@@ -448,7 +448,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea2" type="Area2D" parent="."]
 position = Vector2(213, 1)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea2"]
@@ -462,7 +462,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea10" type="Area2D" parent="."]
 position = Vector2(237, 1)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea10"]
@@ -476,7 +476,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea11" type="Area2D" parent="."]
 position = Vector2(261, 1)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea11"]
@@ -490,7 +490,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea12" type="Area2D" parent="."]
 position = Vector2(286, 1)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea12"]
@@ -504,7 +504,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea13" type="Area2D" parent="."]
 position = Vector2(190, 23)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea13"]
@@ -518,7 +518,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea14" type="Area2D" parent="."]
 position = Vector2(213, 23)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea14"]
@@ -532,7 +532,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea15" type="Area2D" parent="."]
 position = Vector2(237, 23)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea15"]
@@ -546,7 +546,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea16" type="Area2D" parent="."]
 position = Vector2(261, 23)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea16"]
@@ -560,7 +560,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea17" type="Area2D" parent="."]
 position = Vector2(286, 24)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea17"]
@@ -574,7 +574,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea18" type="Area2D" parent="."]
 position = Vector2(198, -92)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea18"]
@@ -588,7 +588,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea19" type="Area2D" parent="."]
 position = Vector2(219, -92)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea19"]
@@ -602,7 +602,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea20" type="Area2D" parent="."]
 position = Vector2(198, -69)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea20"]
@@ -616,7 +616,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea21" type="Area2D" parent="."]
 position = Vector2(219, -69)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea21"]
@@ -630,7 +630,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea22" type="Area2D" parent="."]
 position = Vector2(270, -85)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea22"]
@@ -644,7 +644,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea23" type="Area2D" parent="."]
 position = Vector2(73, -93)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea23"]
@@ -658,7 +658,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea24" type="Area2D" parent="."]
 position = Vector2(94, -93)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea24"]
@@ -672,7 +672,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea25" type="Area2D" parent="."]
 position = Vector2(73, -70)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea25"]
@@ -686,7 +686,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea26" type="Area2D" parent="."]
 position = Vector2(95, -70)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea26"]
@@ -700,7 +700,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea27" type="Area2D" parent="."]
 position = Vector2(18, -91)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea27"]
@@ -714,7 +714,7 @@ shape = SubResource("RectangleShape2D_sp3he")
 
 [node name="PlantingArea28" type="Area2D" parent="."]
 position = Vector2(18, -67)
-script = ExtResource("5_yaamt")
+script = ExtResource("5_4f3g4")
 plantAnimationPath = NodePath("PlantAnimations")
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea28"]
