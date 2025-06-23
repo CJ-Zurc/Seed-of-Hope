@@ -1,20 +1,24 @@
-[gd_scene load_steps=68 format=4 uid="uid://bpjfws1r67246"]
+[gd_scene load_steps=71 format=4 uid="uid://bpjfws1r67246"]
 
 [ext_resource type="Texture2D" uid="uid://d1m4elcvysruv" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="3_ht1us"]
 [ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_xi7x6"]
 [ext_resource type="Texture2D" uid="uid://dftldqx3387pb" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="4_lpxjy"]
 [ext_resource type="Texture2D" uid="uid://dn5dorpdblck3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="4_s22lx"]
 [ext_resource type="Script" uid="uid://dyjj0w45nchwj" path="res://Script/Plant/PlantArea2D.cs" id="5_2xi43"]
-[ext_resource type="Texture2D" uid="uid://dtgsql8llkbor" path="res://2D Arts/AmpalayaAssets.png" id="6_xxkng"]
-[ext_resource type="Texture2D" uid="uid://cq21sug0vo7j1" path="res://2D Arts/CalamansiTree.png" id="7_wxvcn"]
-[ext_resource type="Texture2D" uid="uid://bd86mpo0w5ouq" path="res://2D Arts/SunflowerPlant.png" id="8_hbx8j"]
+[ext_resource type="Texture2D" uid="uid://bh7hd2b77vp48" path="res://2D Arts/Plant Assets/AmpalayaAssets-Sheet.png" id="6_xq4d2"]
+[ext_resource type="Texture2D" uid="uid://dt0qsv7feromt" path="res://2D Arts/Plant Assets/CalamansiTree-Sheet.png" id="7_ni2yb"]
+[ext_resource type="Texture2D" uid="uid://dmuy2ciu5perh" path="res://2D Arts/Plant Assets/SeedDefault.png" id="8_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://c3st6bujm6amt" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Fences.png" id="9_5tstl"]
-[ext_resource type="Texture2D" uid="uid://ctxt8407wprjw" path="res://2D Arts/PechayPlant.png" id="9_xe0xi"]
-[ext_resource type="Texture2D" uid="uid://bnjwbrwa7qns8" path="res://2D Arts/succulentPlant.png" id="10_fh1te"]
+[ext_resource type="Texture2D" uid="uid://cyfuwajgaghek" path="res://2D Arts/Plant Assets/PechayPlant-Sheet.png" id="9_pu366"]
 [ext_resource type="Texture2D" uid="uid://du7gejaxb2xqx" path="res://2D Arts/Interiors/topDown/newTopdownFloor.png" id="10_v7x2m"]
+[ext_resource type="Texture2D" uid="uid://w5ox6jbr5ort" path="res://2D Arts/Plant Assets/succulentPlant-Sheet.png" id="10_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="11_cdqji"]
+[ext_resource type="Texture2D" uid="uid://d21ss4vns2jsj" path="res://2D Arts/Plant Assets/seedSunflower-sheet.png" id="11_ni2yb"]
+[ext_resource type="Texture2D" uid="uid://bcix8fhj8sqi2" path="res://2D Arts/Plant Assets/SunflowerPlant-Sheet.png" id="12_pu366"]
 [ext_resource type="Texture2D" uid="uid://dql2m0o33b2vw" path="res://2D Arts/GardenAssets/FaucetWBucket.png" id="12_x3una"]
+[ext_resource type="Texture2D" uid="uid://bpjlu0ws8x2ca" path="res://2D Arts/Plant Assets/sunflowerfirstform.png" id="12_xi7x6"]
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
+[ext_resource type="Texture2D" uid="uid://cderrtuqxgq6a" path="res://2D Arts/Plant Assets/sunflowerSecondForm.png" id="13_s22lx"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
 [ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
 [ext_resource type="Script" uid="uid://df7dwpfinlauw" path="res://Script/Plant/Faucet.cs" id="17_tjkqt"]
@@ -64,130 +68,123 @@ sources/4 = SubResource("TileSetAtlasSource_cqpgh")
 sources/5 = SubResource("TileSetAtlasSource_yrwc3")
 sources/6 = SubResource("TileSetAtlasSource_mm0kd")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d3vmp"]
-atlas = ExtResource("6_xxkng")
-region = Rect2(0, 0, 41, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi7x6"]
+atlas = ExtResource("6_xq4d2")
+region = Rect2(0, 0, 16, 23)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tgyq2"]
-atlas = ExtResource("6_xxkng")
-region = Rect2(41, 0, 41, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s22lx"]
+atlas = ExtResource("6_xq4d2")
+region = Rect2(16, 0, 16, 23)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l7qf6"]
-atlas = ExtResource("6_xxkng")
-region = Rect2(82, 0, 41, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xi43"]
+atlas = ExtResource("6_xq4d2")
+region = Rect2(32, 0, 16, 23)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dnedi"]
-atlas = ExtResource("6_xxkng")
-region = Rect2(123, 0, 41, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxkng"]
+atlas = ExtResource("6_xq4d2")
+region = Rect2(48, 0, 16, 23)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j7ivk"]
-atlas = ExtResource("6_xxkng")
-region = Rect2(0, 55, 41, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxvcn"]
+atlas = ExtResource("6_xq4d2")
+region = Rect2(64, 0, 16, 23)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nrgwk"]
-atlas = ExtResource("6_xxkng")
-region = Rect2(41, 55, 41, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbx8j"]
+atlas = ExtResource("7_ni2yb")
+region = Rect2(0, 0, 18, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8crev"]
-atlas = ExtResource("7_wxvcn")
-region = Rect2(0, 0, 16, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe0xi"]
+atlas = ExtResource("7_ni2yb")
+region = Rect2(18, 0, 18, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g5r5b"]
-atlas = ExtResource("7_wxvcn")
-region = Rect2(16, 0, 16, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh1te"]
+atlas = ExtResource("7_ni2yb")
+region = Rect2(36, 0, 18, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6k3b4"]
-atlas = ExtResource("7_wxvcn")
-region = Rect2(36, 0, 18, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcrnr"]
+atlas = ExtResource("7_ni2yb")
+region = Rect2(54, 0, 18, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c4spj"]
-atlas = ExtResource("7_wxvcn")
-region = Rect2(80, 2, 20, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqpgh"]
+atlas = ExtResource("7_ni2yb")
+region = Rect2(72, 0, 18, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r41qy"]
-atlas = ExtResource("7_wxvcn")
-region = Rect2(57, 0, 18, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni2yb"]
+atlas = ExtResource("8_xq4d2")
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u23ol"]
-atlas = ExtResource("8_hbx8j")
-region = Rect2(2, 0, 18, 34)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrwc3"]
+atlas = ExtResource("9_pu366")
+region = Rect2(0, 0, 20, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q8c4r"]
-atlas = ExtResource("9_xe0xi")
-region = Rect2(0, 0, 20, 26)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm0kd"]
+atlas = ExtResource("9_pu366")
+region = Rect2(20, 0, 20, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ed357"]
-atlas = ExtResource("9_xe0xi")
-region = Rect2(20, 0, 20, 26)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkm8h"]
+atlas = ExtResource("9_pu366")
+region = Rect2(40, 0, 20, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jx11i"]
-atlas = ExtResource("9_xe0xi")
-region = Rect2(40, 0, 20, 26)
+[sub_resource type="AtlasTexture" id="AtlasTexture_seo6j"]
+atlas = ExtResource("9_pu366")
+region = Rect2(60, 0, 20, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dpb6u"]
-atlas = ExtResource("9_xe0xi")
-region = Rect2(60, 0, 20, 26)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu366"]
+atlas = ExtResource("10_xq4d2")
+region = Rect2(0, 0, 20, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ivyy7"]
-atlas = ExtResource("9_xe0xi")
-region = Rect2(0, 26, 20, 26)
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7ppj"]
+atlas = ExtResource("10_xq4d2")
+region = Rect2(20, 0, 20, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6rx0y"]
-atlas = ExtResource("10_fh1te")
-region = Rect2(0, 0, 15, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_05nmd"]
+atlas = ExtResource("10_xq4d2")
+region = Rect2(40, 0, 20, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yhkdv"]
-atlas = ExtResource("10_fh1te")
-region = Rect2(15, 0, 15, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_41a82"]
+atlas = ExtResource("10_xq4d2")
+region = Rect2(60, 0, 20, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_76v20"]
-atlas = ExtResource("10_fh1te")
-region = Rect2(2, 19, 20, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcsdy"]
+atlas = ExtResource("11_ni2yb")
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7n01r"]
-atlas = ExtResource("10_fh1te")
-region = Rect2(22, 19, 20, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4mxg"]
+atlas = ExtResource("12_xi7x6")
+region = Rect2(0, 0, 18, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hi8s6"]
-atlas = ExtResource("10_fh1te")
-region = Rect2(34, 0, 17, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ew4rj"]
+atlas = ExtResource("13_s22lx")
+region = Rect2(0, 0, 16, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kafvd"]
-atlas = ExtResource("8_hbx8j")
-region = Rect2(21, 0, 18, 34)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdnj3"]
+atlas = ExtResource("12_pu366")
+region = Rect2(75, 0, 25, 43)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_opakg"]
-atlas = ExtResource("8_hbx8j")
-region = Rect2(40, 0, 18, 34)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a00k"]
+atlas = ExtResource("12_pu366")
+region = Rect2(100, 0, 25, 43)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hko6u"]
-atlas = ExtResource("8_hbx8j")
-region = Rect2(0, 40, 24, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6u8u7"]
-atlas = ExtResource("8_hbx8j")
-region = Rect2(22, 34, 22, 34)
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh1m7"]
+atlas = ExtResource("12_pu366")
+region = Rect2(125, 0, 25, 43)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_seo6j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d3vmp")
+"texture": SubResource("AtlasTexture_xi7x6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tgyq2")
+"texture": SubResource("AtlasTexture_s22lx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l7qf6")
+"texture": SubResource("AtlasTexture_2xi43")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dnedi")
+"texture": SubResource("AtlasTexture_xxkng")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j7ivk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nrgwk")
+"texture": SubResource("AtlasTexture_wxvcn")
 }],
 "loop": true,
 "name": &"ampalayaanimation",
@@ -195,19 +192,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8crev")
+"texture": SubResource("AtlasTexture_hbx8j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g5r5b")
+"texture": SubResource("AtlasTexture_xe0xi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6k3b4")
+"texture": SubResource("AtlasTexture_fh1te")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c4spj")
+"texture": SubResource("AtlasTexture_bcrnr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r41qy")
+"texture": SubResource("AtlasTexture_cqpgh")
 }],
 "loop": true,
 "name": &"calamansianimation",
@@ -215,7 +212,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u23ol")
+"texture": SubResource("AtlasTexture_ni2yb")
 }],
 "loop": true,
 "name": &"none",
@@ -223,19 +220,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q8c4r")
+"texture": SubResource("AtlasTexture_yrwc3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ed357")
+"texture": SubResource("AtlasTexture_mm0kd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jx11i")
+"texture": SubResource("AtlasTexture_nkm8h")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dpb6u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ivyy7")
+"texture": SubResource("AtlasTexture_seo6j")
 }],
 "loop": true,
 "name": &"pechayanimation",
@@ -243,22 +237,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u23ol")
+"texture": SubResource("AtlasTexture_pu366")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6rx0y")
+"texture": SubResource("AtlasTexture_r7ppj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yhkdv")
+"texture": SubResource("AtlasTexture_05nmd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_76v20")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7n01r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hi8s6")
+"texture": SubResource("AtlasTexture_41a82")
 }],
 "loop": true,
 "name": &"succulentaimation",
@@ -266,19 +254,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u23ol")
+"texture": SubResource("AtlasTexture_hcsdy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kafvd")
+"texture": SubResource("AtlasTexture_t4mxg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_opakg")
+"texture": SubResource("AtlasTexture_ew4rj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hko6u")
+"texture": SubResource("AtlasTexture_wdnj3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6u8u7")
+"texture": SubResource("AtlasTexture_8a00k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh1m7")
 }],
 "loop": true,
 "name": &"sunfloweranimation",
@@ -805,7 +796,7 @@ x = -65.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea4"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -821,7 +812,7 @@ x = -134.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -837,7 +828,7 @@ x = -111.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea2"]
-position = Vector2(-301, 69)
+position = Vector2(-302, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -853,7 +844,7 @@ x = -88.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea3"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -869,7 +860,7 @@ x = -40.0
 y = 677.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="Control/PlantingArea5"]
-position = Vector2(-301, 69)
+position = Vector2(-300, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -885,7 +876,7 @@ x = -40.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea5"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -901,9 +892,9 @@ x = -64.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea6"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
-animation = &"succulentaimation"
+animation = &"none"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlantingArea6"]
 position = Vector2(-301, 79)
@@ -917,7 +908,7 @@ x = -88.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea7"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -933,7 +924,7 @@ x = -112.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea8"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -949,7 +940,7 @@ x = -134.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea9"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -965,7 +956,7 @@ x = 54.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -981,7 +972,7 @@ x = 77.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea2"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -997,7 +988,7 @@ x = 101.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea10"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1013,7 +1004,7 @@ x = 125.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea11"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1029,7 +1020,7 @@ x = 150.0
 y = 678.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea12"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 77)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1045,7 +1036,7 @@ x = 54.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea13"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1061,7 +1052,7 @@ x = 77.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea14"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1077,7 +1068,7 @@ x = 101.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea15"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1093,7 +1084,7 @@ x = 125.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea16"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1109,7 +1100,7 @@ x = 150.0
 y = 700.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea17"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1125,7 +1116,7 @@ x = 61.0
 y = 583.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea18"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1141,7 +1132,7 @@ x = 83.0
 y = 583.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea19"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1157,7 +1148,7 @@ x = 60.0
 y = 609.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea20"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1173,7 +1164,7 @@ x = 82.0
 y = 609.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea21"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1189,7 +1180,7 @@ x = 136.0
 y = 586.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea22"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 79)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1205,7 +1196,7 @@ x = -71.0
 y = 581.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea23"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 80)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1221,7 +1212,7 @@ x = -49.0
 y = 581.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea24"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 79)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1237,7 +1228,7 @@ x = -70.0
 y = 606.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea25"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1253,7 +1244,7 @@ x = -49.0
 y = 606.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea26"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 78)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1269,7 +1260,7 @@ x = -124.0
 y = 587.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea27"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 75)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
@@ -1285,7 +1276,7 @@ x = -124.0
 y = 608.0
 
 [node name="PlantAnimations" type="AnimatedSprite2D" parent="PlantingArea28"]
-position = Vector2(-301, 69)
+position = Vector2(-301, 79)
 sprite_frames = SubResource("SpriteFrames_seo6j")
 animation = &"none"
 
