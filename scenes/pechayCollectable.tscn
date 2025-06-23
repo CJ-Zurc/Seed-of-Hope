@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://5spetf5xvp65"]
 
-[ext_resource type="Texture2D" uid="uid://ctxt8407wprjw" path="res://2D Arts/PechayPlant.png" id="1_fd4dy"]
+[ext_resource type="Texture2D" uid="uid://0l2eabfbttpk" path="res://2D Arts/PechayPlant.png" id="1_fd4dy"]
 [ext_resource type="PackedScene" uid="uid://cmwjw7bl3c5ei" path="res://scenes/collectable_items.tscn" id="2_j5ha8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3h4td"]

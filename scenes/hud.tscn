@@ -1,14 +1,18 @@
-[gd_scene load_steps=28 format=3 uid="uid://c7ovd1vg55yta"]
+[gd_scene load_steps=35 format=3 uid="uid://c7ovd1vg55yta"]
 
 [ext_resource type="Texture2D" uid="uid://bec5wdw4t5ro0" path="res://2D Arts/UI stuff/HUD UI/moneybackground.png" id="1_uo2fv"]
+[ext_resource type="Script" uid="uid://rtpgplm6svsk" path="res://Script/BuyAndSell/Money.cs" id="1_uxdf7"]
 [ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="2_047uy"]
 [ext_resource type="Texture2D" uid="uid://bkmxjfl4t3p33" path="res://2D Arts/UI stuff/HUD UI/backgroundTime.png" id="3_5pdws"]
+[ext_resource type="FontVariation" uid="uid://pigd5j4eic7v" path="res://2D Arts/UI stuff/fonts/slkscreeVariation.tres" id="3_5357l"]
 [ext_resource type="Texture2D" uid="uid://cptacr07mw423" path="res://2D Arts/UI stuff/HUD UI/stamina bar outline.png" id="4_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://b5tpdnuadh71n" path="res://2D Arts/UI stuff/HUD UI/stamina bar.png" id="5_0i1j5"]
 [ext_resource type="Theme" uid="uid://6j6rfyd2nuwr" path="res://scenes/inventoryPanel.tres" id="6_047uy"]
 [ext_resource type="Texture2D" uid="uid://bm44c21iehsa5" path="res://2D Arts/GardenAssets/Basic_tools_and_meterials.png" id="7_5pdws"]
 [ext_resource type="Script" uid="uid://dkxltdm1bsug7" path="res://Script/Inventory/InventoryPanel.cs" id="7_hd3ao"]
+[ext_resource type="Texture2D" uid="uid://bktgssr408u45" path="res://2D Arts/UI stuff/HUD UI/waterProgressBarOuter.png" id="8_48y67"]
 [ext_resource type="Texture2D" uid="uid://b255lu07j3lou" path="res://2D Arts/AmpalayaAssets.png" id="9_5n1hp"]
+[ext_resource type="Texture2D" uid="uid://cm3f758myakaj" path="res://2D Arts/UI stuff/HUD UI/waterProgressBar.png" id="9_084dp"]
 [ext_resource type="Script" uid="uid://d3dgwb1hbcpxd" path="res://Script/Inventory/InventoryHarvestedPanel.cs" id="9_eld54"]
 [ext_resource type="Texture2D" uid="uid://bd0w41cca0fyt" path="res://2D Arts/CalamansiTree.png" id="10_eld54"]
 [ext_resource type="Texture2D" uid="uid://0l2eabfbttpk" path="res://2D Arts/PechayPlant.png" id="11_3swnk"]
@@ -16,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://dmwks4f7825u2" path="res://2D Arts/SunflowerPlant.png" id="13_uxdf7"]
 [ext_resource type="Texture2D" uid="uid://beb801nqemdpg" path="res://2D Arts/Plant Assets/Seedsmol.png" id="15_3swnk"]
 [ext_resource type="Script" uid="uid://84nwmsu41vue" path="res://Script/Inventory/InventorySeedsPanel.cs" id="15_qkknv"]
+[ext_resource type="Texture2D" uid="uid://dh60cs6gfjc0q" path="res://2D Arts/UI stuff/HUD UI/shadedLight31.png" id="19_iypfu"]
+[ext_resource type="Texture2D" uid="uid://qc3w6cxtpw43" path="res://2D Arts/UI stuff/HUD UI/waterIcon.png" id="22_y2nlu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hd3ao"]
 atlas = ExtResource("7_5pdws")
@@ -62,8 +68,12 @@ margin = Rect2(0, 5, 0, 5)
 atlas = ExtResource("13_uxdf7")
 region = Rect2(49, 35, 19, 18)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kp442"]
+atlas = ExtResource("22_y2nlu")
+
 [node name="HUD" type="CanvasLayer"]
-layer = 3
+layer = 0
+script = ExtResource("1_uxdf7")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -75,23 +85,36 @@ offset_bottom = 106.0
 
 [node name="moneyContainer" type="TextureRect" parent="Control"]
 layout_mode = 1
-offset_left = -29.0
-offset_top = -58.0
-offset_right = 83.0
-offset_bottom = -18.0
+offset_left = 32.0
+offset_top = -60.0
+offset_right = 144.0
+offset_bottom = -20.0
 scale = Vector2(1.88975, 2.35645)
 texture = ExtResource("1_uo2fv")
 
 [node name="money" type="Label" parent="Control/moneyContainer"]
 layout_mode = 1
-offset_left = 13.0
-offset_top = 10.0
-offset_right = 101.0
-offset_bottom = 33.0
+offset_left = 48.1545
+offset_top = 11.0335
+offset_right = 86.1545
+offset_bottom = 27.0335
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_047uy")
-theme_override_font_sizes/font_size = 15
-text = "P99,999"
+theme_override_fonts/font = ExtResource("3_5357l")
+theme_override_font_sizes/font_size = 16
+text = "200"
+horizontal_alignment = 1
+
+[node name="pesoSign" type="Label" parent="Control/moneyContainer"]
+layout_mode = 1
+offset_left = 12.7001
+offset_top = 11.0335
+offset_right = 50.7001
+offset_bottom = 27.0335
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5357l")
+theme_override_font_sizes/font_size = 16
+text = "PHP"
+horizontal_alignment = 1
 
 [node name="containerDateTime" type="VBoxContainer" parent="Control"]
 layout_mode = 1
@@ -119,17 +142,20 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_047uy")
 theme_override_font_sizes/font_size = 8
 text = "Year 1, day 1"
+horizontal_alignment = 1
 
 [node name="season" type="Label" parent="Control/containerDateTime/backgroundColor"]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 21.0
-offset_right = 96.0
-offset_bottom = 44.0
+offset_left = 5.17959
+offset_top = 20.4822
+offset_right = 94.1796
+offset_bottom = 43.4822
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_047uy")
 theme_override_font_sizes/font_size = 9
 text = "Sunny Season"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="timeContainer" type="Panel" parent="Control/containerDateTime/backgroundColor"]
 layout_mode = 0
@@ -140,13 +166,14 @@ offset_bottom = 68.0
 
 [node name="time" type="Label" parent="Control/containerDateTime/backgroundColor/timeContainer"]
 layout_mode = 0
-offset_left = 5.95081
-offset_top = -0.0784788
-offset_right = 79.9508
-offset_bottom = 16.9215
+offset_left = 5.05826
+offset_right = 79.0583
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_047uy")
+theme_override_font_sizes/font_size = 16
 text = "3:25PM"
+horizontal_alignment = 1
 
 [node name="staminaBar" type="VBoxContainer" parent="Control"]
 layout_mode = 1
@@ -168,6 +195,27 @@ value = 90.0
 fill_mode = 3
 texture_over = ExtResource("4_hd3ao")
 texture_progress = ExtResource("5_0i1j5")
+
+[node name="waterBar" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 980.0
+offset_top = 424.0
+offset_right = 996.0
+offset_bottom = 448.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2.14289, 2.39292)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control/waterBar"]
+layout_mode = 2
+value = 90.0
+fill_mode = 3
+texture_over = ExtResource("8_48y67")
+texture_progress = ExtResource("9_084dp")
 
 [node name="inventoryPanel" type="PanelContainer" parent="Control"]
 layout_mode = 0
@@ -328,10 +376,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = 65.0
-offset_right = 12.0
-offset_bottom = 249.0
+offset_left = -42.0
+offset_top = 107.0
+offset_right = -2.0
+offset_bottom = 291.0
 grow_vertical = 2
 scale = Vector2(1.56311, 1.62815)
 theme = ExtResource("6_047uy")
@@ -437,6 +485,24 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_type_variation = &"InventoryLabel"
 text = "0"
+
+[node name="optionButton" type="Button" parent="Control"]
+layout_mode = 1
+offset_left = -39.0
+offset_top = -63.0
+offset_right = 19.0
+offset_bottom = -7.0
+icon = ExtResource("19_iypfu")
+flat = true
+
+[node name="waterDroplet" type="TextureRect" parent="Control"]
+layout_mode = 2
+offset_left = 997.0
+offset_top = 536.0
+offset_right = 1013.0
+offset_bottom = 558.0
+scale = Vector2(2.09695, 1.95464)
+texture = SubResource("AtlasTexture_kp442")
 
 [connection signal="pressed" from="Control/inventoryPanel/MarginContainer/HBoxContainer/waterCan" to="Control/inventoryPanel" method="_on_water_can_pressed"]
 [connection signal="pressed" from="Control/inventorySeedsPanel/MarginContainer/HBoxContainer/ampalayaSeed/ampalayaButton" to="Control/inventoryPanel" method="_on_ampalaya_button_pressed"]

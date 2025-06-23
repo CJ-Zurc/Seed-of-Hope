@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctpqlnacq2w7n"]
+[gd_scene load_steps=7 format=3 uid="uid://ctpqlnacq2w7n"]
 
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://cauhaqfobyof4" path="res://Script/MainMenu/Settings.cs" id="1_es4n0"]
 [ext_resource type="Texture2D" uid="uid://bi3nkooxsr6j5" path="res://2D Arts/UI stuff/Title screen/creditsButton.png" id="2_6wm04"]
 [ext_resource type="Texture2D" uid="uid://bdrqbxw0jxcln" path="res://2D Arts/UI stuff/Title screen/ReturnGameButton.png" id="3_es4n0"]
 [ext_resource type="Texture2D" uid="uid://b2ecc2ved7k5o" path="res://2D Arts/UI stuff/Title screen/MainMenuButton.png" id="3_f4mfi"]
+[ext_resource type="Script" uid="uid://chaihr3wwa38m" path="res://Script/Audio/Volume.cs" id="3_gis3k"]
 
 [node name="settings" type="Control"]
 layout_mode = 3
@@ -18,9 +19,9 @@ grow_vertical = 2
 scale = Vector2(0.992702, 0.923623)
 script = ExtResource("1_es4n0")
 BackButtonPath = NodePath("CanvasLayer/Control/MarginContainer/settings/BButton")
-VolumeSliderPath = NodePath("CanvasLayer/Control/MarginContainer/settings/volume")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -68,6 +69,7 @@ text = "Volume:"
 
 [node name="volume" type="HSlider" parent="CanvasLayer/Control/MarginContainer/settings"]
 layout_mode = 2
+script = ExtResource("3_gis3k")
 
 [node name="CheckBox" type="CheckBox" parent="CanvasLayer/Control/MarginContainer/settings"]
 layout_mode = 2
