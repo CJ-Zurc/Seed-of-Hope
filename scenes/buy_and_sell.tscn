@@ -124,9 +124,9 @@ metadata/_edit_use_anchors_ = true
 [node name="sellAmpalaya" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 55.1358
-offset_top = 165.265
+offset_top = 142.856
 offset_right = 427.136
-offset_bottom = 239.265
+offset_bottom = 216.856
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Ampalaya Seed"
@@ -135,9 +135,9 @@ autowrap_mode = 1
 [node name="sellSucculent" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 57.0
-offset_top = 253.605
+offset_top = 232.597
 offset_right = 426.0
-offset_bottom = 327.605
+offset_bottom = 306.597
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Succulent Seed"
@@ -146,9 +146,9 @@ autowrap_mode = 1
 [node name="sellCalamansi" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 57.0
-offset_top = 350.014
+offset_top = 320.602
 offset_right = 426.0
-offset_bottom = 424.014
+offset_bottom = 394.602
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Calamansi Seed"
@@ -157,9 +157,9 @@ autowrap_mode = 1
 [node name="sellSunflower" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 56.5142
-offset_top = 445.375
+offset_top = 411.762
 offset_right = 423.514
-offset_bottom = 519.375
+offset_bottom = 485.762
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell sunflower  Seed"
@@ -168,9 +168,9 @@ autowrap_mode = 1
 [node name="sellPechay" type="Button" parent="sellUI/CanvasLayer/sellUIBG"]
 layout_mode = 0
 offset_left = 82.7036
-offset_top = 539.213
+offset_top = 499.998
 offset_right = 389.704
-offset_bottom = 613.213
+offset_bottom = 573.998
 theme_override_fonts/font = ExtResource("6_4ox3i")
 theme_override_font_sizes/font_size = 32
 text = "Sell Pechay Seed"
@@ -213,6 +213,7 @@ scale = Vector2(1.00839, 1.00872)
 layer = 3
 
 [node name="SappyBG" type="TextureRect" parent="BuyUI/CanvasLayer"]
+visible = false
 offset_left = 160.0
 offset_top = 97.0
 offset_right = 1312.0
