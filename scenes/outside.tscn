@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://bpjfws1r67246"]
+[gd_scene load_steps=66 format=4 uid="uid://bpjfws1r67246"]
 
 [ext_resource type="Texture2D" uid="uid://d1m4elcvysruv" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="3_ht1us"]
 [ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_xi7x6"]
@@ -13,12 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://du7gejaxb2xqx" path="res://2D Arts/Interiors/topDown/newTopdownFloor.png" id="10_v7x2m"]
 [ext_resource type="Texture2D" uid="uid://w5ox6jbr5ort" path="res://2D Arts/Plant Assets/succulentPlant-Sheet.png" id="10_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="11_cdqji"]
-[ext_resource type="Texture2D" uid="uid://d21ss4vns2jsj" path="res://2D Arts/Plant Assets/seedSunflower-sheet.png" id="11_ni2yb"]
-[ext_resource type="Texture2D" uid="uid://bcix8fhj8sqi2" path="res://2D Arts/Plant Assets/SunflowerPlant-Sheet.png" id="12_pu366"]
+[ext_resource type="Texture2D" uid="uid://cl1u3jdboork5" path="res://2D Arts/Plant Assets/SunflowerPlantAsset-Sheet.png" id="11_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://dql2m0o33b2vw" path="res://2D Arts/GardenAssets/FaucetWBucket.png" id="12_x3una"]
-[ext_resource type="Texture2D" uid="uid://bpjlu0ws8x2ca" path="res://2D Arts/Plant Assets/sunflowerfirstform.png" id="12_xi7x6"]
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
-[ext_resource type="Texture2D" uid="uid://cderrtuqxgq6a" path="res://2D Arts/Plant Assets/sunflowerSecondForm.png" id="13_s22lx"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
 [ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
 [ext_resource type="Script" uid="uid://df7dwpfinlauw" path="res://Script/Plant/Faucet.cs" id="17_tjkqt"]
@@ -145,28 +142,20 @@ atlas = ExtResource("10_xq4d2")
 region = Rect2(60, 0, 20, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hcsdy"]
-atlas = ExtResource("11_ni2yb")
-region = Rect2(0, 0, 16, 16)
+atlas = ExtResource("11_xq4d2")
+region = Rect2(0, 0, 16, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t4mxg"]
-atlas = ExtResource("12_xi7x6")
-region = Rect2(0, 0, 18, 18)
+atlas = ExtResource("11_xq4d2")
+region = Rect2(16, 0, 16, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ew4rj"]
-atlas = ExtResource("13_s22lx")
-region = Rect2(0, 0, 16, 24)
+atlas = ExtResource("11_xq4d2")
+region = Rect2(32, 0, 16, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wdnj3"]
-atlas = ExtResource("12_pu366")
-region = Rect2(75, 0, 25, 43)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8a00k"]
-atlas = ExtResource("12_pu366")
-region = Rect2(100, 0, 25, 43)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oh1m7"]
-atlas = ExtResource("12_pu366")
-region = Rect2(125, 0, 25, 43)
+atlas = ExtResource("11_xq4d2")
+region = Rect2(48, 0, 16, 35)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_seo6j"]
 animations = [{
@@ -249,7 +238,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_41a82")
 }],
 "loop": true,
-"name": &"succulentaimation",
+"name": &"succulentanimation",
 "speed": 5.0
 }, {
 "frames": [{
@@ -264,12 +253,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wdnj3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8a00k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oh1m7")
 }],
 "loop": true,
 "name": &"sunfloweranimation",
