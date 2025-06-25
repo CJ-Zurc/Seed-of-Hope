@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://xpemlunulsjb"]
+[gd_scene load_steps=8 format=3 uid="uid://xpemlunulsjb"]
 
 [ext_resource type="Script" uid="uid://c8qxp5x6jjvyp" path="res://Script/MainMenu/LoadUi.cs" id="1_crao7"]
 [ext_resource type="Texture2D" uid="uid://bwv4c845pm0pd" path="res://2D Arts/UI stuff/Title screen/greenBackgroundTitleScreen.png" id="1_eqs3g"]
 [ext_resource type="Texture2D" uid="uid://c2gexm1f5da6k" path="res://2D Arts/UI stuff/Title screen/backgrounGreenDarker_titleScreen.png" id="2_4vgew"]
+[ext_resource type="Texture2D" uid="uid://bgpv611803jv6" path="res://2D Arts/UI stuff/Title screen/title_screen.png" id="2_43dem"]
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_crao7"]
-[ext_resource type="Texture2D" uid="uid://dc744ea7vg6wd" path="res://2D Arts/UI stuff/Title screen/BackButton.png" id="4_4vgew"]
+[ext_resource type="Texture2D" uid="uid://dx2pxnw4k67v8" path="res://2D Arts/UI stuff/Title screen/BackButton.png" id="4_4vgew"]
+[ext_resource type="Texture2D" uid="uid://c7i5dgihdw8kj" path="res://2D Arts/UI stuff/Icons_Essential/v1.2/Icons/Trashbin.png" id="7_edvh1"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,13 +19,19 @@ script = ExtResource("1_crao7")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_43dem")
+
+[node name="Background UI" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 103.0
 offset_top = 48.0
 offset_right = 1063.0
 offset_bottom = 568.0
 texture = ExtResource("1_eqs3g")
 
-[node name="LoadButton" type="Button" parent="."]
+[node name="LoadButton1" type="Button" parent="."]
 layout_mode = 0
 offset_left = 129.0
 offset_top = 72.0
@@ -32,7 +40,7 @@ offset_bottom = 208.0
 icon = ExtResource("2_4vgew")
 flat = true
 
-[node name="Label" type="Label" parent="LoadButton"]
+[node name="Label" type="Label" parent="LoadButton1"]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 11.0
@@ -43,7 +51,7 @@ theme_override_fonts/font = ExtResource("3_crao7")
 theme_override_font_sizes/font_size = 40
 text = "File 1"
 
-[node name="Label2" type="Label" parent="LoadButton"]
+[node name="Label2" type="Label" parent="LoadButton1"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 69.0
@@ -54,7 +62,7 @@ theme_override_fonts/font = ExtResource("3_crao7")
 theme_override_font_sizes/font_size = 35
 text = "Year 1, Week 4, El Nino"
 
-[node name="Label3" type="Label" parent="LoadButton"]
+[node name="Label3" type="Label" parent="LoadButton1"]
 layout_mode = 0
 offset_left = 778.0
 offset_top = 70.0
@@ -73,3 +81,117 @@ offset_right = 316.0
 offset_bottom = 570.0
 icon = ExtResource("4_4vgew")
 flat = true
+
+[node name="DeleteSaveButton1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 978.0
+offset_top = 85.0
+offset_right = 1018.0
+offset_bottom = 126.0
+icon = ExtResource("7_edvh1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="LoadButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 222.0
+offset_right = 1037.0
+offset_bottom = 358.0
+icon = ExtResource("2_4vgew")
+flat = true
+
+[node name="Label" type="Label" parent="LoadButton2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 11.0
+offset_right = 109.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 40
+text = "File 2"
+
+[node name="Label2" type="Label" parent="LoadButton2"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 69.0
+offset_right = 323.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 35
+text = "Year 1, Week 4, El Nino"
+
+[node name="Label3" type="Label" parent="LoadButton2"]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 70.0
+offset_right = 879.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 35
+text = "P20,000"
+
+[node name="DeleteSaveButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 979.0
+offset_top = 235.0
+offset_right = 1019.0
+offset_bottom = 276.0
+icon = ExtResource("7_edvh1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="LoadButton3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 374.0
+offset_right = 1033.0
+offset_bottom = 510.0
+icon = ExtResource("2_4vgew")
+flat = true
+
+[node name="Label" type="Label" parent="LoadButton3"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 11.0
+offset_right = 109.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 40
+text = "File 3"
+
+[node name="Label2" type="Label" parent="LoadButton3"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 69.0
+offset_right = 323.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 35
+text = "Year 1, Week 4, El Nino"
+
+[node name="Label3" type="Label" parent="LoadButton3"]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 70.0
+offset_right = 879.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_crao7")
+theme_override_font_sizes/font_size = 35
+text = "P20,000"
+
+[node name="DeleteSaveButton3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 981.0
+offset_top = 384.0
+offset_right = 1021.0
+offset_bottom = 425.0
+icon = ExtResource("7_edvh1")
+icon_alignment = 1
+expand_icon = true

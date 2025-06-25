@@ -16,6 +16,7 @@ Thumbs.db
 *.temp
 *.swp
 *.log
+*.uid
 
 # Godot cache files
 *.converted.res
