@@ -25,7 +25,7 @@ public partial class MoneyManager : Node
 
     public override void _Ready()
     {
-        CurrentMoney = 200; // Use the property so the signal fires
+        // Do not set CurrentMoney here!
     }
 
     public void AddMoney(int amount)
