@@ -24,8 +24,15 @@ public partial class MainGame : Node2D
 	private bool hasPlayedMorningSound = false;
 	private bool hasPlayedEveningSound = false;
 
-    private float autosaveTimer = 0f;
-    private const float AUTOSAVE_INTERVAL = 10f; // seconds //Time interval for autosave
+	private float autosaveTimer = 0f;
+	private const float AUTOSAVE_INTERVAL = 10f; // seconds //Time interval for autosave
+
+	// Volume settings: stores the current master volume in dB, and the name of the audio bus
+	private float masterVolume = 0f; // Default volume in dB
+	private const string MusicBusName = "Master";
+	
+	private float stamina = 1.0f; // 1.0 = 100%, 0.0 = 0%
+	private TextureProgressBar staminaBar;
 
 	public override void _Ready()
 	{
@@ -33,9 +40,11 @@ public partial class MainGame : Node2D
 		timeLabel = GetNode<Label>("HUD/Control/containerDateTime/backgroundColor/timeContainer/time");
 		yearWeekLabel = GetNode<Label>("HUD/Control/containerDateTime/backgroundColor/yearWeek");
 
-        audioPlayer = new AudioStreamPlayer();
-        audioPlayer.Bus = "Master";
-        AddChild(audioPlayer);
+		audioPlayer = new AudioStreamPlayer();
+		audioPlayer.Bus = "Master";
+		AddChild(audioPlayer);
+
+		staminaBar = GetNode<TextureProgressBar>("HUD/Control/staminaBar/TextureProgressBar");
 
 		// --- Save/load logic ---
 		if (HasNode("player"))
@@ -48,10 +57,10 @@ public partial class MainGame : Node2D
 				dayCount = 1;
 				year = 1;
 				time = 6f;
-				
 				masterVolume = 0f; // Default volume
-				
 
+				var moneyManager = (MoneyManager)Godot.Engine.GetSingleton("MoneyManager");
+				moneyManager.CurrentMoney = 200; // Set starting money only for new game
 				SaveGame(); // Save the initial state
 			}
 			else
@@ -89,7 +98,15 @@ public partial class MainGame : Node2D
 					if (saveData.ContainsKey("volume"))
 						
 						masterVolume = (float)saveData["volume"];
-						
+					
+
+if (saveData.ContainsKey("money"))
+{
+    var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
+    if (moneyManager != null)
+        moneyManager.CurrentMoney = (int)saveData["money"];
+}
+
 				}
 			}
 		}
@@ -104,22 +121,24 @@ public partial class MainGame : Node2D
 		UpdateTimeLabel();
 		UpdateLighting();
 
-        // Play background music based on loaded time
-        if (time >= 6f && time < 19f)
-        {
-            audioPlayer.Stream = wakeUpSound;
-            audioPlayer.Play();
-            hasPlayedMorningSound = true;
-            hasPlayedEveningSound = false;
-        }
-        else if (time >= 19f || time < 6f)
-        {
-            audioPlayer.Stream = eveningSound;
-            audioPlayer.Play();
-            hasPlayedMorningSound = false;
-            hasPlayedEveningSound = true;
-        }
-    }
+		// Play background music based on loaded time
+		if (time >= 6f && time < 19f)
+		{
+			audioPlayer.Stream = wakeUpSound;
+			audioPlayer.Play();
+			hasPlayedMorningSound = true;
+			hasPlayedEveningSound = false;
+		}
+		else if (time >= 19f || time < 6f)
+		{
+			audioPlayer.Stream = eveningSound;
+			audioPlayer.Play();
+			hasPlayedMorningSound = false;
+			hasPlayedEveningSound = true;
+		}
+	}
+
+
 
 	public override void _Process(double delta)
 	{
@@ -216,31 +235,96 @@ public partial class MainGame : Node2D
 			year++;
 		}
 
-        hasPlayedMorningSound = false;
-        hasPlayedEveningSound = false;
+		hasPlayedMorningSound = false;
+		hasPlayedEveningSound = false;
 
-        UpdateYearLabel();
-        UpdateTimeLabel();
-        UpdateLighting();
-    }
+		stamina = 1.0f;
+		UpdateStaminaBar();
+
+		UpdateYearLabel();
+		UpdateTimeLabel();
+		UpdateLighting();
+
+		SaveGame();
+	}
+	
+	
+	// Method to update volume (called from Settings)
+	public void SetVolume(float volume)
+	{
+		GD.Print("Setting volume to: " + volume);
+		masterVolume = volume;
+		int busIdx = AudioServer.GetBusIndex(MusicBusName);
+		if (busIdx >= 0)
+		{
+			AudioServer.SetBusVolumeDb(busIdx, volume);
+			GD.Print("Volume set in audio bus: " + volume);
+		}
+		else
+		{
+			GD.PrintErr("Audio bus 'Master' not found!");
+		}
+		SaveGame(); // Save immediately when volume changes
+	}
+	
+
+	// Method to get current volume (called from Settings)
+	public float GetVolume()
+	{
+		return masterVolume;
+	}
+
+	public int GetDayCount()
+	{
+		return dayCount;
+	}
+
+	public void DecreaseStamina(float amount)
+	{
+		stamina -= amount;
+		if (stamina < 0f) stamina = 0f;
+		UpdateStaminaBar();
+	}
+
+	private void UpdateStaminaBar()
+	{
+		if (staminaBar != null)
+			staminaBar.Value = stamina * 100f;
+	}
+
+	public float GetStamina() => stamina;
+	public void SetStamina(float value)
+	{
+		stamina = Mathf.Clamp(value, 0f, 1f);
+		UpdateStaminaBar();
+	}
+
+	public float GetHourCount()
+	{
+		return time;
+	}
 
 	private void SaveGame()
 	{
 		// Example: Save player position, day, time, etc.
 		var saveData = new Godot.Collections.Dictionary();
 
-        if (HasNode("player"))
-        {
-            var player = GetNode<Node2D>("player");
-            var pos = player.GlobalPosition;
-            saveData["player_position"] = new Godot.Collections.Array { pos.X, pos.Y };
-        }
-        saveData["day"] = dayCount;
-        saveData["year"] = year;
-        saveData["time"] = time;
-        
+		if (HasNode("player"))
+		{
+			var player = GetNode<Node2D>("player");
+			var pos = player.GlobalPosition;
+			saveData["player_position"] = new Godot.Collections.Array { pos.X, pos.Y };
+		}
+		saveData["day"] = dayCount;
+		saveData["year"] = year;
+		saveData["time"] = time;
+		saveData["volume"] = masterVolume;
 
-
+var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
+if (moneyManager != null)
+{
+    saveData["money"] = moneyManager.CurrentMoney;
+}
 
 		string json = Json.Stringify(saveData);
 		using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
