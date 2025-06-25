@@ -12,22 +12,31 @@ public partial class Settings : Control
 	// Name of your custom bus (must match the name in the Audio panel)
 	private const string MusicBusName = "Master";
 
-	
+
 	// Signal for when the volume changes, to notify other scripts (e.g., MainGame)
 	[Signal]
 	public delegate void VolumeChangedEventHandler(float newVolume);
-	
+
+
+	private bool OpenedFromGame = false;
+	private Button mainMenuButton;
+
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		backButton = GetNode<Button>(BackButtonPath);
 		backButton.Pressed += OnBackButtonPressed;
+		// Also connect to GoToTitleScreen if this button is meant to go to the title screen
+		backButton.Pressed += GoToTitleScreen;
+
+		mainMenuButton = GetNode<Button>("../settings/Main Menu");
+		mainMenuButton.Pressed += GoToTitleScreen;
 
 		volumeSlider = GetNode<HSlider>(VolumeSliderPath);
 		volumeSlider.ValueChanged += OnVolumeChanged;
 
-		
+
 		// Load saved volume if available, otherwise use current bus volume
 		float initialVolume = 0f;
 		if (FileAccess.FileExists("user://savegame.json"))
@@ -50,7 +59,12 @@ public partial class Settings : Control
 			initialVolume = AudioServer.GetBusVolumeDb(busIdx);
 		}
 		volumeSlider.Value = initialVolume;
-	   
+
+	}
+
+	public void SetOpenedFromGame(bool fromGame)
+	{
+		OpenedFromGame = fromGame;
 	}
 
 	private void OnVolumeChanged(double value)
@@ -61,7 +75,7 @@ public partial class Settings : Control
 		else
 			GD.PrintErr($"Audio bus '{MusicBusName}' not found!");
 
-		
+
 		// Save volume to savegame.json so it persists between scenes and sessions
 		Godot.Collections.Dictionary saveData;
 		if (FileAccess.FileExists("user://savegame.json"))
@@ -82,17 +96,29 @@ public partial class Settings : Control
 
 		// Emit the signal so other scripts (like MainGame) can react to the volume change
 		EmitSignal(nameof(VolumeChangedEventHandler), (float)value);
-	  
+
 	}
 
 	private void OnBackButtonPressed()
 	{
-		QueueFree();
+		if (OpenedFromGame)
+		{
+			QueueFree(); // Just close settings if in-game
+		}
+		else
+		{
+			GetTree().ChangeSceneToFile("res://scenes/title_screen.tscn");
+		}
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		
+
 	}
-} 
+
+	public void GoToTitleScreen()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/title_screen.tscn");
+	}
+}
