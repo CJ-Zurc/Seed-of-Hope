@@ -4,7 +4,7 @@ using System;
 public partial class MoneyManager : Node
 {
     // Variable to hold the current amount of money
-    private int currentMoney = 0;
+    private int currentMoney = 200;
 
     // Signal to notify when the money changes
     [Signal]

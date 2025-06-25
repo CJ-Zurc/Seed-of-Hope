@@ -40,4 +40,26 @@ public partial class HarvestManager : Node
         EmitSignal(nameof(InventoryChanged)); // Emit the signal to notify that the inventory has changed
     }
 
-}
+    // Save the inventory to a Godot dictionary for JSON serialization
+    public Godot.Collections.Dictionary ToDictionary()
+    {
+        var dict = new Godot.Collections.Dictionary();
+        foreach (var kvp in inventory)
+        {
+            dict[kvp.Key] = kvp.Value;
+        }
+        return dict;
+    }
+
+    // Load the inventory from a Godot dictionary (from JSON)
+    public void FromDictionary(Godot.Collections.Dictionary dict)
+    {
+        inventory.Clear();
+        foreach (var key in dict.Keys)
+        {
+            inventory[key.ToString()] = (int)dict[key];
+        }
+        EmitSignal(nameof(InventoryChanged));
+    }
+
+} 

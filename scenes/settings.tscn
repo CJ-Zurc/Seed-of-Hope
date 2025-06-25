@@ -19,6 +19,8 @@ grow_vertical = 2
 scale = Vector2(0.992702, 0.923623)
 script = ExtResource("1_es4n0")
 BackButtonPath = NodePath("CanvasLayer/Control/MarginContainer/settings/BButton")
+VolumeSliderPath = NodePath("CanvasLayer/Control/MarginContainer/settings/volume")
+MuteCheckBoxPath = NodePath("CanvasLayer/Control/MarginContainer/settings/CheckBox")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 4

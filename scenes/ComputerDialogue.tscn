@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dolc3xw83lc0p"]
 
-[ext_resource type="Texture2D" uid="uid://b4m74gn8afvnn" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="2_w6vsr"]
+[ext_resource type="Texture2D" uid="uid://d2hsj3m4rdebn" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="2_w6vsr"]
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_0e8cs"]
 
 [node name="Control" type="Control"]
