@@ -156,4 +156,4 @@ wait_time = 1.5
 one_shot = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(-124, 608)
+position = Vector2(-40, 677)
