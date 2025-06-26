@@ -5,10 +5,15 @@ Welcome to Seed of Hope!
 
 Developers
 Astudillo, Zydney - Frontend
+
 Bautista, Gaia - Backend
+
 Caday, Sofia Faith - Frontend
+
 Cruz, Alexandra - Backend
+
 Cruz, Cristian James - Coder
+
 Esquivel, Municht - Coder
 
 
@@ -19,7 +24,9 @@ and got nothing to do. However during those times there people who took the hobb
 of taking care of plants. What we call "Plantita" and "Plantito"
 
 Language Used : C#
+
 Framework : Godot Engine
+
 Document Database: Json
 
 
