@@ -35,6 +35,7 @@ public partial class MainGame : Node2D
 	private TextureProgressBar staminaBar;
 
 	private HarvestManager harvestManager;
+	private SeedInventoryManager seedInventoryManager;
 
 	private bool isMuted = false;
 
@@ -56,6 +57,14 @@ public partial class MainGame : Node2D
 			harvestManager = new HarvestManager();
 			GetTree().Root.AddChild(harvestManager);
 			harvestManager.Name = "HarvestManager";
+		}
+
+		seedInventoryManager = GetNodeOrNull<SeedInventoryManager>("/root/SeedInventoryManager");
+		if (seedInventoryManager == null)
+		{
+			seedInventoryManager = new SeedInventoryManager();
+			GetTree().Root.AddChild(seedInventoryManager);
+			seedInventoryManager.Name = "SeedInventoryManager";
 		}
 
 		// --- Save/load logic ---
@@ -129,6 +138,14 @@ public partial class MainGame : Node2D
 						Godot.Collections.Dictionary invDict = invVariant.AsGodotDictionary();
 						if (invDict != null)
 							harvestManager.FromDictionary(invDict);
+					}
+
+					if (saveData.ContainsKey("seed_inventory") && seedInventoryManager != null)
+					{
+						var seedInvVariant = saveData["seed_inventory"];
+						Godot.Collections.Dictionary seedInvDict = seedInvVariant.AsGodotDictionary();
+						if (seedInvDict != null)
+							seedInventoryManager.FromDictionary(seedInvDict);
 					}
 				}
 			}
@@ -356,6 +373,11 @@ if (moneyManager != null)
 if (harvestManager != null)
 {
 	saveData["harvest_inventory"] = harvestManager.ToDictionary();
+}
+
+if (seedInventoryManager != null)
+{
+	saveData["seed_inventory"] = seedInventoryManager.ToDictionary();
 }
 
 		string json = Json.Stringify(saveData);
