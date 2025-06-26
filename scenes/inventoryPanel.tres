@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=22 format=3 uid="uid://6j6rfyd2nuwr"]
 
 [ext_resource type="FontVariation" uid="uid://pigd5j4eic7v" path="res://2D Arts/UI stuff/fonts/slkscreeVariation.tres" id="1_grxq7"]
-[ext_resource type="Texture2D" uid="uid://bbvn0e2mgo88i" path="res://2D Arts/UI stuff/HUD UI/inventoryHover.png" id="1_mll01"]
-[ext_resource type="Texture2D" uid="uid://biwtvugsqax8j" path="res://2D Arts/UI stuff/HUD UI/Sample-InventorySlotsSet.png" id="2_grxq7"]
+[ext_resource type="Texture2D" uid="uid://bqtawwg7rfpj5" path="res://2D Arts/UI stuff/HUD UI/inventoryHover.png" id="1_mll01"]
+[ext_resource type="Texture2D" uid="uid://62gta3a06th6" path="res://2D Arts/UI stuff/HUD UI/Sample-InventorySlotsSet.png" id="2_grxq7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sbsqu"]
 atlas = ExtResource("2_grxq7")

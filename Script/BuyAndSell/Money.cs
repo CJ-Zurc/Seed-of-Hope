@@ -49,4 +49,12 @@ public partial class Money : CanvasLayer
 		wateringCanLevel = 1.0f;
 		wateringCanBar.Value = 100f;
 	}
+
+	public float GetWateringCanLevel() => wateringCanLevel;
+	public void SetWateringCanLevel(float value)
+	{
+		wateringCanLevel = Mathf.Clamp(value, 0f, 1f);
+		if (wateringCanBar != null)
+			wateringCanBar.Value = wateringCanLevel * 100f;
+	}
 }

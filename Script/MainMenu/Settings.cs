@@ -33,24 +33,31 @@ public partial class Settings : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		GD.Print("Trying to get mute checkbox...");
 		GD.Print("Settings _Ready called");
 		backButton = GetNode<Button>(BackButtonPath);
-		GD.Print("Step 2");
 		backButton.Pressed += OnBackButtonPressed;
-		GD.Print("Step 3");
+
 		volumeSlider = GetNode<Volume>(VolumeSliderPath);
-		GD.Print("volumeSlider is " + (volumeSlider != null));
 		volumeSlider.ValueChanged += OnVolumeChanged;
-		GD.Print("Step 5");
+
 		muteCheckBox = GetNode<CheckBox>(MuteCheckBoxPath);
-		GD.Print("Step 6: muteCheckBox is " + (muteCheckBox != null));
-		muteCheckBox.Toggled += (toggled) => GD.Print("Lambda toggled: " + toggled);
-		GD.Print("Step 7");
 		muteCheckBox.Toggled += OnMuteToggled;
-		GD.Print("Step 8");
 
 		mainGame = GetNode<MainGame>("/root/MainGame");
+
+		// Sync mute state and checkbox
+		bool isMuted = mainGame != null ? mainGame.IsMuted() : false;
+		isInitializing = true;
+		muteCheckBox.ButtonPressed = isMuted;
+
+		// Optionally, also sync the slider to the correct value
+		float busDb = AudioServer.GetBusVolumeDb(AudioServer.GetBusIndex(MusicBusName));
+		float minDb = -40f;
+		float maxDb = 0f;
+		float linear = Mathf.InverseLerp(minDb, maxDb, busDb);
+		float sliderValue = Mathf.Clamp(linear * 100f, (float)volumeSlider.MinValue, (float)volumeSlider.MaxValue);
+		volumeSlider.Value = sliderValue;
+		isInitializing = false;
 	}
 
 	private void OnVolumeChanged(double value)
@@ -126,4 +133,4 @@ public partial class Settings : Control
 	{
 		
 	}
-} 
+}

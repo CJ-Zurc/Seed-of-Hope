@@ -116,6 +116,12 @@ public partial class MainGame : Node2D
 					if (saveData.ContainsKey("mute"))
 						isMuted = (bool)saveData["mute"];
 
+					if (saveData.ContainsKey("stamina")) // <-- Add this block
+					{
+						stamina = (float)saveData["stamina"];
+						UpdateStaminaBar();
+					}
+
 					if (saveData.ContainsKey("money"))
 					{
 						var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
@@ -129,6 +135,14 @@ public partial class MainGame : Node2D
 						Godot.Collections.Dictionary invDict = invVariant.AsGodotDictionary();
 						if (invDict != null)
 							harvestManager.FromDictionary(invDict);
+					}
+
+					// Load watering can level
+					if (saveData.ContainsKey("watering_can_level"))
+					{
+						var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
+						if (moneyHUD != null)
+							moneyHUD.SetWateringCanLevel((float)saveData["watering_can_level"]);
 					}
 				}
 			}
@@ -346,17 +360,25 @@ public partial class MainGame : Node2D
 		saveData["time"] = time;
 		saveData["volume"] = masterVolume;
 		saveData["mute"] = isMuted;
+		saveData["stamina"] = stamina;
 
-var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
-if (moneyManager != null)
-{
-	saveData["money"] = moneyManager.CurrentMoney;
-}
+		var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
+		if (moneyManager != null)
+		{
+			saveData["money"] = moneyManager.CurrentMoney;
+		}
 
-if (harvestManager != null)
-{
-	saveData["harvest_inventory"] = harvestManager.ToDictionary();
-}
+		if (harvestManager != null)
+		{
+			saveData["harvest_inventory"] = harvestManager.ToDictionary();
+		}
+
+		// Save watering can level
+		var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
+		if (moneyHUD != null)
+		{
+			saveData["watering_can_level"] = moneyHUD.GetWateringCanLevel();
+		}
 
 		string json = Json.Stringify(saveData);
 		using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
@@ -371,5 +393,10 @@ if (harvestManager != null)
 		AudioServer.SetBusMute(busIdx, mute);
 		SaveGame();
 		GD.Print($"Mute state after SetMute: {isMuted}");
+	}
+
+	public bool IsMuted()
+	{
+		return isMuted;
 	}
 }
