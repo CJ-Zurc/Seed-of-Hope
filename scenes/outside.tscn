@@ -4,21 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://dfrrn7alcwlg3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/FarmLand_Tile.png" id="3_xi7x6"]
 [ext_resource type="Texture2D" uid="uid://dftldqx3387pb" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="4_lpxjy"]
 [ext_resource type="Texture2D" uid="uid://dn5dorpdblck3" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="4_s22lx"]
-[ext_resource type="Script" uid="uid://dyjj0w45nchwj" path="res://Script/Plant/PlantArea2D.cs" id="5_2xi43"]
-[ext_resource type="Texture2D" uid="uid://bh7hd2b77vp48" path="res://2D Arts/Plant Assets/AmpalayaAssets-Sheet.png" id="6_xq4d2"]
-[ext_resource type="Texture2D" uid="uid://dt0qsv7feromt" path="res://2D Arts/Plant Assets/CalamansiTree-Sheet.png" id="7_ni2yb"]
-[ext_resource type="Texture2D" uid="uid://dmuy2ciu5perh" path="res://2D Arts/Plant Assets/SeedDefault.png" id="8_xq4d2"]
+[ext_resource type="Script" uid="uid://ebv5gkjpffhw" path="res://Script/Plant/PlantArea2D.cs" id="5_2xi43"]
+[ext_resource type="Texture2D" uid="uid://moxt7t646orx" path="res://2D Arts/Plant Assets/AmpalayaAssets-Sheet.png" id="6_xq4d2"]
+[ext_resource type="Texture2D" uid="uid://6heaxuy82h3l" path="res://2D Arts/Plant Assets/CalamansiTree-Sheet.png" id="7_ni2yb"]
+[ext_resource type="Texture2D" uid="uid://cyty6kdr2vil3" path="res://2D Arts/Plant Assets/SeedDefault.png" id="8_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://c3st6bujm6amt" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Fences.png" id="9_5tstl"]
-[ext_resource type="Texture2D" uid="uid://cyfuwajgaghek" path="res://2D Arts/Plant Assets/PechayPlant-Sheet.png" id="9_pu366"]
+[ext_resource type="Texture2D" uid="uid://3ebjp77vkfiw" path="res://2D Arts/Plant Assets/PechayPlant-Sheet.png" id="9_pu366"]
 [ext_resource type="Texture2D" uid="uid://du7gejaxb2xqx" path="res://2D Arts/Interiors/topDown/newTopdownFloor.png" id="10_v7x2m"]
-[ext_resource type="Texture2D" uid="uid://w5ox6jbr5ort" path="res://2D Arts/Plant Assets/succulentPlant-Sheet.png" id="10_xq4d2"]
+[ext_resource type="Texture2D" uid="uid://8hpjvw1siewc" path="res://2D Arts/Plant Assets/succulentPlant-Sheet.png" id="10_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://bc1lcsdqihjrw" path="res://2D Arts/Interiors/topDown/TopDownHouse_DoorsAndWindows.png" id="11_cdqji"]
-[ext_resource type="Texture2D" uid="uid://cl1u3jdboork5" path="res://2D Arts/Plant Assets/SunflowerPlantAsset-Sheet.png" id="11_xq4d2"]
+[ext_resource type="Texture2D" uid="uid://bx0m4vayy7upv" path="res://2D Arts/Plant Assets/SunflowerPlantAsset-Sheet.png" id="11_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://dql2m0o33b2vw" path="res://2D Arts/GardenAssets/FaucetWBucket.png" id="12_x3una"]
 [ext_resource type="Texture2D" uid="uid://dftt8w6mov28l" path="res://2D Arts/GardenAssets/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="13_nxbbw"]
 [ext_resource type="Texture2D" uid="uid://80v1btfmhyjj" path="res://2D Arts/UI stuff/Buttons/Tile/Used in game/tile_0119.png" id="13_x3una"]
-[ext_resource type="Texture2D" uid="uid://d3goqv0u83fdi" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
-[ext_resource type="Script" uid="uid://df7dwpfinlauw" path="res://Script/Plant/Faucet.cs" id="17_tjkqt"]
+[ext_resource type="Texture2D" uid="uid://ch20jjjq6cchb" path="res://2D Arts/EasterEgg/CharmonyDoveBird.png" id="15_ht1us"]
+[ext_resource type="Script" uid="uid://bafws4a1e2cxv" path="res://Script/Plant/Faucet.cs" id="17_tjkqt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bcrnr"]
 texture = ExtResource("3_ht1us")
@@ -774,7 +774,7 @@ metadata/_edit_use_anchors_ = true
 [node name="PlantingArea4" type="Area2D" parent="Control"]
 position = Vector2(72, 0)
 script = ExtResource("5_2xi43")
-plantAnimationPath = NodePath("../PlantingArea3/PlantAnimations")
+plantAnimationPath = NodePath("PlantAnimations")
 x = -65.0
 y = 678.0
 
@@ -838,7 +838,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 [node name="PlantingArea5" type="Area2D" parent="Control"]
 position = Vector2(96, 0)
 script = ExtResource("5_2xi43")
-plantAnimationPath = NodePath("../PlantingArea4/PlantAnimations")
+plantAnimationPath = NodePath("PlantAnimations")
 x = -40.0
 y = 677.0
 
