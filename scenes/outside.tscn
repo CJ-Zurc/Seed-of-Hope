@@ -775,6 +775,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(72, 0)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "1"
 x = -65.0
 y = 678.0
 
@@ -791,6 +792,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(2, 0)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "2"
 x = -134.0
 y = 678.0
 
@@ -807,6 +809,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(25, 0)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "3"
 x = -111.0
 y = 678.0
 
@@ -823,6 +826,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(48, 0)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "4"
 x = -88.0
 y = 678.0
 
@@ -839,6 +843,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(96, 0)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "5"
 x = -40.0
 y = 677.0
 
@@ -855,6 +860,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(263, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "6"
 x = -40.0
 y = 700.0
 
@@ -871,6 +877,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(239, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "7"
 x = -64.0
 y = 700.0
 
@@ -887,6 +894,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(215, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "8"
 x = -88.0
 y = 700.0
 
@@ -903,6 +911,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(191, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "9"
 x = -112.0
 y = 700.0
 
@@ -919,6 +928,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(169, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "10"
 x = -134.0
 y = 700.0
 
@@ -935,6 +945,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(357, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "11"
 x = 54.0
 y = 678.0
 
@@ -951,6 +962,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(380, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "12"
 x = 77.0
 y = 678.0
 
@@ -967,6 +979,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(404, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "13"
 x = 101.0
 y = 678.0
 
@@ -983,6 +996,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(428, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "14"
 x = 125.0
 y = 678.0
 
@@ -999,6 +1013,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(453, 99)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "15"
 x = 150.0
 y = 678.0
 
@@ -1015,6 +1030,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(357, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "16"
 x = 54.0
 y = 700.0
 
@@ -1031,6 +1047,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(380, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "17"
 x = 77.0
 y = 700.0
 
@@ -1047,6 +1064,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(404, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "18"
 x = 101.0
 y = 700.0
 
@@ -1063,6 +1081,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(428, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "19"
 x = 125.0
 y = 700.0
 
@@ -1079,6 +1098,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(453, 120)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "20"
 x = 150.0
 y = 700.0
 
@@ -1095,6 +1115,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(364, 4)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "21"
 x = 61.0
 y = 583.0
 
@@ -1111,6 +1132,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(386, 4)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "22"
 x = 83.0
 y = 583.0
 
@@ -1127,6 +1149,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(363, 30)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "23"
 x = 60.0
 y = 609.0
 
@@ -1143,6 +1166,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(385, 30)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "24"
 x = 82.0
 y = 609.0
 
@@ -1159,6 +1183,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(439, 7)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "25"
 x = 136.0
 y = 586.0
 
@@ -1175,6 +1200,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(233, 2)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "26"
 x = -71.0
 y = 581.0
 
@@ -1191,6 +1217,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(254, 2)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "27"
 x = -49.0
 y = 581.0
 
@@ -1207,6 +1234,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(233, 27)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "28"
 x = -70.0
 y = 606.0
 
@@ -1223,6 +1251,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(254, 27)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "29"
 x = -49.0
 y = 606.0
 
@@ -1239,6 +1268,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(179, 8)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "30"
 x = -124.0
 y = 587.0
 
@@ -1255,6 +1285,7 @@ shape = SubResource("RectangleShape2D_r7ppj")
 position = Vector2(179, 29)
 script = ExtResource("5_2xi43")
 plantAnimationPath = NodePath("PlantAnimations")
+_uniqueID = "31"
 x = -124.0
 y = 608.0
 
