@@ -33,7 +33,7 @@ public partial class HarvestManager : Node
     //Method to sell all of the harvested items
     public void SellHarvestedItems()
     {
-        foreach(var key in inventory.Keys.ToList())
+        foreach(var key in inventory.Keys.ToList()) //creates a copy of the keys in the dictionary that will be passed in the UI script
         {
             inventory[key] = 0; // Set the count to 0 for each item
         }

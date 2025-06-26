@@ -6,7 +6,8 @@ public partial class MainGame : Node2D
 	[Export] public NodePath modulatePath;
 	[Export] public AudioStream wakeUpSound;
 	[Export] public AudioStream eveningSound;
-	[Export] public PackedScene SettingsScene; // Assign your Settings.tscn in the editor
+	[Export] public AudioStream easterEggMusic; // Assign your Easter egg music in the editor
+    [Export] public PackedScene SettingsScene; // Assign your Settings.tscn in the editor
 
 	private CanvasModulate canvasModulate;
 	private Label timeLabel;
@@ -130,9 +131,18 @@ public partial class MainGame : Node2D
 		}
 	}
 
+    //plays the easter egg music when the Easter egg is triggered
+    public void PlayMusic(AudioStream stream)
+    {
+        if (audioPlayer != null) // Checks if audioPlayer is initialized
+        {
+            audioPlayer.Stop(); // Stop any currently playing audio
+            audioPlayer.Stream = stream; // Set the new audio stream
+            audioPlayer.Play(); // Play the new audio stream
+        }
+    }
 
-
-	public override void _Process(double delta)
+    public override void _Process(double delta)
 	{
 		time += (float)delta * (24f / speed);
 		if (time >= 24f)
@@ -264,7 +274,8 @@ public partial class MainGame : Node2D
 		return masterVolume;
 	}
 
-	public int GetDayCount()
+
+    public int GetDayCount()
 	{
 		return dayCount;
 	}
