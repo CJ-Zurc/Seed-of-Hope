@@ -25,11 +25,10 @@ public partial class Settings : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		//Return button
 		backButton = GetNode<Button>(BackButtonPath);
 		backButton.Pressed += OnBackButtonPressed;
-		// Also connect to GoToTitleScreen if this button is meant to go to the title screen
-		backButton.Pressed += GoToTitleScreen;
-
+		//Main menu button
 		mainMenuButton = GetNode<Button>("../settings/Main Menu");
 		mainMenuButton.Pressed += GoToTitleScreen;
 
@@ -105,18 +104,14 @@ public partial class Settings : Control
 		{
 			QueueFree(); // Just close settings if in-game
 		}
-		else
-		{
-			GetTree().ChangeSceneToFile("res://scenes/title_screen.tscn");
-		}
+		
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	private void OnMainMenuButtonPressed()
 	{
-
+		GetTree().ChangeSceneToFile("res://scenes/title_screen.tscn");
 	}
-
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public void GoToTitleScreen()
 	{
 		GetTree().ChangeSceneToFile("res://scenes/title_screen.tscn");
