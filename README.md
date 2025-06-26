@@ -4,6 +4,7 @@ Welcome to Seed of Hope!
 ![alt text](image.png)
 
 Developers
+
 Astudillo, Zydney - Frontend
 
 Bautista, Gaia - Backend
