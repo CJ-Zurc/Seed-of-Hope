@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://q2ayxq15yslw"]
 
-[ext_resource type="Texture2D" uid="uid://d2hsj3m4rdebn" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="1_ggrl0"]
+[ext_resource type="Texture2D" uid="uid://b4m74gn8afvnn" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="1_ggrl0"]
 [ext_resource type="Script" uid="uid://du75jf75ujk4g" path="res://Script/Dialogue/Bed.cs" id="1_umbcb"]
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="2_umbcb"]
 
