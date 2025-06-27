@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bwv4c845pm0pd" path="res://2D Arts/UI stuff/Title screen/greenBackgroundTitleScreen.png" id="1_eqs3g"]
 [ext_resource type="Texture2D" uid="uid://c2gexm1f5da6k" path="res://2D Arts/UI stuff/Title screen/backgrounGreenDarker_titleScreen.png" id="2_4vgew"]
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="3_crao7"]
-[ext_resource type="Texture2D" uid="uid://dc744ea7vg6wd" path="res://2D Arts/UI stuff/Title screen/BackButton.png" id="4_4vgew"]
+[ext_resource type="Texture2D" uid="uid://dh0hpgl7xaisw" path="res://2D Arts/UI stuff/Title screen/BackButton.png" id="4_4vgew"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

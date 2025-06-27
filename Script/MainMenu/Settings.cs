@@ -1,4 +1,5 @@
 using Godot;
+using GodotPlugins.Game;
 using System;
 
 public partial class Settings : Control
@@ -6,8 +7,10 @@ public partial class Settings : Control
 	[Export] public NodePath BackButtonPath;
 	[Export] public NodePath VolumeSliderPath;
 	[Export] public NodePath MuteCheckBoxPath;
+	[Export] public NodePath MainMenuButtonPath;
 
 	private Button backButton;
+	private Button mainMenuButton;
 	private Volume volumeSlider;
 	private CheckBox muteCheckBox;
 	private bool isMuting = false;
@@ -44,10 +47,11 @@ public partial class Settings : Control
 		muteCheckBox = GetNode<CheckBox>(MuteCheckBoxPath);
 		muteCheckBox.Toggled += OnMuteToggled;
 
-		
+		mainMenuButton = GetNode<Button>(MainMenuButtonPath);
+		mainMenuButton.Pressed += OnMainMenuButtonPressed;
 
-        // Sync mute state and checkbox
-        bool isMuted = mainGame != null ? mainGame.IsMuted() : false;
+		// Sync mute state and checkbox
+		bool isMuted = mainGame != null ? mainGame.IsMuted() : false;
 		isInitializing = true;
 		muteCheckBox.ButtonPressed = isMuted;
 
@@ -96,6 +100,12 @@ public partial class Settings : Control
 			mainGame.SetVolume(db); // This will save to JSON
 
 		QueueFree();
+	}
+
+	private void OnMainMenuButtonPressed()
+	{
+		GD.Print("Main menu button pressed");
+		GetTree().ChangeSceneToFile("res://Scenes/title_screen.tscn");
 	}
 
 	private void OnMuteToggled(bool buttonPressed)
