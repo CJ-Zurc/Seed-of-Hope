@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cm3f758myakaj" path="res://2D Arts/UI stuff/HUD UI/waterProgressBar.png" id="4_wsk6x"]
 [ext_resource type="Texture2D" uid="uid://qc3w6cxtpw43" path="res://2D Arts/UI stuff/HUD UI/waterIcon.png" id="5_4u54i"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

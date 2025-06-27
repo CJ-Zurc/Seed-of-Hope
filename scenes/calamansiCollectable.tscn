@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8kf03nlo746s"]
 
-[ext_resource type="Texture2D" uid="uid://bd0w41cca0fyt" path="res://2D Arts/CalamansiTree.png" id="1_7aikl"]
+[ext_resource type="Texture2D" uid="uid://74wt0k5643m5" path="res://2D Arts/CalamansiTree.png" id="1_7aikl"]
 [ext_resource type="PackedScene" uid="uid://cmwjw7bl3c5ei" path="res://scenes/collectable_items.tscn" id="2_koph4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7aikl"]

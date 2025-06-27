@@ -30,6 +30,7 @@ offset_bottom = 648.0
 texture = ExtResource("1_cljn4")
 
 [node name="greenBackground" type="TextureRect" parent="CanvasLayer/Control"]
+modulate = Color(0.485703, 0.485704, 0.485703, 1)
 layout_mode = 0
 offset_left = 102.0
 offset_top = 50.0
@@ -37,101 +38,13 @@ offset_right = 1062.0
 offset_bottom = 570.0
 texture = ExtResource("2_kg6cq")
 
-[node name="daySummaryLabel" type="Label" parent="CanvasLayer/Control"]
+[node name="Click to nexyday" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 115.0
-offset_top = 71.0
-offset_right = 585.0
-offset_bottom = 122.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 293.0
+offset_top = 280.0
+offset_right = 874.0
+offset_bottom = 331.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_de3qo")
 theme_override_font_sizes/font_size = 25
-text = "Day Summary"
-
-[node name="Item1HowMany" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 374.0
-offset_top = 217.0
-offset_right = 457.0
-offset_bottom = 268.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_de3qo")
-theme_override_font_sizes/font_size = 25
-text = "1x"
-
-[node name="item2HowMany" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 373.0
-offset_top = 272.0
-offset_right = 462.0
-offset_bottom = 323.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_de3qo")
-theme_override_font_sizes/font_size = 25
-text = "5x"
-
-[node name="item1Name" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 446.0
-offset_top = 216.0
-offset_right = 690.0
-offset_bottom = 267.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_de3qo")
-theme_override_font_sizes/font_size = 25
-text = "Plants"
-
-[node name="item2Name" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 445.0
-offset_top = 272.0
-offset_right = 683.0
-offset_bottom = 323.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_de3qo")
-theme_override_font_sizes/font_size = 25
-text = "Others"
-
-[node name="item1Price" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 631.0
-offset_top = 216.0
-offset_right = 792.0
-offset_bottom = 267.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_de3qo")
-theme_override_font_sizes/font_size = 25
-text = "P100"
-
-[node name="item2Price" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 631.0
-offset_top = 273.0
-offset_right = 893.0
-offset_bottom = 324.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_de3qo")
-theme_override_font_sizes/font_size = 25
-text = "P12,100"
-
-[node name="Lines" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 300.0
-offset_top = 317.0
-offset_right = 854.0
-offset_bottom = 343.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_de3qo")
-theme_override_font_sizes/font_size = 25
-text = "-------------------------------"
-
-[node name="totalEarned" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = 633.0
-offset_top = 337.0
-offset_right = 767.0
-offset_bottom = 363.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_de3qo")
-theme_override_font_sizes/font_size = 25
-text = "P12,000"
+text = "[Click to continue to next day]"

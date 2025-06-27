@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://beo8eiemlleag"]
 
-[ext_resource type="Texture2D" uid="uid://dtgsql8llkbor" path="res://2D Arts/AmpalayaAssets.png" id="1_u1c73"]
+[ext_resource type="Texture2D" uid="uid://bdkmcpb4ektab" path="res://2D Arts/AmpalayaAssets.png" id="1_u1c73"]
 [ext_resource type="PackedScene" uid="uid://cmwjw7bl3c5ei" path="res://scenes/collectable_items.tscn" id="2_fot2u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37o1f"]

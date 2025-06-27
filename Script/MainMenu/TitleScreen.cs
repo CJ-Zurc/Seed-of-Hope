@@ -10,21 +10,21 @@ public partial class TitleScreen : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-    newGame = GetNode<Button>("New");
-    loadGame = GetNode<Button>("Load");
-    settingsGame = GetNode<Button>("Options");
-    exitGame = GetNode<Button>("ExitGame");
+	newGame = GetNode<Button>("New");
+	loadGame = GetNode<Button>("Load");
+	settingsGame = GetNode<Button>("Options");
+	exitGame = GetNode<Button>("ExitGame");
 
-    // Disable New Game button if save file exists
-    newGame.Disabled = FileAccess.FileExists("user://savegame.json");
+	// Disable New Game button if save file exists
+	newGame.Disabled = FileAccess.FileExists("user://savegame.json");
 
-    // Disable Load Game button if save file does not exist
-    loadGame.Disabled = !FileAccess.FileExists("user://savegame.json");
+	// Disable Load Game button if save file does not exist
+	loadGame.Disabled = !FileAccess.FileExists("user://savegame.json");
 
-    loadGame.Pressed += OnLoadGamePressed;
-    settingsGame.Pressed += OnSettingsGamePressed;
-    exitGame.Pressed += OnExitGamePressed;
-    newGame.Pressed += OnNewGamePressed;
+	loadGame.Pressed += OnLoadGamePressed;
+	settingsGame.Pressed += OnSettingsGamePressed;
+	exitGame.Pressed += OnExitGamePressed;
+	newGame.Pressed += OnNewGamePressed;
 	}
 
 	private void OnLoadGamePressed()

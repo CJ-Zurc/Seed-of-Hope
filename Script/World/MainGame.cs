@@ -35,6 +35,10 @@ public partial class MainGame : Node2D
 	private float stamina = 1.0f; // 1.0 = 100%, 0.0 = 0%
 	private TextureProgressBar staminaBar;
 
+	private HarvestManager harvestManager;
+
+	private bool isMuted = false;
+
 	public override void _Ready()
 	{
 		canvasModulate = GetNode<CanvasModulate>(modulatePath);
@@ -47,6 +51,14 @@ public partial class MainGame : Node2D
 
 		staminaBar = GetNode<TextureProgressBar>("HUD/Control/staminaBar/TextureProgressBar");
 
+		harvestManager = GetNodeOrNull<HarvestManager>("/root/HarvestManager");
+		if (harvestManager == null)
+		{
+			harvestManager = new HarvestManager();
+			GetTree().Root.AddChild(harvestManager);
+			harvestManager.Name = "HarvestManager";
+		}
+
 		// --- Save/load logic ---
 		if (HasNode("player"))
 		{
@@ -58,10 +70,14 @@ public partial class MainGame : Node2D
 				dayCount = 1;
 				year = 1;
 				time = 6f;
-				
 				masterVolume = 0f; // Default volume
-				
 
+				var moneyManager = (MoneyManager)Godot.Engine.GetSingleton("MoneyManager");
+				moneyManager.CurrentMoney = 200; // Set starting money only for new game
+				if (harvestManager != null)
+				{
+					harvestManager.FromDictionary(new Godot.Collections.Dictionary());
+				}
 				SaveGame(); // Save the initial state
 			}
 			else
@@ -97,17 +113,49 @@ public partial class MainGame : Node2D
 					if (saveData.ContainsKey("time"))
 						time = (float)saveData["time"];
 					if (saveData.ContainsKey("volume"))
-						
 						masterVolume = (float)saveData["volume"];
-						
+					if (saveData.ContainsKey("mute"))
+						isMuted = (bool)saveData["mute"];
+
+					if (saveData.ContainsKey("stamina")) // <-- Add this block
+					{
+						stamina = (float)saveData["stamina"];
+						UpdateStaminaBar();
+					}
+
+					if (saveData.ContainsKey("money"))
+					{
+						var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
+						if (moneyManager != null)
+							moneyManager.CurrentMoney = (int)saveData["money"];
+					}
+
+					if (saveData.ContainsKey("harvest_inventory") && harvestManager != null)
+					{
+						var invVariant = saveData["harvest_inventory"];
+						Godot.Collections.Dictionary invDict = invVariant.AsGodotDictionary();
+						if (invDict != null)
+							harvestManager.FromDictionary(invDict);
+					}
+
+					// Load watering can level
+					if (saveData.ContainsKey("watering_can_level"))
+					{
+						var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
+						if (moneyHUD != null)
+							moneyHUD.SetWateringCanLevel((float)saveData["watering_can_level"]);
+					}
 				}
 			}
 		}
 
-		
 		// Apply the loaded or default volume to the audio bus
 		int busIdx = AudioServer.GetBusIndex(MusicBusName);
 		AudioServer.SetBusVolumeDb(busIdx, masterVolume);
+		if (isMuted)
+			AudioServer.SetBusMute(busIdx, true);
+		else
+			AudioServer.SetBusMute(busIdx, false);
 	   
 
 		UpdateYearLabel();
@@ -246,8 +294,10 @@ public partial class MainGame : Node2D
 		UpdateYearLabel();
 		UpdateTimeLabel();
 		UpdateLighting();
-	}
 
+		SaveGame();
+	}
+	
 	
 	// Method to update volume (called from Settings)
 	public void SetVolume(float volume)
@@ -319,9 +369,45 @@ public partial class MainGame : Node2D
 		saveData["day"] = dayCount;
 		saveData["year"] = year;
 		saveData["time"] = time;
+		saveData["volume"] = masterVolume;
+		saveData["mute"] = isMuted;
+		saveData["stamina"] = stamina;
+
+		var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
+		if (moneyManager != null)
+		{
+			saveData["money"] = moneyManager.CurrentMoney;
+		}
+
+		if (harvestManager != null)
+		{
+			saveData["harvest_inventory"] = harvestManager.ToDictionary();
+		}
+
+		// Save watering can level
+		var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
+		if (moneyHUD != null)
+		{
+			saveData["watering_can_level"] = moneyHUD.GetWateringCanLevel();
+		}
 
 		string json = Json.Stringify(saveData);
 		using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
 		file.StoreString(json);
+	}
+
+	public void SetMute(bool mute)
+	{
+		GD.Print($"SetMute called with: {mute}");
+		isMuted = mute;
+		int busIdx = AudioServer.GetBusIndex(MusicBusName);
+		AudioServer.SetBusMute(busIdx, mute);
+		SaveGame();
+		GD.Print($"Mute state after SetMute: {isMuted}");
+	}
+
+	public bool IsMuted()
+	{
+		return isMuted;
 	}
 }
