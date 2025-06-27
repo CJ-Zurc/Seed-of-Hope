@@ -7,7 +7,7 @@ public partial class MainGame : Node2D
 	[Export] public AudioStream wakeUpSound;
 	[Export] public AudioStream eveningSound;
 	[Export] public AudioStream easterEggMusic; // Assign your Easter egg music in the editor
-    [Export] public PackedScene SettingsScene; // Assign your Settings.tscn in the editor
+	[Export] public PackedScene SettingsScene; // Assign your Settings.tscn in the editor
 
 	private CanvasModulate canvasModulate;
 	private Label timeLabel;
@@ -39,6 +39,9 @@ public partial class MainGame : Node2D
 
 	private bool isMuted = false;
 
+	public static int CurrentSaveSlot = 1; // Default to slot 1 if not set
+	private string SaveFileName => $"user://savegame{CurrentSaveSlot}.json";
+
 	public override void _Ready()
 	{
 		canvasModulate = GetNode<CanvasModulate>(modulatePath);
@@ -63,41 +66,41 @@ public partial class MainGame : Node2D
 		if (HasNode("player"))
 		{
 			var player = GetNode<Node2D>("player");
-			if (!FileAccess.FileExists("user://savegame.json"))
+			if (!FileAccess.FileExists(SaveFileName))
 			{
-				// File does not exist: create with default values
+				// File does not exist: create with default values (NEW GAME)
 				player.Position = new Vector2(-16, -459); // Set your default starting position here
 				dayCount = 1;
 				year = 1;
 				time = 6f;
 				masterVolume = 0f; // Default volume
+				stamina = 1.0f;
 
-				var moneyManager = (MoneyManager)Godot.Engine.GetSingleton("MoneyManager");
-				moneyManager.CurrentMoney = 200; // Set starting money only for new game
+				var moneyManager = GetNodeOrNull<MoneyManager>("/root/MoneyManager");
+				if (moneyManager != null)
+					moneyManager.CurrentMoney = 200; // Set starting money only for new game
+
 				if (harvestManager != null)
-				{
-					harvestManager.FromDictionary(new Godot.Collections.Dictionary());
-				}
+					harvestManager.FromDictionary(new Godot.Collections.Dictionary()); // Reset inventory to empty
+
 				SaveGame(); // Save the initial state
 			}
 			else
 			{
 				// File exists: load values
-				using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Read);
+				using var file = FileAccess.Open(SaveFileName, FileAccess.ModeFlags.Read);
 				var json = file.GetAsText();
 				var result = Json.ParseString(json);
-				var saveData = result.As<Godot.Collections.Dictionary>();
+				var saveData = result.AsGodotDictionary();
 				if (saveData != null)
 				{
 					if (HasNode("player"))
 					{
 						var playerNode = GetNode<Node2D>("player");
-
 						if (saveData.ContainsKey("player_position"))
 						{
 							var posVariant = saveData["player_position"];
-							var posArray = posVariant.As<Godot.Collections.Array>();
-
+							var posArray = posVariant.AsGodotArray();
 							if (posArray != null && posArray.Count == 2)
 							{
 								float x = (float)(double)posArray[0];
@@ -116,20 +119,17 @@ public partial class MainGame : Node2D
 						masterVolume = (float)saveData["volume"];
 					if (saveData.ContainsKey("mute"))
 						isMuted = (bool)saveData["mute"];
-
-					if (saveData.ContainsKey("stamina")) // <-- Add this block
+					if (saveData.ContainsKey("stamina"))
 					{
 						stamina = (float)saveData["stamina"];
 						UpdateStaminaBar();
 					}
-
 					if (saveData.ContainsKey("money"))
 					{
 						var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
 						if (moneyManager != null)
 							moneyManager.CurrentMoney = (int)saveData["money"];
 					}
-
 					if (saveData.ContainsKey("harvest_inventory") && harvestManager != null)
 					{
 						var invVariant = saveData["harvest_inventory"];
@@ -137,8 +137,6 @@ public partial class MainGame : Node2D
 						if (invDict != null)
 							harvestManager.FromDictionary(invDict);
 					}
-
-					// Load watering can level
 					if (saveData.ContainsKey("watering_can_level"))
 					{
 						var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
@@ -179,18 +177,18 @@ public partial class MainGame : Node2D
 		}
 	}
 
-    //plays the easter egg music when the Easter egg is triggered
-    public void PlayMusic(AudioStream stream)
-    {
-        if (audioPlayer != null) // Checks if audioPlayer is initialized
-        {
-            audioPlayer.Stop(); // Stop any currently playing audio
-            audioPlayer.Stream = stream; // Set the new audio stream
-            audioPlayer.Play(); // Play the new audio stream
-        }
-    }
+	//plays the easter egg music when the Easter egg is triggered
+	public void PlayMusic(AudioStream stream)
+	{
+		if (audioPlayer != null) // Checks if audioPlayer is initialized
+		{
+			audioPlayer.Stop(); // Stop any currently playing audio
+			audioPlayer.Stream = stream; // Set the new audio stream
+			audioPlayer.Play(); // Play the new audio stream
+		}
+	}
 
-    public override void _Process(double delta)
+	public override void _Process(double delta)
 	{
 		time += (float)delta * (24f / speed);
 		if (time >= 24f)
@@ -325,7 +323,7 @@ public partial class MainGame : Node2D
 	}
 
 
-    public int GetDayCount()
+	public int GetDayCount()
 	{
 		return dayCount;
 	}
@@ -359,7 +357,6 @@ public partial class MainGame : Node2D
 	{
 		// Example: Save player position, day, time, etc.
 		var saveData = new Godot.Collections.Dictionary();
-
 		if (HasNode("player"))
 		{
 			var player = GetNode<Node2D>("player");
@@ -372,27 +369,22 @@ public partial class MainGame : Node2D
 		saveData["volume"] = masterVolume;
 		saveData["mute"] = isMuted;
 		saveData["stamina"] = stamina;
-
 		var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
 		if (moneyManager != null)
 		{
 			saveData["money"] = moneyManager.CurrentMoney;
 		}
-
 		if (harvestManager != null)
 		{
 			saveData["harvest_inventory"] = harvestManager.ToDictionary();
 		}
-
-		// Save watering can level
 		var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
 		if (moneyHUD != null)
 		{
 			saveData["watering_can_level"] = moneyHUD.GetWateringCanLevel();
 		}
-
 		string json = Json.Stringify(saveData);
-		using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
+		using var file = FileAccess.Open(SaveFileName, FileAccess.ModeFlags.Write);
 		file.StoreString(json);
 	}
 
@@ -411,13 +403,13 @@ public partial class MainGame : Node2D
 		return isMuted;
 	}
 
-    // When opening settings
-    public void OpenSettings()
-    {
-        var settingsScene = GD.Load<PackedScene>("res://scenes/settings.tscn");
-        var settings = settingsScene.Instantiate<Settings>();
-        settings.MainGame = this;
-        AddChild(settings);
+	// When opening settings
+	public void OpenSettings()
+	{
+		var settingsScene = GD.Load<PackedScene>("res://scenes/settings.tscn");
+		var settings = settingsScene.Instantiate<Settings>();
+		settings.MainGame = this;
+		AddChild(settings);
 
-    }
+	}
 }
