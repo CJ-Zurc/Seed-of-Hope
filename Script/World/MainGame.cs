@@ -30,11 +30,12 @@ public partial class MainGame : Node2D
 	// Volume settings: stores the current master volume in dB, and the name of the audio bus
 	private float masterVolume = 0f; // Default volume in dB
 	private const string MusicBusName = "Master";
-	
+
 	private float stamina = 1.0f; // 1.0 = 100%, 0.0 = 0%
 	private TextureProgressBar staminaBar;
 
 	private HarvestManager harvestManager;
+	private SeedInventoryManager seedInventoryManager;
 
 	private bool isMuted = false;
 
@@ -58,6 +59,14 @@ public partial class MainGame : Node2D
 			harvestManager.Name = "HarvestManager";
 		}
 
+		seedInventoryManager = GetNodeOrNull<SeedInventoryManager>("/root/SeedInventoryManager");
+		if (seedInventoryManager == null)
+		{
+			seedInventoryManager = new SeedInventoryManager();
+			GetTree().Root.AddChild(seedInventoryManager);
+			seedInventoryManager.Name = "SeedInventoryManager";
+		}
+
 		// --- Save/load logic ---
 		if (HasNode("player"))
 		{
@@ -65,19 +74,19 @@ public partial class MainGame : Node2D
 			if (!FileAccess.FileExists("user://savegame.json"))
 			{
 				// File does not exist: create with default values
-				player.Position = new Vector2(-16, -459); // Set your default starting position here
+				player.Position = new Vector2(-16, -459);
 				dayCount = 1;
 				year = 1;
 				time = 6f;
-				masterVolume = 0f; // Default volume
+				masterVolume = 0f;
 
 				var moneyManager = (MoneyManager)Godot.Engine.GetSingleton("MoneyManager");
-				moneyManager.CurrentMoney = 200; // Set starting money only for new game
+				moneyManager.CurrentMoney = 200;
 				if (harvestManager != null)
 				{
 					harvestManager.FromDictionary(new Godot.Collections.Dictionary());
 				}
-				SaveGame(); // Save the initial state
+				SaveGame();
 			}
 			else
 			{
@@ -91,12 +100,10 @@ public partial class MainGame : Node2D
 					if (HasNode("player"))
 					{
 						var playerNode = GetNode<Node2D>("player");
-
 						if (saveData.ContainsKey("player_position"))
 						{
 							var posVariant = saveData["player_position"];
 							var posArray = posVariant.As<Godot.Collections.Array>();
-
 							if (posArray != null && posArray.Count == 2)
 							{
 								float x = (float)(double)posArray[0];
@@ -115,20 +122,17 @@ public partial class MainGame : Node2D
 						masterVolume = (float)saveData["volume"];
 					if (saveData.ContainsKey("mute"))
 						isMuted = (bool)saveData["mute"];
-
-					if (saveData.ContainsKey("stamina")) // <-- Add this block
+					if (saveData.ContainsKey("stamina"))
 					{
 						stamina = (float)saveData["stamina"];
 						UpdateStaminaBar();
 					}
-
 					if (saveData.ContainsKey("money"))
 					{
 						var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
 						if (moneyManager != null)
 							moneyManager.CurrentMoney = (int)saveData["money"];
 					}
-
 					if (saveData.ContainsKey("harvest_inventory") && harvestManager != null)
 					{
 						var invVariant = saveData["harvest_inventory"];
@@ -136,13 +140,19 @@ public partial class MainGame : Node2D
 						if (invDict != null)
 							harvestManager.FromDictionary(invDict);
 					}
-
 					// Load watering can level
 					if (saveData.ContainsKey("watering_can_level"))
 					{
 						var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
 						if (moneyHUD != null)
 							moneyHUD.SetWateringCanLevel((float)saveData["watering_can_level"]);
+					}
+					if (saveData.ContainsKey("seed_inventory") && seedInventoryManager != null)
+					{
+						var seedInvVariant = saveData["seed_inventory"];
+						Godot.Collections.Dictionary seedInvDict = seedInvVariant.AsGodotDictionary();
+						if (seedInvDict != null)
+							seedInventoryManager.FromDictionary(seedInvDict);
 					}
 				}
 			}
@@ -155,7 +165,6 @@ public partial class MainGame : Node2D
 			AudioServer.SetBusMute(busIdx, true);
 		else
 			AudioServer.SetBusMute(busIdx, false);
-	   
 
 		UpdateYearLabel();
 		UpdateTimeLabel();
@@ -177,7 +186,6 @@ public partial class MainGame : Node2D
 			hasPlayedEveningSound = true;
 		}
 	}
-
 
 
 	public override void _Process(double delta)
@@ -287,8 +295,8 @@ public partial class MainGame : Node2D
 
 		SaveGame();
 	}
-	
-	
+
+
 	// Method to update volume (called from Settings)
 	public void SetVolume(float volume)
 	{
@@ -306,7 +314,7 @@ public partial class MainGame : Node2D
 		}
 		SaveGame(); // Save immediately when volume changes
 	}
-	
+
 
 	// Method to get current volume (called from Settings)
 	public float GetVolume()
@@ -378,6 +386,11 @@ public partial class MainGame : Node2D
 		if (moneyHUD != null)
 		{
 			saveData["watering_can_level"] = moneyHUD.GetWateringCanLevel();
+		}
+
+		if (seedInventoryManager != null)
+		{
+			saveData["seed_inventory"] = seedInventoryManager.ToDictionary();
 		}
 
 		string json = Json.Stringify(saveData);

@@ -37,4 +37,24 @@ public partial class SeedInventoryManager : Node
         var seedInventoryManager = GetNode<SeedInventoryManager>("/root/SeedInventoryManager");
         return seedInventoryManager.Inventory.ContainsKey(seedName) ? seedInventoryManager.Inventory[seedName] : 0;
     }
+
+    public Godot.Collections.Dictionary ToDictionary()
+    {
+        var dict = new Godot.Collections.Dictionary();
+        foreach (var kvp in seedInventory)
+        {
+            dict[kvp.Key] = kvp.Value;
+        }
+        return dict;
+    }
+
+    public void FromDictionary(Godot.Collections.Dictionary dict)
+    {
+        seedInventory.Clear();
+        foreach (var key in dict.Keys)
+        {
+            seedInventory[key.ToString()] = (int)dict[key];
+        }
+        EmitSignal(nameof(InventoryChanged));
+    }
 }
