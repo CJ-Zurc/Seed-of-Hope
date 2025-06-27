@@ -1365,16 +1365,16 @@ texture = ExtResource("13_x3una")
 [node name="faucet" type="StaticBody2D" parent="."]
 position = Vector2(3, -30)
 
-[node name="Area2D" type="Area2D" parent="faucet"]
+[node name="PlantingArea55" type="Area2D" parent="faucet"]
 script = ExtResource("17_tjkqt")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="faucet/Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="faucet/PlantingArea55"]
 position = Vector2(-26, 55)
 sprite_frames = SubResource("SpriteFrames_lpxjy")
 autoplay = "default"
 frame_progress = 0.569984
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="faucet/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="faucet/PlantingArea55"]
 position = Vector2(-23, 55)
 shape = SubResource("RectangleShape2D_q0kmf")
 
