@@ -6,8 +6,8 @@ public partial class MainGame : Node2D
     [Export] public NodePath modulatePath;
     [Export] public AudioStream wakeUpSound;
     [Export] public AudioStream eveningSound;
-    [Export] public AudioStream easterEggMusic; // Assign your Easter egg music in the editor
-    [Export] public PackedScene SettingsScene; // Assign your Settings.tscn in the editor
+    [Export] public AudioStream easterEggMusic; //assigns the easter egg music in the editor
+    [Export] public PackedScene SettingsScene; // Reference to the settings scene
 
     private CanvasModulate canvasModulate;
     private Label timeLabel;
