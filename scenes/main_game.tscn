@@ -82,7 +82,7 @@ playerPath = NodePath("../../player")
 
 [node name="TeleportBlock3" parent="Teleporting Blocks" instance=ExtResource("14_8xp80")]
 visible = false
-position = Vector2(5, 524)
+position = Vector2(4, 501)
 targetX = 9
 targetY = 198
 playerPath = NodePath("../../player")
