@@ -105,7 +105,7 @@ public partial class Settings : Control
 	private void OnMainMenuButtonPressed()
 	{
 		GD.Print("Main menu button pressed");
-		GetTree().ChangeSceneToFile("res://Scenes/title_screen.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/title_screen.tscn");
 	}
 
 	private void OnMuteToggled(bool buttonPressed)

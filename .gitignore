@@ -7,6 +7,9 @@
 *.translation
 *.import
 
+# Ignore Windows executables (built game files)
+*.exe
+
 # OS-generated files
 .DS_Store
 Thumbs.db
