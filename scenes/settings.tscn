@@ -21,6 +21,7 @@ script = ExtResource("1_es4n0")
 BackButtonPath = NodePath("CanvasLayer/Control/MarginContainer/settings/BButton")
 VolumeSliderPath = NodePath("CanvasLayer/Control/MarginContainer/settings/volume")
 MuteCheckBoxPath = NodePath("CanvasLayer/Control/MarginContainer/settings/CheckBox")
+MainMenuButtonPath = NodePath("CanvasLayer/Control/MarginContainer/settings/MainMenu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 4
