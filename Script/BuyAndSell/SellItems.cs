@@ -20,15 +20,15 @@ public partial class SellItems : TextureRect
         { "Ampalaya", 15 },
         { "Calamansi", 20 },
         { "Pechay", 25 },
-        { "Sunflower", 30 }
+        { "Sunflower", 25 }
     };
 
     //This creates a dictionary to hold the prices of the harvested items. HARVESTED ITEMS ONLY
     private readonly Dictionary<string, int> harvestedPrices = new Dictionary<string, int>
     {
-        { "Succulent", 15 },
+        { "Succulent", 30 },
         { "Ampalaya", 30 },
-        { "Calamansi", 25 },
+        { "Calamansi", 40 },
         { "Pechay", 50 },
         { "Sunflower", 70}
     };
