@@ -36,6 +36,7 @@ public partial class MainGame : Node2D
 	private TextureProgressBar staminaBar;
 
 	private HarvestManager harvestManager;
+	private SeedInventoryManager seedInventoryManager;
 
 	private bool isMuted = false;
 
@@ -60,6 +61,14 @@ public partial class MainGame : Node2D
 			harvestManager = new HarvestManager();
 			GetTree().Root.AddChild(harvestManager);
 			harvestManager.Name = "HarvestManager";
+		}
+
+		seedInventoryManager = GetNodeOrNull<SeedInventoryManager>("/root/SeedInventoryManager");
+		if (seedInventoryManager == null)
+		{
+			seedInventoryManager = new SeedInventoryManager();
+			GetTree().Root.AddChild(seedInventoryManager);
+			seedInventoryManager.Name = "SeedInventoryManager";
 		}
 
 		// --- Save/load logic ---
