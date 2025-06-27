@@ -29,8 +29,8 @@ public partial class SellItems : TextureRect
         { "Succulent", 15 },
         { "Ampalaya", 30 },
         { "Calamansi", 25 },
-        { "Pechay", 10 },
-        { "Sunflower", 50}
+        { "Pechay", 50 },
+        { "Sunflower", 70}
     };
 
     public override void _Ready()

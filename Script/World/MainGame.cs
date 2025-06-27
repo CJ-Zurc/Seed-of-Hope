@@ -6,7 +6,8 @@ public partial class MainGame : Node2D
 	[Export] public NodePath modulatePath;
 	[Export] public AudioStream wakeUpSound;
 	[Export] public AudioStream eveningSound;
-	[Export] public PackedScene SettingsScene; // Assign your Settings.tscn in the editor
+	[Export] public AudioStream easterEggMusic; // Assign your Easter egg music in the editor
+    [Export] public PackedScene SettingsScene; // Assign your Settings.tscn in the editor
 
 	private CanvasModulate canvasModulate;
 	private Label timeLabel;
@@ -125,6 +126,12 @@ public partial class MainGame : Node2D
 					if (saveData.ContainsKey("mute"))
 						isMuted = (bool)saveData["mute"];
 
+					if (saveData.ContainsKey("stamina")) // <-- Add this block
+					{
+						stamina = (float)saveData["stamina"];
+						UpdateStaminaBar();
+					}
+
 					if (saveData.ContainsKey("money"))
 					{
 						var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
@@ -140,12 +147,12 @@ public partial class MainGame : Node2D
 							harvestManager.FromDictionary(invDict);
 					}
 
-					if (saveData.ContainsKey("seed_inventory") && seedInventoryManager != null)
+					// Load watering can level
+					if (saveData.ContainsKey("watering_can_level"))
 					{
-						var seedInvVariant = saveData["seed_inventory"];
-						Godot.Collections.Dictionary seedInvDict = seedInvVariant.AsGodotDictionary();
-						if (seedInvDict != null)
-							seedInventoryManager.FromDictionary(seedInvDict);
+						var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
+						if (moneyHUD != null)
+							moneyHUD.SetWateringCanLevel((float)saveData["watering_can_level"]);
 					}
 				}
 			}
@@ -181,9 +188,18 @@ public partial class MainGame : Node2D
 		}
 	}
 
+    //plays the easter egg music when the Easter egg is triggered
+    public void PlayMusic(AudioStream stream)
+    {
+        if (audioPlayer != null) // Checks if audioPlayer is initialized
+        {
+            audioPlayer.Stop(); // Stop any currently playing audio
+            audioPlayer.Stream = stream; // Set the new audio stream
+            audioPlayer.Play(); // Play the new audio stream
+        }
+    }
 
-
-	public override void _Process(double delta)
+    public override void _Process(double delta)
 	{
 		time += (float)delta * (24f / speed);
 		if (time >= 24f)
@@ -317,7 +333,8 @@ public partial class MainGame : Node2D
 		return masterVolume;
 	}
 
-	public int GetDayCount()
+
+    public int GetDayCount()
 	{
 		return dayCount;
 	}
@@ -363,22 +380,25 @@ public partial class MainGame : Node2D
 		saveData["time"] = time;
 		saveData["volume"] = masterVolume;
 		saveData["mute"] = isMuted;
+		saveData["stamina"] = stamina;
 
-var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
-if (moneyManager != null)
-{
-	saveData["money"] = moneyManager.CurrentMoney;
-}
+		var moneyManager = GetNode<MoneyManager>("/root/MoneyManager");
+		if (moneyManager != null)
+		{
+			saveData["money"] = moneyManager.CurrentMoney;
+		}
 
-if (harvestManager != null)
-{
-	saveData["harvest_inventory"] = harvestManager.ToDictionary();
-}
+		if (harvestManager != null)
+		{
+			saveData["harvest_inventory"] = harvestManager.ToDictionary();
+		}
 
-if (seedInventoryManager != null)
-{
-	saveData["seed_inventory"] = seedInventoryManager.ToDictionary();
-}
+		// Save watering can level
+		var moneyHUD = GetNodeOrNull<Money>("/root/MainGame/HUD");
+		if (moneyHUD != null)
+		{
+			saveData["watering_can_level"] = moneyHUD.GetWateringCanLevel();
+		}
 
 		string json = Json.Stringify(saveData);
 		using var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
@@ -394,4 +414,19 @@ if (seedInventoryManager != null)
 		SaveGame();
 		GD.Print($"Mute state after SetMute: {isMuted}");
 	}
+
+	public bool IsMuted()
+	{
+		return isMuted;
+	}
+
+    // When opening settings
+    public void OpenSettings()
+    {
+        var settingsScene = GD.Load<PackedScene>("res://scenes/settings.tscn");
+        var settings = settingsScene.Instantiate<Settings>();
+        settings.MainGame = this;
+        AddChild(settings);
+
+    }
 }

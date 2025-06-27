@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://cauhaqfobyof4" path="res://Script/MainMenu/Settings.cs" id="1_es4n0"]
 [ext_resource type="Texture2D" uid="uid://bi3nkooxsr6j5" path="res://2D Arts/UI stuff/Title screen/creditsButton.png" id="2_6wm04"]
-[ext_resource type="Texture2D" uid="uid://bdrqbxw0jxcln" path="res://2D Arts/UI stuff/Title screen/ReturnGameButton.png" id="3_es4n0"]
+[ext_resource type="Texture2D" uid="uid://crf2c4jgqfwjp" path="res://2D Arts/UI stuff/Title screen/ReturnGameButton.png" id="3_es4n0"]
 [ext_resource type="Texture2D" uid="uid://b2ecc2ved7k5o" path="res://2D Arts/UI stuff/Title screen/MainMenuButton.png" id="3_f4mfi"]
 [ext_resource type="Script" uid="uid://chaihr3wwa38m" path="res://Script/Audio/Volume.cs" id="3_gis3k"]
 
