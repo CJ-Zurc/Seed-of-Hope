@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\easteregg\\easteregg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|solutionrelative:script\\easteregg\\easteregg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\dialogue\\dialoguetriggerabstract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|solutionrelative:script\\dialogue\\dialoguetriggerabstract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\world\\maingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|solutionrelative:script\\world\\maingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\mainmenu\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|solutionrelative:script\\mainmenu\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +27,8 @@
       "RelativeMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|solutionrelative:script\\buyandsell\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\world\\maingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|solutionrelative:script\\world\\maingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\buyandsell\\sellitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|solutionrelative:script\\buyandsell\\sellitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|c:\\users\\seigh\\downloads\\seed-of-hope\\script\\easteregg\\easteregg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29A9B3C0-4C7E-4761-BE7A-20B43A5B60B5}|New Game Project.csproj|solutionrelative:script\\easteregg\\easteregg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "DialogueTriggerAbstract.cs",
+              "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Dialogue\\DialogueTriggerAbstract.cs",
+              "RelativeDocumentMoniker": "Script\\Dialogue\\DialogueTriggerAbstract.cs",
+              "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Dialogue\\DialogueTriggerAbstract.cs",
+              "RelativeToolTip": "Script\\Dialogue\\DialogueTriggerAbstract.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwA4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T08:04:52.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Money.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\Money.cs",
               "RelativeDocumentMoniker": "Script\\BuyAndSell\\Money.cs",
@@ -46,12 +63,11 @@
               "RelativeToolTip": "Script\\BuyAndSell\\Money.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAAADoAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T07:36:50.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T07:36:50.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Volume.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\Audio\\Volume.cs",
               "RelativeDocumentMoniker": "Script\\Audio\\Volume.cs",
@@ -59,12 +75,11 @@
               "RelativeToolTip": "Script\\Audio\\Volume.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAgwE0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T07:07:39.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T07:07:39.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Settings.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\MainMenu\\Settings.cs",
               "RelativeDocumentMoniker": "Script\\MainMenu\\Settings.cs",
@@ -77,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SellItems.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\BuyAndSell\\SellItems.cs",
               "RelativeDocumentMoniker": "Script\\BuyAndSell\\SellItems.cs",
@@ -85,33 +100,33 @@
               "RelativeToolTip": "Script\\BuyAndSell\\SellItems.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwCAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T06:34:37.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T06:34:37.915Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainGame.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\World\\MainGame.cs",
               "RelativeDocumentMoniker": "Script\\World\\MainGame.cs",
               "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\World\\MainGame.cs",
               "RelativeToolTip": "Script\\World\\MainGame.cs",
-              "ViewState": "AgIAAJwBAAAAAAAAAAAYwKIBAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAgwKIBAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T17:39:10.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "EasterEgg.cs",
               "DocumentMoniker": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\EasterEgg\\EasterEgg.cs",
               "RelativeDocumentMoniker": "Script\\EasterEgg\\EasterEgg.cs",
               "ToolTip": "C:\\Users\\seigh\\Downloads\\Seed-of-Hope\\Script\\EasterEgg\\EasterEgg.cs",
               "RelativeToolTip": "Script\\EasterEgg\\EasterEgg.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCQAAACMAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T15:39:40.336Z"
+              "WhenOpened": "2025-06-26T15:39:40.336Z",
+              "EditorCaption": ""
             }
           ]
         }
