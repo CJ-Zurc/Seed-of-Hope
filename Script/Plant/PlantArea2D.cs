@@ -35,6 +35,9 @@ namespace SeedOfHope.Script.Plant
 		[Export]
 		public float y = 0;
 
+		private Timer autosaveTimer;
+		private const float AUTOSAVE_INTERVAL = 10f; // seconds
+
 		public override string CurrentSeedType => currentSeedType;
 		public override int GrowthDaysLeft => growthDaysLeft;
 		public override float WaterLevel => waterLevel;
@@ -55,6 +58,69 @@ namespace SeedOfHope.Script.Plant
 				inventoryPanel.WaterButtonPressed += OnWaterButtonActivated;
 			}
 			moneyHUD = GetNode<Money>("/root/MainGame/HUD");
+
+			// Autosave timer setup
+			autosaveTimer = new Timer();
+			autosaveTimer.WaitTime = AUTOSAVE_INTERVAL;
+			autosaveTimer.OneShot = false;
+			autosaveTimer.Timeout += OnAutosaveTimeout;
+			AddChild(autosaveTimer);
+			autosaveTimer.Start();
+
+			// Load state on ready
+			LoadPlantState();
+		}
+
+		private void OnAutosaveTimeout()
+		{
+			SavePlantState();
+		}
+
+		private string GetPlantSavePath()
+		{
+			return "user://plantsave.json";
+		}
+
+		private void SavePlantState()
+		{
+			// 1. Load all existing data
+			Godot.Collections.Dictionary allData = new Godot.Collections.Dictionary();
+			if (FileAccess.FileExists(GetPlantSavePath()))
+			{
+				using var file = FileAccess.Open(GetPlantSavePath(), FileAccess.ModeFlags.Read);
+				var json = file.GetAsText();
+				var parsed = Json.ParseString(json);
+				if (parsed.VariantType == Variant.Type.Dictionary)
+					allData = parsed.AsGodotDictionary();
+			}
+
+			// 2. Update only this plant's entry
+			allData[Name] = SaveState();
+
+			// 3. Write the whole dictionary back
+			using var saveFile = FileAccess.Open(GetPlantSavePath(), FileAccess.ModeFlags.Write);
+			saveFile.StoreString(Json.Stringify(allData));
+			saveFile.Flush(); // <--- Add this
+			GD.Print($"Saving plant: {Name} ({GetType()})");
+		}
+
+		private void LoadPlantState()
+		{
+			if (!FileAccess.FileExists(GetPlantSavePath()))
+				return;
+
+			using var file = FileAccess.Open(GetPlantSavePath(), FileAccess.ModeFlags.Read);
+			var json = file.GetAsText();
+			var parsed = Json.ParseString(json);
+			if (parsed.VariantType != Variant.Type.Dictionary)
+				return;
+
+			var allData = parsed.AsGodotDictionary();
+			if (allData.ContainsKey(Name))
+			{
+				var plantData = allData[Name].AsGodotDictionary();
+				LoadState(plantData);
+			}
 		}
 
 		public override void Plant(string seedType)
@@ -65,10 +131,10 @@ namespace SeedOfHope.Script.Plant
 
 			currentSeedType = seedType;
 			isPlanted = true;
-			growthDaysLeft = 5; // Set growth stage to 5 days
-			waterLevel = 0f; // Reset water level on planting
-			lastWaterDecreaseHour = mainGame.GetHourCount(); // Track water decrease timing
-			spawnedCollectable = false; // <-- Reset this flag here!
+			growthDaysLeft = 5;
+			waterLevel = 0f;
+			lastWaterDecreaseHour = mainGame.GetHourCount();
+			spawnedCollectable = false;
 
 			switch (seedType)
 			{
@@ -103,8 +169,9 @@ namespace SeedOfHope.Script.Plant
 
 			lastGrowthDay = mainGame.GetDayCount();
 			seedInventoryManager.SellSeed(seedType);
-			mainGame.DecreaseStamina(0.1f); // Decrease stamina by 10% per plant
+			mainGame.DecreaseStamina(0.1f);
 			ShowPlantInfo();
+			SavePlantState(); // Save immediately after planting
 		}
 
 		public override void Water()
@@ -125,13 +192,13 @@ namespace SeedOfHope.Script.Plant
 				{
 					Plant(inventorySeedsPanel.SelectedSeed);
 				}
-				// Only allow watering if wateringCanActive is true in InventoryPanel
 				else if (isPlanted && waitingForWaterClick && inventoryPanel != null && inventoryPanel.Get("wateringCanActive").AsBool())
 				{
 					waterLevel = 1.0f;
 					ShowPlantInfo();
 					waitingForWaterClick = false;
-					moneyHUD.UseWateringCan(); // <-- Add this line
+					moneyHUD.UseWateringCan();
+					SavePlantState(); // Save after watering
 				}
 				else if (isPlanted)
 				{
@@ -206,6 +273,7 @@ namespace SeedOfHope.Script.Plant
 				}
 				plantAnimation.Frame++;
 				lastGrowthDay = mainGame.GetDayCount();
+				SavePlantState(); // Save after growth
 			}
 
 			// Water decrease logic: decrease by 20% every 5 in-game hours
@@ -226,6 +294,7 @@ namespace SeedOfHope.Script.Plant
 						var waterBarNode = plantInfoInstance.GetNode<TextureProgressBar>("CanvasLayer/Control/WaterBar/TextureProgressBar");
 						waterBarNode.Value = waterLevel * 100f;
 					}
+					SavePlantState(); // Save after water decrease
 				}
 			}
 
@@ -253,6 +322,7 @@ namespace SeedOfHope.Script.Plant
 
 				// Mark area as not planted so it can be replanted
 				isPlanted = false;
+				SavePlantState(); // Save after harvest
 			}
 		
 		}
@@ -263,14 +333,54 @@ namespace SeedOfHope.Script.Plant
 		}
 
 		// Implement abstract methods for SaveState and LoadState, but leave them empty for now
-		public override System.Collections.Generic.Dictionary<string, object> SaveState()
+		public override Godot.Collections.Dictionary SaveState()
 		{
-			return new System.Collections.Generic.Dictionary<string, object>();
+			var dict = new Godot.Collections.Dictionary
+			{
+				["current_seed_type"] = currentSeedType,
+				["is_planted"] = isPlanted,
+				["water_level"] = waterLevel,
+				["growth_days_left"] = growthDaysLeft,
+				["last_growth_day"] = lastGrowthDay,
+				["last_water_decrease_hour"] = lastWaterDecreaseHour,
+				["spawned_collectable"] = spawnedCollectable,
+				["collectable_scene_path"] = collectableScenePath,
+				["x"] = x,
+				["y"] = y,
+				["animation"] = plantAnimation != null ? plantAnimation.Animation : "",
+				["animation_frame"] = plantAnimation != null ? plantAnimation.Frame : 0
+			};
+			return dict;
 		}
 
-		public override void LoadState(System.Collections.Generic.Dictionary<string, object> data)
+		public override void LoadState(Godot.Collections.Dictionary data)
 		{
-			// No-op for now
+			if (data == null) return;
+
+			if (data.ContainsKey("current_seed_type"))
+				currentSeedType = (string)data["current_seed_type"];
+			if (data.ContainsKey("is_planted"))
+				isPlanted = (bool)data["is_planted"];
+			if (data.ContainsKey("water_level"))
+				waterLevel = (float)(double)data["water_level"];
+			if (data.ContainsKey("growth_days_left"))
+				growthDaysLeft = (int)(long)data["growth_days_left"];
+			if (data.ContainsKey("last_growth_day"))
+				lastGrowthDay = (float)(double)data["last_growth_day"];
+			if (data.ContainsKey("last_water_decrease_hour"))
+				lastWaterDecreaseHour = (float)(double)data["last_water_decrease_hour"];
+			if (data.ContainsKey("spawned_collectable"))
+				spawnedCollectable = (bool)data["spawned_collectable"];
+			if (data.ContainsKey("collectable_scene_path"))
+				collectableScenePath = (string)data["collectable_scene_path"];
+			if (data.ContainsKey("x"))
+				x = (float)(double)data["x"];
+			if (data.ContainsKey("y"))
+				y = (float)(double)data["y"];
+			if (data.ContainsKey("animation") && plantAnimation != null)
+				plantAnimation.Animation = (string)data["animation"];
+			if (data.ContainsKey("animation_frame") && plantAnimation != null)
+				plantAnimation.Frame = (int)(long)data["animation_frame"];
 		}
 
 		private Money moneyHUD;
