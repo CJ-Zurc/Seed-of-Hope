@@ -410,4 +410,14 @@ public partial class MainGame : Node2D
 	{
 		return isMuted;
 	}
+
+    // When opening settings
+    public void OpenSettings()
+    {
+        var settingsScene = GD.Load<PackedScene>("res://scenes/settings.tscn");
+        var settings = settingsScene.Instantiate<Settings>();
+        settings.MainGame = this;
+        AddChild(settings);
+
+    }
 }

@@ -1,12 +1,12 @@
 [gd_scene load_steps=21 format=3 uid="uid://8shpnyu2wb1w"]
 
 [ext_resource type="Script" uid="uid://bwx7wxiwgsp3o" path="res://Script/BuyAndSell/BuyAndSellPanel.cs" id="1_j3yc2"]
-[ext_resource type="Texture2D" uid="uid://dcyf7w1sitqjd" path="res://2D Arts/BuyAndSell/BuyBackground.png" id="2_a0msc"]
+[ext_resource type="Texture2D" uid="uid://cdjasg07nd0gl" path="res://2D Arts/BuyAndSell/BuyBackground.png" id="2_a0msc"]
 [ext_resource type="Texture2D" uid="uid://vfesmpkjvlup" path="res://2D Arts/BuyAndSell/seeds.png" id="2_y4nr4"]
 [ext_resource type="Texture2D" uid="uid://bims48vbhs25b" path="res://2D Arts/BuyAndSell/buyButton.png" id="3_ei2hd"]
 [ext_resource type="Texture2D" uid="uid://dyjnciylhmg4t" path="res://2D Arts/BuyAndSell/SellButton.png" id="5_ei2hd"]
 [ext_resource type="FontFile" uid="uid://clbii8t1lgfv4" path="res://2D Arts/UI stuff/fonts/slkscre.ttf" id="6_4ox3i"]
-[ext_resource type="Texture2D" uid="uid://dc8b2vocw7gwg" path="res://2D Arts/BuyAndSell/SellBackground.png" id="7_dbud6"]
+[ext_resource type="Texture2D" uid="uid://cfdepgs183lpc" path="res://2D Arts/BuyAndSell/SellBackground.png" id="7_dbud6"]
 [ext_resource type="Script" uid="uid://cpraq5wf3rhsh" path="res://Script/BuyAndSell/SellItems.cs" id="8_j3yc2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbqbk"]

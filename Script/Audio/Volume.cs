@@ -75,7 +75,7 @@ public partial class Volume : HSlider
 		writeFile.StoreString(newJson);
 		GD.Print($"Volume.cs: Saved dB value {db} to JSON");
 
-		EmitSignal(nameof(VolumeChangedEventHandler), db);
+		EmitSignal(nameof(VolumeChanged), db);
 	}
 
 	public void Mute()

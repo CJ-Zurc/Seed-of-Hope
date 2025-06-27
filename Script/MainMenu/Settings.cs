@@ -14,6 +14,7 @@ public partial class Settings : Control
 	private bool isInitializing = false;
 	private float previousVolumeDb = 0f;
 	private MainGame mainGame;
+	public MainGame MainGame { get; set; }
 
 	// Name of your custom bus (must match the name in the Audio panel)
 	private const string MusicBusName = "Master";
@@ -43,10 +44,10 @@ public partial class Settings : Control
 		muteCheckBox = GetNode<CheckBox>(MuteCheckBoxPath);
 		muteCheckBox.Toggled += OnMuteToggled;
 
-		mainGame = GetNode<MainGame>("/root/MainGame");
+		
 
-		// Sync mute state and checkbox
-		bool isMuted = mainGame != null ? mainGame.IsMuted() : false;
+        // Sync mute state and checkbox
+        bool isMuted = mainGame != null ? mainGame.IsMuted() : false;
 		isInitializing = true;
 		muteCheckBox.ButtonPressed = isMuted;
 
@@ -80,7 +81,7 @@ public partial class Settings : Control
 			GD.PrintErr($"Audio bus '{MusicBusName}' not found!");
 
 		// Emit the signal so other scripts (like MainGame) can react to the volume change
-		EmitSignal(nameof(VolumeChangedEventHandler), db); // Emit dB value
+		EmitSignal(nameof(VolumeChanged), db); // Emit dB value
 	}
 
 	private void OnBackButtonPressed()
