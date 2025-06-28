@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://5spetf5xvp65"]
+
+[ext_resource type="Texture2D" uid="uid://0l2eabfbttpk" path="res://2D Arts/PechayPlant.png" id="1_fd4dy"]
+[ext_resource type="PackedScene" uid="uid://cmwjw7bl3c5ei" path="res://scenes/collectable_items.tscn" id="2_j5ha8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h4td"]
+atlas = ExtResource("1_fd4dy")
+region = Rect2(60, 8, 15, 17)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vu416"]
+radius = 7.07107
+
+[node name="pechay" type="Sprite2D"]
+texture = SubResource("AtlasTexture_3h4td")
+
+[node name="collectableItems" parent="." instance=ExtResource("2_j5ha8")]
+CollectableItemName = "Pechay"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collectableItems"]
+shape = SubResource("CircleShape2D_vu416")

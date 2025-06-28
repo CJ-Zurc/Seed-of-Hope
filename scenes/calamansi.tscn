@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bvhsl2lgo60oo"]
 
-[ext_resource type="Texture2D" uid="uid://c67f54obgtrrj" path="res://Assets/2D Arts/Plant Assets/CalamansiTree.png" id="1_2wcuf"]
+[ext_resource type="Texture2D" uid="uid://c67f54obgtrrj" path="res://2D Arts/Plant Assets/CalamansiTree.png" id="1_2wcuf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_864tp"]
 atlas = ExtResource("1_2wcuf")

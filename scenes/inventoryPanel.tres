@@ -1,0 +1,101 @@
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://6j6rfyd2nuwr"]
+
+[ext_resource type="FontVariation" uid="uid://pigd5j4eic7v" path="res://2D Arts/UI stuff/fonts/slkscreeVariation.tres" id="1_grxq7"]
+[ext_resource type="Texture2D" uid="uid://c472vh0w1llh0" path="res://2D Arts/UI stuff/HUD UI/inventoryHover.png" id="1_mll01"]
+[ext_resource type="Texture2D" uid="uid://cf8qem3ia0gs1" path="res://2D Arts/UI stuff/HUD UI/Sample-InventorySlotsSet.png" id="2_grxq7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbsqu"]
+atlas = ExtResource("2_grxq7")
+region = Rect2(112, 191, 24, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cwl37"]
+texture = SubResource("AtlasTexture_sbsqu")
+region_rect = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oul7s"]
+atlas = ExtResource("2_grxq7")
+region = Rect2(336, 79, 24, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uh4gv"]
+texture = SubResource("AtlasTexture_oul7s")
+region_rect = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh4gv"]
+atlas = ExtResource("2_grxq7")
+region = Rect2(0, 79, 24, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8sr2j"]
+texture = SubResource("AtlasTexture_uh4gv")
+region_rect = Rect2(4, 4, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_grxq7"]
+load_path = "res://.godot/imported/Sample-InventorySlotsSet.png-abe51840e693ec9e6e12f7cf1a3fb2f5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8d1r"]
+atlas = SubResource("CompressedTexture2D_grxq7")
+region = Rect2(0, 79, 24, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j6xnq"]
+texture = SubResource("AtlasTexture_s8d1r")
+region_rect = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rluj8"]
+atlas = ExtResource("1_mll01")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s8d1r"]
+texture = SubResource("AtlasTexture_rluj8")
+region_rect = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6xnq"]
+atlas = ExtResource("2_grxq7")
+region = Rect2(336, 79, 24, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbsqu"]
+texture = SubResource("AtlasTexture_j6xnq")
+region_rect = Rect2(0, 0, 24, 24)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mll01"]
+load_path = "res://.godot/imported/Sample-InventorySlotsSet.png-abe51840e693ec9e6e12f7cf1a3fb2f5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grxq7"]
+atlas = SubResource("CompressedTexture2D_mll01")
+region = Rect2(0, 79, 24, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rluj8"]
+texture = SubResource("AtlasTexture_grxq7")
+region_rect = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwl37"]
+atlas = ExtResource("2_grxq7")
+region = Rect2(0, 79, 24, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oul7s"]
+texture = SubResource("AtlasTexture_cwl37")
+region_rect = Rect2(3, 3, 18, 17)
+
+[resource]
+InventoryLabel/base_type = &"Label"
+InventoryLabel/font_sizes/font_size = 16
+InventoryLabel/fonts/font = ExtResource("1_grxq7")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+inventoryItemPanel/base_type = &"PanelContainer"
+inventoryItemPanel/styles/panel = SubResource("StyleBoxTexture_cwl37")
+inventorySeeds/base_type = &"PanelContainer"
+inventorySeeds/styles/panel = SubResource("StyleBoxTexture_uh4gv")
+inventorySeedsLabel/base_type = &"Label"
+inventorySeedsLabel/font_sizes/font_size = 16
+inventorySeedsLabel/fonts/font = ExtResource("1_grxq7")
+newWoodPanel/base_type = &"PanelContainer"
+newWoodPanel/styles/panel = SubResource("StyleBoxTexture_8sr2j")
+waterCan/base_type = &"Button"
+waterCan/styles/disabled = null
+waterCan/styles/focus = SubResource("StyleBoxTexture_j6xnq")
+waterCan/styles/hover = SubResource("StyleBoxTexture_s8d1r")
+waterCan/styles/normal = SubResource("StyleBoxTexture_sbsqu")
+waterCan/styles/pressed = SubResource("StyleBoxTexture_rluj8")
+woodPanel/base_type = &"PanelContainer"
+woodPanel/styles/panel = SubResource("StyleBoxTexture_oul7s")

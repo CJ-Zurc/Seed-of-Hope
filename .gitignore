@@ -7,6 +7,9 @@
 *.translation
 *.import
 
+# Ignore Windows executables (built game files)
+*.exe
+
 # OS-generated files
 .DS_Store
 Thumbs.db
@@ -16,6 +19,7 @@ Thumbs.db
 *.temp
 *.swp
 *.log
+*.uid
 
 # Godot cache files
 *.converted.res

@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://q2ayxq15yslw"]
+
+[ext_resource type="Texture2D" uid="uid://b4m74gn8afvnn" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="1_ggrl0"]
+[ext_resource type="Script" uid="uid://du75jf75ujk4g" path="res://Script/Dialogue/Bed.cs" id="1_umbcb"]
+[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="2_umbcb"]
+
+[node name="Control2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_umbcb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1128.0
+offset_top = -857.0
+offset_right = -1088.0
+offset_bottom = -817.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.96055, 2.0339)
+
+[node name="background" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 380.0
+offset_right = 715.0
+offset_bottom = 508.0
+texture = ExtResource("1_ggrl0")
+
+[node name="questionSave" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 398.0
+offset_right = 689.0
+offset_bottom = 414.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_umbcb")
+text = "Do you want to sleep? "
+
+[node name="yesButton" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 435.0
+offset_right = 700.0
+offset_bottom = 459.0
+theme_override_colors/font_color = Color(0.995615, 0.995601, 0.995338, 1)
+theme_override_fonts/font = ExtResource("2_umbcb")
+text = "Yes"
+alignment = 0
+
+[node name="noButton" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 461.0
+offset_right = 700.0
+offset_bottom = 485.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_umbcb")
+text = "No"
+alignment = 0

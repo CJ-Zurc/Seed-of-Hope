@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://k8r2w4ciyv6t"]
 
-[ext_resource type="Texture2D" uid="uid://v36natl8ql1f" path="res://Assets/2D Arts/Plant Assets/AmpalayaAssets.png" id="1_db5bx"]
+[ext_resource type="Texture2D" uid="uid://v36natl8ql1f" path="res://2D Arts/Plant Assets/AmpalayaAssets.png" id="1_db5bx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_db5bx"]
 size = Vector2(15.375, 33)

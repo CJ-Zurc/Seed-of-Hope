@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccj04xb1wisqb"]
+
+[ext_resource type="Texture2D" uid="uid://b4m74gn8afvnn" path="res://2D Arts/UI stuff/dialogues/dialogueBoxBed.png" id="1_gk5r3"]
+[ext_resource type="FontFile" uid="uid://bmdklqoudcv6" path="res://2D Arts/UI stuff/fonts/MedodicaRegular.otf" id="2_m7yxt"]
+
+[node name="Saving Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 282.0
+offset_bottom = 128.0
+texture = ExtResource("1_gk5r3")
+
+[node name="questionSave" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 256.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_m7yxt")
+text = "Do you want to sleep? "
+
+[node name="yesButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 55.0
+offset_right = 267.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0.995615, 0.995601, 0.995338, 1)
+theme_override_fonts/font = ExtResource("2_m7yxt")
+text = "Yes"
+alignment = 0
+
+[node name="noButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 81.0
+offset_right = 267.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_m7yxt")
+text = "No"
+alignment = 0
